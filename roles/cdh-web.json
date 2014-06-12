@@ -1,0 +1,16 @@
+{
+  "name": "cdh-web",
+  "description": "Role for web nodes",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[cdh::web]"
+  ],
+  "env_run_lists": {
+  }
+}

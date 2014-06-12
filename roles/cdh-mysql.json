@@ -1,0 +1,19 @@
+{
+  "name": "cdh-mysql",
+  "description": "Role for database node",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "cdh": {
+      "db_user_host": "10.%"
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[cdh::mysql_server]"
+  ],
+  "env_run_lists": {
+  }
+}

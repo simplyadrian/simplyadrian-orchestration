@@ -1,0 +1,6 @@
+default["cdh"]["database"] = "cdh"
+default["cdh"]["db_username"] = "cdh"
+default["cdh"]["path"] = "/var/www/cdh"
+default['cdh']['server_name'] = "cdh"
+default["cdh"]["db_user_host"] = "localhost"
+default[:mysql][:secretpath] = "/etc/chef/encrypted_data_bag_secret"
