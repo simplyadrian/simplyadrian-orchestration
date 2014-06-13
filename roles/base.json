@@ -1,0 +1,20 @@
+{
+  "name": "base",
+  "description": "Base installation run on all Linux servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[yum]",
+    "recipe[yum-epel]",
+    "recipe[yum-upgrade]",
+    "recipe[git]",
+    "recipe[vim]"
+  ],
+  "env_run_lists": {
+    "dev": "recipe[build-essential]"
+  }
+}

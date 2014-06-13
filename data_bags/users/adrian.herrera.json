@@ -1,7 +1,0 @@
-{
-    "id": "adrian.herrera",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBste8hSxKfAs0BnzjidhXHa8e2av4PxLPabA4Q42n5FgbPXpkzlz7/OhmSskq7dDahKObWFVWcpbO72lylIuvmwriLpd7hQvyuibvcolsW5o7OGtRQmFYOcFepCUUYhg5uuFO9CFb4QLRt04tqp4gtaUFXN37zGUyxlzJeDcziP35V6EYARS/zKQpcZKpR6TvzxJTXTQzYZAKDtuqFBp1p/rNPcVhmew/8o/6X00CKMwIyKB0pW0oA+eO52Qt6XWePSEXxWqI6pk6fgx/1Mf4UB8FqXZgIIaBOhx5fbZi2wbxPxPUZ8+/MLR4umn121Z69gRMpHtoX9nOyF9l2kCz adrian.herrera@OMSOLA-036301.local",
-    "groups": [ "admins", "domain_admins", "users", "infrastructure", "hadoop_admins", "hadoop_developers" ],
-    "uid": 466116629,
-    "shell": "\/bin\/bash"
-}
