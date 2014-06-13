@@ -1,6 +1,0 @@
-{
-  "mysql": {"server_root_password": "ilikerandompasswords", "server_debian_password": "Yellowfrog6$", "server_repl_password": "Whitewhale3$"},
-  "cdh": {"db_password": "Purplefrog4$", "server_name": "chef-demo.nativex.com"},
-  "run_list": ["recipe[apt]","recipe[cdh]"]
-}
-
