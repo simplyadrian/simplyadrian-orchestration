@@ -32,6 +32,8 @@ module Opscode
         case
         when platform_family == 'rhel'
           platform == 'amazon' ? platform_version : platform_version.to_i.to_s
+        when platform_family == 'suse'
+          platform_version
         when platform_family == 'fedora'
           platform_version
         when platform_family == 'debian'
@@ -79,6 +81,14 @@ module Opscode
               '5.1' => {
                 'package_name' => 'mysql-server',
                 'service_name' => 'mysqld'
+              },
+              '5.5' => {
+                'package_name' => 'mysql-community-server',
+                'service_name' => 'mysqld'
+              },
+              '5.6' => {
+                'package_name' => 'mysql-community-server',
+                'service_name' => 'mysqld'
               }
             },
             '7' => {
@@ -102,7 +112,15 @@ module Opscode
             '2013.09' => {
               'default_version' => '5.1',
               '5.1' => {
-                'package_name' => 'mysql-server',
+                'package_name' => 'mysql-community-server',
+                'service_name' => 'mysqld'
+              },
+              '5.5' => {
+                'package_name' => 'mysql-community-server',
+                'service_name' => 'mysqld'
+              },
+              '5.6' => {
+                'package_name' => 'mysql-community-server',
                 'service_name' => 'mysqld'
               }
             },
@@ -113,7 +131,11 @@ module Opscode
                 'service_name' => 'mysqld'
               },
               '5.5' => {
-                'package_name' => 'mysql55-server',
+                'package_name' => 'mysql-community-server',
+                'service_name' => 'mysqld'
+              },
+              '5.6' => {
+                'package_name' => 'mysql-community-server',
                 'service_name' => 'mysqld'
               }
             }
@@ -132,6 +154,16 @@ module Opscode
               '5.5' => {
                 'package_name' => 'community-mysql-server',
                 'service_name' => 'mysqld'
+              }
+            }
+          },
+          'suse' => {
+            'default_data_dir' => '/var/lib/mysql',
+            '11.3' => {
+              'default_version' => '5.5',
+              '5.5' => {
+                'package_name' => 'mysql',
+                'service_name' => 'mysql'
               }
             }
           },
@@ -223,6 +255,13 @@ module Opscode
           },
           'freebsd' => {
             'default_data_dir' => '/var/db/mysql',
+            '9' => {
+              'default_version' => '5.5',
+              '5.5' => {
+                'package_name' => 'mysql55-server',
+                'service_name' => 'mysql-server'
+              }
+            },
             '10' => {
               'default_version' => '5.5',
               '5.5' => {

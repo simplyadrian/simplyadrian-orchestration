@@ -1,0 +1,135 @@
+[client]
+<% if @port %>
+port                           = <%= @port %>
+<% end %>
+<% if @socket_file %>
+socket                         = <%= @socket_file %>
+<% end %>
+
+[mysqld_safe]
+socket                         = <%= @socket_file %>
+<% if @nice %>
+nice                           = 0
+<% end %>
+
+[mysqld]
+skip-external-locking
+user                           = mysql
+pid-file                       = <%= @pid_file %>
+socket                         = <%= @socket_file %>
+<% if @port %>
+port                           = <%= @port %>
+<% end %>
+<% if @basedir %>
+basedir                        = <%= @base_dir %>
+<% end %>
+<% if @data_dir %>
+datadir                        = <%= @data_dir %>
+<% end %>
+<% if @tmpdir %>
+tmpdir                         = /tmp
+<% end %>
+<% if @lc_messages_dir %>
+lc-messages-dir                = <%= @lc_messages_dir %>
+<% end %>
+<% if @key_buffer %>
+key_buffer                     = <%= @key_buffer %>
+<% end %>
+<% if @key_buffer_size %>
+key_buffer_size                = <%= @key_buffer_size %>
+<% end %>
+<% if @max_allowed_packet %>
+max_allowed_packet             = <%= @max_allowed_packet %>
+<% end %>
+<% if @thread_stack %>
+thread_stack                   = <%= @thread_stack %>
+<% end %>
+<% if @thread_cache_size %>
+thread_cache_size              = <%= @thread_cache_size %>
+<% end %>
+<% if @query_cache_limit %>
+query_cache_limit              = <%= @query_cache_limit %>
+<% end %>
+<% if @query_cache_size %>
+query_cache_size               = <%= @query_cache_size %>
+<% end %>
+<% if @query_cache_type %>
+query_cache_type               = <%= @query_cache_type %>
+<% end %>
+<% if @max_connections %>
+max_connections                = <%= @max_connections %>
+<% end %>
+<% if @table_open_cache %>
+table_open_cache               = <%= @table_open_cache %>
+<% end %>
+<% if @sort_buffer_size %>
+sort_buffer_size               = <%= @sort_buffer_size %>
+<% end %>
+<% if @join_buffer_size %>
+join_buffer_size               = <%= @join_buffer_size %>
+<% end %>
+<% if @net_buffer_length %>
+net_buffer_length              = <%= @net_buffer_length %>
+<% end %>
+<% if @read_buffer_size %>
+read_buffer_size               = <%= @read_buffer_size %>
+<% end %>
+<% if @read_rnd_buffer_size %>
+read_rnd_buffer_size           = <%= @read_rnd_buffer_size %>
+<% end %>
+<% if @myisam_sort_buffer_size %>
+myisam_sort_buffer_size        = <%= @myisam_sort_buffer_size %>
+<% end %> 
+<% if @thread_concurrency %>
+thread_concurrency             = <%= @thread_concurrency %>
+<% end %>
+<% if @innodb_file_per_table %>
+innodb_file_per_table          = <%= @innodb_file_per_table %>
+<% end %>
+<% if @innodb_log_buffer_size %>
+innodb_log_buffer_size         = <%= @innodb_log_buffer_size %>
+<% end %>
+<% if @innodb_buffer_pool_size %>
+innodb_buffer_pool_size        = <%= @innodb_buffer_pool_size %>
+<% end %>
+<% if @innodb_thread_concurrency %>
+innodb_thread_concurrency      = <%= @innodb_thread_concurrency %>
+<% end %>
+<% if @innodb_flush_method %>
+innodb_flush_method            = <%= @innodb_flush_method %>
+<% end %>
+<% if @innodb_log_file_size %>
+innodb_log_file_size           = <%= @innodb_log_file_size %>
+<% end %>
+<% if @log_bin %>
+log_bin                        = <%= @log_bin %>
+<% end %>
+
+[mysql]
+no-auto-rehash
+<% if @include_dir %>
+!includedir <%= @include_dir %>
+<% end %>
+
+[mysqldump]
+quick
+<% if @max_allowed_packet %>
+max_allowed_packet             = <%= @max_allowed_packet %>
+<% end %>
+
+[myisamchk]
+<% if @myisam_key_buffer_size %>
+key_buffer_size                = <%= @myisam_key_buffer_size %>
+<% end %>
+<% if @sort_buffer_size %>
+sort_buffer_size               = <%= @sort_buffer_size %>
+<% end %>
+<% if @read_buffer %>
+read_buffer                    = <%= @read_buffer %>
+<% end %>
+<% if @write_buffer %>
+write_buffer                   = <%= @write_buffer %>
+<% end %>
+
+[mysqlhotcopy]
+interactive-timeout

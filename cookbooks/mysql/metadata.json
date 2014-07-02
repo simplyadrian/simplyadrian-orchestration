@@ -1,6 +1,6 @@
 {
   "name": "mysql",
-  "version": "5.2.12",
+  "version": "5.3.2",
   "description": "Provides mysql_service and mysql_client resources",
   "long_description": "",
   "maintainer": "Chef Software, Inc.",
@@ -19,6 +19,7 @@
     "freebsd": ">= 0.0.0"
   },
   "dependencies": {
+    "yum-mysql-community": ">= 0.0.0"
   },
   "recommendations": {
   },

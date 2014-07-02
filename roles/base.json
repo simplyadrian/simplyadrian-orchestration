@@ -10,11 +10,11 @@
   "run_list": [
     "recipe[yum]",
     "recipe[yum-epel]",
-    "recipe[yum-upgrade]",
-    "recipe[git]",
-    "recipe[vim]"
+    "recipe[yum-upgrade]"
   ],
   "env_run_lists": {
-    "dev": "recipe[build-essential]"
+    "dev": "recipe[build-essential]",
+    "dev": "recipe[git]",
+    "dev": "recipe[vim]"
   }
 }
