@@ -3,6 +3,9 @@
   "description": "Base installation run on all Linux servers",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    }
   },
   "override_attributes": {
   },
@@ -13,8 +16,5 @@
     "recipe[yum-upgrade]"
   ],
   "env_run_lists": {
-    "dev": "recipe[build-essential]",
-    "dev": "recipe[git]",
-    "dev": "recipe[vim]"
   }
 }

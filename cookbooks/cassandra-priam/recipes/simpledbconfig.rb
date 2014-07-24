@@ -19,7 +19,7 @@
 
 ## SimpleDB Configuration Recipe
 # package dependencies
-%w{build-essential libxslt-dev libxml2-dev}.each {|pkg| package pkg}
+%w{libxslt-devel libxml2-devel}.each {|pkg| package pkg}
 
 # we attempt to automatically set the cluster_name based on the role name -
 # this is sensible in the Author's opinion.

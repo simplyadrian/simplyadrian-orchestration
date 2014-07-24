@@ -1,0 +1,47 @@
+{
+  "name": "cassandra-priam-multiregion",
+  "description": "A Chef role to configure and install Cassandra cluster for NativeX",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    }
+  },
+  "override_attributes": {
+    "override_attributes": {
+      "cassandra": {
+        "jnapackagename": "jna",
+        "priam_s3_bucket": "backups-cassandra-nativex",
+        "priam_multiregion_enable": "true",
+        "priam_endpoint_snitch": "org.apache.cassandra.locator.Ec2MultiRegionSnitch",
+        "priam_zones_available": "us-east-1a,us-east-1b,us-east-1c,us-west-1a,us-west-1b,us-west-1c"
+      },
+      "tomcat": {
+        "base_version": "6"
+      },
+      "authorization": {
+        "sudo": {
+          "include_sudoers_d": "true"
+        }
+      },
+      "java": {
+        "install_flavor": "oracle",
+        "jdk_version": "7",
+        "oracle": {
+          "accept_oracle_download_terms": "true"
+        }
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[build-essential]",
+    "recipe[devel-tools]",
+    "recipe[yum]",
+    "recipe[yum-epel]",
+    "recipe[yum-upgrade]",
+    "recipe[cassandra-priam::install]"
+  ],
+  "env_run_lists": {
+  }
+}
