@@ -3,3 +3,4 @@
 .DS_Store
 doc/*
 .chef
+.berkshelf
