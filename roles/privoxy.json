@@ -1,6 +1,6 @@
 {
-  "name": "base",
-  "description": "A role to manage the base configuration of a linux server in EC2",
+  "name": "privoxy",
+  "description": "A role to manage the configuration of a privoxy server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
     "build-essential": {
@@ -11,9 +11,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[yum]",
-    "recipe[yum-epel]",
-    "recipe[yum-upgrade]"
+    "role[base]",
+    "recipe[privoxy]"
   ],
   "env_run_lists": {
   }

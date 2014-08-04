@@ -1,6 +1,6 @@
 {
   "name": "cassandra-priam-multiregion",
-  "description": "A Chef role to configure and install Cassandra cluster for NativeX",
+  "description": "A role to manage the configuration of a Cassandra server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
     "build-essential": {
