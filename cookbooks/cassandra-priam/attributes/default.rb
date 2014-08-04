@@ -29,6 +29,7 @@ default[:cassandra][:stacksize] = "Xss228k"
 
 # We will attempt to get AWS credentials from a databag - the attributes of which are below
 # These variables stolen from the EBS cookbook https://raw.github.com/albertsj1/chef-ebs/master/attributes/default.rb
+default[:cassandra][:secretpath] = "/Users/adrian.herrera/Google Drive/operations/chef-nativex/.chef/encrypted_data_bag_secret"
 default[:cassandra][:aws][:databag] = "credentials"
 default[:cassandra][:aws][:item] = "aws"
 # IDs inside the item to use
