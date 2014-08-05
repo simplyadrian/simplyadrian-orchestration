@@ -18,5 +18,5 @@
 #
 
 default['aws']['right_aws_version'] = "3.0.5"
-default['aws']['databag_name'] = nil
-default['aws']['databag_entry'] = nil
+default['aws']['databag_name'] = credentials
+default['aws']['databag_entry'] = aws

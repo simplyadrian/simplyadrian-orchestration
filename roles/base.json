@@ -11,6 +11,7 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[aws]",
     "recipe[yum]",
     "recipe[yum-epel]",
     "recipe[yum-upgrade]"
