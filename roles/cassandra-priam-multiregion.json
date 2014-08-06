@@ -29,10 +29,24 @@
       "oracle": {
         "accept_oracle_download_terms": "true"
       }
+    },
+    "ebs": {
+      "raids": {
+        "/dev/md0": {
+          "num_disks": 4,
+          "disk_size": 10,
+          "piops": 2000,
+          "raid_level": 10,
+          "fstype": "xfs",
+          "mount_point": "/data",
+          "uselvm": "true"
+        }
+      }
     }
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[ebs]",
     "recipe[yum]",
     "recipe[yum-epel]",
     "recipe[yum-upgrade]",
