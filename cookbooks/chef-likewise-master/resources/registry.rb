@@ -1,8 +1,9 @@
 #
-# Cookbook Name:: pacman
-# Resource:: group
+# Author:: Randy Dickinson <rtd@i-x.net>
+# Cookbook Name:: likewise
+# Resource:: registry
 #
-# Copyright:: 2010, Opscode, Inc <legal@opscode.com>
+# Copyright 2012, Randy Dickinson
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,14 +18,14 @@
 # limitations under the License.
 #
 
-actions :build, :install
+actions :set
 
-default_action :install
+attribute :value_name, :name_attribute => true, :kind_of => String
+attribute :value_data
+attribute :key, :kind_of => String
+attribute :value_set, :default => false
 
-attribute :package_name, :name_attribute => true
-attribute :version, :default => nil
-attribute :builddir, :default => "#{Chef::Config[:file_cache_path]}/builds"
-attribute :options, :kind_of => String
-attribute :pkgbuild_src, :default => false
-attribute :patches, :kind_of => Array, :default => []
-attribute :exists, :default => false
+def initialize(*args)
+  super
+  @action = [ :set ]
+end

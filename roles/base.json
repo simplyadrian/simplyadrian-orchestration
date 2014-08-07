@@ -14,7 +14,7 @@
     "recipe[aws]",
     "recipe[yum]",
     "recipe[yum-epel]",
-    "recipe[yum-upgrade]"
+    "recipe[nativex-yumupgrade]"
   ],
   "env_run_lists": {
   }

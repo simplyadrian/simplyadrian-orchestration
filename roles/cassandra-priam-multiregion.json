@@ -49,7 +49,7 @@
     "recipe[ebs]",
     "recipe[yum]",
     "recipe[yum-epel]",
-    "recipe[yum-upgrade]",
+    "recipe[nativex-yumupgrade]",
     "recipe[cassandra-priam::install]"
   ],
   "env_run_lists": {
