@@ -7,5 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nativex-dnsupdate::addpub.rb"
-include_recipe "nativex-dnsupdate::addprv.rb"
+include_recipe "nativex-dnsupdate::addpub"
+include_recipe "nativex-dnsupdate::addprv"

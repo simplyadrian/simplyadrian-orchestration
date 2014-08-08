@@ -11,7 +11,7 @@ require 'net/http'
 include_recipe 'route53'
 
 aws = Chef::EncryptedDataBagItem.load("credentials", "aws")
-full_nodename = "#{node.name}.#{node['nativex-dnsupdate']['int_domain']}"
+full_nodename = "#{node.name}-pub.#{node['nativex-dnsupdate']['int_domain']}"
 route53_record "create a record" do
   name                   full_nodename
   value                  Net::HTTP.get(URI.parse('http://169.254.169.254/latest/meta-data/public-ipv4'))

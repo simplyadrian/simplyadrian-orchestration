@@ -1,4 +1,5 @@
-ookbook Name:: nativex-dnsupdate
+#
+# Cookbook Name:: nativex-dnsupdate
 # Recipe:: addprv.rb
 #
 # Copyright 2014, NativeX
