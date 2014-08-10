@@ -1,0 +1,6 @@
+# Privoxy Locked Down
+# Firewall configuration created and managed by Chef
+# Do not edit manually
+<% @node['nativex-iptables']['privoxy']['addresses'].each do |address| %>
+-A FWR -p tcp -s <%= address %> --dport 8090 -j ACCEPT
+<% end %>

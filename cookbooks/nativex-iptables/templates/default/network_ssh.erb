@@ -1,0 +1,6 @@
+# SSH Locked Down
+# Firewall configuration created and managed by Chef
+# Do not edit manually
+<% @node['nativex-iptables']['ssh']['addresses'].each do |address| %>
+-A FWR -p tcp -s <%= address %> --dport 22 -j ACCEPT
+<% end %>

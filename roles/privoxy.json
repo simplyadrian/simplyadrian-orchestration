@@ -13,7 +13,10 @@
   "run_list": [
     "role[base]",
     "recipe[privoxy]",
-    "recipe[nativex-dnsupdate]"
+    "recipe[nativex-dnsupdate]",
+    "recipe[iptables]",
+    "recipe[nativex-iptables::privoxy]",
+    "recipe[nativex-iptables::ssh]"
   ],
   "env_run_lists": {
   }

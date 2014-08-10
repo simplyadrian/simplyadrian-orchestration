@@ -1,0 +1,6 @@
+# HTTP Locked Down
+# Firewall configuration created and managed by Chef
+# Do not edit manually
+<% @node['nativex-iptables']['web']['addresses'].each do |address| %>
+-A FWR -p tcp -s <%= address %> --dport 80 -j ACCEPT
+<% end %>
