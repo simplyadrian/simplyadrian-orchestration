@@ -5,6 +5,9 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
+    },
+    "ntp":{
+       "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
     }
   },
   "override_attributes": {
@@ -12,9 +15,12 @@
   "chef_type": "role",
   "run_list": [
     "recipe[aws]",
+    "recipe[iptables]",
+    "recipe[nativex-dnsupdate]",
+    "recipe[nativex-yumupgrade]",
+    "recipe[ntp]",
     "recipe[yum]",
-    "recipe[yum-epel]",
-    "recipe[nativex-yumupgrade]"
+    "recipe[yum-epel]"
   ],
   "env_run_lists": {
   }
