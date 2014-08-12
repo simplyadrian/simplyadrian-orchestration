@@ -1,0 +1,20 @@
+{
+  "name": "datascience",
+  "description": "A role to manage the configuration of a data science server in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[nativex-iptables::ssh]",
+    "recipe[python]"
+  ],
+  "env_run_lists": {
+  }
+}
