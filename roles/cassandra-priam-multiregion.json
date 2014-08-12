@@ -46,10 +46,8 @@
   },
   "chef_type": "role",
   "run_list": [
+    "role[base]",
     "recipe[ebs]",
-    "recipe[yum]",
-    "recipe[yum-epel]",
-    "recipe[nativex-yumupgrade]",
     "recipe[cassandra-priam::install]"
   ],
   "env_run_lists": {
