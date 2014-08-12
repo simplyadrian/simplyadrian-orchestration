@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: nativex-iptables
+# Recipe:: web.rb
+#
+# Copyright 2014, NativeX
+#
+# All rights reserved - Do Not Redistribute
+#
+
 # Have we decided to lock down the node?
 if node['nativex-iptables']['web']['addresses'].empty?
   # Use the all_ rules

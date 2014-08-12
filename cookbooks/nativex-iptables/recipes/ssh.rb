@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: nativex-iptables
+# Recipe:: ssh.rb
+#
+# Copyright 2014, NativeX
+#
+# All rights reserved - Do Not Redistribute
+#
+
 # Have we decided to lock down the node?
 if node['nativex-iptables']['ssh']['addresses'].empty?
   # Use the all_ssh rule
