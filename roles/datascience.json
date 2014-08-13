@@ -8,6 +8,9 @@
     }
   },
   "override_attributes": {
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/datascience"
+    },
     "python": {
       "install_method": "source",
       "version": "3.3.5"
@@ -23,6 +26,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[ephemeral_lvm]",
     "recipe[nativex-iptables::ssh]",
     "recipe[python]",
     "recipe[nativex-python::pippackages]",

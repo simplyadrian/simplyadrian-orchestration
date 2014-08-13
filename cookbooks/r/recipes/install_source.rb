@@ -40,8 +40,7 @@ end
 bash "build-and-install-r" do
   user "root"
   code <<-EOH
-  (cd /usr/local/R#{r_version}/ && make && make install)
+  (cd /usr/local/R-3.0.1-1/ && make && make install)
   EOH
-  action :nothing
   not_if is_installed_command
 end
