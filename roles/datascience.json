@@ -8,12 +8,17 @@
     }
   },
   "override_attributes": {
+    "python": {
+      "install_method": "source",
+      "version": "3.3.5"
+    }
   },
   "chef_type": "role",
   "run_list": [
     "role[base]",
     "recipe[nativex-iptables::ssh]",
-    "recipe[python]"
+    "recipe[python]",
+    "recipe[nativex-python::pippackages]"
   ],
   "env_run_lists": {
   }
