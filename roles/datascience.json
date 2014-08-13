@@ -23,7 +23,6 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
-    "recipe[java]",
     "recipe[nativex-iptables::ssh]",
     "recipe[python]",
     "recipe[nativex-python::pippackages]",
