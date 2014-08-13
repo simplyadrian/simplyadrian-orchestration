@@ -17,7 +17,7 @@ r_package "data.table"
 
 r_package "ffbase"
 
-r_package "rocr"
+r_package "ROCR"
 
 r_package "ETLUtils"
 

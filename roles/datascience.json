@@ -28,7 +28,9 @@
     "recipe[python]",
     "recipe[nativex-python::pippackages]",
     "recipe[r]",
-    "recipe[nativex-r::rpackages]"
+    "recipe[nativex-r::rpackages]",
+    "recipe[rabbitmq]",
+    "recipe[rabbitmq::mgmt_console]"
   ],
   "env_run_lists": {
   }
