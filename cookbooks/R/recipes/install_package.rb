@@ -1,7 +1,7 @@
 #
 # Author:: Steven Danna(<steve@opscode.com>)
 # Cookbook Name:: R
-# Recipe:: default
+# Recipe:: package
 #
 # Copyright 2011-2013, Steven S. Danna (<steve@opscode.com>)
 # Copyright 2013, Mark Van de Vyver (<mark@taqtiqa.com>)
@@ -19,17 +19,14 @@
 # limitations under the License.
 #
 
-chef_gem "rinruby"
-
-if node['r']['install_repo']
-  include_recipe "r::repo"
+package 'r-base' do
+  version node['r']['version'] if node['r']['version']
+  action :install
 end
 
-include_recipe "r::install_#{node['r']['install_method']}"
-
-# Setting the default CRAN mirror makes
-# remote administration of R much easier.
-template "#{node['r']['install_dir']}/etc/Rprofile.site" do
-  mode "0555"
-  variables( :cran_mirror => node['r']['cran_mirror'])
+if node['r']['install_dev']
+  package 'r-base-dev' do
+    version node['r']['version'] if node['r']['version']
+    action :install
+  end
 end

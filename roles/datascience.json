@@ -18,7 +18,8 @@
     "role[base]",
     "recipe[nativex-iptables::ssh]",
     "recipe[python]",
-    "recipe[nativex-python::pippackages]"
+    "recipe[nativex-python::pippackages]",
+    "recipe[R]"
   ],
   "env_run_lists": {
   }

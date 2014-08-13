@@ -19,17 +19,20 @@
 # limitations under the License.
 #
 
-chef_gem "rinruby"
+r_version = node['r']['version']
+major_version = r_version.split(".").first
 
-if node['r']['install_repo']
-  include_recipe "r::repo"
-end
+# Command to check if we should be installing R or not.
+is_installed_command = "R --version | grep -q #{r_version}"
 
-include_recipe "r::install_#{node['r']['install_method']}"
+package "gcc-gfortran"
 
-# Setting the default CRAN mirror makes
-# remote administration of R much easier.
-template "#{node['r']['install_dir']}/etc/Rprofile.site" do
-  mode "0555"
-  variables( :cran_mirror => node['r']['cran_mirror'])
+include_recipe "build-essential"
+include_recipe "ark"
+
+ark "R-#{r_version}" do
+  url "#{node['r']['cran_mirror']}/src/base/R-#{major_version}/R-#{r_version}.tar.gz"
+  autoconf_opts node['r']['config_opts'] if node['r']['config_opts']
+  action [:configure, :install_with_make]
+  not_if is_installed_command
 end

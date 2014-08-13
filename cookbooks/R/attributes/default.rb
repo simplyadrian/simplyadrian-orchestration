@@ -1,7 +1,7 @@
 #
 # Author:: Steven Danna(<steve@opscode.com>)
 # Cookbook Name:: R
-# Recipe:: default
+# Attribute:: default
 #
 # Copyright 2011-2013, Steven S. Danna (<steve@opscode.com>)
 # Copyright 2013, Mark Van de Vyver (<mark@taqtiqa.com>)
@@ -19,17 +19,17 @@
 # limitations under the License.
 #
 
-chef_gem "rinruby"
+default['r']['cran_mirror'] = "http://cran.fhcrc.org/"
 
-if node['r']['install_repo']
-  include_recipe "r::repo"
+case node['platform_family']
+when 'debian'
+  default['r']['install_method'] = 'package'
+  default['r']['install_repo']   = true
+else
+  default['r']['version']        = '3.0.1'
+  default['r']['checksum']       = 'af90488af3141103b211dc81b6f17d1f0faf4f17684c579a32dfeb25d0d87134'
+  default['r']['install_method'] = 'source'
+  default['r']['config_opts']    = [ "--with-x=no" ]
 end
 
-include_recipe "r::install_#{node['r']['install_method']}"
-
-# Setting the default CRAN mirror makes
-# remote administration of R much easier.
-template "#{node['r']['install_dir']}/etc/Rprofile.site" do
-  mode "0555"
-  variables( :cran_mirror => node['r']['cran_mirror'])
-end
+default['r']['install_dev'] = true
