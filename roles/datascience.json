@@ -11,15 +11,24 @@
     "python": {
       "install_method": "source",
       "version": "3.3.5"
+    },
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "7",
+      "oracle": {
+        "accept_oracle_download_terms": "true"
+      }
     }
   },
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[java]",
     "recipe[nativex-iptables::ssh]",
     "recipe[python]",
     "recipe[nativex-python::pippackages]",
-    "recipe[R]"
+    "recipe[r]",
+    "recipe[nativex-r::rpackages]"
   ],
   "env_run_lists": {
   }
