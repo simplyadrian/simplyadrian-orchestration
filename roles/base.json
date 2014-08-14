@@ -15,6 +15,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[aws]",
+    "recipe[ephemeral_lvm]",
     "recipe[iptables]",
     "recipe[nativex-dnsupdate]",
     "recipe[nativex-yumupgrade]",
