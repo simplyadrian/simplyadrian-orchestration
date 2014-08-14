@@ -1,7 +1,0 @@
-{
-  "id": "cdh3",
-  "host": "pchdvl-hdpsql01.teamfreeze.com",
-  "database": "metastore",
-  "db_username": "hiveuser",
-  "db_password": "e50586910465ad767b36d11ec3fe323c"
-}
