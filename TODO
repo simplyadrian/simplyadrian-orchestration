@@ -1,0 +1,48 @@
+Remove extra directories that aren’t needed in custom cookbooks and complete documentation in README file. Also update and maintain change log.
+
+When the below stuff is complete create actual version and commit to master branch. Then cut development branch to work from and instruct all others working in Chef to work from development branch.
+
+Cloudformation script to create VPC
+
+Cloudformation script to create ELB’s
+
+Create recipe that joins “application” server to an ELB
+
+✓Create rabbitMQ Cookbook
+
+Create mono Cookbook
+
+nativex-dnsupdate
+
+add logic to check if record exists and then update if it does
+create recipe to delete record upon termination
+finalize the domain name that the cookbook will use as an attribute
+
+nativex-pbis
+
+complete and test enterprise installer
+create pbis configuration recipe
+create pbis join domain recipe
+create phis leave domain recipe
+
+nativex-yum
+
+create recipe to inject custom repos to yum.repo.d
+migrate yumupgrade logic to this recipe
+
+nativex-python
+
+determine if virtual environment is needed
+
+nativex-iptables
+
+restrict the connections further by limiting networks that can connect to the services
+add additional service templates as needed
+
+ebs
+
+test ebs creation cookbook
+
+cassandra-priam
+
+figure out if bootstrap action is actually creating a working cassandra installation

@@ -20,6 +20,8 @@
     "recipe[nativex-dnsupdate]",
     "recipe[nativex-yumupgrade]",
     "recipe[ntp]",
+    "recipe[sudo]",
+    "recipe[users::sysadmins]",
     "recipe[yum]"
   ],
   "env_run_lists": {

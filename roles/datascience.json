@@ -8,6 +8,12 @@
     }
   },
   "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": ["brett.stime"],
+        "passwordless": "true"
+      }
+    },
     "ephemeral_lvm": {
       "mount_point": "/mnt/datascience"
     },
