@@ -4,5 +4,4 @@
 doc/*
 .chef
 .berkshelf
-data_bags/credentials/*
-data_bags/users/*
+data_bags/*
