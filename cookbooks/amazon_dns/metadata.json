@@ -1,0 +1,32 @@
+{
+  "name": "amazon_dns",
+  "description": "Manage Amazon Route 53 DNS system",
+  "long_description": "# amazon_dns\n\nProvides a set of LWRPs to manage Amazon Route 53 entries.\n\nThis works as a drop-in replacement for the [official route53 cookbook](http://community.opscode.com/cookbooks/route53), but adds a few features.\n\n# Platforms\n\nTested on Ubuntu 12.04 and Debian 6.0.6.\n\n# Requirements\n\nChef 11\n\n# Examples\n\n```\n# Create a zone for example.com\namazon_dns_zone \"example.com\" do\n  aws_access_key_id     \"ASDASDASDASD\"\n  aws_secret_access_key \"GSDFGSDFDFGF\"\nend\n\n\n# Add subdomain1 to example.com\namazon_dns_record \"subdomain1\" do\n  value \"192.168.1.1\"\n  domain \"example.com\"\n  aws_access_key_id     \"ASDASDASDASD\"\n  aws_secret_access_key \"GSDFGSDFDFGF\"\nend\n\n# Let's add a CNAME record\namazon_dns_record \"mail\" do\n  value \"ghs.google.com\"\n  domain \"example.com\"\n  type \"CNAME\"\n  ttl 86400\n  aws_access_key_id     \"ASDASDASDASD\"\n  aws_secret_access_key \"GSDFGSDFDFGF\"\nend\n\n# Create an MX record after specifing credentials via node attribute\nnode.set[:amazon_dns][:aws_access_key_id] = \"ASDASDASDASD\"\nnode.set[:amazon_dns][:aws_secret_access_key] = \"GSDFGSDFDFGF\"\n\namazon_dns_record \"example.com\" do\n  domain \"example.com\"\n  type \"MX\"\n  value \"1 aspmx.l.google.com\"\nend\n```\n\n# Differences from Route53 cookbook\n\n  * Ability to add zones\n  * No need to specify zone_id, amazon_dns will look it up for you\n  * Alias record support\n\n# Authorization\n\nYou can either set the node attributes `node[:amazon_dns][:aws_access_key_id]` and `node[:amazon_dns][:aws_secret_access_key]`, or provide the same values with every resource call.  \nSee examples above.\n\n# Alias records\n\nAlias records are A or AAAA records that point to S3 Website Endpoints, Elastic Load Balancers or Route 53 record sets in the same zone.  \nTo utilize alias records, set the `alias_target` attribute of the amazon_dns_record resource to a hash containing the keys `:dns_name` for the endpoint, and `:hosted_zone_id` for the hosted zone id.\n\n# Recipes\n\n## amazon_dns::default\n\nInstalls the [fog gem](https://github.com/fog/fog), which is needed for the LWRPs.\n\n# Attributes\n\nAttribute | Description | Type | Default\n----------|-------------|------|--------\naws_access_key_id | Access key ID, in case you don't want to specify it every time you call a resource |String\naws_secret_access_key | Secret access key, in case you don't want to specify it every time you call a resource | String\n\n# Resources / Providers\n\n## amazon_dns_zone\n\nCreates a new Route53 zone.\n\n### Attributes\n\nAttribute | Description | Type | Default\n----------|-------------|------|--------\nname | name of the zone / domain | String | name\ncomment | Optional comment, will show up in the web interface | String | \"\"\naws_access_key_id | Your AWS access key ID | String\naws_secret_access_key | Your AWS secret access key | String\n\n### Actions\n\nName | Description | Default\n-----|-------------|--------\ncreate | Create the zone | yes\n\n## amazon_dns_record\n\n### Attributes\n\nAttribute | Description | Type | Default\n----------|-------------|------|--------\nname | Name of the dns entry, can be \"subdomain\" or \"subdomain.example.com\" | String | name\ndomain | Name of the domain to add the entry to (set this or zone_id) | String |\nzone_id | Zone_id of the zone to add the entry to (set this or domain) | String |\nvalue | Value for the DNS record. Not needed for alias records | String, Array | \nalias_target | Targets for alias records. Hash that needs they keys `:dns_name` and `:hosted_zone_id` | Hash\ntype | DNS record type | String | A\nttl | Time to live | Integer, String | 3600\nweight | For weighted record sets | Integer, String |\naws_access_key_id | Your AWS access key ID | String\naws_secret_access_key | Your AWS secret access key | String\n\n### Actions\n\nName | Description | Default\n-----|-------------|--------\ncreate_or_update | Create or update the record | yes\n",
+  "maintainer": "Nils Landt",
+  "maintainer_email": "cookbooks@promisedlandt.de",
+  "license": "MIT",
+  "platforms": {
+    "ubuntu": ">= 0.0.0",
+    "debian": ">= 0.0.0"
+  },
+  "dependencies": {
+    "gem_installation": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.2"
+}
