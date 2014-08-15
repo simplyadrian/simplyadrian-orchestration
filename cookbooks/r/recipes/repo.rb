@@ -1,11 +1,8 @@
 #
-# Author:: Steven Danna(<steve@opscode.com>)
-# Author:: Guilhem Lettron <guilhem.lettron@youscribe.com
+# Author:: Adrian Herrera(<adrian.herrera@nativex.com>)
 # Cookbook Name:: R
 # Recipe:: repo
 #
-# Copyright 2011-2013, Steven S. Danna (<steve@opscode.com>)
-# Copyright 2013, Mark Van de Vyver (<mark@taqtiqa.com>)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

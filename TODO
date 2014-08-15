@@ -30,10 +30,6 @@ nativex-yum
 create recipe to inject custom repos to yum.repo.d
 migrate yumupgrade logic to this recipe
 
-nativex-python
-
-determine if virtual environment is needed
-
 nativex-iptables
 
 restrict the connections further by limiting networks that can connect to the services

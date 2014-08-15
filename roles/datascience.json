@@ -10,7 +10,7 @@
   "override_attributes": {
     "authorization": {
       "sudo": {
-        "users": ["brett.stime"],
+        "users": ["brett.stime", "zhiyong.tan"],
         "passwordless": "true"
       }
     },
@@ -23,7 +23,10 @@
     },
     "r": {
       "version": "3.0.1"
-    },  
+    },
+    "rabbitmq": {
+      "version": "3.3.5"
+    }, 
     "java": {
       "install_flavor": "oracle",
       "jdk_version": "7",
