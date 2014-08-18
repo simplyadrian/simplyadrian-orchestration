@@ -18,6 +18,7 @@
     "recipe[ephemeral_lvm]",
     "recipe[iptables]",
     "recipe[nativex-dnsupdate]",
+    "recipe[nativex-hostname::createhostfile]",
     "recipe[nativex-yumupgrade]",
     "recipe[ntp]",
     "recipe[sudo]",
