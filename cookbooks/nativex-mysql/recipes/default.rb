@@ -7,4 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nativex-mysql::custom_cnf.rb"
+include_recipe "nativex-mysql::custom_cnf"

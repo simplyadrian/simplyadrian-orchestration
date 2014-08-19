@@ -19,11 +19,10 @@
     "recipe[iptables]",
     "recipe[nativex-dnsupdate]",
     "recipe[nativex-hostname::createhostfile]",
-    "recipe[nativex-yumupgrade]",
+    "recipe[nativex-yum]",
     "recipe[ntp]",
     "recipe[sudo]",
-    "recipe[users::sysadmins]",
-    "recipe[yum]"
+    "recipe[users::sysadmins]"
   ],
   "env_run_lists": {
   }

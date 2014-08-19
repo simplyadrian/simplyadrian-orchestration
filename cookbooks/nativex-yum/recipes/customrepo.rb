@@ -7,16 +7,23 @@
 # All rights reserved - Do Not Redistribute
 #
 
-yum_repository 'custom' do
-  description "my custom Repo"
-  baseurl "http://localhost/#{os_release}/#{arch}/stable/"
-  gpgkey 'http://localhost/gpg_key'
+yum_repository 'nativex-custom' do
+  description 'NativeX Custom repository'
+  baseurl 'http://spacewalk.teamfreeze.com/nativex-custom'
+  gpgkey 'http://spacewalk.teamfreeze.com/pub/rpm-gpg-keys/RPM-GPG-KEY-NativeX-Custom'
   action :create
 end
 
-yum_repository 'custom2' do
-  description "my custom Repo"
-  baseurl "http://localhost2/#{os_release}/#{arch}/stable/"
-  gpgcheck false
+yum_repository 'spacewalk client' do
+  description 'Spacewalk client repository'
+  baseurl 'http://yum.spacewalkproject.org/2.2-client/RHEL/6/$basearch/'
+  gpgkey 'http://yum.spacewalkproject.org/RPM-GPG-KEY-spacewalk-2012'
+  action :create
+end
+
+yum_repository 'spacewalk-client-nightly' do
+  description 'Spacewalk nightly client repository'
+  baseurl 'http://yum.spacewalkproject.org/nightly-client/RHEL/6/$basearch/'
+  gpgkey 'http://yum.spacewalkproject.org/RPM-GPG-KEY-spacewalk-2012'
   action :create
 end

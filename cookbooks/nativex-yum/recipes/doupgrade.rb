@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: nativex-yumupgrade
-# Recipe:: default
+# Recipe:: doupgrade
 #
 # Copyright 2014, NativeX
 #

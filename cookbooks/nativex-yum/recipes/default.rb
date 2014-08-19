@@ -6,3 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+include_recipe "nativex-yum::customrepo"
+include_recipe "nativex-yum::deleterepo"
+include_recipe "nativex-yum::doupgrade"

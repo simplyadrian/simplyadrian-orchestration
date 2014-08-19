@@ -25,10 +25,10 @@ create pbis configuration recipe
 create pbis join domain recipe
 create phis leave domain recipe
 
-nativex-yum
+nativex-yum - Complete
 
-create recipe to inject custom repos to yum.repo.d
-migrate yumupgrade logic to this recipe
+✓create recipe to inject custom repos to yum.repo.d
+✓migrate yumupgrade logic to this recipe
 
 nativex-iptables
 
