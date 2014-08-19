@@ -12,17 +12,17 @@ yum_repository 'CentOS-Media' do
   action :delete
 end
 
-#delete CentOS-Debuginfo repo
+# delete CentOS-Debuginfo repo
 yum_repository 'CentOS-Debuginfo' do
   action :delete
 end
 
-#delete CentOS-Vault repo
+# delete CentOS-Vault repo
 yum_repository 'CentOS-Vault' do
   action :delete
 end
 
-delete rightlink repo
+# delete rightlink repo
 yum_repository 'rightlink' do
   action :delete
 end
