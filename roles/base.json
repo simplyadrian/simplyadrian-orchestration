@@ -19,7 +19,8 @@
     "recipe[iptables]",
     "recipe[nativex-dnsupdate]",
     "recipe[nativex-hostname::createhostfile]",
-    "recipe[nativex-yum]",
+    "recipe[nativex-yum::deleterepo]",
+    "recipe[nativex-yum::doupgrade]",
     "recipe[ntp]",
     "recipe[sudo]",
     "recipe[users::sysadmins]"
