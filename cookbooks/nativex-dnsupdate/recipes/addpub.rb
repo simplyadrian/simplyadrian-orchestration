@@ -15,7 +15,7 @@ route53_record "create A record" do
   name                   full_nodename
   value                  node[:ec2][:public_ipv4] 
   type                   "A"
-  ext_zone_id            node['nativex-dnsupdate']['ext_zone_id']
+  zone_id                node['nativex-dnsupdate']['ext_zone_id']
   aws_access_key_id      aws["aws_access_key_id"]
   aws_secret_access_key  aws["aws_secret_access_key"]
   ttl                    60

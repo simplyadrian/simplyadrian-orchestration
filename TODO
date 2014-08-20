@@ -15,8 +15,8 @@ Create mono Cookbook
 nativex-dnsupdate
 
 add logic to check if record exists and then update if it does
-create recipe to delete record upon termination
-finalize the domain name that the cookbook will use as an attribute
+✓create recipe to delete record
+✓finalize the domain name that the cookbook will use as an attribute
 
 nativex-pbis
 

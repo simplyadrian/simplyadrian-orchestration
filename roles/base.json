@@ -17,7 +17,7 @@
     "recipe[aws]",
     "recipe[ephemeral_lvm]",
     "recipe[iptables]",
-    "recipe[nativex-dnsupdate::deleteprv]",
+    "recipe[nativex-dnsupdate]",
     "recipe[nativex-hostname::createhostfile]",
     "recipe[nativex-yum::deleterepo]",
     "recipe[nativex-yum::doupgrade]",
