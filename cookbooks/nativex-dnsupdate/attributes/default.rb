@@ -1,8 +1,12 @@
 #
-# Domain Name
+# Internal Domain Name
 default['nativex-dnsupdate']['int_domain'] = 'nativexintern.com'
 
-# ZoneID
-default['nativex-dnsupdate']['zone_id'] = 'Z1NZHUXT02UQJ'
+# internal ZoneID
+default['nativex-dnsupdate']['int_zone_id'] = 'Z1NZHUXT02UQJ'
 
-# 
+# External Domain Name
+default['nativex-dnsupdate']['ext_domain'] = 'teamfreeze.com'
+
+# external ZoneID
+default['nativex-dnsupdate']['ext_zone_id'] = 'ZPCX17R5ZD3SC'
