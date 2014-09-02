@@ -1,0 +1,17 @@
+{
+  "name": "win32-base",
+  "description": "A role to manage the base configuration of a Windows server in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[aws]",
+    "recipe[windows]",
+    "recipe[nativex-dnsupdate]"
+  ],
+  "env_run_lists": {
+  }
+}
