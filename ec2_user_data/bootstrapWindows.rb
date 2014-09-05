@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/opt/chef/embedded/bin/ruby
  
 require 'socket'
  
@@ -9,28 +9,14 @@ AWS_SECRET_ACCESS_KEY = "XIghXUF1fvHCiuLG4fLlUTmjS3PzrL8TVnSfuGFk"
 # Node details
 NODE_NAME         = "DAW2AVM-TEST-01"
 CHEF_ENVIRONMENT  = "dev"
-INSTANCE_SIZE     = "m1.small"
+INSTANCE_SIZE     = "m3.medium"
 REGION            = "us-west-2"
-AVAILABILITY_ZONE = "us-west-2b"
-AMI_NAME          = "ami-0b2e683b"
+AVAILABILITY_ZONE = "us-west-2a"
+AMI_NAME          = "ami-d75412e7"
 SECURITY_GROUP    = "default"
-RUN_LIST          = "recipe[aws],recipe[windows]"
-USER_DATA_FILE    = "/tmp/userdata.txt"
+RUN_LIST          = "recipe[aws],recipe[windows],recipe[nativex-dnsupdate]"
 USERNAME          = "Administrator"
-PASSWORD          = "2ddzZxDU?X"
- 
-# Write user data file that sets up WinRM and sets the Administrator password.
-File.open(USER_DATA_FILE, "w") do |f|
-  f.write <<EOT
-<script>
-winrm quickconfig -q & winrm set winrm/config/winrs @{MaxMemoryPerShellMB="300"} & winrm set winrm/config @{MaxTimeoutms="1800000"} & winrm set winrm/config/service @{AllowUnencrypted="true"} & winrm set winrm/config/service/auth @{Basic="true"}
-</script>
-<powershell>
-$admin = [adsi]("WinNT://./administrator, user")
-$admin.psbase.invoke("SetPassword", "#{PASSWORD}")
-</powershell>
-EOT
-end
+PASSWORD          = "zv-Pxohm%N"
  
 # Define the command to provision the instance
 provision_cmd = [
@@ -44,7 +30,6 @@ provision_cmd = [
   "--availability-zone #{AVAILABILITY_ZONE}",
   "--image #{AMI_NAME}",
   "--groups '#{SECURITY_GROUP}'",
-  "--user-data #{USER_DATA_FILE}",
   "--verbose"
 ].join(" ")
  

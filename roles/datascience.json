@@ -10,7 +10,7 @@
   "override_attributes": {
     "authorization": {
       "sudo": {
-        "users": ["brett.stime", "zhiyong.tan"],
+        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl"],
         "passwordless": "true"
       }
     },
