@@ -5,9 +5,7 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
-    }
-  },
-  "override_attributes": {
+    },
     "authorization": {
       "sudo": {
         "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl"],
@@ -26,7 +24,7 @@
     },
     "rabbitmq": {
       "version": "3.3.5"
-    }, 
+    },
     "java": {
       "install_flavor": "oracle",
       "jdk_version": "7",
@@ -34,6 +32,8 @@
         "accept_oracle_download_terms": "true"
       }
     }
+  },
+  "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [

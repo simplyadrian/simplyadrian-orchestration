@@ -13,17 +13,3 @@ yum_repository 'nativex-custom' do
   gpgkey 'http://spacewalk.teamfreeze.com/pub/rpm-gpg-keys/RPM-GPG-KEY-NativeX-Custom'
   action :create
 end
-
-yum_repository 'spacewalk client' do
-  description 'Spacewalk client repository'
-  baseurl 'http://yum.spacewalkproject.org/2.2-client/RHEL/6/$basearch/'
-  gpgkey 'http://yum.spacewalkproject.org/RPM-GPG-KEY-spacewalk-2012'
-  action :create
-end
-
-yum_repository 'spacewalk-client-nightly' do
-  description 'Spacewalk nightly client repository'
-  baseurl 'http://yum.spacewalkproject.org/nightly-client/RHEL/6/$basearch/'
-  gpgkey 'http://yum.spacewalkproject.org/RPM-GPG-KEY-spacewalk-2012'
-  action :create
-end

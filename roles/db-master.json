@@ -5,14 +5,14 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
-    }
-  },
-  "override_attributes": {
+    },
     "mysql": {
       "server_root_password": "iloverandompasswords",
       "server_repl_password": "iloverandompasswordsbutthiswilldo",
       "server_debian_password": "yolo"
     }
+  },
+  "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [

@@ -5,9 +5,7 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
-    }
-  },
-  "override_attributes": {
+    },
     "cassandra": {
       "jnapackagename": "jna",
       "priam_s3_bucket": "backups-cassandra-nativex",
@@ -43,6 +41,8 @@
         }
       }
     }
+  },
+  "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [

@@ -7,6 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# delete CentOS-Base repo
+yum_repository 'CentOS-Base' do
+  action :delete
+end
+
 # delete CentOS-Media repo
 yum_repository 'CentOS-Media' do
   action :delete

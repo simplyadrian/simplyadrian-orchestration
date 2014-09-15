@@ -8,16 +8,16 @@
     },
     "ntp":{
        "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
-    }
-  },
-  "override_attributes": {
+    },
     "snmp": {
        "community": "xmass1970",
        "full_systemview": "true",
-       "sources": "10.15.0.0/16",
+       "sources": ["10.15.0.0/16", "localhost"],
        "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
        "syscontact": "sysadmins <sysadmins@w3i.com>"
     }
+  },
+  "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
@@ -25,9 +25,13 @@
     "recipe[ephemeral_lvm]",
     "recipe[iptables]",
     "recipe[snmp]",
-    "recipe[nativex-dnsupdate]",
+    "recipe[nativex-dnsupdate::addprv]",
     "recipe[nativex-hostname::createhostfile]",
     "recipe[nativex-yum::deleterepo]",
+    "recipe[nativex-yum::epelrepo]",
+    "recipe[nativex-yum::spacewalk-clientrepo]",
+    "recipe[nativex-spacewalkclient::clientinstall]",
+    "recipe[nativex-yum::customrepo]",
     "recipe[nativex-yum::doupgrade]",
     "recipe[ntp]",
     "recipe[sudo]",

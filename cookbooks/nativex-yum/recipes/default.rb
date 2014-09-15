@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nativex-yum::customrepo"
 include_recipe "nativex-yum::deleterepo"
+include_recipe "nativex-yum::spacewalk-clientrepo"
+include_recipe "nativex-yum::epelrepo"
+include_recipe "nativex-yum::customrepo"
 include_recipe "nativex-yum::doupgrade"

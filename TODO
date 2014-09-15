@@ -42,3 +42,7 @@ test ebs creation cookbook
 cassandra-priam
 
 figure out if bootstrap action is actually creating a working cassandra installation
+
+MOTD
+
+chef-client
