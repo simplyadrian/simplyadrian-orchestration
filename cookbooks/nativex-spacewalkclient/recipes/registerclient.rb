@@ -9,6 +9,6 @@
 
 bash 'register_client' do
   code <<-EOH
-    rhnreg_ks --serverUrl=http://spacewalk.teamfreeze.com/XMLRPC --activationkey=1-centos6
+    rhnreg_ks --serverUrl=http://spacewalk.teamfreeze.com/XMLRPC --activationkey=1-centos6 --force
   EOH
 end

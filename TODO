@@ -2,7 +2,7 @@ Remove extra directories that aren’t needed in custom cookbooks and complete d
 
 When the below stuff is complete create actual version and commit to master branch. Then cut development branch to work from and instruct all others working in Chef to work from development branch.
 
-Cloudformation script to create VPC
+✓Cloudformation script to create VPC
 
 Cloudformation script to create ELB’s
 
@@ -25,7 +25,7 @@ create pbis configuration recipe
 create pbis join domain recipe
 create phis leave domain recipe
 
-nativex-yum - Complete
+✓nativex-yum - Complete
 
 ✓create recipe to inject custom repos to yum.repo.d
 ✓migrate yumupgrade logic to this recipe
@@ -43,6 +43,6 @@ cassandra-priam
 
 figure out if bootstrap action is actually creating a working cassandra installation
 
-MOTD
+✓MOTD
 
-chef-client
+✓chef-client
