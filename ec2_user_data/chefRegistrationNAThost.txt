@@ -1,0 +1,74 @@
+#!/bin/bash
+exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+mkdir -p /var/log/chef
+mkdir -p /var/backups/chef
+mkdir -p /var/run/chef
+mkdir -p /var/cache/chef
+mkdir -p /var/lib/chef
+mkdir /etc/chef
+
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+
+cat - >/etc/chef/bootstrap.json <<EOF
+{
+ "run_list": [
+   "role[base]"
+ ],
+ "default_attributes": {
+ },
+ "override_attributes": {
+ }
+}
+EOF
+
+cat - >/etc/chef/client.rb <<EOF
+log_level          :info
+log_location       "/var/log/chef/client.log"
+ssl_verify_mode    :verify_none
+validation_client_name "nativex-validator"
+validation_key         "/etc/chef/validation.pem"
+client_key               "/etc/chef/client.pem"
+chef_server_url    "https://api.opscode.com/organizations/nativex"
+file_cache_path    "/var/cache/chef"
+file_backup_path  "/var/backups/chef"
+pid_file           "/var/run/chef/client.pid"
+node_name       "`curl http://169.254.169.254/latest/meta-data/instance-id`"
+Chef::Log::Formatter.show_time = true
+encrypted_data_bag_secret "/etc/chef/encrypted_data_bag_secret"
+EOF
+
+cat - >/etc/chef/encrypted_data_bag_secret <<EOF
+PrDpb0sSwoQLslM0CPj/6BZHNAGXaB7CdGKIJ3WEAgs5tUfCwjvv/4o3FT92UBy/oMAzdkjjRKAd/2t49DmpJjsEG9eOuREd7/cuHETA9gA2GS/YpVW/9kYLe8PgMY7WchWUDJSbksmQzwFKuLGgD0giv/O+5aohJ0xwt5xsUR4BnQ51BgB5oFgJszS9IN/Lm8HddJQmUlQrXwGNnyohuFSWIDV3s9//C3jV0EI4ZYZd5V4vr98FWkSSHhwshw6Jv1bPQ28aK0kFBiV8tC3EHwJhk/XhnyGCd77jLd5Xe6radY0lo0jeUZSDO7jnZ+kErF9smIPzBd9s3WOguhPjJHWKj14y9Pvgsst68e+QRe6QAP3lhH47ckr+aOcG3IafAjcZAGtS2FtWhMbYZOPbYMK8RnY6ChweXBNUZd8eriMPZTvAoK7qw3adgXX8vZ439tgfpgZkB/rrXOKRaP4APmzTtiLZtFVJ/T979vpzDpHuKTXv5O/RXo1suWSUfdnlDQ1I0D4DFeambOyQF5Huu8OCk8jcLhokPD4NQLsfZ2RUvMJYXohd/83O6vqow0FZR5yDeb6iLG59SNiAYuF2TuypTj+ODi9eu/I1Q2n/TmmYEHQ2s6cxEIM7gYylkcNQiXKIhjfIUar1r5sEnPupu9oMSTDCEOhbAlAdSKb8Udo=
+EOF
+
+cat - >/etc/chef/validation.pem <<EOF
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA0kdiEvj8TOT/lxVoUeQG/rnyYNOq/DrZzveYFbIlo6q5Jygn
+YCaxtFjoStO144rDNZj1Bi+Bx62WgvsLCZseWktUBWqVh2C4RHtJC9U/taO7EHaC
++sxm9zphgJua40+3nybXMHBhmviA3V0BOk2ZlOehJvRwzCBqu9ED95hmcotHBKmv
+En0CXoFGc3W7JE2bM0H5eCVi4JXcVBFyDtY3/mHaTM9uUbdm+94OHKkrLrXrpQsw
+Wgr5zte647q2HEsrDN24K30Y446NKvFg4QTd4KNC5Zi3VDBZ+jk6K75egG+GyzNq
+Mw8Nv/2L+8MQjfwJ2zbEKGxN7QzILOBQLmuMOQIDAQABAoIBAQCub6T+FCpIJ5eX
+X5zgggcDfIGCrVSkVLWmqWIybUwoD1H1F6xCaRb1guOAX0v97Hivl6l7biF84ZWA
+Jn0rhNCTGvYiYB6W5Tc3KAaamFZ3edGOgKF7J+EqqfWEWJEOjGzIy9GrTy7I/ej4
+uVRxZzpGejgHNrPzwdiI4YUm+ffSgBKBfdwHjkjp9xXOQGhrj5xtd71Nys5/2N4T
+8YSaAkBPw50QFy/AMagweBWEzrghffcW2HnVvrdgkzVX6RnW1C2WQTbqC6hru122
+gfknlOP2veqKo0fikoCe0rBr+uyxPQ04t1nH/mBzOkh/YPBIiSAzd7bPfR9cm8ZS
+iGIckou5AoGBAOku9KhABZQYVrAHCoS49bcnKEmHri6ZRzb8w89H/JTsfsgdNJP5
+OtzglVn6DXOBjSAz4Qypiev13a0V1atXLeh4vHZBPhxcNdj4ZTc+hYeFJlAK71t0
+soBFBB7p45fB1MkuBgpH6LMbA6n6WEojIV1d9DFpuQsRaS9Z/JC0fxtrAoGBAOba
+r/ZTPfPfJ/YNr4ZpuSzZnI0iRmteZJIMw7POXIWhVkX0x/RtERxL0j+dphT3dtOc
+3VNqxfLGcKkC5SgAsLXUbgsi0xh7sD5a4Bgl9UupILTFN+lRQUenFY+XIAVrEjOP
+zS4ySj4ex9HkvjUnEZgUFYllnnaGQ0ABJVRWKWPrAoGBANMDZO7kkKfFppzAomoc
+nm7RhomTuLH+jw1ZizCGajGyGcCpfSzy+qtqqHy15XpDIBymFd/JhD/9TE8XVTYq
+PCcFKzawL66mWywvDBkEAP30JgmE+7l9TxL4YZQ//28TPqWXemvPSurZZWVqYH8m
+b0j4fsRAce1sIg1xlzazv9plAoGAX9cahmE4ry5OINC9tkfeIMiXPeCk655ckmXK
+ObPKpY+9iX1+JfPBzsWLm+2PLdUu99t/50nEtG2+B+yzxk/DDToMFYN3sAppuPlx
+X5UiqS6l7WaTN8IMH/s18E8FdDpnbBCfVjZ6rB+LRZB5hweZPlHYPxp5FyvWb5QK
+M2Ex/dECgYAPimOQH9X6HyHm/hY+1UgafGfBm1yQnUaXJubFMgFF2GemQ7omcJSR
+0amIzMrotHFAdhXlNv2kkN99U84XMEMqN4O7FpJ/KaRg/9rpnPYVJiygBo6wgVON
+4mp79JOpAadbak6332UQC9RJgT2FU8i6194J4SY3v+va51hwpJu/Cw==
+-----END RSA PRIVATE KEY-----
+EOF
+
+/usr/bin/chef-client -j /etc/chef/bootstrap.json
