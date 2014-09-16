@@ -8,7 +8,7 @@
 #
 
 yum_repository 'epel' do
-  mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-5&arch=$basearch'
+  mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
   description 'Extra Packages for Enterprise Linux 6 - $basearch'
   enabled true
   gpgcheck true

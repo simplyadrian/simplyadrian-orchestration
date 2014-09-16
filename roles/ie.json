@@ -1,0 +1,28 @@
+{
+  "name": "ie",
+  "description": "A role to manage the configuration of a basic infrastructure engineering server in EC2. These servers have no real use or purpose other then basic testing.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    },
+    "authorization": {
+      "sudo": {
+        "users": ["ted.bienapfl"],
+        "passwordless": "true"
+      }
+    },
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/ie"
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[nativex-iptables::ssh]"
+  ],
+  "env_run_lists": {
+  }
+}

@@ -8,3 +8,4 @@
 #
 
 include_recipe "nativex-spacewalkclient::clientinstall"
+include_recipe "nativex-spacewalkclient::registerclient"
