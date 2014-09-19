@@ -1,0 +1,38 @@
+{
+  "name": "apache-webserver",
+  "description": "A role to manage the configuration of an apache webserver in EC2.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    },
+    "authorization": {
+      "sudo": {
+        "users": ["ted.bienapfl"],
+        "passwordless": "true"
+      }
+    },
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/www"
+    },
+    "apache2": {
+        "listen_ports": ["80", "443"],
+        "docroot_dir": "/mnt/www",
+        "contact": "SysEngineers@nativex.com" 
+      }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[nativex-iptables::ssh]",
+    "recipe[nativex-iptables::web]",
+    "recipe[apache2]",
+    "recipe[apache2::mod_ssl]",
+    "recipe[apache2::logrotate]",
+    "recipe[nativex-apache2::vhost]"
+  ],
+  "env_run_lists": {
+  }
+}

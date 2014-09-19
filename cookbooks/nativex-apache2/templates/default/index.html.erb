@@ -1,0 +1,7 @@
+<html>
+  <body>
+    <h1>Welcome to <%= node['hostname'] %></h1>
+    <h2>We are testing the application <%= "#{node['nativex-apache2']['app_name']}" %></h2>
+    <%= node['ipaddress'] %>:<%= "#{node['apache2']['listen_ports']}" %>
+  </body>
+</html>
