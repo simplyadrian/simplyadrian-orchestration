@@ -1,0 +1,10 @@
+{
+  "sources": {
+    "snmp": {
+      "path": "."
+    },
+    "apt": {
+      "locked_version": "1.9.2"
+    }
+  }
+}
