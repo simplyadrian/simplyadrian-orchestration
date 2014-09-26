@@ -1,6 +1,6 @@
 {
-  "name": "base",
-  "description": "A role to manage the base configuration of a linux server in EC2",
+  "name": "nat",
+  "description": "A role to manage the base configuration of a NAT server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
     "build-essential": {
@@ -31,6 +31,8 @@
     "recipe[nativex-yum::doupgrade]",
     "recipe[nativex-yum::deleterepo]",
     "recipe[ntp]",
+    "recipe[sudo]",
+    "recipe[users::sysadmins]",
     "recipe[motd]",
     "recipe[chef-client::delete_validation]",
     "recipe[chef-client]"

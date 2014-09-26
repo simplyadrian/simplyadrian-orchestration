@@ -46,7 +46,8 @@
     "recipe[r]",
     "recipe[nativex-r::rpackages]",
     "recipe[rabbitmq]",
-    "recipe[rabbitmq::mgmt_console]"
+    "recipe[rabbitmq::mgmt_console]",
+    "recipe[rabbitmq::user_management]"
   ],
   "env_run_lists": {
   }
