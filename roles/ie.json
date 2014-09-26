@@ -8,7 +8,7 @@
     },
     "authorization": {
       "sudo": {
-        "users": ["ted.bienapfl"],
+        "users": ["ted.bienapfl","adrian.herrera"],
         "passwordless": "true"
       }
     },

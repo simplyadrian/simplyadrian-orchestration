@@ -1,0 +1,40 @@
+{
+  "name": "base",
+  "description": "A role to manage the base configuration of a linux server in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    },
+    "ntp":{
+       "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
+    },
+    "snmp": {
+       "community": "xmass1970",
+       "full_systemview": "true",
+       "sources": ["10.15.0.0/16", "localhost"],
+       "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
+       "syscontact": "sysadmins <sysadmins@w3i.com>"
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[aws]",
+    "recipe[ephemeral_lvm]",
+    "recipe[snmp]",
+    "recipe[nativex-dnsupdate::addprv]",
+    "recipe[nativex-hostname::createhostfile]",
+    "recipe[nativex-yum::customrepo]",
+    "recipe[nativex-spacewalkclient]",
+    "recipe[nativex-yum::doupgrade]",
+    "recipe[nativex-yum::deleterepo]",
+    "recipe[ntp]",
+    "recipe[motd]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[chef-client]"
+  ],
+  "env_run_lists": {
+  }
+}

@@ -8,7 +8,7 @@
     },
     "authorization": {
       "sudo": {
-        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl"],
+        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl","henry.humadi"],
         "passwordless": "true"
       }
     },
@@ -23,7 +23,9 @@
       "version": "3.0.1"
     },
     "rabbitmq": {
-      "version": "3.3.5"
+      "version": "3.3.5",
+      "default_user": "user",
+      "default_pass": "user"
     },
     "java": {
       "install_flavor": "oracle",
