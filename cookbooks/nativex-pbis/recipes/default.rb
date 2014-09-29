@@ -8,3 +8,4 @@
 #
 
 include_recipe	"nativex-pbis::installpbis"
+include_recipe  "nativex-pbis::joindomain"

@@ -9,7 +9,8 @@
   "chef_type": "role",
   "run_list": [
     "recipe[aws]",
-    "recipe[windows]"
+    "recipe[windows]",
+    "recipe[nativex-ad]"
   ],
   "env_run_lists": {
   }

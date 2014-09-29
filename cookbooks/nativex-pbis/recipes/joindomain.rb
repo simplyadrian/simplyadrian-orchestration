@@ -8,11 +8,9 @@
 #
 
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
-
 bash "pbis join domain" do
   user "root"
   code <<-EOH
-  (domainjoin-cli join #{domain_name} ad["ad_username"] ad["ad_password"])
+  (domainjoin-cli join "#{node['nativex-pbis']['domain_name']}" ad["ad_username"] ad["ad_password"])
   EOH
-  not_if not_installed_command
 end

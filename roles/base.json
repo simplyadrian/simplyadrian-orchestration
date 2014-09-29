@@ -29,6 +29,7 @@
     "recipe[nativex-hostname::createhostfile]",
     "recipe[nativex-yum::customrepo]",
     "recipe[nativex-spacewalkclient]",
+    "recipe[nativex-pbis::installpbis]",
     "recipe[nativex-yum::doupgrade]",
     "recipe[nativex-yum::deleterepo]",
     "recipe[ntp]",
