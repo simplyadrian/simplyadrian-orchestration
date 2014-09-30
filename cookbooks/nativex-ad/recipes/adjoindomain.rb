@@ -14,5 +14,4 @@ windows_ad_domain "#{node['nativex-ad']['name']}" do
   action :join
   domain_pass ad["ad_password"]
   domain_user ad["ad_username"]
-  options ({ "ou" => "OU=Domain Controllers,DC=teamfreeze,DC=com" })
 end

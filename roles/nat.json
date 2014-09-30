@@ -25,7 +25,7 @@
     "recipe[ephemeral_lvm]",
     "recipe[snmp]",
     "recipe[nativex-dnsupdate::addprv]",
-    "recipe[nativex-hostname::createhostfile]",
+    "recipe[nativex-hostname::updatehostname]",
     "recipe[nativex-yum::customrepo]",
     "recipe[nativex-spacewalkclient]",
     "recipe[nativex-yum::doupgrade]",

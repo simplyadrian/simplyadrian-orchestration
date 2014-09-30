@@ -15,9 +15,23 @@ AVAILABILITY_ZONE = "us-west-2a"
 AMI_NAME          = "ami-d75412e7"
 SECURITY_GROUP    = "default"
 RUN_LIST          = "recipe[aws],recipe[windows],recipe[nativex-dnsupdate]"
+USER_DATA_FILE    = "/tmp/userdata.txt"
 USERNAME          = "Administrator"
 PASSWORD          = "zv-Pxohm%N"
  
+# Write user data file that sets up WinRM and sets the Administrator password.
+File.open(USER_DATA_FILE, "w") do |f|
+  f.write <<EOT
+<script>
+winrm quickconfig -q & winrm set winrm/config/winrs @{MaxMemoryPerShellMB="300"} & winrm set winrm/config @{MaxTimeoutms="1800000"} & winrm set winrm/config/service @{AllowUnencrypted="true"} & winrm set winrm/config/service/auth @{Basic="true"}
+</script>
+<powershell>
+$admin = [adsi]("WinNT://./administrator, user")
+$admin.psbase.invoke("SetPassword", "#{PASSWORD}")
+</powershell>
+EOT
+end
+
 # Define the command to provision the instance
 provision_cmd = [
   "knife ec2 server create",

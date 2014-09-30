@@ -12,7 +12,6 @@
   "run_list": [
     "role[win-base]",
     "recipe[windows_ad]",
-    "recipe[nativex-ad]"
   ],
   "env_run_lists": {
 

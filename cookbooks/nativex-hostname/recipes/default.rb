@@ -7,4 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nativex-hostname::createhostfile"
+include_recipe "nativex-hostname::updatehostname"
