@@ -11,14 +11,12 @@
     	  "aws_access_key" => "AKIAIQUPLDCK3OTK4E3A",
 	      "aws_secret_key" => "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",
 	      "agents" => [
-			"ec",
     	    "ec2",
        		"ebs",
 	        "elb",
 			"rds",
 			"sqs",
-			"sns",
-			"emr"
+			"sns"
     	  ]
     	}
 	}
