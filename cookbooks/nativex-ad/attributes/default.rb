@@ -1,5 +1,3 @@
-# Hostname
-default[''][''] = ''
 # Domain Name
 default['nativex-ad']['name'] = 'teamfreeze.com'
 # OU
