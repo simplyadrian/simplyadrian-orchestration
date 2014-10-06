@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: nativex-ad
-# Recipe:: adjoindomain
+# Recipe:: renamecomputer 
 #
 # Copyright 2014, NativeX
 #
@@ -16,6 +16,8 @@ windows_reboot 60 do
   action :nothing
 end
 
+not_if_test = "hostname"
+ 
 # rename computer
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
 nativex_ad_rename "#{node.name}" do
@@ -24,5 +26,6 @@ nativex_ad_rename "#{node.name}" do
   domain_user ad["ad_username"]
   hostname "#{node.name}"
   notifies :request, 'windows_reboot[60]', :delayed
-end
+  only_if "$not_if_test.StartsWith('WIN')"
+end 
 
