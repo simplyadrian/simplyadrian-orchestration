@@ -67,13 +67,13 @@ action :join do
           code <<-EOH
             $secpasswd = ConvertTo-SecureString '#{new_resource.domain_pass}' -AsPlainText -Force
             $mycreds = New-Object System.Management.Automation.PSCredential  ('#{new_resource.domain_user}', $secpasswd)
-            Add-Computer -DomainName #{new_resource.name} -Credential $mycreds -OUPath '"' + #{new_resource.oupath} + '"' -Force:$true
+            Add-Computer -DomainName #{new_resource.name} -Credential $mycreds -OUPath #{new_resource.oupath} -Force:$true
           EOH
         else
           code <<-EOH
             $secpasswd = ConvertTo-SecureString '#{new_resource.domain_pass}' -AsPlainText -Force
             $mycreds = New-Object System.Management.Automation.PSCredential  ('#{new_resource.domain_user}', $secpasswd)
-            Add-Computer -DomainName #{new_resource.name} -Credential $mycreds -OUPath '"' + #{new_resource.oupath} + '"'
+            Add-Computer -DomainName #{new_resource.name} -Credential $mycreds -OUPath #{new_resource.oupath}
           EOH
         end
       end

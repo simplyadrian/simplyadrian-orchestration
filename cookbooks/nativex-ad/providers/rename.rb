@@ -14,13 +14,13 @@ action :rename do
           code <<-EOH
             $secpasswd = ConvertTo-SecureString '#{new_resource.domain_pass}' -AsPlainText -Force
             $mycreds = New-Object System.Management.Automation.PSCredential  ('#{new_resource.domain_user}', $secpasswd)
-            Rename-Computer -NewName #{new_resource.hostname} -Credential $mycreds  -Force:$true
+            Rename-Computer -NewName #{new_resource.hostname} -DomainCredential $mycreds -PassThru
           EOH
         else
           code <<-EOH
             $secpasswd = ConvertTo-SecureString '#{new_resource.domain_pass}' -AsPlainText -Force
             $mycreds = New-Object System.Management.Automation.PSCredential  ('#{new_resource.domain_user}', $secpasswd)
-            Rename-Computer -DomainName #{new_resource.hostname} -Credential $mycreds
+            Rename-Computer -DomainName #{new_resource.hostname} -DomainCredential $mycreds -PassThru
           EOH
         end
       end
