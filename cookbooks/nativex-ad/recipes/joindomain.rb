@@ -9,12 +9,11 @@
 
 # Join teamfreeze.com domain
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
-
-windows_ad_domain "#{node['nativex-ad']['name']}" do
+nativex_ad_domain "#{node['nativex-ad']['name']}" do
   action :join
   retries 3
   retry_delay 60
   domain_pass ad["ad_password"]
   domain_user ad["ad_username"]
-  ou "#{node['nativex-ad']['ou']}"
+  oupath "#{node['nativex-ad']['oupath']}"
 end

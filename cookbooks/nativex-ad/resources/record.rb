@@ -1,4 +1,4 @@
-actions :create, :delete
+actions :create
 
 default_action :create
 

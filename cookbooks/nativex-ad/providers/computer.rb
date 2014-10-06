@@ -89,7 +89,7 @@ end
 
 def dn
   dn ='"' + "CN=#{new_resource.name},"
-  dn << "OU=#{new_resource.ou},"
+  dn << "CN=#{new_resource.ou},"
   dn << new_resource.domain_name.split(".").map! { |k| "DC=#{k}" }.join(",") + '"'
 end
 

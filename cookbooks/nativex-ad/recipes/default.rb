@@ -36,4 +36,5 @@ else
   Chef::Log.error("This version of Windows Server is currently unsupported beyond installing the required roles and features")
 end
 
-include_recipe 'nativex-ad::adjoindomain'
+include_recipe 'nativex-ad::joindomain'
+include_recipe 'nativex-ad::renamecomputer'
