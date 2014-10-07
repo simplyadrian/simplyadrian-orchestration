@@ -16,7 +16,8 @@
 	        "elb",
 			"rds",
 			"sqs",
-			"sns"
+			"sns",
+			"ec"
     	  ]
     	}
 	}
