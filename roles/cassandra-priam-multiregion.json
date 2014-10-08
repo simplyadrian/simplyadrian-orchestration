@@ -29,15 +29,12 @@
       }
     },
     "ebs": {
-      "raids": {
-        "/dev/md0": {
-          "num_disks": 4,
-          "disk_size": 10,
-          "piops": 2000,
-          "raid_level": 10,
+      "volumes": {
+        "/srv": {
+          "size": 500,
+          "piops": 1000,
           "fstype": "xfs",
-          "mount_point": "/data",
-          "uselvm": "true"
+          "mount_options": "noatime"
         }
       }
     }

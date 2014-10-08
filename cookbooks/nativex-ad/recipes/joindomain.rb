@@ -11,8 +11,6 @@
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
 nativex_ad_domain "#{node['nativex-ad']['name']}" do
   action :join
-  retries 3
-  retry_delay 60
   domain_pass ad["ad_password"]
   domain_user ad["ad_username"]
   oupath "#{node['nativex-ad']['oupath']}"

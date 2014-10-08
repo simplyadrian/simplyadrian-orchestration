@@ -13,7 +13,7 @@
     "recipe[nativex-ad::joindomain]",
     "recipe[nativex-ad::installdomaincontroller]",
     "recipe[nativex-ad::promotetodomaincontroller]",
-    "recipe[nativex-ad::renamecomputer]",    
+    "recipe[nativex-ad::renamecomputer]",
     "recipe[nativex-dnsupdate::addprv]",
     "recipe[chef-client::delete_validation]",
     "recipe[chef-client]"
