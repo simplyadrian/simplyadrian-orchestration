@@ -7,12 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# reboot action block
+# Reboot server to commit changes
 include_recipe 'windows::reboot_handler'
 
 windows_reboot 60 do
   timeout 60
-  reason 'Opscode Chef initiated reboot. Restarting computer in 30 seconds!'
+  reason 'Opscode Chef initiated reboot. Restarting computer in 60 seconds!'
   action :nothing
 end
 
