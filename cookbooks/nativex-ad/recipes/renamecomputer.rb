@@ -27,3 +27,4 @@ windows_reboot 60 do
   reason 'Opscode Chef initiated reboot. Restarting computer in 60 seconds!'
   action :nothing
 end
+
