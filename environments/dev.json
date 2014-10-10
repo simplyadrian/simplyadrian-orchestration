@@ -7,10 +7,8 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "chef-client": {
-      "config": {
+    "chef_client": {
         "interval": "300"
-      }
     }
   },
   "override_attributes": {
