@@ -11,7 +11,7 @@ action :create do
       cmd << " -Credential (New-Object System.Management.Automation.PSCredential #{new_resource.domain_user},(convertto-securestring #{new_resource.domain_pass} -asplaintext -force))"
       cmd << " -DomainName #{new_resource.name} -SiteName #{new_resource.site_name}"
       cmd << " -SafeModeAdministratorPassword (convertto-securestring '#{new_resource.safe_mode_pass}' -asplaintext -Force)"
-      cmd << " -CreateDnsDelegation:$true -InstallDns:$true -NoRebootOnCompletion:$false -Force:$true -WhatIf"
+      cmd << " -InstallDns:$true -NoRebootOnCompletion:$false -Force:$true -WhatIf"
     else node[:os_version] <= "6.1"
       cmd = "dcpromo -unattend"
       cmd << " -newDomain:#{new_resource.type}"

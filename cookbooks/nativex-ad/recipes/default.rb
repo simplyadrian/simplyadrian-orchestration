@@ -7,5 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
+#include_recipe 'nativex-ad::joindomain'
 include_recipe 'nativex-ad::joindomain'
-include_recipe 'nativex-ad::renamecomputer'
