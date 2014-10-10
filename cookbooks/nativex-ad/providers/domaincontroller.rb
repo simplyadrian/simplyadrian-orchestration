@@ -15,7 +15,7 @@ action :create do
     else node[:os_version] <= "6.1"
       cmd = "dcpromo -unattend"
       cmd << " -newDomain:#{new_resource.type}"
-      cmd << " -NewDomainDNSName:#{new_resource.name}"
+      cmd << " -NewDomainDNSName:#{new_resource.name} -SiteName #{new_resource.site_name}"
       cmd << " -RebootOnCompletion:Yes"
       cmd << " -SafeModeAdminPassword:(convertto-securestring '#{new_resource.safe_mode_pass}' -asplaintext -Force)"
       cmd << " -ReplicaOrNewDomain:#{new_resource.replica_type}"
@@ -108,11 +108,11 @@ end
 
 def site_name_by_region
     case new_resource.site_name
-      when aws[:region] = "us-east1"
+      when aws[:region] = "us-east-1"
         puts "AWS-VIRGINIA"
-      when aws[:region] = "us-west1"
+      when aws[:region] = "us-west-1"
         puts "AWS-NCALIFORNIA"
-      when aws[:region] = "us-west2"
+      when aws[:region] = "us-west-2"
         puts "AWS-OREGON"
     end
 end
