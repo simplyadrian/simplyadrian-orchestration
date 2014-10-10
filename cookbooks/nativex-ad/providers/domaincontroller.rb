@@ -105,3 +105,14 @@ def create_command
     end
   end
 end
+
+def site_name_by_region
+    case new_resource.site_name
+      when aws[:region] = "us-east1"
+        puts "AWS-VIRGINIA"
+      when aws[:region] = "us-west1"
+        puts "AWS-NCALIFORNIA"
+      when aws[:region] = "us-west2"
+        puts "AWS-OREGON"
+    end
+end
