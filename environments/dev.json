@@ -8,7 +8,7 @@
   "chef_type": "environment",
   "default_attributes": {
     "chef_client": {
-        "interval": "300"
+        "interval": "600"
     }
   },
   "override_attributes": {
