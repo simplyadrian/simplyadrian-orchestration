@@ -1,0 +1,36 @@
+{
+  "name": "dse",
+  "description": "A role to manage the configuration of a DataStax Enterprise Server in EC2.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": [
+          "derek.bromenshenkel"
+        ],
+        "passwordless": "true"
+      }
+    },
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/ie"
+    },
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "7",
+      "oracle": {
+        "accept_oracle_download_terms": "true"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[ie]",
+    "recipe[nativex-dse]"
+  ],
+  "env_run_lists": {
+
+  }
+}

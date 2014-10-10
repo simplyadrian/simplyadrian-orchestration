@@ -7,14 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# reboot action block
+# Reboot server to commit changes
 include_recipe 'windows::reboot_handler'
-
-windows_reboot 60 do
-  timeout 60
-  reason 'Opscode Chef initiated reboot. Restarting computer in 30 seconds!'
-  action :nothing
-end
+node.default[:windows][:allow_pending_reboots] = false
 
 # rename computer
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
@@ -26,4 +21,10 @@ nativex_ad_rename "#{node.name}" do
   notifies :request, 'windows_reboot[60]', :delayed
   not_if {"#{node.name}" == node['hostname']} 
 end 
+
+windows_reboot 60 do
+  timeout 60
+  reason 'Opscode Chef initiated reboot. Restarting computer in 60 seconds!'
+  action :nothing
+end
 

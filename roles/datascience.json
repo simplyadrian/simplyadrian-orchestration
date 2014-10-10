@@ -33,6 +33,15 @@
       "oracle": {
         "accept_oracle_download_terms": "true"
       }
+    },
+    "ebs": {
+      "volumes": {
+        "/srv": {
+          "size": 500,
+          "piops": 1000,
+          "fstype": "xfs"
+        }
+      }
     }
   },
   "override_attributes": {
@@ -40,6 +49,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[ebs]",
     "recipe[nativex-iptables::ssh]",
     "recipe[python]",
     "recipe[nativex-python::pippackages]",
