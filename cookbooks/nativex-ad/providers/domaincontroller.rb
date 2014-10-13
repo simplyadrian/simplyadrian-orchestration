@@ -107,12 +107,12 @@ def create_command
 end
 
 def site_name_by_region
-    case new_resource.site_name
-      when aws[:region] = "us-east-1"
-        puts "AWS-VIRGINIA"
-      when aws[:region] = "us-west-1"
-        puts "AWS-NCALIFORNIA"
-      when aws[:region] = "us-west-2"
-        puts "AWS-OREGON"
+    case aws['region']
+      when 'us-east-1'
+        new_resouce.site_name = "AWS-VIRGINIA"
+      when 'us-west-1'
+        new_resource.site_name = "AWS-NCALIFORNIA"
+      when 'us-west-2'
+        new_resource.site_name = "AWS-OREGON"
     end
 end
