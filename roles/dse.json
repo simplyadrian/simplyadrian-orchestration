@@ -3,16 +3,8 @@
   "description": "A role to manage the configuration of a DataStax Enterprise Server in EC2.",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "authorization": {
-      "sudo": {
-        "users": [
-          "derek.bromenshenkel"
-        ],
-        "passwordless": "true"
-      }
-    },
     "ephemeral_lvm": {
-      "mount_point": "/mnt/ie"
+      "mount_point": "/var/lib/cassandra"
     },
     "java": {
       "install_flavor": "oracle",
