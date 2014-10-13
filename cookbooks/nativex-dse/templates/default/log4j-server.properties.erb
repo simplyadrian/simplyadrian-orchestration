@@ -18,7 +18,7 @@
 # (%l is slower.)
 
 # output messages into a rolling log file as well as stdout
-log4j.rootLogger=<%= node['cassandra']['log_level'] %>,stdout,R
+log4j.rootLogger=<%= node['cassandra']['log_level'] %>,stdout,R,SYSLOG
 
 # stdout
 log4j.appender.stdout=org.apache.log4j.ConsoleAppender
@@ -28,7 +28,7 @@ log4j.appender.stdout.layout.ConversionPattern=%5p %d{HH:mm:ss,SSS} %m%n
 # rolling log file
 log4j.appender.R=org.apache.log4j.RollingFileAppender
 log4j.appender.R.maxFileSize=20MB
-log4j.appender.R.maxBackupIndex=50
+log4j.appender.R.maxBackupIndex=10
 log4j.appender.R.layout=org.apache.log4j.PatternLayout
 log4j.appender.R.layout.ConversionPattern=%5p [%t] %d{ISO8601} %F (line %L) %m%n
 # Edit the next line to point to your logs directory
@@ -40,7 +40,7 @@ log4j.additivity.SolrValidationLog=false
 # rolling log file for solr validation
 log4j.appender.V=org.apache.log4j.RollingFileAppender
 log4j.appender.V.maxFileSize=20MB
-log4j.appender.V.maxBackupIndex=50
+log4j.appender.V.maxBackupIndex=10
 log4j.appender.V.layout=org.apache.log4j.PatternLayout
 log4j.appender.V.layout.ConversionPattern=%d{ISO8601} %m%n
 # Edit the next line to point to your logs directory
@@ -53,6 +53,8 @@ log4j.appender.V.File=/var/log/cassandra/solrvalidation.log
 
 # Adding this to avoid thrift logging disconnect errors.
 log4j.logger.org.apache.thrift.server.TNonblockingServer=FATAL
+log4j.logger.com.thinkaurelius.thrift=FATAL
+log4j.logger.org.apache.cassandra.db.Memtable=ERROR
 
 # stderr
 log4j.appender.stderr=org.apache.log4j.ConsoleAppender
@@ -114,3 +116,11 @@ log4j.logger.org.apache.solr.handler.component=WARN
 log4j.logger.org.apache.solr.search.SolrIndexSearcher=WARN
 log4j.logger.org.apache.solr.update=WARN
 log4j.logger.org.apache.solr.util.plugin.AbstractPluginLoader=WARN
+
+# SYSLOG
+log4j.appender.SYSLOG = org.apache.log4j.net.SyslogAppender
+log4j.appender.SYSLOG.syslogHost = 10.15.0.249
+log4j.appender.SYSLOG.threshold = WARN
+log4j.appender.SYSLOG.layout = org.apache.log4j.PatternLayout
+log4j.appender.SYSLOG.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+log4j.appender.SYSLOG.Facility = LOCAL0

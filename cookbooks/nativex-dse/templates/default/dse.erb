@@ -37,7 +37,7 @@ fi
 #DSE_HOME=your_install_location
 
 # Location of log output
-OUTPUT_FILE="/var/log/cassandra/output.log"
+OUTPUT_FILE="<%= node['cassandra']['log_directory'] %>output.log"
 
 # Configuration directory
 CONFDIR=/etc/dse/cassandra
@@ -52,8 +52,8 @@ PIDFILE=/var/run/$NAME/$NAME.pid
 #TOMCAT_LOGS=
 
 # Ths user to use for the service
-CASSANDRA_USER=cassandra
+CASSANDRA_USER=<%= node['cassandra']['user'] %>
 
 # Ths group to use for the service
-CASSANDRA_GROUP=cassandra
+CASSANDRA_GROUP=<%= node['cassandra']['group'] %>
 

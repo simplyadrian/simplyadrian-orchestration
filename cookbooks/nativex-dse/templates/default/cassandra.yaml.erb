@@ -7,7 +7,7 @@
 
 # The name of the cluster. This is mainly used to prevent machines in
 # one logical cluster from joining another.
-cluster_name: '<%= node[:cassandra][:cluster_name] %>'
+cluster_name: '<%= ['cassandra']['cluster_name'] %>'
 
 # This defines the number of tokens randomly assigned to this node on the ring
 # The more tokens, relative to other nodes, the larger the proportion of data
@@ -22,43 +22,43 @@ cluster_name: '<%= node[:cassandra][:cluster_name] %>'
 #
 # If you already have a cluster with 1 token per node, and wish to migrate to
 # multiple tokens per node, see http://wiki.apache.org/cassandra/Operations
-<% if node[:cassandra][:vnodes] %>
-num_tokens: <%=node[:cassandra][:num_tokens]%>
+<% if node['cassandra']['vnodes']  %>
+num_tokens: <%=node['cassandra']['num_tokens'] %>
 <% end %>
 
 # initial_token allows you to specify tokens manually.  While you can use it with
 # vnodes (num_tokens > 1, above) -- in which case you should provide a
 # comma-separated list -- it's primarily used when adding nodes to legacy clusters
 # that do not have vnodes enabled.
-<% if node[:cassandra][:vnodes] %>
+<% if node['cassandra']['vnodes'] %>
 initial_token:
 <% else %>
-initial_token: <%= node[:cassandra][:initial_token] %>
+initial_token: <%= node['cassandra']['initial_token']  %>
 <% end %>
 
 # May either be "true" or "false" to enable globally, or contain a list
 # of data centers to enable per-datacenter.
 # hinted_handoff_enabled: DC1,DC2
 # See http://wiki.apache.org/cassandra/HintedHandoff
-hinted_handoff_enabled: true
+hinted_handoff_enabled: <%= node['cassandra']['hinted_handoff_enabled'] %>
 # this defines the maximum amount of time a dead host will have hints
 # generated.  After it has been dead this long, new hints for it will not be
 # created until it has been seen alive and gone down again.
-max_hint_window_in_ms: 604800000 # 7 days
+max_hint_window_in_ms: <%= node['cassandra']['max_hint_window_in_ms'] %>
 # Maximum throttle in KBs per second, per delivery thread.  This will be
 # reduced proportionally to the number of nodes in the cluster.  (If there
 # are two nodes in the cluster, each delivery thread will use the maximum
 # rate; if there are three, each will throttle to half of the maximum,
 # since we expect two nodes to be delivering hints simultaneously.)
-hinted_handoff_throttle_in_kb: 1024
+hinted_handoff_throttle_in_kb: <%= node['cassandra']['hinted_handoff_throttle_in_kb'] %>
 # Number of threads with which to deliver hints;
 # Consider increasing this number when you have multi-dc deployments, since
 # cross-dc handoff tends to be slower
-max_hints_delivery_threads: 2
+max_hints_delivery_threads: <%= node['cassandra']['max_hints_delivery_threads'] %>
 
 # Maximum throttle in KBs per second, total. This will be
 # reduced proportionally to the number of nodes in the cluster.
-batchlog_replay_throttle_in_kb: 1024
+batchlog_replay_throttle_in_kb: <%= node['cassandra']['batchlog_replay_throttle_in_kb'] %>
 
 
 # Authentication backend, implementing IAuthenticator; used to identify users
@@ -72,12 +72,11 @@ batchlog_replay_throttle_in_kb: 1024
 #   Please increase system_auth keyspace replication factor if you use this authenticator.
 # - com.datastax.bdp.cassandra.auth.KerberosAuthenticator For external authentication
 #   through Kerberos. Additional configuration is required in dse.yaml
-<% if node[:cassandra][:authentication] %>
-authenticator: <%= node[:cassandra][:authenticator] %>
+<% if node['cassandra']['authenticator'] %>
+authenticator: <%= node['cassandra']['authenticator'] %>
 <% else %>
 authenticator: AllowAllAuthenticator
 <% end %>
-#authenticator: com.datastax.bdp.cassandra.auth.KerberosAuthenticator
 
 # Authorization backend, implementing IAuthorizer; used to limit access/provide permissions
 # Out of the box, Cassandra provides org.apache.cassandra.auth.{AllowAllAuthorizer,
@@ -86,8 +85,8 @@ authenticator: AllowAllAuthenticator
 # - AllowAllAuthorizer allows any action to any user - set it to disable authorization.
 # - CassandraAuthorizer stores permissions in system_auth.permissions table. Please
 #   increase system_auth keyspace replication factor if you use this authorizer.
-<% if node[:cassandra][:authorization] %>
-authorizer: <%= node[:cassandra][:authorizer] %>
+<% if node['cassandra']['authorizer'] %>
+authorizer: <%= node['cassandra']['authorizer'] %>
 <% else %>
 authorizer: AllowAllAuthorizer
 <% end %>
@@ -96,7 +95,7 @@ authorizer: AllowAllAuthorizer
 # expensive operation depending on the authorizer, CassandraAuthorizer is
 # one example). Defaults to 2000, set to 0 to disable.
 # Will be disabled automatically for AllowAllAuthorizer.
-permissions_validity_in_ms: 2000
+permissions_validity_in_ms: <%= node['cassandra']['permissions_validity_in_ms'] %>
 
 # The partitioner is responsible for distributing groups of rows (by
 # partition key) across nodes in the cluster.  You should leave this
@@ -108,18 +107,18 @@ permissions_validity_in_ms: 2000
 # compatibility include RandomPartitioner, ByteOrderedPartitioner, and
 # OrderPreservingPartitioner.
 #
-partitioner: org.apache.cassandra.dht.RandomPartitioner
+partitioner: <%= node['cassandra']['partitioner'] %>
 
 # Directories where Cassandra should store data on disk.  Cassandra
 # will spread data evenly across them, subject to the granularity of
 # the configured compaction strategy.
 data_file_directories:
-    <% @dir.each do |dirs| %>
+    <% node['cassandra']['data_file_directories'].each do |dirs| %>
     - <%= dirs %>
     <% end %>
 
 # commit log
-commitlog_directory: <%= node[:cassandra][:commit_dir]  %>
+commitlog_directory: <%= node['cassandra']['commitlog_directory'] %>
 
 # policy for data disk failures:
 # stop_paranoid: shut down gossip and Thrift even for single-sstable errors.
@@ -129,7 +128,7 @@ commitlog_directory: <%= node[:cassandra][:commit_dir]  %>
 #              remaining available sstables.  This means you WILL see obsolete
 #              data at CL.ONE!
 # ignore: ignore fatal errors and let requests fail, as in pre-1.2 Cassandra
-disk_failure_policy: stop
+disk_failure_policy: <%= node['cassandra']['disk_failure_policy'] %>
 
 # policy for commit disk failures:
 # stop: shut down gossip and Thrift, leaving the node effectively dead, but
@@ -137,7 +136,7 @@ disk_failure_policy: stop
 # stop_commit: shutdown the commit log, letting writes collect but
 #              continuing to service reads, as in pre-2.0.5 Cassandra
 # ignore: ignore fatal errors and let the batches fail
-commit_failure_policy: stop
+commit_failure_policy: <%= node['cassandra']['commit_failure_policy'] %>
 
 # Maximum size of the key cache in memory.
 #
@@ -151,7 +150,7 @@ commit_failure_policy: stop
 # NOTE: if you reduce the size, you may not get you hottest keys loaded on startup.
 #
 # Default value is empty to make it "auto" (min(5% of Heap (in MB), 100MB)). Set to 0 to disable key cache.
-key_cache_size_in_mb:
+key_cache_size_in_mb: <%= node['cassandra']['key_cache_size_in_mb'] %>
 
 # Duration in seconds after which Cassandra should
 # save the key cache. Caches are saved to saved_caches_directory as
@@ -162,7 +161,7 @@ key_cache_size_in_mb:
 # has limited use.
 #
 # Default is 14400 or 4 hours.
-key_cache_save_period: 14400
+key_cache_save_period: <%= node['cassandra']['key_cache_save_period'] %>
 
 # Number of keys from the key cache to save
 # Disabled by default, meaning all keys are going to be saved
@@ -172,7 +171,7 @@ key_cache_save_period: 14400
 # NOTE: if you reduce the size, you may not get you hottest keys loaded on startup.
 #
 # Default value is 0, to disable row caching.
-row_cache_size_in_mb: 0
+row_cache_size_in_mb: <%= node['cassandra']['row_cache_size_in_mb'] %>
 
 # Duration in seconds after which Cassandra should
 # safe the row cache. Caches are saved to saved_caches_directory as specified
@@ -183,7 +182,7 @@ row_cache_size_in_mb: 0
 # has limited use.
 #
 # Default is 0 to disable saving the row cache.
-row_cache_save_period: 0
+row_cache_save_period: <%= node['cassandra']['row_cache_save_period'] %>
 
 # Number of keys from the row cache to save
 # Disabled by default, meaning all keys are going to be saved
@@ -200,10 +199,10 @@ row_cache_save_period: 0
 # modify cassandra-env.sh as directed in the file.
 #
 # Defaults to NativeAllocator
-memory_allocator: NativeAllocator
+memory_allocator: <%= node['cassandra']['memory_allocator'] %>
 
 # saved caches
-saved_caches_directory: <%= File.join(node.cassandra.root_dir, 'saved_caches') %>
+saved_caches_directory: <%= node['cassandra']['saved_caches_directory'] %>
 
 # commitlog_sync may be either "periodic" or "batch."
 # When in batch mode, Cassandra won't ack writes until the commit log
@@ -220,8 +219,8 @@ saved_caches_directory: <%= File.join(node.cassandra.root_dir, 'saved_caches') %
 # entries on the commitlog queue.  If you are writing very large blobs,
 # you should reduce that; 16*cores works reasonably well for 1MB blobs.
 # It should be at least as large as the concurrent_writes setting.
-commitlog_sync: periodic
-commitlog_sync_period_in_ms: 10000
+commitlog_sync: <%= node['cassandra']['commitlog_sync'] %>
+commitlog_sync_period_in_ms: <%= node['cassandra']['commitlog_sync_period_in_ms'] %>
 # commitlog_periodic_queue_size:
 
 # The size of the individual commitlog file segments.  A commitlog
@@ -233,7 +232,7 @@ commitlog_sync_period_in_ms: 10000
 # archiving commitlog segments (see commitlog_archiving.properties),
 # then you probably want a finer granularity of archiving; 8 or 16 MB
 # is reasonable.
-commitlog_segment_size_in_mb: 32
+commitlog_segment_size_in_mb: <%= node['cassandra']['commitlog_segment_size_in_mb'] %>
 
 # any class that implements the SeedProvider interface and has a
 # constructor that takes a Map<String, String> of parameters will do.
@@ -246,7 +245,7 @@ seed_provider:
       parameters:
           # seeds is actually a comma-delimited list of addresses.
           # Ex: "<ip1>,<ip2>,<ip3>"
-          - seeds: "<%= node[:cassandra][:seeds] %>"
+          - seeds: "<%= node['cassandra']['seeds'] %>"
 
 # For workloads with more data than can fit in memory, Cassandra's
 # bottleneck will be reads that need to fetch data from
@@ -257,8 +256,8 @@ seed_provider:
 # On the other hand, since writes are almost never IO bound, the ideal
 # number of "concurrent_writes" is dependent on the number of cores in
 # your system; (8 * number_of_cores) is a good rule of thumb.
-concurrent_reads: <%= node[:cassandra][:concurrent_reads] %>
-concurrent_writes: <%= node[:cassandra][:concurrent_writes] %>
+concurrent_reads: <%= node['cassandra']['concurrent_reads'] %>
+concurrent_writes: <%= node['cassandra']['concurrent_writes'] %>
 
 # Total memory to use for sstable-reading buffers.  Defaults to
 # the smaller of 1/4 of heap or 512MB.
@@ -267,11 +266,7 @@ concurrent_writes: <%= node[:cassandra][:concurrent_writes] %>
 # Total memory to use for memtables.  Cassandra will flush the largest
 # memtable when this much memory is used.
 # If omitted, Cassandra will set it to 1/4 of the heap.
-<% if node["cassandra"]["memtable_total_space_in_mb"] %>
-memtable_total_space_in_mb: <%= node["cassandra"]["memtable_total_space_in_mb"] %>
-<% else %>
-# memtable_total_space_in_mb: 2048
-<% end %>
+memtable_total_space_in_mb: <%= node['cassandra']['memtable_total_space_in_mb'] %>
 
 # Total space to use for commitlogs.  Since commitlog segments are
 # mmapped, and hence use up address space, the default size is 32
@@ -288,35 +283,27 @@ memtable_total_space_in_mb: <%= node["cassandra"]["memtable_total_space_in_mb"] 
 # while blocked. If you have a large heap and many data directories,
 # you can increase this value for better flush performance.
 # By default this will be set to the amount of data directories defined.
-<% if node["cassandra"]["memtable_flush_writers"] %>
-memtable_flush_writers: <%= node["cassandra"]["memtable_flush_writers"] %>
-<% else %>
-#memtable_flush_writers: 1
-<% end %>
+memtable_flush_writers: <%= node['cassandra']['memtable_flush_writers'] %>
 
 # the number of full memtables to allow pending flush, that is,
 # waiting for a writer thread.  At a minimum, this should be set to
 # the maximum number of secondary indexes created on a single CF.
-memtable_flush_queue_size: 4
+memtable_flush_queue_size: <%= node['cassandra']['memtable_flush_queue_size'] %>
 
 # Whether to, when doing sequential writing, fsync() at intervals in
 # order to force the operating system to flush the dirty
 # buffers. Enable this to avoid sudden dirty buffer flushing from
 # impacting read latencies. Almost always a good idea on SSDs; not
 # necessarily on platters.
-<% if node[:cassandra][:trickle_fsync] %>
-trickle_fsync: true
-<% else %>
-trickle_fsync: false
-<% end %>
-trickle_fsync_interval_in_kb: 10240
+trickle_fsync: <%= node['cassandra']['trickle_fsync'] %>
+trickle_fsync_interval_in_kb: <%= node['cassandra']['trickle_fsync_interval_in_kb'] %>
 
 # TCP port, for commands and data
-storage_port: 7000
+storage_port: <%= node['cassandra']['storage_port'] %>
 
 # SSL port, for encrypted communication.  Unused unless enabled in
 # encryption_options
-ssl_storage_port: 7001
+ssl_storage_port: <%= node['cassandra']['ssl_storage_port'] %>
 
 # Address to bind to and tell other Cassandra nodes to connect to. You
 # _must_ change this if you want multiple nodes to be able to
@@ -328,16 +315,11 @@ ssl_storage_port: 7001
 # address associated with the hostname (it might not be).
 #
 # Setting this to 0.0.0.0 is always wrong.
-listen_address: <%= node[:cassandra][:listen_address] %>
+listen_address: <%= node['cassandra']['listen_address'] %>
 
 # Address to broadcast to other Cassandra nodes
 # Leaving this blank will set it to the same value as listen_address
 # broadcast_address: 1.2.3.4
-<% if node[:cassandra][:broadcast_address] %>
-broadcast_address: <%= node[:cassandra][:broadcast_address] %>
-<% else %>
-#broadcast_address: 1.2.3.4
-<% end %>
 
 # Internode authentication backend, implementing IInternodeAuthenticator;
 # used to allow/disallow connections from peer nodes.
@@ -346,9 +328,9 @@ broadcast_address: <%= node[:cassandra][:broadcast_address] %>
 # Whether to start the native transport server.
 # Please note that the address on which the native transport is bound is the
 # same as the rpc_address. The port however is different and specified below.
-start_native_transport: true
+start_native_transport: <%= node['cassandra']['start_native_transport'] %>
 # port for the CQL native transport to listen for clients on
-native_transport_port: 9042
+native_transport_port: <%= node['cassandra']['native_transport_port'] %>
 # The maximum threads for handling requests when the native transport is used.
 # This is similar to rpc_max_threads though the default differs slightly (and
 # there is no native_transport_min_threads, idle threads will always be stopped
@@ -360,7 +342,7 @@ native_transport_port: 9042
 # native_transport_max_frame_size_in_mb: 256
 
 # Whether to start the thrift rpc server.
-start_rpc: true
+start_rpc: <%= node['cassandra']['start_rpc'] %>
 
 # The address to bind the Thrift RPC service and native transport
 # server -- clients connect here.
@@ -371,12 +353,12 @@ start_rpc: true
 # Note that unlike ListenAddress above, it is allowed to specify 0.0.0.0
 # here if you want to listen on all interfaces, but that will break clients
 # that rely on node auto-discovery.
-rpc_address: <%= node[:cassandra][:rpc_address] %>
+rpc_address: <%= node['cassandra']['rpc_address'] %>
 # port for Thrift to listen for clients on
-rpc_port: 9160
+rpc_port: <%= node['cassandra']['rpc_port'] %>
 
 # enable or disable keepalive on rpc/native connections
-rpc_keepalive: true
+rpc_keepalive: <%= node['cassandra']['rpc_keepalive'] %>
 
 # Cassandra provides two out-of-the-box options for the RPC Server:
 #
@@ -395,7 +377,7 @@ rpc_keepalive: true
 #
 # Alternatively,  can provide your own RPC server by providing the fully-qualified class name
 # of an o.a.c.t.TServerFactory that can create an instance of it.
-rpc_server_type: hsha
+rpc_server_type: <%= node['cassandra']['rpc_server_type'] %>
 
 # Uncomment rpc_min|max_thread to set request pool size limits.
 #
@@ -407,8 +389,8 @@ rpc_server_type: hsha
 # encouraged to set a maximum that makes sense for you in production, but do keep in mind that
 # rpc_max_threads represents the maximum number of client requests this server may execute concurrently.
 #
-rpc_min_threads: 16
-rpc_max_threads: 2048
+rpc_min_threads: <%= node['cassandra']['rpc_min_threads'] %>
+rpc_max_threads: <%= node['cassandra']['rpc_max_threads'] %>
 
 # uncomment to set socket buffer sizes on rpc connections
 # rpc_send_buff_size_in_bytes:
@@ -428,28 +410,24 @@ rpc_max_threads: 2048
 
 # Frame size for thrift (maximum message length).
 thrift_framed_transport_size_in_mb: <%= node['cassandra']['thrift_framed_transport_size_in_mb'] %>
-<% if node['cassandra']['thrift_max_message_length_in_mb'] %>
-thrift_max_message_length_in_mb: <%= node['cassandra']['thrift_max_message_length_in_mb'] %>
-<% else %>
-<% end %>
 
 # Set to true to have Cassandra create a hard link to each sstable
 # flushed or streamed locally in a backups/ subdirectory of the
 # keyspace data.  Removing these links is the operator's
 # responsibility.
-incremental_backups: false
+incremental_backups: <%= node['cassandra']['incremental_backups'] %>
 
 # Whether or not to take a snapshot before each compaction.  Be
 # careful using this option, since Cassandra won't clean up the
 # snapshots for you.  Mostly useful if you're paranoid when there
 # is a data format change.
-snapshot_before_compaction: false
+snapshot_before_compaction: <%= node['cassandra']['snapshot_before_compaction'] %>
 
 # Whether or not a snapshot is taken of the data before keyspace truncation
 # or dropping of column families. The STRONGLY advised default of true
 # should be used to provide data safety. If you set this flag to false, you will
 # lose data on truncation or drop.
-auto_snapshot: true
+auto_snapshot: <%= node['cassandra']['auto_snapshot'] %>
 
 # When executing a scan, within or across a partition, we need to keep the
 # tombstones seen in memory so we can return them to the coordinator, which
@@ -460,8 +438,8 @@ auto_snapshot: true
 # Adjust the thresholds here if you understand the dangers and want to
 # scan more tombstones anyway.  These thresholds may also be adjusted at runtime
 # using the StorageService mbean.
-tombstone_warn_threshold: 1000
-tombstone_failure_threshold: 100000
+tombstone_warn_threshold: <%= node['cassandra']['tombstone_warn_threshold'] %>
+tombstone_failure_threshold: <%= node['cassandra']['tombstone_failure_threshold'] %>
 
 # Granularity of the collation index of rows within a partition.
 # Increase if your rows are large, or if you have a very large
@@ -472,15 +450,15 @@ tombstone_failure_threshold: 100000
 #   2) but, Cassandra will keep the collation index in memory for hot
 #      rows (as part of the key cache), so a larger granularity means
 #      you can cache more hot rows
-column_index_size_in_kb: 64
+column_index_size_in_kb: <%= node['cassandra']['column_index_size_in_kb'] %>
 
 # Log WARN on any batch size exceeding this value. 64kb per batch by default.
 # Caution should be taken on increasing the size of this threshold as it can lead to node instability.
-batch_size_warn_threshold_in_kb: 64
+batch_size_warn_threshold_in_kb: <%= node['cassandra']['batch_size_warn_threshold_in_kb'] %>
 # Size limit for rows being compacted in memory.  Larger rows will spill
 # over to disk and use a slower two-pass compaction process.  A message
 # will be logged specifying the row key.
-in_memory_compaction_limit_in_mb: <%= node[:cassandra][:in_memory_compaction_limit] %>
+in_memory_compaction_limit_in_mb: <%= node['cassandra']['in_memory_compaction_limit'] %>
 
 # Number of simultaneous compactions to allow, NOT including
 # validation "compactions" for anti-entropy repair.  Simultaneous
@@ -493,22 +471,14 @@ in_memory_compaction_limit_in_mb: <%= node[:cassandra][:in_memory_compaction_lim
 #
 # concurrent_compactors defaults to the number of cores.
 # Uncomment to make compaction mono-threaded, the pre-0.8 default.
-<% if node[:cassandra][:concurrent_compactors] %>
-concurrent_compactors: <%= node[:cassandra][:concurrent_compactors] %>
-<% else %>
-#concurrent_compactors: 1
-<% end %>
+concurrent_compactors: <%= node['cassandra']['concurrent_compactors'] %>
 
 # Multi-threaded compaction. When enabled, each compaction will use
 # up to one thread per core, plus one thread per sstable being merged.
 # This is usually only useful for SSD-based hardware: otherwise,
 # your concern is usually to get compaction to do LESS i/o (see:
 # compaction_throughput_mb_per_sec), not more.
-<% if node[:cassandra][:multithreaded_compaction] %>
-multithreaded_compaction: true
-<% else %>
-multithreaded_compaction: false
-<% end %>
+multithreaded_compaction: <%= node['cassandra']['multithreaded_compaction'] %>
 
 # Throttles compaction to the given total throughput across the entire
 # system. The faster you insert data, the faster you need to compact in
@@ -516,19 +486,19 @@ multithreaded_compaction: false
 # 16 to 32 times the rate you are inserting data is more than sufficient.
 # Setting this to 0 disables throttling. Note that this account for all types
 # of compaction, including validation compaction.
-compaction_throughput_mb_per_sec: <%= node[:cassandra][:compaction_thruput] %>
+compaction_throughput_mb_per_sec: <%= node['cassandra']['compaction_throughput_mb_per_sec'] %>
 
 # Track cached row keys during compaction, and re-cache their new
 # positions in the compacted sstable.  Disable if you use really large
 # key caches.
-compaction_preheat_key_cache: true
+compaction_preheat_key_cache: <%= node['cassandra']['compaction_preheat_key_cache'] %>
 
 # Throttles all outbound streaming file transfers on this node to the
 # given total throughput in Mbps. This is necessary because Cassandra does
 # mostly sequential IO when streaming data during bootstrap or repair, which
 # can lead to saturating the network connection and degrading rpc performance.
 # When unset, the default is 200 Mbps or 25 MB/s.
-# stream_throughput_outbound_megabits_per_sec: 200
+stream_throughput_outbound_megabits_per_sec: <%= node['cassandra']['stream_throughput_outbound_megabits_per_sec'] %>
 
 # Throttles all streaming file transfer between the datacenters,
 # this setting allows users to throttle inter dc stream throughput in addition
@@ -536,20 +506,20 @@ compaction_preheat_key_cache: true
 # stream_throughput_outbound_megabits_per_sec
 # inter_dc_stream_throughput_outbound_megabits_per_sec:
 # How long the coordinator should wait for read operations to complete
-read_request_timeout_in_ms: 10000
+read_request_timeout_in_ms: <%= node['cassandra']['read_request_timeout_in_ms'] %>
 # How long the coordinator should wait for seq or index scans to complete
 range_request_timeout_in_ms: <%= node['cassandra']['range_request_timeout_in_ms'] %>
 # How long the coordinator should wait for writes to complete
-write_request_timeout_in_ms: 10000
+write_request_timeout_in_ms: <%= node['cassandra']['write_request_timeout_in_ms'] %>
 # How long a coordinator should continue to retry a CAS operation
 # that contends with other proposals for the same row
-cas_contention_timeout_in_ms: 1000
+cas_contention_timeout_in_ms: <%= node['cassandra']['cas_contention_timeout_in_ms'] %>
 # How long the coordinator should wait for truncates to complete
 # (This can be much longer, because unless auto_snapshot is disabled
 # we need to flush first so we can snapshot before removing the data.)
-truncate_request_timeout_in_ms: 60000
+truncate_request_timeout_in_ms: <%= node['cassandra']['truncate_request_timeout_in_ms'] %>
 # The default timeout for other, miscellaneous operations
-request_timeout_in_ms: 10000
+request_timeout_in_ms: <%= node['cassandra']['request_timeout_in_ms'] %>
 
 # Enable operation timeout information exchange between nodes to accurately
 # measure request timeouts.  If disabled, replicas will assume that requests
@@ -559,7 +529,7 @@ request_timeout_in_ms: 10000
 #
 # Warning: before enabling this property make sure to ntp is installed
 # and the times are synchronized between the nodes.
-cross_node_timeout: true
+cross_node_timeout: <%= node['cassandra']['cross_node_timeout'] %>
 
 # Enable socket timeout for streaming operation.
 # When a timeout occurs during streaming, streaming is retried from the start
@@ -570,7 +540,7 @@ cross_node_timeout: true
 
 # phi value that must be reached for a host to be marked down.
 # most users should never need to adjust this.
-phi_convict_threshold: 12
+# phi_convict_threshold: 12
 
 # endpoint_snitch -- Set this to a class that implements
 # IEndpointSnitch.  The snitch has two functions:
@@ -630,14 +600,14 @@ phi_convict_threshold: 12
 # NOTE: To choose a different snitch, please change the delegated_snitch
 #       option in the dse.yaml file. For DSE installations do NOT change
 #       the endpoint_snitch setting here directly.
-endpoint_snitch: <%= node[:cassandra][:dse][:snitch] %>
+endpoint_snitch: <%= node['cassandra']['endpoint_snitch'] %>
 
 # controls how often to perform the more expensive part of host score
 # calculation
-dynamic_snitch_update_interval_in_ms: 100
+dynamic_snitch_update_interval_in_ms: <%= node['cassandra']['dynamic_snitch_update_interval_in_ms'] %>
 # controls how often to reset all host scores, allowing a bad host to
 # possibly recover
-dynamic_snitch_reset_interval_in_ms: 600000
+dynamic_snitch_reset_interval_in_ms: <%= node['cassandra']['dynamic_snitch_reset_interval_in_ms'] %>
 # if set greater than zero and read_repair_chance is < 1.0, this will allow
 # 'pinning' of replicas to hosts in order to increase cache capacity.
 # The badness threshold will control how much worse the pinned host has to be
@@ -645,7 +615,7 @@ dynamic_snitch_reset_interval_in_ms: 600000
 # expressed as a double which represents a percentage.  Thus, a value of
 # 0.2 means Cassandra would continue to prefer the static snitch values
 # until the pinned host was 20% worse than the fastest.
-dynamic_snitch_badness_threshold: 0.2
+dynamic_snitch_badness_threshold: <%= node['cassandra']['dynamic_snitch_badness_threshold'] %>
 
 # request_scheduler -- Set this to a class that implements
 # RequestScheduler, which will schedule incoming client requests
@@ -658,7 +628,7 @@ dynamic_snitch_badness_threshold: 0.2
 # client requests to a node with a separate queue for each
 # request_scheduler_id. The scheduler is further customized by
 # request_scheduler_options as described below.
-request_scheduler: org.apache.cassandra.scheduler.NoScheduler
+request_scheduler: <%= node['cassandra']['request_scheduler'] %>
 
 # Scheduler Options vary based on the type of scheduler
 # NoScheduler - Has no options
@@ -703,11 +673,11 @@ request_scheduler: org.apache.cassandra.scheduler.NoScheduler
 # http://download.oracle.com/javase/6/docs/technotes/guides/security/jsse/JSSERefGuide.html#CreateKeystore
 #
 server_encryption_options:
-    internode_encryption: <%= node["cassandra"]["dse"]["internode_encryption"] %>
-    keystore: <%= node["cassandra"]["dse"]["keystore"] %>
-    keystore_password: <%= @ssl_password.call %>
-    truststore: <%= node["cassandra"]["dse"]["truststore"] %>
-    truststore_password: <%= @ssl_password.call %>
+    internode_encryption: none
+    keystore: resources/dse/conf/.keystore
+    keystore_password: cassandra
+    truststore: resources/dse/conf/.truststore
+    truststore_password: cassandra
     # More advanced defaults below:
     # protocol: TLS
     # algorithm: SunX509
@@ -735,16 +705,16 @@ client_encryption_options:
 # can be:  all  - all traffic is compressed
 #          dc   - traffic between different datacenters is compressed
 #          none - nothing is compressed.
-internode_compression: all
+internode_compression: <%= node['cassandra']['internode_compression'] %>
 
 # Enable or disable tcp_nodelay for inter-dc communication.
 # Disabling it will result in larger (but fewer) network packets being sent,
 # reducing overhead from the TCP protocol itself, at the cost of increasing
 # latency if you block for cross-datacenter responses.
-inter_dc_tcp_nodelay: true
+inter_dc_tcp_nodelay: <%= node['cassandra']['inter_dc_tcp_nodelay'] %>
 
 # Enable or disable kernel page cache preheating from contents of the key cache after compaction.
 # When enabled it would preheat only first "page" (4KB) of each row to optimize
 # for sequential access. Note: This could be harmful for fat rows, see CASSANDRA-4937
 # for further details on that topic.
-preheat_kernel_page_cache: false
+preheat_kernel_page_cache: <%= node['cassandra']['preheat_kernel_page_cache'] %>
