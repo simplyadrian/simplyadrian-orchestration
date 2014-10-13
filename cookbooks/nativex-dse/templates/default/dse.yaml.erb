@@ -11,7 +11,7 @@
 #  - com.datastax.bdp.snitch.DseSimpleSnitch:
 #    Proximity is determined by DSE workload, which places Cassandra,
 #    Analytics, and Solr nodes into their seperate datacenters.
-delegated_snitch: <%= node[:dse][:delegated_snitch] %>
+delegated_snitch: <%= node['dse']['delegated_snitch'] %>
 
 # Kerberos options
 #
