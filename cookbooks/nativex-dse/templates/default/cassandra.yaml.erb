@@ -266,7 +266,11 @@ concurrent_writes: <%= node['cassandra']['concurrent_writes'] %>
 # Total memory to use for memtables.  Cassandra will flush the largest
 # memtable when this much memory is used.
 # If omitted, Cassandra will set it to 1/4 of the heap.
+<% if node['cassandra']['memtable_total_space_in_mb'] %>
 memtable_total_space_in_mb: <%= node['cassandra']['memtable_total_space_in_mb'] %>
+<% else %>
+# memtable_total_space_in_mb: 2048
+<% end %>
 
 # Total space to use for commitlogs.  Since commitlog segments are
 # mmapped, and hence use up address space, the default size is 32
@@ -283,7 +287,11 @@ memtable_total_space_in_mb: <%= node['cassandra']['memtable_total_space_in_mb'] 
 # while blocked. If you have a large heap and many data directories,
 # you can increase this value for better flush performance.
 # By default this will be set to the amount of data directories defined.
+<% if node['cassandra']['memtable_flush_writers'] %>
 memtable_flush_writers: <%= node['cassandra']['memtable_flush_writers'] %>
+<% else %>
+# memtable_flush_writers: 1
+<% end %>
 
 # the number of full memtables to allow pending flush, that is,
 # waiting for a writer thread.  At a minimum, this should be set to
@@ -389,8 +397,16 @@ rpc_server_type: <%= node['cassandra']['rpc_server_type'] %>
 # encouraged to set a maximum that makes sense for you in production, but do keep in mind that
 # rpc_max_threads represents the maximum number of client requests this server may execute concurrently.
 #
+<% if node['cassandra']['rpc_min_threads'] %>
 rpc_min_threads: <%= node['cassandra']['rpc_min_threads'] %>
+<% else %>
+# rpc_min_threads: 16
+<% end %>
+<% if node['cassandra']['rpc_max_threads'] %>
 rpc_max_threads: <%= node['cassandra']['rpc_max_threads'] %>
+<% else %>
+# rpc_max_threads: 2048
+<% end %>
 
 # uncomment to set socket buffer sizes on rpc connections
 # rpc_send_buff_size_in_bytes:
@@ -471,7 +487,11 @@ in_memory_compaction_limit_in_mb: <%= node['cassandra']['in_memory_compaction_li
 #
 # concurrent_compactors defaults to the number of cores.
 # Uncomment to make compaction mono-threaded, the pre-0.8 default.
+<% if node['cassandra']['concurrent_compactors'] %>
 concurrent_compactors: <%= node['cassandra']['concurrent_compactors'] %>
+<% else %>
+# concurrent_compactors: 1
+<% end %>
 
 # Multi-threaded compaction. When enabled, each compaction will use
 # up to one thread per core, plus one thread per sstable being merged.
