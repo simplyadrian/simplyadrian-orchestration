@@ -1,4 +1,4 @@
-Ohai.plugin(:awsregion) do
+Ohai.plugin(:aws) do
   provides "aws"
   depends "ec2"
   collect_data(:default) do

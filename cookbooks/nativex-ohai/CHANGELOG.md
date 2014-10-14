@@ -1,11 +1,11 @@
-ohai-aws CHANGELOG
-==================
+nativex-ohai CHANGELOG
+======================
 
-This file is used to list changes made in each version of the ohai-aws cookbook.
+This file is used to list changes made in each version of the nativex-ohai cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of ohai-aws
+- [your_name] - Initial release of nativex-ohai
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
