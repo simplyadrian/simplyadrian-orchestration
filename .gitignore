@@ -7,4 +7,3 @@ doc/*
 data_bags/credentials/*
 data_bags/users/*
 data_bags/cdh-sites/*
-cookbooks/windows_ad/Berksfile
