@@ -32,12 +32,8 @@
 #10.21.119.14=DC3:RAC2
 #10.20.114.15=DC2:RAC2
 
-<% @cluster.each do |result| %>
-<%= result['ip'] %>=<% if result['dc'] %><%= result['dc'] %><% else %>NoDC<% end %>
-<% end %>
-
 # default for unknown nodes
-default=TTC:RAC1
+default=DC1:RAC1
 
 # Native IPv6 is supported, however you must escape the colon in the IPv6 Address
 # Also be sure to comment out JVM_OPTS="$JVM_OPTS -Djava.net.preferIPv4Stack=true"

@@ -10,7 +10,7 @@
 
 # enable this to start Hadoop's JobTracker and/or TaskTrackers on this machine.
 # If left disabled, this will act as a regular Cassandra node.
-<% if node[:cassandra][:hadoop] %>
+<% if node['cassandra']['hadoop'] %>
 HADOOP_ENABLED=1
 <% else %>
 HADOOP_ENABLED=0
@@ -23,7 +23,7 @@ HADOOP_ENABLED=0
 
 # enable this to start Solr search indexing on this machine.  If left disabled,
 # this will act as a regular Cassandra node.
-<% if node[:cassandra][:solr] %>
+<% if node['cassandra']['solr'] %>
 SOLR_ENABLED=1
 <% else %>
 SOLR_ENABLED=0
@@ -37,7 +37,7 @@ fi
 #DSE_HOME=your_install_location
 
 # Location of log output
-OUTPUT_FILE="/var/log/cassandra/output.log"
+OUTPUT_FILE="<%= node['cassandra']['log_directory'] %>output.log"
 
 # Configuration directory
 CONFDIR=/etc/dse/cassandra
@@ -52,8 +52,8 @@ PIDFILE=/var/run/$NAME/$NAME.pid
 #TOMCAT_LOGS=
 
 # Ths user to use for the service
-CASSANDRA_USER=cassandra
+CASSANDRA_USER=<%= node['cassandra']['user'] %>
 
 # Ths group to use for the service
-CASSANDRA_GROUP=cassandra
+CASSANDRA_GROUP=<%= node['cassandra']['group'] %>
 
