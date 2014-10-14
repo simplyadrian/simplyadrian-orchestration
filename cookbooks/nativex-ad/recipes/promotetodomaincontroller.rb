@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
+
 # Promote to Domain Controller
 ad = Chef::EncryptedDataBagItem.load("credentials", "ad")
 nativex_ad_domaincontroller "#{node['nativex-ad']['name']}" do
