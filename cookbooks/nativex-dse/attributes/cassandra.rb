@@ -11,6 +11,7 @@ default['cassandra']['datacenter']                                  = "DC1"
 default['cassandra']['rack']                                        = "RAC1"
 # cassandra.yaml settings (Defaults according to Apache release: https://github.com/apache/cassandra/blob/cassandra-2.0.10/conf/cassandra.yaml)
 default['cassandra']['cluster_name']                                = "Test Cluster"
+default['cassandra']['auto_bootstrap']                              = true
 default['cassandra']['num_tokens']                                  = "256"
 default['cassandra']['initial_token']                               = ""
 default['cassandra']['hinted_handoff_enabled']                      = true
