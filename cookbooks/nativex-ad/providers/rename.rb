@@ -20,7 +20,7 @@ action :rename do
           code <<-EOH
             $secpasswd = ConvertTo-SecureString '#{new_resource.domain_pass}' -AsPlainText -Force
             $mycreds = New-Object System.Management.Automation.PSCredential  ('#{new_resource.domain_user}', $secpasswd)
-            Rename-Computer -DomainName #{new_resource.hostname} -DomainCredential $mycreds -PassThru
+            Rename-Computer -NewName #{new_resource.hostname} -DomainCredential $mycreds -PassThru
           EOH
         end
       end

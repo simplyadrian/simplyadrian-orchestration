@@ -1,5 +1,5 @@
 #Include the setup recipe for DataStax
-include_recipe "datastax"
+include_recipe "nativex-dse::datastax"
 
 #set up the dse default file. This sets up hadoop, etc
 template "/etc/default/dse" do
@@ -50,10 +50,10 @@ case node['dse']['delegated_snitch']
     owner node['cassandra']['user']
     group node['cassandra']['group']
     #notifies :restart, "service[#{node['cassandra']['dse']['service_name']}]"
+    end
   else
     Chef::Log.warn("Unsupported Snitch!!")
   end
-end
 
 #start DSE
 service node['dse']['service_name'] do
