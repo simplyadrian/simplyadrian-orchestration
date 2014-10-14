@@ -21,7 +21,6 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[ohai-aws]",
     "recipe[aws]",
     "recipe[ephemeral_lvm]",
     "recipe[iptables]",

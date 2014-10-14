@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node.set['build_essential']['compile_time'] = true
+node.set['build-essential']['compile_time'] = true
 include_recipe 'build-essential'
 include_recipe 'ohai::default'
 chef_gem 'aws-sdk'
