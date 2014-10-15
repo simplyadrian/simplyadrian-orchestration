@@ -19,8 +19,10 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[nativex-ohai::default]",
     "role[ie]",
-    "recipe[nativex-dse]"
+    "recipe[nativex-dse::default]",
+    "recipe[nativex-dse::determine_ec2_topology]"
   ],
   "env_run_lists": {
 
