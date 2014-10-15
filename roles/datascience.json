@@ -8,7 +8,7 @@
     },
     "authorization": {
       "sudo": {
-        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl","henry.humadi"],
+        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl","henry.humadi", "eric.li", "hui.li", "joel.barajas", "liang.dai", "sherry.sidhu"],
         "passwordless": "true"
       }
     },
