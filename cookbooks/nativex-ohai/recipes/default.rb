@@ -7,4 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'ohai-aws::awsplugin'
+include_recipe 'nativex-ohai::awsplugin'
