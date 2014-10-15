@@ -8,4 +8,4 @@ version          '0.1.0'
 supports         'windows', ">= 6.2"
 
 depends		 "windows"
-depends		 "ohai-aws"
+depends		 "nativex-ohai"
