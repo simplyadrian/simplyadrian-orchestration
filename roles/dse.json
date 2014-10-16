@@ -21,8 +21,9 @@
   "run_list": [
     "recipe[nativex-ohai::default]",
     "role[ie]",
-    "recipe[nativex-dse::default]",
-    "recipe[nativex-dse::determine_ec2_topology]"
+    "recipe[nativex-dse::determine_ec2_topology]",
+    "recipe[nativex-dse::determine_seeds]",
+    "recipe[nativex-dse::default]"
   ],
   "env_run_lists": {
 

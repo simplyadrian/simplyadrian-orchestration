@@ -12,7 +12,7 @@ ruby_block "determine_ec2_toplogy_properties" do
   block do
     if node['cloud']['provider'] == 'ec2'
       if node['aws']['region']
-        node.set['cassandra']['datacenter'] = node['aws'][:region]
+        node.set['cassandra']['datacenter'] = node['aws']['region']
 
         if node['ec2']['placement_availability_zone']
           node.set['cassandra']['rack'] = node['ec2']['placement_availability_zone']
@@ -25,6 +25,6 @@ ruby_block "determine_ec2_toplogy_properties" do
     else
       Chef::Log.warn("Unsupported provider #{node['cloud']['provider']}. Cannot automatically determine cluster topology.")
     end
-    action :run
   end
+  action :run
 end
