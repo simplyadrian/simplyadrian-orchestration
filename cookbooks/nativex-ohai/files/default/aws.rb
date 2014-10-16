@@ -8,6 +8,6 @@ Ohai.plugin(:AwsRegion) do
   end
 
   collect_data do
-    aws[:region] collect_region
+    aws collect_region[:region]
   end
 end
