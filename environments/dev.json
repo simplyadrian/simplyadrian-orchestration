@@ -8,7 +8,14 @@
   "chef_type": "environment",
   "default_attributes": {
     "chef_client": {
-        "interval": "600"
+        "interval": "600",
+        "log_file": "chefclt.log"
+    },
+    "cassandra": {
+        "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch"
+    },
+    "dse": {
+        "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
     }
   },
   "override_attributes": {
