@@ -1,4 +1,4 @@
-nativex-apache2 Cookbook
+apache-nativex2 Cookbook
 ========================
 TODO: Enter the cookbook description here.
 
@@ -11,14 +11,14 @@ TODO: List your cookbook requirements. Be sure to include any requirements this 
 
 e.g.
 #### packages
-- `toaster` - nativex-apache2 needs toaster to brown your bagel.
+- `toaster` - apache-nativex2 needs toaster to brown your bagel.
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
 e.g.
-#### nativex-apache2::default
+#### apache-nativex2::default
 <table>
   <tr>
     <th>Key</th>
@@ -27,7 +27,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['nativex-apache2']['bacon']</tt></td>
+    <td><tt>['apache-nativex2']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -36,17 +36,17 @@ e.g.
 
 Usage
 -----
-#### nativex-apache2::default
+#### apache-nativex2::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `nativex-apache2` in your node's `run_list`:
+Just include `apache-nativex2` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[nativex-apache2]"
+    "recipe[apache-nativex2]"
   ]
 }
 ```
