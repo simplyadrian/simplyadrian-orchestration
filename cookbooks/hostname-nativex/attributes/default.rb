@@ -1,2 +1,2 @@
 # Domain Name
-default['nativex-dnsupdate']['int_domain'] = 'nativexintern.com'
+default['dnsupdate-nativex']['int_domain'] = 'nativexintern.com'

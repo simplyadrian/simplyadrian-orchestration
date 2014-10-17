@@ -1,11 +1,11 @@
-nativex-hostname CHANGELOG
+hostname-nativex CHANGELOG
 ==========================
 
-This file is used to list changes made in each version of the nativex-hostname cookbook.
+This file is used to list changes made in each version of the hostname-nativex cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of nativex-hostname
+- [your_name] - Initial release of hostname-nativex
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

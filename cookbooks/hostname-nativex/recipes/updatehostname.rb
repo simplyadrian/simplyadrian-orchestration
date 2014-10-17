@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-hostname
+# Cookbook Name:: hostname-nativex
 # Recipe:: updatehostname
 #
 # Copyright 2014, NativeX
@@ -8,7 +8,7 @@
 #
 
 # Set the FQDN for the node
-full_nodename = "#{node.name}-prv.#{node['nativex-dnsupdate']['int_domain']}"
+full_nodename = "#{node.name}-prv.#{node['dnsupdate-nativex']['int_domain']}"
 
 # Create the hosts file
 hostsfile_entry node['ipaddress'] do
