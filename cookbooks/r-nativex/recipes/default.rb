@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-r
+# Cookbook Name:: r-nativex
 # Recipe:: default
 #
 # Copyright 2014, NativeX 
@@ -7,4 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe	"nativex-r::rpackages"
+include_recipe	"r-nativex::rpackages"

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-r
+# Cookbook Name:: r-nativex
 # Recipe:: rpackages 
 #
 # Copyright 2014, NativeX

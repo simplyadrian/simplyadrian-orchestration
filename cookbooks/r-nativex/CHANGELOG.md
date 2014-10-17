@@ -1,11 +1,11 @@
-nativex-r CHANGELOG
+r-nativex CHANGELOG
 ===================
 
-This file is used to list changes made in each version of the nativex-r cookbook.
+This file is used to list changes made in each version of the r-nativex cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of nativex-r
+- [your_name] - Initial release of r-nativex
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
