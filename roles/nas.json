@@ -1,0 +1,46 @@
+{
+  "name": "nas",
+  "description": "A role to manage the configuration of a NAS in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    },
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/ephemeral"
+    },
+    "nfs": {
+      "packages": [ "portmap", "nfs-utils", "nfs4-acl-tools" ],
+      "port": {
+        "statd": "32765",
+        "statd_out": "32766",
+        "mountd": "32767",
+        "lockd": "32768"
+      }
+    },
+    "ebs": {
+      "raids": {
+        "/dev/md0": {
+          "num_disks": 4,
+          "disk_size": 1024,
+          "piops": 2000,
+          "raid_level": 10,
+          "fstype": "xfs",
+          "mount_point": "/mnt/ebs",
+          "uselvm": true
+         }
+       }
+     }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[nfs::server]",
+    "recipe[nativex-blockdevice]",
+    "recipe[nativex-iptables::ssh]"
+  ],
+  "env_run_lists": {
+  }
+}
