@@ -21,7 +21,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
-    "recipe[nativex-iptables::ssh]"
+    "recipe[iptables-nativex::ssh]"
   ],
   "env_run_lists": {
   }
