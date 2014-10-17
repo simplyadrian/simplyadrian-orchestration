@@ -1,11 +1,11 @@
-nativex-mysql CHANGELOG
+mysql-nativex CHANGELOG
 =======================
 
-This file is used to list changes made in each version of the nativex-mysql cookbook.
+This file is used to list changes made in each version of the mysql-nativex cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of nativex-mysql
+- [your_name] - Initial release of mysql-nativex
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
