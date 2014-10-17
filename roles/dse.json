@@ -12,6 +12,9 @@
       "oracle": {
         "accept_oracle_download_terms": "true"
       }
+    },
+    "opscenter-agent": {
+      "enabled": true
     }
   },
   "override_attributes": {
@@ -19,8 +22,11 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[nativex-ohai::default]",
     "role[ie]",
-    "recipe[nativex-dse]"
+    "recipe[nativex-dse::determine_ec2_topology]",
+    "recipe[nativex-dse::determine_seeds]",
+    "recipe[nativex-dse::default]"
   ],
   "env_run_lists": {
 
