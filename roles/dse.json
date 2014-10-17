@@ -12,6 +12,9 @@
       "oracle": {
         "accept_oracle_download_terms": "true"
       }
+    },
+    "opscenter-agent": {
+      "enabled": true
     }
   },
   "override_attributes": {

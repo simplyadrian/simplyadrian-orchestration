@@ -8,7 +8,17 @@
   "chef_type": "environment",
   "default_attributes": {
     "chef_client": {
-        "interval": "600"
+        "interval": "600",
+        "log_file": "chefclt.log"
+    },
+    "cassandra": {
+        "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch"
+    },
+    "dse": {
+        "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
+    },
+    "opscenter-agent": {
+      "opscenter-ip": "10.15.72.5"
     }
   },
   "override_attributes": {
