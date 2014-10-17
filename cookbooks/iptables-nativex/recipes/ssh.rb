@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-iptables
+# Cookbook Name:: iptables-nativex
 # Recipe:: ssh.rb
 #
 # Copyright 2014, NativeX
@@ -8,7 +8,7 @@
 #
 
 # Have we decided to lock down the node?
-if node['nativex-iptables']['ssh']['addresses'].empty?
+if node['iptables-nativex']['ssh']['addresses'].empty?
   # Use the all_ssh rule
   iptables_rule "all_ssh"
   # Disable the network ssh rule

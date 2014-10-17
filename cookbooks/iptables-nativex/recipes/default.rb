@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-iptables
+# Cookbook Name:: iptables-nativex
 # Recipe:: default
 #
 # Copyright 2014, NativeX
@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nativex-iptables::privoxy"
-include_recipe "nativex-iptables::ssh"
-include_recipe "nativex-iptables::web"
+include_recipe "iptables-nativex::privoxy"
+include_recipe "iptables-nativex::ssh"
+include_recipe "iptables-nativex::web"
