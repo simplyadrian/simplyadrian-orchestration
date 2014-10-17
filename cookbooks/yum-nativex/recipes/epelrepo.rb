@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-yum
+# Cookbook Name:: yum-nativex
 # Recipe:: customrepo.rb
 #
 # Copyright 2014, NativeX

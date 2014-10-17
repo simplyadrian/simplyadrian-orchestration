@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-yumupgrade
+# Cookbook Name:: yumupgrade-nativex
 # Recipe:: doupgrade
 #
 # Copyright 2014, NativeX
