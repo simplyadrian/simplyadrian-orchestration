@@ -19,15 +19,10 @@
       }
     },
     "ebs": {
-      "raids": {
-        "/dev/md0": {
-          "num_disks": 4,
-          "disk_size": 1024,
-          "piops": 2000,
-          "raid_level": 10,
-          "fstype": "xfs",
-          "mount_point": "/mnt/ebs",
-          "uselvm": true
+      "volumes": {
+        "/mnt/ebs": {
+          "size": 1024,
+          "fstype": "xfs"
          }
        }
      }
@@ -38,7 +33,7 @@
   "run_list": [
     "role[base]",
     "recipe[nfs::server]",
-    "recipe[nativex-blockdevice]",
+    "recipe[ebs]",
     "recipe[nativex-iptables::ssh]"
   ],
   "env_run_lists": {
