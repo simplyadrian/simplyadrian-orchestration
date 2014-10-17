@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-spacewalkclient
+# Cookbook Name:: spacewalkclient-nativex
 # Recipe:: clientinstall
 #
 # Copyright 2014, NativeX
