@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: nativex-python
+# Cookbook Name:: python-nativex
 # Recipe:: pippackages.rb 
 #
 # Copyright 2014, NativeX
