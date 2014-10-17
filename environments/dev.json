@@ -16,6 +16,9 @@
     },
     "dse": {
         "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
+    },
+    "opscenter-agent": {
+      "opscenter-ip": "10.15.72.5"
     }
   },
   "override_attributes": {
