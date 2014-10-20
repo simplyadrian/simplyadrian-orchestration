@@ -9,7 +9,7 @@
 
 yum_repository 'nativex' do
   description 'NativeX Custom repository'
-  baseurl 'http://spacewalk.teamfreeze.com/custom-nativex'
+  baseurl 'http://spacewalk.teamfreeze.com/nativex-custom'
   gpgcheck false
   gpgkey 'http://spacewalk.teamfreeze.com/pub/rpm-gpg-keys/RPM-GPG-KEY-NativeX-Custom'
   action :create
