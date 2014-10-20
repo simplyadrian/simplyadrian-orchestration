@@ -22,6 +22,7 @@
       "volumes": {
         "/mnt/ebs": {
           "size": 1024,
+          "piops": 500,
           "fstype": "xfs"
          }
        }
@@ -33,8 +34,8 @@
   "run_list": [
     "role[base]",
     "recipe[nfs::server]",
-    "recipe[ebs]",
-    "recipe[nativex-iptables::ssh]"
+    "recipe[blockdevice-nativex]",
+    "recipe[iptables-nativex::ssh]"
   ],
   "env_run_lists": {
   }

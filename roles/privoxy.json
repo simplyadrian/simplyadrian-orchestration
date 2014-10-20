@@ -17,8 +17,8 @@
   "run_list": [
     "role[base]",
     "recipe[privoxy]",
-    "recipe[nativex-iptables::privoxy]",
-    "recipe[nativex-iptables::ssh]"
+    "recipe[iptables-nativex::privoxy]",
+    "recipe[iptables-nativex::ssh]"
   ],
   "env_run_lists": {
   }

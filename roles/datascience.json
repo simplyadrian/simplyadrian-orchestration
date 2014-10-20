@@ -50,11 +50,11 @@
   "run_list": [
     "role[base]",
     "recipe[ebs]",
-    "recipe[nativex-iptables::ssh]",
+    "recipe[iptables-nativex::ssh]",
     "recipe[python]",
-    "recipe[nativex-python::pippackages]",
+    "recipe[python-nativex::pippackages]",
     "recipe[r]",
-    "recipe[nativex-r::rpackages]",
+    "recipe[r-nativex::rpackages]",
     "recipe[rabbitmq]",
     "recipe[rabbitmq::mgmt_console]",
     "recipe[rabbitmq::user_management]"
