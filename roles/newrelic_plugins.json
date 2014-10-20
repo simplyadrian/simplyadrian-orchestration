@@ -1,34 +1,34 @@
 {
-  "name": "newrelic_plugins",
-  "description": "A role to install newrelic_plugin for AWS Cloudwatch",
-  "json_class": "Chef::Role",
-  "default_attributes": {
-    "build-essential": {
-      "compile_time": "true"
-    },
-    "newrelic": {
-      "license_key": "e6c51eda3a31c3e1496e20f2664c0d60a2bd5dbf",
-      "aws_cloudwatch": {
-        "install_path": "/opt",
-        "user": "root",
-    	"aws_access_key": "AKIAIQUPLDCK3OTK4E3A",
-	"aws_secret_key": "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",
-	"agents": [
-          "elb",
-          "rds",
-          "sqs",
-          "sns"
-    	]
-      }
-    }
-  },
-  "override_attributes": {
-  },
-  "chef_type": "role",
-  "run_list": [
-    "role[base]",
-    "recipe[newrelic_plugins::aws_cloudwatch]"
-  ],
-  "env_run_lists": {
-  }
+	"name": "newrelic_plugins",
+	"description": "A role to install newrelic_plugin for AWS Cloudwatch",
+	"json_class": "Chef::Role",
+	"default_attributes": {
+		"build-essential": {
+			"compile_time": "true"
+		},
+		"newrelic": {
+			"license_key": "e6c51eda3a31c3e1496e20f2664c0d60a2bd5dbf",
+			"aws_cloudwatch": {
+				"install_path": "/opt",
+				"user": "root",
+				"aws_access_key": "AKIAIQUPLDCK3OTK4E3A",
+				"aws_secret_key": "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",
+				"agents": [
+					"elb",
+					"rds",
+					"sqs",
+					"sns"
+				]
+			}
+		}
+	},
+	"override_attributes": {
+	},
+	"chef_type": "role",
+	"run_list": [
+		"role[base]",
+		"recipe[newrelic_plugins::aws_cloudwatch]"
+	],
+	"env_run_lists": {
+	}
 }
