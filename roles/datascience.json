@@ -6,12 +6,6 @@
     "build-essential": {
       "compile_time": "true"
     },
-    "authorization": {
-      "sudo": {
-        "users": ["brett.stime", "zhiyong.tan", "ted.bienapfl","henry.humadi", "eric.li", "hui.li", "joel.barajas", "liang.dai", "sherry.sidhu"],
-        "passwordless": "true"
-      }
-    },
     "ephemeral_lvm": {
       "mount_point": "/mnt/datascience"
     },
