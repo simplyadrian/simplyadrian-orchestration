@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w{rhn-client-tools rhn-check rhn-setup rhnsd m2crypto yum-rhn-plugin}.each do |pkg|
+%w{rhn-client-tools rhn-check rhn-setup rhnsd m2crypto yum-rhn-plugin spacewalk-abrt}.each do |pkg|
   package pkg do
     action :install
   end
