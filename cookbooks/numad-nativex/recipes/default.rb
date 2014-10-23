@@ -8,6 +8,6 @@
 #
 
 # Install numad
-package "dumad" do
+package "numad" do
   action :install
 end
