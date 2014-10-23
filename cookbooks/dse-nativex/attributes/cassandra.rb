@@ -1,11 +1,12 @@
 #Cassandra Default Info
-default['cassandra']['solr']		                                = false
+default['cassandra']['solr']                                        = false
 default['cassandra']['hadoop']                                      = false
 default['cassandra']['dse_version']                                 = "4.5.2-1"
 default['cassandra']['user']                                        = "cassandra"
 default['cassandra']['group']                                       = "cassandra"
 default['cassandra']['root_dir']                                    = "/var/lib/cassandra/"
 default['cassandra']['log_directory']                               = "/var/log/cassandra/"
+default['cassandra']['jar_lib_dir']                                 = "/usr/share/dse/cassandra/lib"
 default['cassandra']['vnodes']                                      = true
 default['cassandra']['datacenter']                                  = "DC1"
 default['cassandra']['rack']                                        = "RAC1"
@@ -44,7 +45,7 @@ default['cassandra']['concurrent_writes']                           = 32
 default['cassandra']['memtable_total_space_in_mb']                  = nil
 default['cassandra']['memtable_flush_writers']                      = nil
 default['cassandra']['memtable_flush_queue_size']                   = 4
-default['cassandra']['trickle_fsync']		                        = false
+default['cassandra']['trickle_fsync']                               = false
 default['cassandra']['trickle_fsync_interval_in_kb']                = 10240
 default['cassandra']['storage_port']                                = 7000
 default['cassandra']['ssl_storage_port']                            = 7001
@@ -111,7 +112,20 @@ default['cassandra']['gc_log_NumberOfGCLogFiles']                   = nil
 default['cassandra']['gc_log_GCLogFileSize']                        = nil
 
 # Log4J Settings
-default['cassandra']['log_level']				                    = "INFO"
+default['cassandra']['log_level']                                   = "INFO"
+default['cassandra']['log_file_size_mb']                            = "20"
+default['cassandra']['log_file_roll_count']                         = 10
+default['cassandra']['log_syslog_enabled']                          = false
+default['cassandra']['log_syslog_host']                             = ""
+default['cassandra']['log_syslog_threshold']                        = "WARN"
 default['cassandra']['audit_logging']                               = false
 default['cassandra']['audit_dir']                                   = "/etc/dse/cassandra"
 default['cassandra']['active_categories']                           = "ADMIN,AUTH,DDL,DCL"
+
+# JNA (3.2.7 or higher required for C* 2.0 and 2.1)
+default['cassandra']['jna_version']                                 = "3.5.2"
+default['cassandra']['jna_install_dir']                             = node['cassandra']['jar_lib_dir']
+default['cassandra']['jna_jar_source_base_uri']                     = "https://maven.java.net/content/repositories/releases/net/java/dev/jna/jna/"
+
+# JEMalloc
+default['cassandra']['jemalloc_location']                           = "/usr/lib64/"
