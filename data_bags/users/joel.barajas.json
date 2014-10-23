@@ -1,0 +1,7 @@
+{
+    "id": "joel.barajas",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2+2bF1Vx//k2NuHck8waS2T+Sm7bwnAqRy7hHQm3CfaXA3BNRBtypwb23acDHZDIN0NmbjpgKON3pq9Augq9rRuwbqAodh0vO73Yc8iAOaa5AQ3wDy9AEfPV2HhZxq6jRDAmBrohDR/l7sVuc33YHaeYzhoD9LUoMRkZdQ5TSvsTZMOq8fzKMFdtmkvX3a1nv6n4S1XXEpvy9W00Dl8D9zlffXvXTxDZ+g4vUpo0Hcpjgmiani6nmPcMbbtRja7XkRuOmLP5CrR2PHUj8U5Xx8l+glZgAtF/FVMo0FXbV1EbcQf/9WWzc/i0mxRcJYe8hgEyBGfsxGiS/QoqfiQx3 joel.barajas@nativex.com",
+    "groups": [ "sysadmin" ],
+    "uid": 2008,
+    "shell": "\/bin\/bash"
+}

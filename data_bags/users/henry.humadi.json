@@ -1,0 +1,7 @@
+{
+    "id": "henry.humadi",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDP9/2s8UNlJT1nZ4NeuVsXLz17hDqbhRj71s+/rAiB4YKWYVMmu11WBZAKqiH+s+jJM6uKi7sNwjJmykv93M0WCNHM4yE6n93zTmSVjXUEiMx7Q/6kCdwlKGwwhPZw5cDvnWJqQmVisy05/fROADVSTptCml0Hu8IKR57zqYfSJjRHoq9p6Vd/0N33YQ7hJUPlcPYebuwmGJbEosOr0OqgX3kmPIF3chO5G+qJpP/0IWh2/xRBHQIidtLLw5nSgPbTM0KLU+RsZERXqPduEF1M6wYtejrcpIZapR/qlu0Jgns0QywHGmfmnwO7I6xGRAlcORq0iwLF+LT3ipy2pG0B henry.humadi@nativex.com",
+    "groups": [ "sysadmin" ],
+    "uid": 2005,
+    "shell": "\/bin\/bash"
+}

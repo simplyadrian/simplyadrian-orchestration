@@ -1,0 +1,7 @@
+{
+    "id": "sherry.sidhu",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4pmujoeGQjaj+cQbSGrqGRj1HzikM7Si1nP6CVemwiqwvz0CbToEvDboYobSo1IG3bK6Wu/wKxpiD+IMi9WiL4shL2JdkZlxML2CGhrU1mL+/bk42GFYOKLsla3rEZ4X5Vr3Ikr6GLlDUjcHD5N2scX2yL2QNu00hc06gsaQlexk0/FBQcQi77/JwPDE7RmHVM1061WUYVhM3rv0YWV8rze9qF/oqy7O9AvvbrW0GxzM59aK9JUAAj9E+9QnuE8Io1rWE1Ix4hTcFGiIInsXLLePhog+s1X6zAKpLOIa7N7DUmNC3dXwZiuV3i1qZlwnU2CVzfTEcxQskD+LFu5Bb sherry.sidhu@nativex.com",
+    "groups": [ "sysadmin" ],
+    "uid": 2010,
+    "shell": "\/bin\/bash"
+}
