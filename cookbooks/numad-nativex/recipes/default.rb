@@ -6,3 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+# Install numad
+package "dumad" do
+  action :install
+end
