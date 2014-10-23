@@ -5,11 +5,7 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
-    },
-    "sudo": {
-        "users": ["ted.bienapfl"],
-        "passwordless": "true"
-      }
+    }
   },
   "override_attributes": {
   },

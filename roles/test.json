@@ -1,5 +1,5 @@
 {
-  "name": "base",
+  "name": "test",
   "description": "A role to manage the base configuration of a linux server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {

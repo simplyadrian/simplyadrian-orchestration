@@ -6,12 +6,6 @@
     "build-essential": {
       "compile_time": "true"
     },
-    "authorization": {
-      "sudo": {
-        "users": ["ted.bienapfl"],
-        "passwordless": "true"
-      }
-    },
     "ephemeral_lvm": {
       "mount_point": "/mnt/www"
     },
