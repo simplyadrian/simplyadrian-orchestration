@@ -21,7 +21,27 @@
   },
   "chef_type": "role",
   "run_list": [
-    "role[base]"
+    "recipe[ohai-nativex]",
+    "recipe[aws]",
+    "recipe[vim]",
+    "recipe[nano]",
+    "recipe[bash-completion]",
+    "recipe[dstat]",
+    "recipe[numad-nativex]",
+    "recipe[tuned-nativex]",
+    "recipe[ephemeral_lvm]",
+    "recipe[iptables]",
+    "recipe[snmp]",
+    "recipe[dnsupdate-nativex::addprv]",
+    "recipe[hostname-nativex::updatehostname]",
+    "recipe[yum-nativex::customrepo]",
+    "recipe[spacewalkclient-nativex]",
+    "recipe[yum-nativex::doupgrade]",
+    "recipe[yum-nativex::deleterepo]",
+    "recipe[ntp]",
+    "recipe[motd]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[chef-client]"
   ],
   "env_run_lists": {
   }

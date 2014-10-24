@@ -10,5 +10,6 @@
 %w{rhn-client-tools rhn-check rhn-setup rhnsd m2crypto yum-rhn-plugin spacewalk-abrt}.each do |pkg|
   package pkg do
     action :install
+    options "--nogpgcheck"
   end
 end
