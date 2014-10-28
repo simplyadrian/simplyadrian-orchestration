@@ -131,7 +131,12 @@ end
 def update_initramfs()
   execute "updating initramfs" do
     Chef::Log.debug("updating initramfs to ensure RAID config persists reboots")
-    command "update-initramfs -u"
+    if platform_family?("rhel")
+      command "dracut -f"
+    end
+    if platform_family?("debian")
+      command "update-initramfs -u"
+    end
   end
 end
 
