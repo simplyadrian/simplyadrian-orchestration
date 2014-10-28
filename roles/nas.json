@@ -19,11 +19,15 @@
       }
     },
     "ebs": {
-      "volumes": {
-        "/mnt/ebs": {
-          "size": 1024,
+      "raids": {
+        "/dev/md1": {
+          "num_disks": 4,
+          "disk_size": 10,
           "piops": 500,
-          "fstype": "xfs"
+          "raid_level": 10,
+          "fstype": "xfs",
+          "mount_point": "/mnt/ebs2",
+          "uselvm": true
          }
        }
      }
