@@ -17,20 +17,7 @@
         "mountd": "32767",
         "lockd": "32768"
       }
-    },
-    "ebs": {
-      "raids": {
-        "/dev/md1": {
-          "num_disks": 4,
-          "disk_size": 10,
-          "piops": 500,
-          "raid_level": 10,
-          "fstype": "xfs",
-          "mount_point": "/mnt/ebs2",
-          "uselvm": true
-         }
-       }
-     }
+    }
   },
   "override_attributes": {
   },
