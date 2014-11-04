@@ -1,20 +1,10 @@
 {
   "name": "test",
-  "description": "A role to manage the base configuration of a linux server in EC2",
+  "description": "A role to manage the configuration of a data science server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
-    },
-    "ntp":{
-       "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
-    },
-    "snmp": {
-       "community": "xmass1970",
-       "full_systemview": "true",
-       "sources": ["10.15.0.0/16", "localhost"],
-       "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
-       "syscontact": "sysadmins <sysadmins@w3i.com>"
     },
     "ephemeral_lvm": {
       "mount_point": "/mnt/ephemeral"
@@ -38,13 +28,14 @@
         "accept_oracle_download_terms": "true"
       }
     },
-    "ebs": {
-      "volumes": {
-        "/mnt/ebs": {
-          "size": 500,
-          "piops": 1000,
-          "fstype": "xfs"
-        }
+    "blockdevice-nativex": {
+      "dir": "/mnt/ebs",
+      "filesystem": "ext4",
+      "snapshots_to_keep": "5",
+      "ebs": {
+        "raid": "false",
+        "count": 1,
+        "size": 250      
       }
     }
   },
@@ -52,29 +43,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[ohai-nativex]",
-    "recipe[aws]",
-    "recipe[vim]",
-    "recipe[nano]",
-    "recipe[bash-completion]",
-    "recipe[dstat]",
-    "recipe[numad-nativex]",
-    "recipe[tuned-nativex]",
-    "recipe[ephemeral_lvm]",
-    "recipe[iptables]",
-    "recipe[snmp]",
-    "recipe[dnsupdate-nativex::addprv]",
-    "recipe[hostname-nativex::updatehostname]",
-    "recipe[yum-nativex::customrepo]",
-    "recipe[spacewalkclient-nativex]",
-    "recipe[pbis-nativex]",
-    "recipe[yum-nativex::doupgrade]",
-    "recipe[yum-nativex::deleterepo]",
-    "recipe[ntp]",
-    "recipe[motd]",
-    "recipe[chef-client::delete_validation]",
-    "recipe[chef-client]",
-    "recipe[ebs]",
+    "role[base]",
+    "recipe[blockdevice-nativex]",
     "recipe[iptables-nativex::ssh]",
     "recipe[python]",
     "recipe[python-nativex::pippackages]",

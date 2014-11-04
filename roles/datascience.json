@@ -7,7 +7,7 @@
       "compile_time": "true"
     },
     "ephemeral_lvm": {
-      "mount_point": "/mnt/datascience"
+      "mount_point": "/mnt/ephemeral"
     },
     "python": {
       "install_method": "source",
@@ -30,7 +30,7 @@
     },
     "ebs": {
       "volumes": {
-        "/srv": {
+        "/mnt/ebs": {
           "size": 500,
           "piops": 1000,
           "fstype": "xfs"
