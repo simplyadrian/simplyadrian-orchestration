@@ -1,0 +1,61 @@
+{
+  "name": "dse_devcass1_aws",
+  "description": "A role to manage the configuration of a DataStax Enterprise Server in EC2 that belongs to the dev-cass1 development cluster.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "tuned": {
+      "active_profile": "cassandra-ssd-storage"
+    },
+    "cassandra": {
+      "auto_bootstrap": false,
+      "max_hint_window_in_ms": 604800000,
+      "partitioner": "org.apache.cassandra.dht.RandomPartitioner",
+      "memory_allocator": "JEMallocAllocator",
+      "concurrent_writes": 64,
+      "memtable_total_space_in_mb": 1024,
+      "rpc_address": "0.0.0.0",
+      "rpc_server_type": "hsha",
+      "rpc_min_threads": 16,
+      "rpc_max_threads": 2048,
+      "batch_size_warn_threshold_in_kb": 64,
+      "in_memory_compaction_limit": 256,
+      "compaction_throughput_mb_per_sec": 64,
+      "read_request_timeout_in_ms": 10000,
+      "write_request_timeout_in_ms": 10000,
+      "cross_node_timeout": true,
+      "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch",
+      "dynamic_snitch_badness_threshold": 0.2,
+      "inter_dc_tcp_nodelay": true,
+      "max_heap_size": "6G",
+      "heap_newsize": "1200M",
+      "jvm_gc_UseNUMA": true,
+      "gc_log_PrintGCDetails": true,
+      "gc_log_PrintGCDateStamps": true,
+      "gc_log_PrintHeapAtGC": true,
+      "gc_log_PrintTenuringDistribution": true,
+      "gc_log_PrintGCApplicationStoppedTime": true,
+      "gc_log_PrintPromotionFailure": true,
+      "gc_log_PrintFLSStatistics": true,
+      "gc_log_Xloggc": "gc.log",
+      "gc_log_UseGCLogFileRotation": true,
+      "gc_log_NumberOfGCLogFiles": 10,
+      "gc_log_GCLogFileSize": "10M",
+      "log_syslog_enabled": true,
+      "log_syslog_host": "10.15.0.249"
+    },
+    "dse": {
+      "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
+    },
+    "opscenter-agent": {
+      "opscenter-ip": "10.15.72.5"
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[dse]"
+  ],
+  "env_run_lists": {
+  }
+}
