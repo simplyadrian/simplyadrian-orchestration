@@ -23,6 +23,7 @@
       "read_request_timeout_in_ms": 10000,
       "write_request_timeout_in_ms": 10000,
       "cross_node_timeout": true,
+      "phi_convict_threshold": 12,
       "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch",
       "dynamic_snitch_badness_threshold": 0.2,
       "inter_dc_tcp_nodelay": true,
