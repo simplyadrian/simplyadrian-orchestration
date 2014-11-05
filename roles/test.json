@@ -9,33 +9,17 @@
     "ephemeral_lvm": {
       "mount_point": "/mnt/ephemeral"
     },
-    "python": {
-      "install_method": "source",
-      "version": "3.3.5"
-    },
-    "r": {
-      "version": "3.0.1"
-    },
-    "rabbitmq": {
-      "version": "3.3.5",
-      "default_user": "user",
-      "default_pass": "user"
-    },
-    "java": {
-      "install_flavor": "oracle",
-      "jdk_version": "7",
-      "oracle": {
-        "accept_oracle_download_terms": "true"
-      }
-    },
-    "blockdevice-nativex": {
-      "dir": "/mnt/ebs",
-      "filesystem": "ext4",
-      "snapshots_to_keep": "5",
-      "ebs": {
-        "raid": "false",
-        "count": 1,
-        "size": 250      
+    "ebs": {
+      "raids": {
+        "dev/md0": {
+          "num_disks": 4,
+          "disk_size": 10,
+          "piops": 1000,
+          "raid_level": 10,
+          "fstype": "xfs",
+          "mount_point": "/mnt/ebs",
+          "uselvm": true
+        }
       }
     }
   },
@@ -44,15 +28,9 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
-    "recipe[blockdevice-nativex]",
-    "recipe[iptables-nativex::ssh]",
-    "recipe[python]",
-    "recipe[python-nativex::pippackages]",
-    "recipe[r]",
-    "recipe[r-nativex::rpackages]",
-    "recipe[rabbitmq]",
-    "recipe[rabbitmq::mgmt_console]",
-    "recipe[rabbitmq::user_management]"
+    "recipe[ebs]",
+    "recipe[nfs::server]",
+    "recipe[iptables-nativex::ssh]"
   ],
   "env_run_lists": {
   }

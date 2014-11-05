@@ -18,8 +18,16 @@
     },
     "rabbitmq": {
       "version": "3.3.5",
-      "default_user": "user",
-      "default_pass": "user"
+      "enabled_users":[{
+        "name": "datascience",
+        "password": "datascience",
+        "tag": "administrator",
+        "rights": [{
+          "conf": ".*",
+          "write": ".*",
+          "read": ".*"
+        }]
+      }]
     },
     "java": {
       "install_flavor": "oracle",
