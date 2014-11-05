@@ -15,6 +15,9 @@
     },
     "opscenter-agent": {
       "enabled": true
+    },
+    "tuned": {
+      "active_profile": "throughput-performance"
     }
   },
   "override_attributes": {
@@ -23,6 +26,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[tuned-nativex::apply_profile]",
     "recipe[dse-nativex::determine_ec2_topology]",
     "recipe[dse-nativex::determine_seeds]",
     "recipe[dse-nativex::default]"
