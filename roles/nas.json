@@ -17,6 +17,12 @@
         "mountd": "32767",
         "lockd": "32768"
       }
+    },
+    "blockdevice-nativex": {
+      "ebs": {
+        "raid": false,
+        "size": 1024
+      }
     }
   },
   "override_attributes": {

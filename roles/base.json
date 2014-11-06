@@ -34,6 +34,7 @@
     "recipe[snmp]",
     "recipe[dnsupdate-nativex::addprv]",
     "recipe[hostname-nativex::updatehostname]",
+    "recipe[yum-nativex]",
     "recipe[yum-nativex::customrepo]",
     "recipe[spacewalkclient-nativex]",
     "recipe[pbis-nativex]",
