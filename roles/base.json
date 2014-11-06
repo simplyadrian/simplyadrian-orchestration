@@ -29,7 +29,7 @@
     "recipe[dstat]",
     "recipe[numad-nativex]",
     "recipe[tuned-nativex]",
-    "recipe[ephemeral_lvm]",
+    "recipe[ephemeral_lvm-nativex]",
     "recipe[iptables]",
     "recipe[snmp]",
     "recipe[dnsupdate-nativex::addprv]",
