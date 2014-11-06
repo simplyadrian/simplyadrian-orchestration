@@ -4,7 +4,10 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "ephemeral_lvm": {
-      "mount_point": "/var/lib/cassandra"
+      "mount_point": "/var/lib/cassandra",
+      "filesystem": "xfs",
+      "volume_group_name": "vg_data_ephem",
+      "logical_volume_name": "lv_cass_raid0"
     },
     "java": {
       "install_flavor": "oracle",
