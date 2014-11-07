@@ -18,3 +18,5 @@ python_pip "lockfile"
 python_pip "asyncio"
 
 python_pip "paramiko"
+
+python_pip "boto"

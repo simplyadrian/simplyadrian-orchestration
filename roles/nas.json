@@ -7,7 +7,13 @@
       "compile_time": "true"
     },
     "ephemeral_lvm": {
-      "mount_point": "/mnt/ephemeral"
+      "mount_point": "/mnt/ephemeral",
+      "filesystem": "xfs",
+      "volume_group_name": "vg_data_ephem",
+      "logical_volume_name": "lv_nas_raid0"
+    },
+    "tuned": {
+      "active_profile": "virtual-guest"
     },
     "nfs": {
       "packages": [ "portmap", "nfs-utils", "nfs4-acl-tools" ],
@@ -18,10 +24,9 @@
         "lockd": "32768"
       }
     },
-    "blockdevice-nativex": {
+    "blockdevice_nativex": {
       "ebs": {
-        "raid": false,
-        "size": 1024
+        "raid": true
       }
     }
   },
@@ -30,6 +35,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[tuned-nativex::apply_profile]",
     "recipe[nfs::server]",
     "recipe[blockdevice-nativex]",
     "recipe[iptables-nativex::ssh]"

@@ -51,6 +51,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[git]",
     "recipe[ebs]",
     "recipe[iptables-nativex::ssh]",
     "recipe[python]",
