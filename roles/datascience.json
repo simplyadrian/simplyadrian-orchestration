@@ -14,7 +14,7 @@
       "version": "3.3.5"
     },
     "r": {
-      "version": "3.0.1"
+      "version": "3.1.2"
     },
     "rabbitmq": {
       "version": "3.3.5",
@@ -55,9 +55,9 @@
     "recipe[ebs]",
     "recipe[iptables-nativex::ssh]",
     "recipe[python]",
-    "recipe[python-nativex::pippackages]",
+    "recipe[python-nativex]",
     "recipe[r]",
-    "recipe[r-nativex::rpackages]",
+    "recipe[r-nativex]",
     "recipe[rabbitmq]",
     "recipe[rabbitmq::mgmt_console]",
     "recipe[rabbitmq::user_management]"

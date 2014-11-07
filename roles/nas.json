@@ -25,6 +25,7 @@
       }
     },
     "blockdevice_nativex": {
+      "filesystem": "xfs",
       "ebs": {
         "raid": true
       }

@@ -26,3 +26,5 @@ r_package "rjson"
 r_package "RODBC"
 
 r_package "ff"
+
+r_package "gbm"
