@@ -26,6 +26,7 @@
     },
     "blockdevice_nativex": {
       "filesystem": "xfs",
+      "mount_point_group": "predictive_analytics",
       "ebs": {
         "raid": true
       }
