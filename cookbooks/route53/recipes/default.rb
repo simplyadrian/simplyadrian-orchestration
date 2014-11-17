@@ -2,7 +2,7 @@
 # Cookbook Name:: route53
 # Recipe:: default
 #
-# Copyright 2011, Heavy Water Software Inc.
+# Copyright 2011, Heavy Water Operations, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,6 +39,11 @@ elsif node['platform_family'] == 'rhel'
       action :nothing
    end
    xslt.run_action( :install )
+end
+
+chef_gem 'nokogiri' do
+  action :install
+  version node['route53']['nokogiri_version']
 end
 
 chef_gem "fog" do
