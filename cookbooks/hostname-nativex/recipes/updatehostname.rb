@@ -10,27 +10,41 @@
 # Set the FQDN for the node
 full_nodename = "#{node.name}-prv.#{node['dnsupdate-nativex']['int_domain']}"
 
-# Create the hosts file
-hostsfile_entry node['ipaddress'] do
-  hostname  "#{full_nodename}"
-  action    :create
-end
+if platform_family?('debian')
 
-# Write the FQDN to the hostname file
-File.open('/etc/hostname', 'w') {|f| f.write("#{full_nodename}") }
+  # Create the hosts file
+  hostsfile_entry node['ipaddress'] do
+    hostname  "#{full_nodename}"
+    action    :create
+  end
 
-# Set the files to search/replace in the sysconfig directory
-files = ['/etc/sysconfig/network']
+  # Write the FQDN to the hostname file
+  File.open('/etc/hostname', 'w') {|f| f.write("#{full_nodename}") }
 
-# Then set the variables for find/replace
-@original_string_or_regex = /HOSTNAME=.*/
-@replacement_string = "HOSTNAME=#{full_nodename}"
+else
 
-# Do the find/replace
-files.each do |file_name|
-  text = File.read(file_name)
-  replace = text.gsub!(@original_string_or_regex, @replacement_string)
-  File.open(file_name, "w") { |file| file.puts replace }
+  # Create the hosts file
+  hostsfile_entry node['ipaddress'] do
+    hostname  "#{full_nodename}"
+    action    :create
+  end
+
+  # Write the FQDN to the hostname file
+  File.open('/etc/hostname', 'w') {|f| f.write("#{full_nodename}") }
+
+  # Set the files to search/replace in the sysconfig directory
+  files = ['/etc/sysconfig/network']
+
+  # Then set the variables for find/replace
+  @original_string_or_regex = /HOSTNAME=.*/
+  @replacement_string = "HOSTNAME=#{full_nodename}"
+
+  # Do the find/replace
+  files.each do |file_name|
+    text = File.read(file_name)
+    replace = text.gsub!(@original_string_or_regex, @replacement_string)
+    File.open(file_name, "w") { |file| file.puts replace }
+  end
 end
 
 # Set the hostname using the hostname command
