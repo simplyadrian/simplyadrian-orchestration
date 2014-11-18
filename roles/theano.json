@@ -26,7 +26,7 @@
         "passwordless": "true"
       }
     },
-        "blockdevice_nativex": {
+    "blockdevice_nativex": {
       "filesystem": "xfs",
       "ebs": {
         "raid": false
