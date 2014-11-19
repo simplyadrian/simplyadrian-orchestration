@@ -28,3 +28,5 @@ r_package "RODBC"
 r_package "ff"
 
 r_package "gbm"
+
+r_package "LaF"

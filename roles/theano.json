@@ -79,6 +79,7 @@
     "recipe[bash-completion]",
     "recipe[dstat]",
     "recipe[ephemeral_lvm-nativex]",
+    "recipe[blockdevice-nativex]",
     "recipe[dnsupdate-nativex]",
     "recipe[hostname-nativex::updatehostname]",
     "recipe[iptables]",

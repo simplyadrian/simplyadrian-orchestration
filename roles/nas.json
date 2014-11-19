@@ -40,6 +40,7 @@
     "recipe[tuned-nativex::apply_profile]",
     "recipe[nfs::server]",
     "recipe[blockdevice-nativex]",
+    "recipe[nfs-nativex]",
     "recipe[iptables-nativex::ssh]"
   ],
   "env_run_lists": {
