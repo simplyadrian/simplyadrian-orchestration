@@ -7,9 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "blockdevice-nativex"
-
-nfs_export node['blockdevice-nativex']['dir'] do
+nfs_export node['nfs-nativex']['export_dir'] do
   network node['nfs-nativex']['network']
   writeable node['nfs-nativex']['writeable']
   sync node['nfs-nativex']['sync']

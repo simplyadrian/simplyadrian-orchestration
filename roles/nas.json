@@ -6,6 +6,14 @@
     "build-essential": {
       "compile_time": "true"
     },
+    "blockdevice_nativex": {
+      "dir": "/mnt/ebs",
+      "filesystem": "xfs",
+      "mount_point_group": "predictive_analytics",
+      "ebs": {
+        "raid": true
+      }
+    },
     "ephemeral_lvm": {
       "mount_point": "/mnt/ephemeral",
       "filesystem": "xfs",
@@ -24,12 +32,11 @@
         "lockd": "32768"
       }
     },
-    "blockdevice_nativex": {
-      "filesystem": "xfs",
-      "mount_point_group": "predictive_analytics",
-      "ebs": {
-        "raid": true
-      }
+    "nfs-nativex": {
+      "export_dir": "/mnt/ebs",
+      "network": "172.16.0.0/12",
+      "writeable": true,
+      "sync": true
     }
   },
   "override_attributes": {
