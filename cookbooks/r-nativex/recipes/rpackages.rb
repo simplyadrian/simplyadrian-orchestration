@@ -9,24 +9,8 @@
 
 include_recipe 'r'
 
-r_package "optparse"
-
-r_package "yaml"
-
-r_package "data.table"
-
-r_package "ffbase"
-
-r_package "ROCR"
-
-r_package "ETLUtils"
-
-r_package "rjson"
-
-r_package "RODBC"
-
-r_package "ff"
-
-r_package "gbm"
-
-r_package "LaF"
+%w{#{node['r-nativex']['packages']}}.each do |pkg|
+  r_package pkg do
+    action :install
+  end
+end

@@ -6,15 +6,37 @@
     "build-essential": {
       "compile_time": "true"
     },
+    "blockdevice_nativex": {
+      "dir": "/mnt/ebs",
+      "mount_point_group": "predictive_analytics",
+      "filesystem": "xfs",
+      "ebs": {
+        "raid": false,
+        "size": 500
+      }
+    },
     "ephemeral_lvm": {
       "mount_point": "/mnt/ephemeral"
+    },
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "7",
+      "oracle": {
+        "accept_oracle_download_terms": "true"
+      }
     },
     "python": {
       "install_method": "source",
       "version": "3.3.5"
     },
+    "python_nativex": {
+      "packages": ["pyyaml", "kombu", "lockfile", "asyncio", "paramiko", "boto"]
+      },
     "r": {
       "version": "3.1.2"
+    },
+    "r_nativex": {
+      "packages": ["optparse", "yaml", "data.table", "ffbase", "ROCR", "ETLUtils", "rjson", "RODBC", "ff", "gbm", "LaF"]
     },
     "rabbitmq": {
       "version": "3.3.5",
@@ -29,21 +51,8 @@
         }]
       }]
     },
-    "java": {
-      "install_flavor": "oracle",
-      "jdk_version": "7",
-      "oracle": {
-        "accept_oracle_download_terms": "true"
-      }
-    },
-    "ebs": {
-      "volumes": {
-        "/mnt/ebs": {
-          "size": 500,
-          "piops": 1000,
-          "fstype": "xfs"
-        }
-      }
+    "tuned": {
+      "active_profile": "virtual-guest"
     }
   },
   "override_attributes": {
@@ -52,7 +61,7 @@
   "run_list": [
     "role[base]",
     "recipe[git]",
-    "recipe[ebs]",
+    "recipe[blockdevice-nativex]",
     "recipe[iptables-nativex::ssh]",
     "recipe[python]",
     "recipe[python-nativex]",
@@ -60,7 +69,8 @@
     "recipe[r-nativex]",
     "recipe[rabbitmq]",
     "recipe[rabbitmq::mgmt_console]",
-    "recipe[rabbitmq::user_management]"
+    "recipe[rabbitmq::user_management]",
+    "recipe[tuned-nativex::apply_profile]"
   ],
   "env_run_lists": {
   }
