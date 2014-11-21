@@ -9,7 +9,7 @@
 
 include_recipe 'r'
 
-%w{#{node['r-nativex']['packages']}}.each do |pkg|
+node['r_nativex']['packages'].each do |pkg|
   r_package pkg do
     action :install
   end

@@ -9,7 +9,7 @@
 
 include_recipe 'python'
 
-%w{#{node['python_nativex']['packages']}}.each do |pkg|
+node['python_nativex']['packages'].each do |pkg|
   python_pip pkg do
     action :install
   end
