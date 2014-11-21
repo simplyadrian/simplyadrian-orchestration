@@ -62,6 +62,7 @@
     "role[base]",
     "recipe[git]",
     "recipe[blockdevice-nativex]",
+    "recipe[blockdevice-nativex::tags]",
     "recipe[iptables-nativex::ssh]",
     "recipe[python]",
     "recipe[python-nativex]",
