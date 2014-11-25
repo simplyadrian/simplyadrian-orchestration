@@ -8,3 +8,4 @@
 #
 
 package "yum-plugin-fastestmirror"
+include_recipe "yum-nativex::customrepo"

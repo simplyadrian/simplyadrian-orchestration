@@ -20,6 +20,14 @@
       "volume_group_name": "vg_data_ephem",
       "logical_volume_name": "lv_nas_raid0"
     },
+    "glusterfs": {
+      "server": {
+        "peers": ["DAW1AL-NAS-01-prv.nativexintern.com", "DAW1AL-NAS-02-prv.nativexintern.com", "DAW1AL-NAS-03-prv.nativexintern.com"],
+        "volumes": "testvol",
+        "export_directory": "/mnt/ebs",
+        "stripe": 3
+      }
+    },
     "tuned": {
       "active_profile": "virtual-guest"
     },
