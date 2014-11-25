@@ -29,6 +29,7 @@
     "recipe[dstat]",
     "recipe[numad-nativex]",
     "recipe[tuned-nativex]",
+    "recipe[nfs]",
     "recipe[ephemeral_lvm-nativex]",
     "recipe[iptables]",
     "recipe[snmp]",

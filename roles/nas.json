@@ -45,8 +45,9 @@
   "run_list": [
     "role[base]",
     "recipe[tuned-nativex::apply_profile]",
-    "recipe[nfs::server]",
+    "recipe[nfs::server4]",
     "recipe[blockdevice-nativex]",
+    "recipe[blockdevice-nativex::tags]",
     "recipe[nfs-nativex]",
     "recipe[iptables-nativex::ssh]"
   ],
