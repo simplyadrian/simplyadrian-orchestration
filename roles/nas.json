@@ -22,10 +22,12 @@
     },
     "glusterfs": {
       "server": {
-        "peers": ["DAW1AL-NAS-01-prv.nativexintern.com", "DAW1AL-NAS-02-prv.nativexintern.com", "DAW1AL-NAS-03-prv.nativexintern.com"],
-        "volumes": "testvol",
+        "peers": ["DAW1AL-NAS-01-prv.nativexintern.com", "DAW1AL-NAS-02-prv.nativexintern.com"],
+        "volumes": ["gv0","brick"],
         "export_directory": "/mnt/ebs",
-        "stripe": 3
+        "stripe": 3,
+        "replica": "replica",
+        "transport": "transport tcp"
       }
     },
     "tuned": {
@@ -56,8 +58,8 @@
     "recipe[nfs::server4]",
     "recipe[blockdevice-nativex]",
     "recipe[blockdevice-nativex::tags]",
-    "recipe[nfs-nativex]",
-    "recipe[iptables-nativex::ssh]"
+    "recipe[glusterfs-nativex::server]",
+    "recipe[nfs-nativex]"
   ],
   "env_run_lists": {
   }
