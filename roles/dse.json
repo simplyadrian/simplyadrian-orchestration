@@ -31,7 +31,6 @@
     "role[base]",
     "recipe[tuned-nativex::apply_profile]",
     "recipe[dse-nativex::determine_ec2_topology]",
-    "recipe[dse-nativex::determine_seeds]",
     "recipe[dse-nativex::default]"
   ],
   "env_run_lists": {
