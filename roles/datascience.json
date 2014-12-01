@@ -9,6 +9,7 @@
     "blockdevice_nativex": {
       "dir": "/mnt/ebs",
       "mount_point_group": "predictive_analytics",
+      "recurse_permissions": false,
       "filesystem": "xfs",
       "ebs": {
         "raid": false,
@@ -40,6 +41,8 @@
     },
     "rabbitmq": {
       "version": "3.3.5",
+      "mnesiadir": "/mnt/ebs/rabbitmq_db",
+      "logdir": "/mnt/ebs/log/rabbitmq",
       "enabled_users":[{
         "name": "datascience",
         "password": "datascience",

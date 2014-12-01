@@ -1,10 +1,10 @@
-include_recipe 'glusterfs::base'
+include_recipe 'glusterfs-nativex::base'
 
 package 'glusterfs-server' do
   action :install
 end
 
-service 'glusterfs-server' do
+service 'glusterd' do
   supports :status => true, :restart => true, :reload => true
   action :start
 end

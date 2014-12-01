@@ -1,4 +1,4 @@
-include_recipe 'glusterfs::base'
+include_recipe 'glusterfs-nativex::base'
 
 package 'glusterfs-client' do
   action :install
