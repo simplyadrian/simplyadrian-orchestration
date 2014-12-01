@@ -7,8 +7,13 @@
       "active_profile": "cassandra-ssd-storage"
     },
     "cassandra": {
+      "cluster_name": "dev-cass1",
+      "cluster_dc_info": { "dev-cass1": { "seeds": ["10.15.72.101", "10.15.72.102"] } },
+      "seeds": "10.15.72.101,10.15.72.102",
       "auto_bootstrap": false,
       "max_hint_window_in_ms": 604800000,
+      "hinted_handoff_throttle_in_kb": 512,
+      "max_hints_delivery_threads": 4,
       "partitioner": "org.apache.cassandra.dht.RandomPartitioner",
       "memory_allocator": "JEMallocAllocator",
       "concurrent_writes": 64,
@@ -26,9 +31,10 @@
       "phi_convict_threshold": 12,
       "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch",
       "dynamic_snitch_badness_threshold": 0.2,
-      "inter_dc_tcp_nodelay": true,
-      "max_heap_size": "6G",
-      "heap_newsize": "1200M",
+      "inter_dc_tcp_nodelay": false,
+      "inter_dc_stream_throughput_outbound_Mbps": 10,
+      "max_heap_size": "2G",
+      "heap_newsize": "200M",
       "jvm_gc_UseNUMA": true,
       "gc_log_PrintGCDetails": true,
       "gc_log_PrintGCDateStamps": true,
@@ -48,7 +54,8 @@
       "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
     },
     "opscenter-agent": {
-      "opscenter-ip": "10.15.72.5"
+      "opscenter-ip": "10.15.72.5",
+      "is_opscenter_cluster_configured": true
     }
   },
   "override_attributes": {
