@@ -8,8 +8,8 @@
     },
     "cassandra": {
       "cluster_name": "dev-cass1",
-      "cluster_dc_info": { "dev-cass1": { "seeds": ["10.15.72.101", "10.15.72.102"] }, "us-west-1": { "seeds": ["172.28.12.144"] } },
-      "seeds": "10.15.72.101,10.15.72.102,172.28.12.144",
+      "cluster_dc_info": { "dev-cass1": { "seeds": ["10.15.72.101", "10.15.72.102"] }, "us-west-1": { "seeds": ["172.28.12.144", "172.28.22.105"] } },
+      "seeds": "10.15.72.101,10.15.72.102,172.28.12.144,172.28.22.105",
       "auto_bootstrap": false,
       "max_hint_window_in_ms": 604800000,
       "hinted_handoff_throttle_in_kb": 512,
