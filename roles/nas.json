@@ -6,8 +6,32 @@
     "build-essential": {
       "compile_time": "true"
     },
+    "blockdevice_nativex": {
+      "dir": "/mnt/ebs",
+      "filesystem": "xfs",
+      "mount_point_group": "predictive_analytics",
+      "ebs": {
+        "raid": true
+      }
+    },
     "ephemeral_lvm": {
-      "mount_point": "/mnt/ephemeral"
+      "mount_point": "/mnt/ephemeral",
+      "filesystem": "xfs",
+      "volume_group_name": "vg_data_ephem",
+      "logical_volume_name": "lv_nas_raid0"
+    },
+    "glusterfs": {
+      "server": {
+        "peers": ["DAW1AL-NAS-01-prv.nativexintern.com", "DAW1AL-NAS-02-prv.nativexintern.com"],
+        "volumes": ["gv0","brick"],
+        "export_directory": "/mnt/ebs",
+        "stripe": 3,
+        "replica": "replica",
+        "transport": "transport tcp"
+      }
+    },
+    "tuned": {
+      "active_profile": "virtual-guest"
     },
     "nfs": {
       "packages": [ "portmap", "nfs-utils", "nfs4-acl-tools" ],
@@ -18,24 +42,24 @@
         "lockd": "32768"
       }
     },
-    "ebs": {
-      "volumes": {
-        "/mnt/ebs": {
-          "size": 1024,
-          "piops": 500,
-          "fstype": "xfs"
-         }
-       }
-     }
+    "nfs-nativex": {
+      "export_dir": "/mnt/ebs",
+      "network": "172.16.0.0/12",
+      "writeable": true,
+      "sync": true
+    }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
     "role[base]",
-    "recipe[nfs::server]",
+    "recipe[tuned-nativex::apply_profile]",
+    "recipe[nfs::server4]",
     "recipe[blockdevice-nativex]",
-    "recipe[iptables-nativex::ssh]"
+    "recipe[blockdevice-nativex::tags]",
+    "recipe[glusterfs-nativex::server]",
+    "recipe[nfs-nativex]"
   ],
   "env_run_lists": {
   }

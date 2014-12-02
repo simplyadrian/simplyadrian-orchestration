@@ -5,6 +5,9 @@
   "default_attributes": {
     "build-essential": {
       "compile_time": "true"
+    },
+    "tuned": {
+      "active_profile": "virtual-guest"
     }
   },
   "override_attributes": {

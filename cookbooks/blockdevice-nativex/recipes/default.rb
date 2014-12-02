@@ -7,13 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# xfsdump is not an Amazon Linux package at this moment.
-case node[:platform]
-when 'debian','ubuntu'
-  package 'xfsdump'
-  package 'xfslibs-dev'
-when 'redhat','centos','fedora','amazon'
-  package 'xfsprogs-devel'
-end
 
+include_recipe "xfs::default" if node['blockdevice_nativex']['filesystem'] == "xfs"
 include_recipe "blockdevice-nativex::volumes"
+

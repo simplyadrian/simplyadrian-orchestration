@@ -131,7 +131,12 @@ end
 def update_initramfs()
   execute "updating initramfs" do
     Chef::Log.debug("updating initramfs to ensure RAID config persists reboots")
-    command "update-initramfs -u"
+    if platform_family?("rhel")
+      command "dracut -f"
+    end
+    if platform_family?("debian")
+      command "update-initramfs -u"
+    end
   end
 end
 
@@ -390,6 +395,8 @@ def create_raid_disks(mount_point, mount_point_owner, mount_point_group, mount_p
         case filesystem
           when "ext4"
             system("mke2fs -t #{filesystem} -F #{md_device}")
+          when "xfs"
+            system("mkfs -t #{filesystem} -f #{md_device}")
           else
             #TODO fill in details on how to format other filesystems here
             Chef::Log.info("Can't format filesystem #{filesystem}")

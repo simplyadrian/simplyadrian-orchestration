@@ -15,6 +15,9 @@
        "sources": ["10.15.0.0/16", "localhost"],
        "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
        "syscontact": "sysadmins <sysadmins@w3i.com>"
+    },
+    "tuned": {
+      "active_profile": "virtual-guest"
     }
   },
   "override_attributes": {
@@ -29,12 +32,14 @@
     "recipe[dstat]",
     "recipe[numad-nativex]",
     "recipe[tuned-nativex]",
-    "recipe[ephemeral_lvm]",
+    "recipe[nfs]",
+    "recipe[ephemeral_lvm-nativex]",
     "recipe[iptables]",
     "recipe[snmp]",
     "recipe[dnsupdate-nativex::addprv]",
     "recipe[hostname-nativex::updatehostname]",
-    "recipe[yum-nativex::customrepo]",
+    "recipe[yum-nativex]",
+    "recipe[yum-epel]",
     "recipe[spacewalkclient-nativex]",
     "recipe[pbis-nativex]",
     "recipe[yum-nativex::doupgrade]",

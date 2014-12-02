@@ -9,12 +9,8 @@
 
 include_recipe 'python'
 
-python_pip "pyyaml"
-
-python_pip "kombu"
-
-python_pip "lockfile"
-
-python_pip "asyncio"
-
-python_pip "paramiko"
+node['python_nativex']['packages'].each do |pkg|
+  python_pip pkg do
+    action :install
+  end
+end

@@ -7,6 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
+package "yum-plugin-fastestmirror"
 include_recipe "yum-nativex::customrepo"
-include_recipe "yum-nativex::doupgrade"
-include_recipe "yum-nativex::deleterepo"

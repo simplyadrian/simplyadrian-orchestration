@@ -1,0 +1,95 @@
+{
+  "name": "theano",
+  "description": "A role to manage the base configuration of a Theano server in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "build-essential": {
+      "compile_time": "true"
+    },
+    "apt": {
+      "compile_time_update": "true"
+    },
+    "authorization": {
+      "sudo": {
+        "users": [
+          "ubuntu",
+          "brett.stime",
+          "eric.li",
+          "henry.humadi",
+          "hui.li",
+          "james.shanahan",
+          "joel.barajas",
+          "liang.dai",
+          "sherry.sidhu",
+          "zhiyong.tan"
+        ],
+        "passwordless": "true"
+      }
+    },
+    "blockdevice_nativex": {
+      "filesystem": "xfs",
+      "ebs": {
+        "raid": false
+      }
+    },
+    "ntp": {
+      "servers": [
+        "0.us.pool.ntp.org",
+        "1.us.pool.ntp.org",
+        "2.us.pool.ntp.org",
+        "3.us.pool.ntp.org"
+      ]
+    },
+    "snmp": {
+      "community": "xmass1970",
+      "full_systemview": "true",
+      "sources": [
+        "10.15.0.0/16",
+        "localhost"
+      ],
+      "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
+      "syscontact": "sysadmins <sysadmins@w3i.com>"
+    },
+    "ephemeral_lvm": {
+      "mount_point": "/mnt/ephemeral",
+      "filesystem": "xfs",
+      "volume_group_name": "vg_data_ephem",
+      "logical_volume_name": "lv_nas_raid0"
+    },
+    "xml": {
+      "compile_time": "true",
+      "nokogiri": {
+        "version": "1.6.1"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[ohai-nativex]",
+    "recipe[aws]",
+    "recipe[xml]",
+    "recipe[users::sysadmins]",
+    "recipe[sudo]",
+    "recipe[apt]",
+    "recipe[vim]",
+    "recipe[nano]",
+    "recipe[bash-completion]",
+    "recipe[dstat]",
+    "recipe[ephemeral_lvm-nativex]",
+    "recipe[blockdevice-nativex]",
+    "recipe[dnsupdate-nativex]",
+    "recipe[hostname-nativex::updatehostname]",
+    "recipe[iptables]",
+    "recipe[snmp]",
+    "recipe[ntp]",
+    "recipe[motd]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[chef-client]"
+  ],
+  "env_run_lists": {
+
+  }
+}

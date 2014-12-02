@@ -7,4 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
+package "unixODBC-devel"
 include_recipe	"r-nativex::rpackages"

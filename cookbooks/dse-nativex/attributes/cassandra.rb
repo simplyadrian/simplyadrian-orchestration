@@ -1,7 +1,7 @@
 #Cassandra Default Info
 default['cassandra']['solr']                                        = false
 default['cassandra']['hadoop']                                      = false
-default['cassandra']['dse_version']                                 = "4.5.2-1"
+default['cassandra']['dse_version']                                 = "4.5.3-1"
 default['cassandra']['user']                                        = "cassandra"
 default['cassandra']['group']                                       = "cassandra"
 default['cassandra']['root_dir']                                    = "/var/lib/cassandra/"
@@ -10,6 +10,7 @@ default['cassandra']['jar_lib_dir']                                 = "/usr/shar
 default['cassandra']['vnodes']                                      = true
 default['cassandra']['datacenter']                                  = "DC1"
 default['cassandra']['rack']                                        = "RAC1"
+default['cassandra']['snitch_prefer_local_ip']                      = false
 default['cassandra']['num_seeds_per_dc']                            = 3
 default['cassandra']['cluster_dc_info']                             = {}
 # cassandra.yaml settings (Defaults according to Apache release: https://github.com/apache/cassandra/blob/cassandra-2.0.10/conf/cassandra.yaml)
@@ -73,6 +74,7 @@ default['cassandra']['multithreaded_compaction']                    = false
 default['cassandra']['compaction_throughput_mb_per_sec']            = 16
 default['cassandra']['compaction_preheat_key_cache']                = true
 default['cassandra']['stream_throughput_outbound_megabits_per_sec'] = nil
+default['cassandra']['inter_dc_stream_throughput_outbound_Mbps']    = nil
 default['cassandra']['read_request_timeout_in_ms']                  = 5000
 default['cassandra']['range_request_timeout_in_ms']                 = 10000
 default['cassandra']['write_request_timeout_in_ms']                 = 2000
@@ -80,6 +82,7 @@ default['cassandra']['cas_contention_timeout_in_ms']                = 1000
 default['cassandra']['truncate_request_timeout_in_ms']              = 60000
 default['cassandra']['request_timeout_in_ms']                       = 10000
 default['cassandra']['cross_node_timeout']                          = false
+default['cassandra']['phi_convict_threshold']                       = nil
 default['cassandra']['endpoint_snitch']                             = "SimpleSnitch"
 default['cassandra']['dynamic_snitch_update_interval_in_ms']        = 100
 default['cassandra']['dynamic_snitch_reset_interval_in_ms']         = 600000
@@ -129,3 +132,17 @@ default['cassandra']['jna_jar_source_base_uri']                     = "https://m
 
 # JEMalloc
 default['cassandra']['jemalloc_location']                           = "/usr/lib64/"
+
+# OS settings for Cassandra (See: http://www.datastax.com/documentation/cassandra/2.0/cassandra/install/installRecommendSettings.html)
+default['cassandra']['os']['zone_reclaim_mode']                     = 0
+default['cassandra']['os']['limits_ary']                            = [
+                                                                       { 'domain' => 'cassandra', 'type' => '-', 'item' => 'memlock', 'value' => 'unlimited' },
+                                                                       { 'domain' => 'cassandra', 'type' => '-', 'item' => 'nofile', 'value' => '100000' },
+                                                                       { 'domain' => 'cassandra', 'type' => '-', 'item' => 'nproc', 'value' => '32768' },
+                                                                       { 'domain' => 'cassandra', 'type' => '-', 'item' => 'as', 'value' => 'unlimited' }
+                                                                      ]
+default['cassandra']['os']['90_nproc_limits_ary']                   = [
+                                                                       { 'domain' => 'root', 'type' => 'soft', 'item' => 'nproc', 'value' => 'unlimited' },
+                                                                       { 'domain' => '*', 'type' => '-', 'item' => 'nproc', 'value' => '32768' }
+                                                                      ]
+default['cassandra']['os']['sysctl_vm_max_map_count']               = 131072

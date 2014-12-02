@@ -4,7 +4,10 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "ephemeral_lvm": {
-      "mount_point": "/var/lib/cassandra"
+      "mount_point": "/var/lib/cassandra",
+      "filesystem": "xfs",
+      "volume_group_name": "vg_data_ephem",
+      "logical_volume_name": "lv_cass_raid0"
     },
     "java": {
       "install_flavor": "oracle",
@@ -15,6 +18,9 @@
     },
     "opscenter-agent": {
       "enabled": true
+    },
+    "tuned": {
+      "active_profile": "throughput-performance"
     }
   },
   "override_attributes": {
@@ -22,10 +28,9 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[ohai-nativex::default]",
-    "role[ie]",
+    "role[base]",
+    "recipe[tuned-nativex::apply_profile]",
     "recipe[dse-nativex::determine_ec2_topology]",
-    "recipe[dse-nativex::determine_seeds]",
     "recipe[dse-nativex::default]"
   ],
   "env_run_lists": {
