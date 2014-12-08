@@ -58,7 +58,6 @@
     "recipe[nfs::server4]",
     "recipe[blockdevice-nativex]",
     "recipe[blockdevice-nativex::tags]",
-    "recipe[glusterfs-nativex::server]",
     "recipe[nfs-nativex]"
   ],
   "env_run_lists": {
