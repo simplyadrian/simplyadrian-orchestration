@@ -8,6 +8,6 @@
 #
 
 execute "yum-y-upgrade" do
-  command "yum -y upgrade"
+  command "yum -y upgrade --nogpgcheck"
   action :run
 end
