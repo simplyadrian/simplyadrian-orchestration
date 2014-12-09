@@ -1,11 +1,15 @@
-spacewalkclient-nativex CHANGELOG
+spacewalk-nativex CHANGELOG
 =================================
 
-This file is used to list changes made in each version of the spacewalkclient-nativex cookbook.
+This file is used to list changes made in each version of the spacewalk-nativex cookbook.
+
+0.2.0
+-----
+- [Jesse Hauf] - Changed name of cookbook to spacewalk-nativex. Added support for Spacewalk server.
 
 0.1.0
 -----
-- [your_name] - Initial release of spacewalkclient-nativex
+- [Adrian Herrera] - Initial release of spacewalkclient-nativex
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
