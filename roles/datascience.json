@@ -26,6 +26,11 @@
         "accept_oracle_download_terms": "true"
       }
     },
+    "nodejs": {
+      "npm_packages": [
+        {"name": "aws-sdk"}
+      ]
+    },
     "python": {
       "install_method": "source",
       "version": "3.3.5"
@@ -67,6 +72,7 @@
     "recipe[blockdevice-nativex]",
     "recipe[blockdevice-nativex::tags]",
     "recipe[iptables-nativex::ssh]",
+    "recipe[nodejs]",
     "recipe[python]",
     "recipe[python-nativex]",
     "recipe[r]",
