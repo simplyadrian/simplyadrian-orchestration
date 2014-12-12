@@ -38,7 +38,7 @@ include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalkclient-nativex'
 include_recipe 'pbis-nativex'
-include_recipe 'yum-nativex::doupgrade'
+include_recipe "auto-patch"
 include_recipe 'yum-nativex::deleterepo'
 include_recipe 'ntp'
 include_recipe 'motd'
