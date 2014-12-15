@@ -3,6 +3,14 @@
   "description": "A role to manage the base configuration of a linux server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "auto-patch": {
+      "monthly": "third tuesday",
+      "prep": {
+        "disable": false,
+        "hour":3,
+        "monthly": "third tuesday"
+      }
+    },
     "build-essential": {
       "compile_time": "true"
     },
