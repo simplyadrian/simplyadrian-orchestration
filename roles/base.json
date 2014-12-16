@@ -15,14 +15,14 @@
       "compile_time": "true"
     },
     "ntp":{
-       "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
+      "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
     },
     "snmp": {
-       "community": "xmass1970",
-       "full_systemview": "true",
-       "sources": ["10.15.0.0/16", "localhost"],
-       "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
-       "syscontact": "sysadmins <sysadmins@w3i.com>"
+      "community": "xmass1970",
+      "full_systemview": "true",
+      "sources": ["10.15.0.0/16", "localhost"],
+      "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
+      "syscontact": "sysadmins <sysadmins@w3i.com>"
     },
     "tuned": {
       "active_profile": "virtual-guest"
@@ -48,7 +48,7 @@
     "recipe[hostname-nativex::updatehostname]",
     "recipe[yum-nativex]",
     "recipe[yum-epel]",
-    "recipe[spacewalkclient-nativex]",
+    "recipe[spacewalk-nativex]",
     "recipe[pbis-nativex]",
     "recipe[yum-nativex::doupgrade]",
     "recipe[yum-nativex::deleterepo]",
