@@ -68,6 +68,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
+    "recipe[cifs-nativex]",
     "recipe[git]",
     "recipe[blockdevice-nativex]",
     "recipe[blockdevice-nativex::tags]",
