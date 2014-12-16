@@ -48,7 +48,7 @@
     "recipe[hostname-nativex::updatehostname]",
     "recipe[yum-nativex]",
     "recipe[yum-epel]",
-    "recipe[spacewalkclient-nativex]",
+    "recipe[spacewalk-nativex]",
     "recipe[pbis-nativex]",
     "recipe[yum-nativex::doupgrade]",
     "recipe[yum-nativex::deleterepo]",
