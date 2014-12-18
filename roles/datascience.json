@@ -28,7 +28,8 @@
     },
     "nodejs": {
       "npm_packages": [
-        {"name": "aws-sdk"}
+        {"name": "aws-sdk"},
+        {"name": "moment"}
       ]
     },
     "python": {
