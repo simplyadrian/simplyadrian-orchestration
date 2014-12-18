@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# If we're in EC2, then need to dynamically determine the the OU based on region
+include_recipe 'ad-nativex::dynamic_ou' if node['cloud']['provider'] == 'ec2'
+
 # Reboot server to commit changes
 include_recipe 'windows::reboot_handler'
 node.default[:windows][:allow_pending_reboots] = false
@@ -17,7 +20,7 @@ ad_nativex_domain "#{node['ad-nativex']['name']}" do
   action :join
   domain_pass ad["ad_password"]
   domain_user ad["ad_username"]
-  oupath "#{node['ad-nativex']['oupath']}"
+  oupath lazy { "#{node['ad-nativex']['oupath']}" }
 end
 
 # rename computer
