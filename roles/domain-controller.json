@@ -3,6 +3,9 @@
   "description": "A role to manage the configuration of a domain controller in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "ad-nativex": {
+      "oupath": "OU=Domain Controllers,DC=teamfreeze,DC=com"
+    },
   },
   "override_attributes": {
   },
