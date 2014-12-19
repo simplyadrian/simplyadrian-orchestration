@@ -7,7 +7,9 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-
+    "spacewalk-nativex": {
+      "activation_key": "1-prod-centos6"
+    }
   },
   "override_attributes": {
 
