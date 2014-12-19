@@ -1,0 +1,15 @@
+***************** Release 1, 12/19/2014 ***************
+Additions
+ - nodejs v2.2.0 cookbook
+ - cifs-nativex v0.1.0 cookbook
+ - auto-patch v0.1.9 cookbooko
+
+Changes
+ - datascience Role includes 'awscli' python package
+ - bug fixes for blockdevice-nativex cookbook
+ - xml cookbook version bump 1.2.4 to 1.2.6
+ - route53 cookbook version bump 0.3.5 to 0.3.8
+ - cron cookbook version bump 1.5.0 to 1.6.1
+ - chef-sugar cookbook version bump 2.0.0 to 2.4.1
+ - build-essential cookbook version bump 2.0.6 to 2.1.2
+**********************************************************
