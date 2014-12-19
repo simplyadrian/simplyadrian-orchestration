@@ -5,7 +5,7 @@
   "default_attributes": {
     "ad-nativex": {
       "oupath": "OU=Domain Controllers,DC=teamfreeze,DC=com"
-    },
+    }
   },
   "override_attributes": {
   },
