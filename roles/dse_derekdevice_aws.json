@@ -28,7 +28,7 @@
       "write_request_timeout_in_ms": 10000,
       "cross_node_timeout": true,
       "phi_convict_threshold": 12,
-      "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch",
+      "endpoint_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch",
       "dynamic_snitch_badness_threshold": 0.2,
       "inter_dc_tcp_nodelay": false,
       "inter_dc_stream_throughput_outbound_Mbps": 10,
@@ -47,9 +47,6 @@
       "gc_log_NumberOfGCLogFiles": 10,
       "gc_log_GCLogFileSize": "10M",
       "log_syslog_enabled": false
-    },
-    "dse": {
-      "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
     },
     "opscenter-agent": {
       "opscenter-ip": "10.15.72.5",
