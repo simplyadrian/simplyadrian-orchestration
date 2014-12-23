@@ -30,8 +30,8 @@
   "run_list": [
     "role[base]",
     "recipe[tuned-nativex::apply_profile]",
-    "recipe[dse-nativex::determine_ec2_topology]",
-    "recipe[dse-nativex::default]"
+    "recipe[dse-nativex::determine_ec2_topology@0.1.0]",
+    "recipe[dse-nativex::default@0.1.0]"
   ],
   "env_run_lists": {
 
