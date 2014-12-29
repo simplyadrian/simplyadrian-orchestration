@@ -78,7 +78,7 @@
     "recipe[python]",
     "recipe[python-nativex]",
     "recipe[r]",
-    "recipe[r-nativex@0.1.1]",
+    "recipe[r-nativex]",
     "recipe[rabbitmq]",
     "recipe[rabbitmq::mgmt_console]",
     "recipe[rabbitmq::user_management]",
