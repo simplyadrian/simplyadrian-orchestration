@@ -26,6 +26,9 @@
         "accept_oracle_download_terms": "true"
       }
     },
+    "mkdirs": [{
+      "path": "/automnt"
+    }],
     "nodejs": {
       "npm_packages": [
         {"name": "aws-sdk"},
@@ -74,6 +77,7 @@
     "recipe[blockdevice-nativex]",
     "recipe[blockdevice-nativex::tags]",
     "recipe[iptables-nativex::ssh]",
+    "recipe[mkdirs]",
     "recipe[nodejs]",
     "recipe[python]",
     "recipe[python-nativex]",
