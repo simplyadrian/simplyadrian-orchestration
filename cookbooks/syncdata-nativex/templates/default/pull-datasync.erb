@@ -1,0 +1,32 @@
+#!/bin/bash
+# pull-datasync.sh : Pull data from remote server via rsync
+
+status="<%= node[:status_directory] %>/datasync.status"
+
+if [ -d /tmp/.rsync.lock ]; then
+echo "FAILURE : rsync lock exists : Perhaps there is a lot of new data to pull from the remote server. Will retry shortly" > $status
+exit 1
+fi
+
+/bin/mkdir /tmp/.rsync.lock
+
+if [ $? = "1" ]; then
+echo "FAILURE : can not create lock" > $status
+exit 1
+else
+echo "SUCCESS : created lock" > $status
+fi
+
+echo "===== Beginning rsync ====="
+
+nice -n 20 /usr/bin/rsync -axvz --delete -e ssh <%= node[:user_name] %>@<%= node[:remote_node_fqdn] %>:<%= node[:source_directory] %> <%= node[:destination_directory] %>
+
+if [ $? = "1" ]; then
+echo "FAILURE : rsync failed. Please refer to solution documentation" > $status
+exit 1
+fi
+
+echo "===== Completed rsync ====="
+
+/bin/rm -rf /tmp/.rsync.lock
+echo "SUCCESS : rsync completed successfully" > $status
