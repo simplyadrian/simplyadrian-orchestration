@@ -1,7 +1,0 @@
-{
-    "id": "ted.bienapfl",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAesYM1dkSS+I8Btb9Qp0BbEOO24SPe4B0oRbEdddoUXeMs0IskPStQDRQB4M0s30+Oz5B3ixgjBvw1UeCLnD1YcPiqrXxFcgUv1TWuk5bYGM0K9D0OIKvukPSmSrLOjMHPSCj3sCqntKD4tRwZn7EPR/P49hfLgAhYocLSuyl6+Yafj37Kl8Pt4WpWtnPzJ41O8zGpHNYbaDV+/PS4QmDdK/veFpRDzedkl0E9sfBM2BZgWIwgZAdKeE9FAgXzgvNttqZ3xZgO+9143/xPwtoUDS3XTkFB7+1og62MQ9asYlSISsXqmrHYDQA4aVlENFmrAVTOK9ofHNHSMEOHjQb ted.bienapfl@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2003,
-    "shell": "\/bin\/bash"
-}

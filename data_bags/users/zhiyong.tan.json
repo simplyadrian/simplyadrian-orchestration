@@ -1,7 +1,0 @@
-{
-    "id": "zhiyong.tan",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRu+GpWhGmiFUDiW3l96dM5YM9p2PlbBDAggV9kvFcplOcXY3v+n/7rh3VwBJ3PKwHQlM1S0V2tyMDOnhXRoCxgOLnqN+bfZPoxRMoHa+7dKzzCwJ23qi4xIbDzE7EqxembtSH6M7ecye/g+kCdqxPkYegJvFflbetby0X1ne1k/K5yYRI+rw23kRGDTF9R25gcvF52s8ysU59n7L92dfXdKfs+V81lUcIt6zzYurcIo9SJYfxCnfIfAzrvu7+Jr6luUSZ3X2/wjoHSN7k66Ss+QxA71lqlSpVk5sS2c2TVmbqsQ9MbOfgfdQ62W5Vnpa+bz7+rnq4Ib14BDJ4ky+5 zhiyong.tan@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2002,
-    "shell": "\/bin\/bash"
-}
