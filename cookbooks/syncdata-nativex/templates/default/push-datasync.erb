@@ -1,8 +1,8 @@
 #!/bin/bash
 # push-datasync.sh - Push data from local server to remote servers via rsync
 
-remoteservers=(nas01 nas02 nas03 nas04 nas05)
-status="/mnt/ebs/datasync.status"
+remoteservers=(<%= node[:remote_servers] %>)
+status="<%= node[:status_directory] %>/datasync.status"
 
 if [ -d /tmp/.rsync.lock ]; then
 echo "FAILURE : rsync lock exists : Perhaps there is a lot of new data to push to the remote servers. Will retry soon." > $status
@@ -22,7 +22,7 @@ for i in ${remoteservers[@]}; do
 
 echo "===== Beginning rsync of $i ====="
 
-nice -n 20 /usr/bin/rsync -avzx --delete -e ssh /mnt/ebs/ root@$i:/mnt/ebs/
+nice -n 20 /usr/bin/rsync -avzx --delete -e ssh <%= node[:source_directory] %> root@$i:<%= node[:destination_directory] %>
 
 if [ $? = "1" ]; then
 echo "FAILURE : rsync failed. Please refer to the solution documentation " > $status
