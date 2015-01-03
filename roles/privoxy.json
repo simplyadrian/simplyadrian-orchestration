@@ -3,21 +3,12 @@
   "description": "A role to manage the configuration of a privoxy server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "build-essential": {
-      "compile_time": "true"
-    },
-    "tuned": {
-      "active_profile": "virtual-guest"
-    }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
-    "role[base]",
-    "recipe[privoxy]",
-    "recipe[iptables-nativex::privoxy]",
-    "recipe[iptables-nativex::ssh]"
+    "recipe[role-privoxy-nativex]"
   ],
   "env_run_lists": {
   }

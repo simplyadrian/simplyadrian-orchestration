@@ -3,21 +3,12 @@
   "description": "A role to manage the configuration of a domain controller in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "ad-nativex": {
-      "oupath": "OU=Domain Controllers,DC=teamfreeze,DC=com"
-    }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[aws]",
-    "recipe[windows]",
-    "recipe[ad-nativex::joindomain]",
-    "recipe[ad-nativex::installdomaincontroller]",
-    "recipe[dnsupdate-nativex::addprv]",
-    "recipe[chef-client::delete_validation]",
-    "recipe[chef-client]"
+    "recipe[role-domain-controller-nativex]"
   ],
   "env_run_lists": {
   }
