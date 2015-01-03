@@ -2,7 +2,7 @@
 # push-datasync.sh - Push data from local server to remote servers via rsync
 
 remoteservers=<%= node['syncdata_nativex']['remote_servers'] %>
-status="<%= node['syncdata_nativex']['status_directory'] %>/datasync.status"
+status="/tmp/datasync.status"
 
 if [ -d /tmp/.rsync.lock ]; then
 echo "FAILURE : rsync lock exists : Perhaps there is a lot of new data to push to the remote servers. Will retry soon." > $status

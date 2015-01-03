@@ -1,5 +1,3 @@
-#Where to write the status file for the process.
-default['syncdata_nativex']['status_directory'] = "/mnt/ebs"
 #The remote nodes fully qualified domain name.
 default['syncdata_nativex']['remote_node_fqdn'] = "PAW1AL-NAS-01-prv.nativexintern.com"
 #The remote nodes directory you want to sync locally.
@@ -12,6 +10,6 @@ default['syncdata_nativex']['remote_servers'] = ["PAW2AL-NAS-02-prv.nativexinter
 default['syncdata_nativex']['ssh']['user'] = "root"
 #The group the ssh keys will be owned by.
 default['syncdata_nativex']['ssh']['group'] = "root"
-#The users home directory where the ssh keys will be generated and stored for the master node.
+#The users home directory where the ssh keys will be generated and stored.
 default['syncdata_nativex']['ssh']['home'] = "/root/.ssh"
 
