@@ -1,7 +1,7 @@
 #!/bin/bash
 # pull-datasync.sh : Pull data from remote server via rsync
 
-status="<%= node['syncdata_nativex']['status_directory'] %>/datasync.status"
+status="/tmp/datasync.status"
 
 if [ -d /tmp/.rsync.lock ]; then
 echo "FAILURE : rsync lock exists : Perhaps there is a lot of new data to pull from the remote server. Will retry shortly" > $status

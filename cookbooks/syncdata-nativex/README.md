@@ -1,24 +1,15 @@
 syncdata-nativex Cookbook
 =========================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook provides templates to sync directory content with rsync using pull or a push method from defined servers.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - syncdata-nativex needs toaster to brown your bagel.
+crond
+line
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### syncdata-nativex::default
+#### syncdata-nativex
 <table>
   <tr>
     <th>Key</th>
@@ -27,20 +18,55 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['syncdata-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['syncdata-nativex']['ssh']['home']</tt></td>
+    <td>String</td>
+    <td>The users home directory where the ssh keys will be generated and stored.</td>
+    <td><tt>/root/.ssh</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['ssh']['group']</tt></td>
+    <td>String</td>
+    <td>The group the ssh keys will be owned by</td>
+    <td><tt>root</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['ssh']['user']</tt></td>
+    <td>String</td>
+    <td>The user the ssh keys will be generated for use by.</td>
+    <td><tt>root</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['remote_servers']</tt></td>
+    <td>String</td>
+    <td>The list of remote servers content is to be pushed to.</td>
+    <td><tt>["PAW2AL-NAS-02-prv.nativexintern.com","PAE1AL-NAS-03-prv.nativexintern.com"]</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['destination_directory']</tt></td>
+    <td>String</td>
+    <td>The local directory that will be synced with the remote node.</td>
+    <td><tt>"/mnt/ebs/"</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['source_directory']</tt></td>
+    <td>String</td>
+    <td>The remote nodes directory you want to sync locally.</td>
+    <td><tt>"/mnt/ebs/"</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['syncdata-nativex']['remote_node_fqdn']</tt></td>
+    <td>String</td>
+    <td>The remote nodes fully qualified domain name.</td>
+    <td><tt>"PAW1AL-NAS-01-prv.nativexintern.com"</tt></td>
   </tr>
 </table>
+
 
 Usage
 -----
 #### syncdata-nativex::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `syncdata-nativex` in your node's `run_list`:
+Just include `syncdata-nativex` in your node's `run_list` to set up ssh keys:
 
 ```json
 {
@@ -51,18 +77,6 @@ Just include `syncdata-nativex` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera
