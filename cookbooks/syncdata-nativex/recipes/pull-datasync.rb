@@ -1,21 +1,21 @@
 #
 # Cookbook Name:: syncdata-nativex
-# Recipe:: push-datasync
+# Recipe:: pull-datasync
 #
 # Copyright 2014, NativeX
 #
 # All rights reserved - Do Not Redistribute
 #
 
-template '/usr/local/bin/push-datasync.rb' do
+template '/usr/local/bin/pull-datasync.rb' do
   action :create
-  source 'push-datasync.erb'
+  source 'pull-datasync.erb'
   mode '0744'
 end
 
 # Run channel update on the 3rd Tuesday of every month
-cron 'push-datasync' do
+cron 'pull-datasync' do
   action :create
-  command "/usr/local/bin/push-datasync.rb"
+  command "/usr/local/bin/pull-datasync.rb"
   minute '*'
 end
