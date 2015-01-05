@@ -17,14 +17,29 @@
 # limitations under the License.
 #
 
-package 'r-base' do
-  version node['r']['version'] if node['r']['version']
-  action :install
-end
-
-if node['r']['install_dev']
-  package 'r-base-dev' do
+case node['platform_family']
+when 'debian'
+  package 'r-base' do
     version node['r']['version'] if node['r']['version']
     action :install
+  end
+
+  if node['r']['install_dev']
+    package 'r-base-dev' do
+      version node['r']['version'] if node['r']['version']
+      action :install
+    end
+  end
+when 'rhel'
+  if node['r']['install_dev']
+    package 'R-devel' do
+      version node['r']['version'] if node['r']['version']
+      action :install
+    end
+  else
+    package 'R' do
+      version node['r']['version'] if node['r']['version']
+      action :install
+    end
   end
 end

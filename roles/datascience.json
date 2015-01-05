@@ -31,6 +31,7 @@
     }],
     "nodejs": {
       "npm_packages": [
+        {"name": "async"},
         {"name": "aws-sdk"},
         {"name": "moment"}
       ]
@@ -43,7 +44,7 @@
       "packages": ["pyyaml", "kombu", "lockfile", "asyncio", "paramiko", "boto", "awscli"]
       },
     "r": {
-      "version": "3.1.2"
+      "version": "3.1.2-1.el6"
     },
     "r_nativex": {
       "packages": ["optparse", "yaml", "data.table", "ffbase", "ROCR", "ETLUtils", "rjson", "RODBC", "ff", "gbm", "LaF"]
