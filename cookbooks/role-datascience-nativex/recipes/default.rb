@@ -26,12 +26,10 @@ node.default['r_nativex']['packages'] = ["optparse", "yaml", "data.table", "ffba
 node.default['rabbitmq']['version'] = "3.3.5"
 node.default['rabbitmq']['mnesiadir'] = "/mnt/ebs/rabbitmq_db"
 node.default['rabbitmq']['logdir'] = "/mnt/ebs/log/rabbitmq"
-node.default['rabbitmq']['enabled_users']['name'] = "datascience"
-node.default['rabbitmq']['enabled_users']['password'] = "datascience"
-node.default['rabbitmq']['enabled_users']['tag'] = "administrator"
-node.default['rabbitmq']['enabled_users']['rights']['conf'] = ".*"
-node.default['rabbitmq']['enabled_users']['rights']['write'] = ".*"
-node.default['rabbitmq']['enabled_users']['rights']['read'] = ".*"
+node.default['rabbitmq']['enabled_users'] =
+  [{ :name => 'datascience', :password => 'datascience', :tag => 'administrator', :rights =>
+    [{ :conf => '.*', :write => '.*', :read => '.*' }]
+  }]
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'role-base-nativex'
