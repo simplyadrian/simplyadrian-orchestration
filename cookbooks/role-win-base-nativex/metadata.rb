@@ -5,9 +5,9 @@ license          'All rights reserved'
 description      'Installs/Configures role-win-base-nativex'
 version          '0.1.0'
 
-depends "ohai-nativex"
-depends "aws"
-depends "windows"
-depends "ad-nativex"
-depends "dnsupdate-nativex"
-depends "chef-client"
+depends "ohai-nativex", '0.1.1'
+depends "aws", '2.5.0'
+depends "windows", '1.34.6'
+depends "ad-nativex", '0.1.1'
+depends "dnsupdate-nativex", '0.1.0'
+depends "chef-client", '3.8.0'
