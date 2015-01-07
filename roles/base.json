@@ -3,59 +3,12 @@
   "description": "A role to manage the base configuration of a linux server in EC2",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "auto-patch": {
-      "monthly": "third tuesday",
-      "prep": {
-        "disable": false,
-        "hour":3,
-        "monthly": "third tuesday"
-      }
-    },
-    "build-essential": {
-      "compile_time": "true"
-    },
-    "ntp":{
-      "servers": ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
-    },
-    "snmp": {
-      "community": "xmass1970",
-      "full_systemview": "true",
-      "sources": ["10.15.0.0/16", "localhost"],
-      "syslocationVirtual": "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server",
-      "syscontact": "sysadmins <sysadmins@w3i.com>"
-    },
-    "tuned": {
-      "active_profile": "virtual-guest"
-    }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[ohai-nativex]",
-    "recipe[aws]",
-    "recipe[vim]",
-    "recipe[nano]",
-    "recipe[bash-completion]",
-    "recipe[dstat]",
-    "recipe[numad-nativex]",
-    "recipe[tuned-nativex]",
-    "recipe[nfs]",
-    "recipe[ephemeral_lvm-nativex]",
-    "recipe[iptables]",
-    "recipe[snmp]",
-    "recipe[dnsupdate-nativex::addprv]",
-    "recipe[hostname-nativex::updatehostname]",
-    "recipe[yum-nativex]",
-    "recipe[yum-epel]",
-    "recipe[spacewalk-nativex]",
-    "recipe[pbis-nativex]",
-    "recipe[yum-nativex::doupgrade]",
-    "recipe[yum-nativex::deleterepo]",
-    "recipe[ntp]",
-    "recipe[motd]",
-    "recipe[chef-client::delete_validation]",
-    "recipe[chef-client]"
+    "recipe[role-base-nativex]"
   ],
   "env_run_lists": {
   }

@@ -1,0 +1,12 @@
+name             'role-domain-controller-nativex'
+maintainer       'NativeX'
+maintainer_email 'adrian.herrera@nativex.com'
+license          'All rights reserved'
+description      'Installs/Configures role-domain-controller-nativex'
+version          '0.1.0'
+
+depends 'aws', '2.5.0'
+depends 'windows', '1.34.6'
+depends 'ad-nativex', '0.1.1'
+depends 'dnsupdate-nativex', '0.1.0'
+depends 'chef-client', '3.8.0'
