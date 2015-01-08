@@ -19,4 +19,4 @@ include_recipe 'iptables-nativex::web'
 include_recipe 'apache2'
 include_recipe 'apache2::mod_ssl'
 include_recipe 'apache2::logrotate'
-include_recipe 'apache-nativex2::vhost"
+include_recipe 'apache-nativex2::vhost'
