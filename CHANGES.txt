@@ -1,4 +1,6 @@
-***************** Release 1, 12/19/2014 ***************
+**********************************************************
+***************** Release 1, 12/19/2014 ******************
+**********************************************************
 Additions
  - nodejs v2.2.0 cookbook
  - cifs-nativex v0.1.0 cookbook
@@ -13,3 +15,14 @@ Changes
  - chef-sugar cookbook version bump 2.0.0 to 2.4.1
  - build-essential cookbook version bump 2.0.6 to 2.1.2
 **********************************************************
+***************** Release 2, 01/08/2015 ******************
+**********************************************************
+Additions
+ - syncdata-nativex v0.1.0
+ - mkdirs
+
+Changes
+ - role to "role cookbook" conversion completed
+ - removed the data_bag directory from source control. Now we rely on "knife data bag" resource to handle data bags in chef.
+ - updates added to the prod environment file. Restricting the environment to only run "0.1.0" of the "role cookbooks".
+ - refactored the dnsupdate-nativex cookbook to use the aws-sdk gem for dns manipulation. 
