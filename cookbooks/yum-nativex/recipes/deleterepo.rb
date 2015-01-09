@@ -7,27 +7,20 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# delete CentOS-Base repo
-yum_repository 'CentOS-Base' do
-  action :delete
-end
+repositories = %w(
+    CentOS-Base
+    CentOS-Media
+    CentOS-Debuginfo
+    CentOS-Vault
+    rightlink
+    epel
+    spacewalk-client
+    base
+    extras
+)
 
-# delete CentOS-Media repo
-yum_repository 'CentOS-Media' do
-  action :delete
-end
-
-# delete CentOS-Debuginfo repo
-yum_repository 'CentOS-Debuginfo' do
-  action :delete
-end
-
-# delete CentOS-Vault repo
-yum_repository 'CentOS-Vault' do
-  action :delete
-end
-
-# delete rightlink repo
-yum_repository 'rightlink' do
-  action :delete
+repositories.each do |r|
+  yum_repository r do
+    action :delete
+  end
 end
