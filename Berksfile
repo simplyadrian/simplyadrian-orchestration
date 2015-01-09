@@ -1,9 +1,15 @@
-site :opscode
+# Example parent berksfile
+source 'https://supermarket.getchef.com'
 
-def company_cookbook(name, version = '>= 0.0.0', options = {})
-  cookbook(name, version, {
-    git: "git@github.com:company-cookbooks/#{name}.git"
-   }.merge(options))
-end
+organization = 'jhauf-nativex'
+repo_prefix = 'chef-'
+private_cookbooks = [
+    ['cron', '>= 1.6.1', :branch => 'master'],
+    ['vim', '>= 1.1.3', :branch => 'master']
+]
 
-cookbook "apache"
+private_cookbooks.each { |cb|
+  cookbook(cb[0], cb[1], {
+    git: "git@github.com:#{organization}/#{repo_prefix}#{cb[0]}.git"
+  }.merge(cb[2]))
+}
