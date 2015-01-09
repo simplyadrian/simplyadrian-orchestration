@@ -1,5 +1,5 @@
 # mkdirs path to directory being created
-default['mkdirs']['path'] = "/automnt"
+default['mkdirs']['path'] = ["/automnt"]
 # user who owns the directory
 default['mkdirs']['owner'] = "root"
 # group that owns the directory
