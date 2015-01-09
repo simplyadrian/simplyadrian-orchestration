@@ -1,7 +1,0 @@
-{
-    "id": "james.shanahan",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHuT0tLv56dfmb5b1HM2ECWPhhjuDcmyhO5Y6R1AC4uOjQjWB4DfBgfllnnXWY+yebe+QUSg+kl3TD0ATEyQpJk5DMUWs0GPRTifgIKF8gH+WQ3BxxishbOqBcm64/aSmtnvHx8ip18xG74Kn28THgPQzcywsj49vbUaLGhnGDAPnxIsxVZh8beOwniet5MChxLg3HgonT2C2d0GqUmREFXdksXrfRzvAlf+uJyOE6yz0Os8jTgeMXebiDntgHV048WPnWX+ayq48NsL+0WQjgn1B0sb+bC+zYL+jdbHVM2W0swozMCU0Ehlj5q6mKQaMsZsNOO6/8Joybr+/6pujP james.shanahan@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2011,
-    "shell": "\/bin\/bash"
-}

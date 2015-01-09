@@ -2,7 +2,18 @@
   "name": "prod",
   "description": "The master branch",
   "cookbook_versions": {
-
+    "role-apache-webserver-nativex": "= 0.1.0",
+    "role-base-nativex": "= 0.1.0",
+    "role-datascience-nativex": "= 0.1.0",
+    "role-domain-controller-nativex": "= 0.1.0",
+    "role-dse-devcass1-aws-nativex": "= 0.1.0",
+    "role-dse-nativex": "= 0.1.0",
+    "role-nas-nativex": "= 0.1.0",
+    "role-nat-nativex": "= 0.1.0",
+    "role-privoxy-nativex": "= 0.1.0",
+    "role-spacewalk-server-nativex": "= 0.1.0",
+    "role-theano-nativex": "= 0.1.0",
+    "role-win-base-nativex": "= 0.1.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",

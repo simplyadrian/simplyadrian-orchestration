@@ -1,7 +1,0 @@
-{
-    "id": "brett.stime",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgiTp2tSBfVksHkwdD7yzuBWpVjMq0wEiG73QWL/E5ouieVotYIQH+mhy3rdNIu3rAoHWfNHWDTZIqGbgZg8Sv0x4/4ydscCYwgvPBQ1Y9AzVNjJuXxLL847xsSwSalfhQhr2V6dCSdglljldfr9kV104QHwi71/haCiYmmJgfOlwn5M+Ad5OAhZygBmGr7nM78yv8/X0GF4m/bONjedrvsB5GGvi2bo5gTUQPV6d8dob3V4fMyHUiI5BPiNKtLOlfthfVvMvWVeoT+dr5ipAWKrg5Mlk4MD8Ci0Btb6og5+4MbPnl1iwcm2pmIQ8sb9DHgNA23YaY7JwERVPlDSNh brett.stime@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2001,
-    "shell": "\/bin\/bash"
-}

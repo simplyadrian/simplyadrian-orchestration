@@ -1,7 +1,0 @@
-{
-    "id": "hui.li",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmtMBRXPRd7mFAtP4T/RZzgza6IOKjv9ei57tw3dmsxaspQoHN2/ySyJNhR0UCKNlqAC+KZO6fhj0NoZZidA7zCupCNy7izCZv08NcKUFClV8FcG3rxEhjBBH9X5TDfikWOsVI8YwkRYxOpEGHSDtyX3m/MC6Vu+VDIKJ2UGZHSik/PgodQoCllao9/wewsjF9vnv+MK3wMrIQ4hpsonT3q7+Bn9uRMx98IMaBUtXYrFVSVlLPZ+WBAA9H2FALQs2fxsfCtKPb/r8BTX7Y7yMqVfSxtZ//2+NehO6uunFB3XhApxcgEZyHDPOIaJ2aR96NC8fPB7Pqjur5VgtRPIrn hui.li@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2007,
-    "shell": "\/bin\/bash"
-}
