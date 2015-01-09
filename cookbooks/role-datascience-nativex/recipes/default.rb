@@ -40,7 +40,7 @@ include_recipe 'git'
 include_recipe 'blockdevice-nativex'
 include_recipe 'blockdevice-nativex::tags'
 include_recipe 'iptables-nativex::ssh'
-include_recipe "mkdirs"
+include_recipe 'mkdirs'
 include_recipe 'nodejs'
 include_recipe 'python'
 include_recipe 'python-nativex'
