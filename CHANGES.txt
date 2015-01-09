@@ -29,3 +29,4 @@ Changes
  - refactored the dnsupdate-nativex cookbook to use the aws-sdk gem for dns manipulation. 
  - Simplified 'ou' vs 'oupath' confusion in ad and pbis nativex cookbooks. Settled on 'oupath'. [ISE-281]
  - Expanded and componentized 'oupath' in pbis/ad nativex cookbooks for our 6-level OU Path in ActiveDirectory. [ISE-293 and 294]
+ - dse-nativex v1.0.0 supports DSE 4.6. Still using 4.5.3 for existing servers at this time.
