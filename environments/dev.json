@@ -2,7 +2,8 @@
   "name": "dev",
   "description": "The master development branch",
   "cookbook_versions": {
-
+    "role-dse-devcass1-aws-nativex": "= 0.1.0",
+    "role-dse-nativex": "= 0.1.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
@@ -10,12 +11,6 @@
     "chef_client": {
         "interval": "600",
         "log_file": "chefclt.log"
-    },
-    "cassandra": {
-        "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch"
-    },
-    "dse": {
-        "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
     },
     "opscenter-agent": {
       "opscenter-ip": "10.15.72.5"

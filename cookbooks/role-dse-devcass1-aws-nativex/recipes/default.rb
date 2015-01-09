@@ -29,7 +29,7 @@ node.default['cassandra']['read_request_timeout_in_ms'] = 10000
 node.default['cassandra']['write_request_timeout_in_ms'] = 10000
 node.default['cassandra']['cross_node_timeout'] = true
 node.default['cassandra']['phi_convict_threshold'] = 12
-node.default['cassandra']['endpoint_snitch'] = "com.datastax.bdp.snitch.DseDelegateSnitch"
+node.default['cassandra']['endpoint_snitch'] = "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
 node.default['cassandra']['dynamic_snitch_badness_threshold'] = 0.2
 node.default['cassandra']['inter_dc_tcp_nodelay'] = false
 node.default['cassandra']['inter_dc_stream_throughput_outbound_Mbps'] = 10
@@ -49,7 +49,6 @@ node.default['cassandra']['gc_log_NumberOfGCLogFiles'] = 10
 node.default['cassandra']['gc_log_GCLogFileSize'] = "10M"
 node.default['cassandra']['log_syslog_enabled'] = true
 node.default['cassandra']['log_syslog_host'] = "10.15.0.249"
-node.default['dse']['delegated_snitch'] = "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
 node.default['opscenter-agent']['opscenter-ip'] = "10.15.72.5"
 node.default['opscenter-agent']['is_opscenter_cluster_configured'] = true
 
