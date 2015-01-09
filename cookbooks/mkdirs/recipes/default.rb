@@ -7,11 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['mkdirs'].each do |dir_cfg|
-  directory dir_cfg['path'] do
-    owner (dir_cfg['owner'] || 'root')
-    group (dir_cfg['group'] || 'root')
-    mode (dir_cfg['mode'] || '0755')
+node['mkdirs']['path'].each do |dir_cfg|
+  directory dir_cfg do
+    owner node['mkdirs']['owner']
+    group node['mkdirs']['group']
+    mode node['mkdirs']['mode']
     action :create
   end
 end
