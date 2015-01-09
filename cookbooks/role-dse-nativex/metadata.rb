@@ -7,4 +7,4 @@ version          '0.1.0'
 
 depends 'role-base-nativex', '=0.1.0'
 depends 'tuned-nativex', '=0.1.0'
-depends 'dse-nativex', '=1.0.0'
+depends 'dse-nativex', '=0.1.0'
