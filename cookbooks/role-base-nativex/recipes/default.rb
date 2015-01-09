@@ -36,7 +36,7 @@ include_recipe 'dnsupdate-nativex::addprv'
 include_recipe 'hostname-nativex::updatehostname'
 include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
-include_recipe 'spacewalkclient-nativex'
+include_recipe 'spacewalk-nativex'
 include_recipe 'pbis-nativex'
 include_recipe "auto-patch"
 include_recipe 'yum-nativex::deleterepo'
