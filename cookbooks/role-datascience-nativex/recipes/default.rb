@@ -7,12 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node.default['blockdevice-nativex']['dir'] = "/mnt/ebs"
-node.default['blockdevice-nativex']['mount_point_group'] = "predictive_analytics"
-node.default['blockdevice-nativex']['recurse_permissions'] = false
-node.default['blockdevice-nativex']['filesystem'] = "xfs"
-node.default['blockdevice-nativex']['ebs']['raid'] = false
-node.default['blockdevice-nativex']['ebs']['size'] = 500 
+node.default['blockdevice_nativex']['dir'] = "/mnt/ebs"
+node.default['blockdevice_nativex']['mount_point_group'] = "predictive_analytics"
+node.default['blockdevice_nativex']['recurse_permissions'] = false
+node.default['blockdevice_nativex']['filesystem'] = "xfs"
+node.default['blockdevice_nativex']['ebs']['raid'] = false
+node.default['blockdevice_nativex']['ebs']['size'] = 500 
 node.default['ephemeral_lvm']['mount_point'] = "/mnt/ephemeral"
 node.default['java']['install_flavor'] = "oracle"
 node.default['java']['jdk_version'] = "7"
