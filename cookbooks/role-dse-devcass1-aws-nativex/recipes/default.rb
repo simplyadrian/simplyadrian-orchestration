@@ -8,7 +8,7 @@
 #
 node.default['tuned']['active_profile'] = "cassandra-ssd-storage"
 node.default['cassandra']['cluster_name'] = "dev-cass1"
-node.default['cassandra']['cluster_dc_info'] = { "dev-cass1": { "seeds": ["10.15.72.101", "10.15.72.102"] }, "us-west-1": { "seeds": ["172.28.12.144", "172.28.22.105"] } }
+node.default['cassandra']['cluster_dc_info'] = {"dev-cass1"=>{"seeds"=>["10.15.72.101", "10.15.72.102"]}, "us-west-1"=>{"seeds"=>["172.28.12.144", "172.28.22.105"]}}
 node.default['cassandra']['seeds'] = "10.15.72.101,10.15.72.102,172.28.12.144,172.28.22.105"
 node.default['cassandra']['auto_bootstrap'] = false
 node.default['cassandra']['max_hint_window_in_ms'] = 604800000

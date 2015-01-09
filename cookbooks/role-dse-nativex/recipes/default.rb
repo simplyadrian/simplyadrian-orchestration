@@ -15,6 +15,7 @@ node.default['java']['install_flavor'] = "oracle"
 node.default['java']['jdk_version'] = "7"
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
 node.default['opscenter-agent']['enabled'] = true
+node.default['pbis-nativex']['organizational_unit_level_5'] = "Cassandra Servers"
 node.default['tuned']['active_profile'] = "throughput-performance"
 
 include_recipe 'role-base-nativex'
