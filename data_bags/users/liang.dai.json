@@ -1,7 +1,0 @@
-{
-    "id": "liang.dai",
-    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDlR5xR8/5pnhAg9sRt3QqHGq5KFu/nigHXvtbkk4MxS2ABesxlNq5F5ygB8zXuAhOOq+bFhEBWQNFElxa8RvkYxasjxhLSIE72RWujeNveugfC4rlepb9PmPjZcgZUomMaUT2ekLdKfz7Lpl5oQPb5UdyPgYUPxM5snjnFupJ3CyTTY29k/GbW2ZE28EJ8hB/loXP7FOikxHVF5qikUtm5gfJ/CXkHk1EVTxCr393FLhS3U3aDXz8r26fe5GOIvY8sjdb59QWMgx7x3K588Gb20kIA4Fnu/SEFhIA4e+0l+MQPqK3NCands/y9zegiFCaWCikpI6cAI4U5YWcySDBL liang.dai@nativex.com",
-    "groups": [ "sysadmin" ],
-    "uid": 2009,
-    "shell": "\/bin\/bash"
-}

@@ -1,0 +1,10 @@
+name             'role-dse-nativex'
+maintainer       'NativeX'
+maintainer_email 'adrian.herrera@nativex.com'
+license          'All rights reserved'
+description      'Installs/Configures role-dse-nativex'
+version          '0.1.0'
+
+depends 'role-base-nativex', '=0.1.0'
+depends 'tuned-nativex', '=0.1.0'
+depends 'dse-nativex', '=1.0.0'
