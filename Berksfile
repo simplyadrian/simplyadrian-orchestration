@@ -87,3 +87,4 @@ cookbook 'role-nas-nativex', '0.1.0', github: 'nativex/cookbook-role-nas-nativex
 cookbook 'role-nat-nativex', '0.1.0', github: 'nativex/cookbook-role-nat-nativex'
 cookbook 'role-privoxy-nativex', '0.1.0', github: 'nativex/cookbook-role-privoxy-nativex'
 cookbook 'role-spacewalk-server-nativex', '0.1.0', github: 'nativex/cookbook-role-spacewalk-server-nativex'
+cookbook 'role-theano-nativex', '0.1.0', github: 'nativex/cookbook-role-theano-nativex'
