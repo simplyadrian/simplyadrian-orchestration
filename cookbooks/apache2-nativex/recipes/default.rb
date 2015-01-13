@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: apache-nativex2
+# Cookbook Name:: apache2-nativex
 # Recipe:: default
 #
 # Copyright 2014, NativeX

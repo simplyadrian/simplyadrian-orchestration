@@ -1,1 +1,1 @@
-default['apache-nativex2']['app_name'] = 'helloWorld'
+default['apache2-nativex']['app_name'] = 'helloWorld'

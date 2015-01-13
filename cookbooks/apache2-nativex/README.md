@@ -1,4 +1,4 @@
-apache-nativex2 Cookbook
+apache2-nativex Cookbook
 ========================
 This cookbook sets up apache2 for NativeX. A minimal configuration of a vhost file at this point for testing of html display. More will need to be developed to make this a meaningful production cookbook.
 
@@ -10,7 +10,7 @@ Requirements
 Attributes
 ----------
 
-#### apache-nativex2::vhost
+#### apache2-nativex::vhost
 <table>
   <tr>
     <th>Key</th>
@@ -19,7 +19,7 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['apache-nativex2']['app_name']</tt></td>
+    <td><tt>['apache2-nativex']['app_name']</tt></td>
     <td>String</td>
     <td>Provide the name of the app you are loading into Apache2</td>
     <td><tt>helloWorld</tt></td>
@@ -28,15 +28,15 @@ Attributes
 
 Usage
 -----
-#### apache-nativex2::vhost
+#### apache2-nativex::vhost
 
-Just include `apache-nativex2::vhost` in your node's `run_list`:
+Just include `apache2-nativex::vhost` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[apache-nativex2::vhost]"
+    "recipe[apache2-nativex::vhost]"
   ]
 }
 ```
