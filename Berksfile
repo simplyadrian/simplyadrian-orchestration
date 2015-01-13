@@ -92,3 +92,4 @@ cookbook 'role-win-base-nativex', '0.1.0', github: 'nativex/cookbook-role-win-ba
 cookbook 'spacewalk-nativex', '0.3.0', github: 'nativex/cookbook-spacewalk-nativex'
 cookbook 'syncdata-nativex', '0.1.0', github: 'nativex/cookbook-syncdata-nativex'
 cookbook 'tuned-nativex', '0.1.0', github: 'nativex/cookbook-tuned-nativex'
+cookbook 'yum-nativex', '0.2.0', github: 'nativex/cookbook-yum-nativex'
