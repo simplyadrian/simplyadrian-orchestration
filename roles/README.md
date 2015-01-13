@@ -1,3 +1,5 @@
+General Info About Roles
+-----------------------
 Create roles here, in either the Role Ruby DSL (.rb) or JSON (.json) files. To install roles on the server, use knife.
 
 For example, create `roles/base_example.rb`:
@@ -14,3 +16,7 @@ For example, create `roles/base_example.rb`:
 Then upload it to the Chef Server:
     
     knife role from file roles/base_example.rb
+
+Roles at NativeX
+----------------
+These role definitions should be very simple. We have decided to use the 'role cookbook' paradigm, so roles as they are defined here can should ideally wrap the `default` recipe of a corresponding role cookbook and nothing more.  That means no attribute definitions or run_list specification (other than the role-cookbook) -- all of that should go in the role cookbook.
