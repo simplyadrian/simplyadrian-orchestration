@@ -90,3 +90,4 @@ cookbook 'role-spacewalk-server-nativex', '0.1.0', github: 'nativex/cookbook-rol
 cookbook 'role-theano-nativex', '0.1.0', github: 'nativex/cookbook-role-theano-nativex'
 cookbook 'role-win-base-nativex', '0.1.0', github: 'nativex/cookbook-role-win-base-nativex'
 cookbook 'spacewalk-nativex', '0.3.0', github: 'nativex/cookbook-spacewalk-nativex'
+cookbook 'syncdata-nativex', '0.1.0', github: 'nativex/cookbook-syncdata-nativex'
