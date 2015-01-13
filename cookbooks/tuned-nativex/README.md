@@ -33,7 +33,7 @@ Attributes
   </tr>
   <tr>
     <td><tt>node['tuned']['files_in_each_profile']</tt></td>
-    <td>tt>Set</tt> of <tt>string</tt></td>
+    <td><tt>Set</tt> of <tt>string</tt></td>
     <td>Set of filenames that are defined for each custom profile and should be copied to the <tt>profiles_dir</tt>.</td>
     <td><tt>Set.new(["ktune.sh", "ktune.sysconfig", "sysctl.ktune", "tuned.conf"])</tt></td>
   </tr>
