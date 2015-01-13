@@ -73,3 +73,4 @@ cookbook 'iptables-nativex', '0.1.0', github: 'nativex/cookbook-iptables-nativex
 cookbook 'mkdirs-nativex', '0.1.0', github: 'nativex/cookbook-mkdirs-nativex'
 cookbook 'nfs-nativex', '0.1.0', github: 'nativex/cookbook-nfs-nativex'
 cookbook 'numad-nativex', '0.1.0', github: 'nativex/cookbook-numad-nativex'
+cookbook 'ohai-nativex', '0.1.1', github: 'nativex/cookbook-ohai-nativex'
