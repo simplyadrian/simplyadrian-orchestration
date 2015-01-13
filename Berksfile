@@ -68,3 +68,4 @@ cookbook 'dnsupdate-nativex', '1.1.0', github: 'nativex/cookbook-dnsupdate-nativ
 cookbook 'dse-nativex', '1.0.0', github: 'nativex/cookbook-dse-nativex'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', github: 'nativex/cookbook-ephemeral_lvm-nativex'
 cookbook 'glusterfs-nativex', '0.1.0', github: 'nativex/cookbook-glusterfs-nativex'
+cookbook 'hostname-nativex', '0.1.0', github: 'nativex/cookbook-hostname-nativex'
