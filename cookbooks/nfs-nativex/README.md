@@ -1,23 +1,25 @@
 nfs-nativex Cookbook
 ====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Configures a node as a NFS server.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+#### cookbooks
+- `nfs` - The nfs community cookbook should run before nfs-nativex runs
 
-e.g.
 #### packages
-- `toaster` - nfs-nativex needs toaster to brown your bagel.
+- `nfs-utils` - nfs-utils required for NFS server
+
+Recipes
+-------
+#### default.rb
+Calls nfs-nativex::export.
+
+#### export.rb
+Configures a node as a NFS server using the appropriate options provided in attributes.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### nfs-nativex::default
 <table>
   <tr>
@@ -27,42 +29,48 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['nfs-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['nfs-nativex']['export_dir']</tt></td>
+    <td>String</td>
+    <td>NFS export directory.</td>
+    <td><tt>"/mnt/ebs"</tt></td>
   </tr>
+ <tr>
+   <td><tt>['nfs-nativex']['network']</tt></td>
+   <td>String</td>
+   <td>NFS subnet.</td>
+   <td><tt>"172.16.0.0/12"</tt></td>
+ </tr>
+ <tr>
+   <td><tt>['nfs-nativex']['writeable']</tt></td>
+   <td>Boolean</td>
+   <td>If set to true, exported directory is writable.</td>
+   <td><tt>false</tt></td>
+ </tr>
+ <tr>
+   <td><tt>['nfs-nativex']['sync']</tt></td>
+   <td>Boolean</td>
+   <td>If set to true, NFS will use synchronous write. If set to false it will use async.</td>
+   <td><tt>true</tt></td>
+ </tr>
+ <tr>
+   <td><tt>['nfs-nativex']['options']</tt></td>
+   <td>Array</td>
+   <td>Additional NFS options.</td>
+   <td><tt>['no_root_squash']</tt></td>
+ </tr>
 </table>
 
 Usage
 -----
 #### nfs-nativex::default
-TODO: Write usage instructions for each cookbook.
+Just include `nfs-nativex` in your node's `run_list`.
 
-e.g.
-Just include `nfs-nativex` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[nfs-nativex]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Example usage in a role cookbook:
+node.default['nfs-nativex']['export_dir'] = "/mnt/ebs"
+node.default['nfs-nativex']['network'] = "172.16.0.0/12"
+node.default['nfs-nativex']['writeable'] = true
+node.default['nfs-nativex']['sync'] = true
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera

@@ -1,23 +1,15 @@
 iptables-nativex Cookbook
 =========================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook sets up iptable chain rules for host level firewall per security best practices. This cookbook is designed to be extensible and additional recipes should be built to create a firewall for new roles or services. i.e. web servers, securing ssh, privoxy servers, etc..
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 #### packages
-- `toaster` - iptables-nativex needs toaster to brown your bagel.
+- `iptables` - Official iptables cookbook from opscode: https://supermarket.chef.io/cookbooks/iptables
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### iptables-nativex::default
 <table>
   <tr>
@@ -27,20 +19,30 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['iptables-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['iptables-nativex']['privoxy']['addresses']</tt></td>
+    <td>String</td>
+    <td>the CIDR or CIDR's you wish to use to retrict iptables further </td>
+    <td><tt>empty? utilizing the all_privoxy templates</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['iptables-nativex']['ssh']['addresses']</tt></td>
+    <td>String</td>
+    <td>the CIDR or CIDR's you wish to use to retrict iptables further </td>
+    <td><tt>empty? utilizing the all_ssh templates</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['iptables-nativex']['web']['addresses']</tt></td>
+    <td>String</td>
+    <td>the CIDR or CIDR's you wish to use to retrict iptables further </td>
+    <td><tt>empty? utilizing the all_http and all_https templates</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### iptables-nativex::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `iptables-nativex` in your node's `run_list`:
+To restrict with all current recipes just include `iptables-nativex` in your node's `run_list`:
 
 ```json
 {
@@ -51,18 +53,37 @@ Just include `iptables-nativex` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+To configure iptables to allow for the privoxy service include `iptables-nativex::privoxy` in your node's `run_list`:
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[iptables-nativex::privoxy]"
+    ]
+}
+```
+To configure iptables to allow for the ssh service include `iptables-nativex::ssh` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[iptables-nativex::ssh]"
+    ]
+}
+```
+To configure iptables to allow for the web service on both ports 80 and 443 include `iptables-nativex::web` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[iptables-nativex::web]"
+    ]
+}
+```
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera

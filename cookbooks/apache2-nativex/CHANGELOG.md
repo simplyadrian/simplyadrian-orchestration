@@ -1,11 +1,11 @@
-apache-nativex2 CHANGELOG
+apache2-nativex CHANGELOG
 =========================
 
-This file is used to list changes made in each version of the apache-nativex2 cookbook.
+This file is used to list changes made in each version of the apache2-nativex cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of apache-nativex2
+- [your_name] - Initial release of apache2-nativex
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

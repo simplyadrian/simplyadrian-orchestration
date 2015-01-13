@@ -6,7 +6,7 @@ description      'Installs/Configures role-theano-nativex'
 version          '0.1.0'
 
 depends 'ohai-nativex', '=0.1.1'
-depends 'aws', '=2.5.0'
+depends 'aws', '=2.6.0'
 depends 'xml', '=1.2.6'
 depends 'users', '=1.7.0'
 depends 'sudo', '=2.6.0'

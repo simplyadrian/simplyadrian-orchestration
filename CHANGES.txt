@@ -20,7 +20,7 @@ Changes
 **********************************************************
 Additions
  - syncdata-nativex v0.1.0
- - mkdirs
+ - mkdirs-nativex
 
 Changes
  - role to "role cookbook" conversion completed

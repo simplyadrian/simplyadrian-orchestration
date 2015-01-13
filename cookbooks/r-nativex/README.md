@@ -1,23 +1,27 @@
 r-nativex Cookbook
 ==================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Leverages the r_package provider from the r community cookbook to install R packages from CRAN.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+#### cookbooks
+- `r` - This cookbook installs additional packages for r on top of the community r cookbook.
 
-e.g.
 #### packages
-- `toaster` - r-nativex needs toaster to brown your bagel.
+- `unixODBC-devel` - r-nativex::rpackages needs unix ODBC development packages.
+- `rinruby` - TODO: why?
+
+Recipes
+-------
+#### default.rb
+Installs unixODBC-devel package required by r-nativex::rpackages
+Calls r-nativex::rpackages
+
+#### rpackages.rb
+Installs additional r packages specified in the cookbook attribute.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### r-nativex::default
 <table>
   <tr>
@@ -27,19 +31,16 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['r-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['r-nativex']['packages']</tt></td>
+    <td>Array</td>
+    <td>Additional r packages to install</td>
+    <td><tt>empty {}</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### r-nativex::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
 Just include `r-nativex` in your node's `run_list`:
 
 ```json
@@ -51,18 +52,11 @@ Just include `r-nativex` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+In a role cookbook be sure to first include r then include r-nativex. An example of using r-nativex to install
+several additional packages from CRAN:
+node.default['r_nativex']['packages'] = ["optparse", "yaml", "data.table", "ffbase", "ROCR", "ETLUtils", "rjson",
+  "RODBC", "ff", "gbm", "LaF"]
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera

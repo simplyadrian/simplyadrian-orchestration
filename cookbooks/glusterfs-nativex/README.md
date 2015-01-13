@@ -1,17 +1,12 @@
 glusterfs-nativex Cookbook
 ====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook is attempting to install glusterfs, configure a cluster and create the filesystem. In its current state the cookbook only installs the glusterfs services and software. Work will have to be done to be able to properly join nodes in the cluster.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 #### packages
-- `toaster` - glusterfs-nativex needs toaster to brown your bagel.
+- `yum` - glusterfs-nativex needs yum to correctly install the glusterfs channels.
 
 Attributes
 ----------
@@ -27,19 +22,47 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['glusterfs-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['glusterfs-nativex']['server']['peers']</tt></td>
+    <td>String</td>
+    <td>An array of servers that you wish to join in the clustered filesystem</td>
+    <td><tt>empty</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['glusterfs-nativex']['server']['volumes']</tt></td>
+    <td>String</td>
+    <td>Name of the glusterfs volume (share) you are creating.</td>
+    <td><tt>empty</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['glusterfs-nativex']['server']['stripe']</tt></td>
+    <td>Integer</td>
+    <td>The stripe setting you are using while creating the glusterfs volume. How many nodes in your filesystem.</td>
+    <td><tt>empty</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['glusterfs-nativex']['server']['replica']</tt></td>
+    <td>String</td>
+    <td>.</td>
+    <td><tt>.</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['glusterfs-nativex']['server']['transport']</tt></td>
+    <td>String</td>
+    <td>.</td>
+    <td><tt>.</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['glusterfs-nativex']['client']['mounts']</tt></td>
+    <td>String</td>
+    <td>Sets up the client side mount points for glusterfs.</td>
+    <td><tt>empty</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### glusterfs-nativex::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `glusterfs-nativex` in your node's `run_list`:
 
 ```json
@@ -51,18 +74,7 @@ Just include `glusterfs-nativex` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera
