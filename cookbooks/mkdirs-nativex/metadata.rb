@@ -1,4 +1,4 @@
-name             'mkdirs'
+name             'mkdirs-nativex'
 maintainer       'NativeX'
 maintainer_email 'brett.stime@nativex.com'
 license          'All rights reserved'

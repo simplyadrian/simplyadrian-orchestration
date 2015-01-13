@@ -34,7 +34,6 @@ DEPENDENCIES
   ms_dotnet2 (= 1.0.0)
   ms_dotnet4 (= 1.0.2)
   ms_dotnet45 (= 1.1.2)
-  mysql (= 5.3.2)
   mysql-chef_gem (= 0.0.2)
   nano (= 1.0.0)
   nfs (= 2.0.0)
@@ -64,7 +63,6 @@ DEPENDENCIES
   yum (= 3.2.2)
   yum-epel (= 0.4.0)
   yum-erlang_solutions (= 0.2.0)
-  yum-mysql-community (= 0.1.6)
 
 GRAPH
   7-zip (1.0.2)

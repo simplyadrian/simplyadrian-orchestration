@@ -1,4 +1,4 @@
-mkdirs Cookbook
+mkdirs-nativex Cookbook
 ===============
 Creates \[empty\] directories defined in a node attribute list.
 
@@ -12,7 +12,7 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['mkdirs']</tt></td>
+    <td><tt>['mkdirs-nativex']</tt></td>
     <td>Array/List</td>
     <td>The directories to create. See example below.</td>
     <td><tt>empty list []</tt></td>
@@ -21,13 +21,13 @@ Attributes
 
 Usage
 -----
-Just include `mkdirs` in your node's `run_list` and configure the mkdirs attribute:
+Just include `mkdirs-nativex` in your node's `run_list` and configure the mkdirs-nativex attribute:
 
 ```json
 {
   "name":"my_node",
   "default_attributes": {
-    "mkdirs": [{
+    "mkdirs-nativex": [{
       "path": "/foo"
     }, {
       "path": "/foo/bar",
@@ -37,7 +37,7 @@ Just include `mkdirs` in your node's `run_list` and configure the mkdirs attribu
     }]
   }
   "run_list": [
-    "recipe[mkdirs]"
+    "recipe[mkdirs-nativex]"
   ]
 }
 ```

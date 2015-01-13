@@ -17,7 +17,7 @@ node.default['ephemeral_lvm']['mount_point'] = "/mnt/ephemeral"
 node.default['java']['install_flavor'] = "oracle"
 node.default['java']['jdk_version'] = "7"
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
-node.default['mkdirs']['path'] = ["/automnt"]
+node.default['mkdirs-nativex']['path'] = ["/automnt"]
 node.default['nodejs']['npm_packages'] = [{:name => "async", :name => "aws-sdk", :name => "moment"}]
 node.default['pbis-nativex']['organizational_unit_level_5'] = "Predictive Analytics"
 node.default['python']['install_method'] = "source"
@@ -40,7 +40,7 @@ include_recipe 'git'
 include_recipe 'blockdevice-nativex'
 include_recipe 'blockdevice-nativex::tags'
 include_recipe 'iptables-nativex::ssh'
-include_recipe 'mkdirs'
+include_recipe 'mkdirs-nativex'
 include_recipe 'nodejs'
 include_recipe 'python'
 include_recipe 'python-nativex'
