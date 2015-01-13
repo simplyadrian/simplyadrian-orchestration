@@ -6,7 +6,7 @@ description      'Installs/Configures role-win-base-nativex'
 version          '0.1.0'
 
 depends 'ohai-nativex', '=0.1.1'
-depends 'aws', '=2.5.0'
+depends 'aws', '=2.6.0'
 depends 'windows', '=1.34.6'
 depends 'ad-nativex', '=1.0.0'
 depends 'dnsupdate-nativex', '=1.1.0'

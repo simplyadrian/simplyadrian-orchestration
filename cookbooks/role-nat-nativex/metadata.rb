@@ -6,7 +6,7 @@ description      'Installs/Configures role-nat-nativex'
 version          '0.1.0'
 
 depends 'ohai-nativex', '=0.1.0'
-depends 'aws', '=2.5.0'
+depends 'aws', '=2.6.0'
 depends 'vim', '=1.1.2'
 depends 'nano', '=1.0.0'
 depends 'bash-completion', '=0.1.0'
