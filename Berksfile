@@ -82,3 +82,4 @@ cookbook 'role-base-nativex', '0.1.0', github: 'nativex/cookbook-role-base-nativ
 cookbook 'role-datascience-nativex', '0.1.0', github: 'nativex/cookbook-role-datascience-nativex'
 cookbook 'role-domain-controller-nativex', '0.1.0', github: 'nativex/cookbook-role-domain-controller-nativex'
 cookbook 'role-dse-devcass1-aws-nativex', '1.0.0', github: 'nativex/cookbook-role-dse-devcass1-aws-nativex'
+cookbook 'role-dse-nativex', '1.0.0', github: 'nativex/cookbook-role-dse-nativex'
