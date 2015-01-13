@@ -66,3 +66,4 @@ cookbook 'blockdevice-nativex', '0.2.0', github: 'nativex/cookbook-blockdevice-n
 cookbook 'cifs-nativex', '0.1.0', github: 'nativex/cookbook-cifs-nativex'
 cookbook 'dnsupdate-nativex', '1.1.0', github: 'nativex/cookbook-dnsupdate-nativex'
 cookbook 'dse-nativex', '1.0.0', github: 'nativex/cookbook-dse-nativex'
+cookbook 'ephemeral_lvm-nativex', '0.1.0', github: 'nativex/cookbook-ephemeral_lvm-nativex'
