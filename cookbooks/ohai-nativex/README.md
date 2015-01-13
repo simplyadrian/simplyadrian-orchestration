@@ -1,68 +1,30 @@
 ohai-nativex Cookbook
 =====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Configures ohai and additional plugins for ohai.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Depends on the ohai community cookbook.
 
-e.g.
-#### packages
-- `toaster` - ohai-nativex needs toaster to brown your bagel.
+#### ohai-nativex::awsplugin
+Depends on the ec2 plugin.
+
+#### ohai-nativex::awsplugin
+Reloads aws ohai plugin and configures it using the aws.rb file.
+
+Recipes
+-------
+#### ohai-nativex::default
+Calls ohai-nativex::awsplugin
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### ohai-nativex::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ohai-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+None.
 
 Usage
 -----
-#### ohai-nativex::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `ohai-nativex` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[ohai-nativex]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Just include `ohai-nativex` in your node's `run_list`.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera

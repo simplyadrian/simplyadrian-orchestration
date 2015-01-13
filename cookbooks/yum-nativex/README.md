@@ -1,68 +1,43 @@
 yum-nativex Cookbook
 ====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Used to configure yum repositories on target nodes as well as upgrade target nodes.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Depends on the yum community cookbook.
 
-e.g.
-#### packages
-- `toaster` - yum-nativex needs toaster to brown your bagel.
+Recipes
+-------
+#### default.rb
+Calls the yum-nativex::customrepo recipe
+
+#### customrepo.rb
+Adds the epel and spacewalk repos required by other cookbooks during the bootstrap process.
+
+#### yum-nativex::deleterepo
+Cleans up repos that were added for the bootstrap process. Repositories will be managed by the node or in the case of
+NativeX, SpaceWalk after this point.
+
+#### yum-nativex:doupgrade
+Performs a yum upgrade on the node.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### yum-nativex::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['yum-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+None.
 
 Usage
 -----
 #### yum-nativex::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `yum-nativex` in your node's `run_list`:
+Example of usage in a role cookbook:
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[yum-nativex]"
-  ]
-}
-```
+include_recipe 'yum-nativex'
+# Include repository dependent recipes here
+include_recipe 'yum-nativex::deleterepo'
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+#### yum-nativex::doupgrade
+Simply include this recipe to perform a yum upgrade on the node.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera, Jesse Hauf

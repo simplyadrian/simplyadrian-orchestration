@@ -1,23 +1,15 @@
 python-nativex Cookbook
 =======================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Install python and includes specified packages.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - python-nativex needs toaster to brown your bagel.
+Depends on the python community cookbook.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
+default['python_nativex']['packages'] = {}
 
-e.g.
 #### python-nativex::default
 <table>
   <tr>
@@ -27,42 +19,21 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['python-nativex']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['python-nativex']['packages']</tt></td>
+    <td>Array</td>
+    <td>Additional python packages to install on a node.</td>
+    <td><tt>empty</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### python-nativex::default
-TODO: Write usage instructions for each cookbook.
+Calls python-nativex::pippackages
 
-e.g.
-Just include `python-nativex` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[python-nativex]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Example usage in a role cookbook adding several packages:
+node.default['python-nativex']['packages'] = ["pyyaml", "kombu", "lockfile", "asyncio", "paramiko", "boto", "awscli"]
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adrian Herrera
