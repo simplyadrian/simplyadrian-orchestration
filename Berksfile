@@ -70,3 +70,4 @@ cookbook 'ephemeral_lvm-nativex', '0.1.0', github: 'nativex/cookbook-ephemeral_l
 cookbook 'glusterfs-nativex', '0.1.0', github: 'nativex/cookbook-glusterfs-nativex'
 cookbook 'hostname-nativex', '0.1.0', github: 'nativex/cookbook-hostname-nativex'
 cookbook 'iptables-nativex', '0.1.0', github: 'nativex/cookbook-iptables-nativex'
+cookbook 'mkdirs-nativex', '0.1.0', github: 'nativex/cookbook-mkdirs-nativex'
