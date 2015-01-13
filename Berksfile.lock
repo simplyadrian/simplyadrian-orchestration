@@ -49,8 +49,8 @@ DEPENDENCIES
   privoxy (= 1.0.3)
   python (= 1.4.6)
   r
-    git: git://github.com/stevendanna/cookbook-r.git
-    revision: aa96e45874cb12efe1488e639006da124a9cb50b
+    git: git://github.com/nativex/cookbook-r.git
+    revision: 9b656a4721ed7cfaa0468e51a968610cb709811f
   rabbitmq (= 3.2.2)
   route53 (= 0.3.8)
   runit (= 1.5.10)
