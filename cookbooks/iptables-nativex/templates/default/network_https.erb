@@ -1,6 +1,0 @@
-# HTTPS Locked Down
-# Firewall configuration created and managed by Chef
-# Do not edit manually
-<% @node['iptables-nativex']['web']['addresses'].each do |address| %>
--A FWR -p tcp -s <%= address %> --dport 443 -j ACCEPT
-<% end %>

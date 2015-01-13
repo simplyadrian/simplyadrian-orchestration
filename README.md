@@ -8,7 +8,6 @@ Repository Directories
 
 This repository contains several directories, and each directory contains a README file that describes what it is for in greater detail, and how to use it for managing your systems with Chef.
 
-* `cookbooks/` - Cookbooks you download or create.
 * `ec2_user_data/` user data scripts used to bootstrap ec2 instances in AWS.
 * `environments/` - environment files as defined here: http://docs.chef.io/environments.html
 * `roles/` - Store roles in .rb or .json in the repository.
@@ -21,6 +20,15 @@ You can find the data_bags @ https://manage.chef.io/organizations/nativex/data_b
 ### NOTE
 Data Bag contents should never exist in this repository. Use the 'knife data bag' commands to manage our databags.
 See https://info.teamfreeze.com:8443/display/ENG/Managing+Chef+Data+Bags for tips on how to do this.
+
+Cookbooks
+=========
+
+Cookbooks are managed by Berkshelf. 
+
+- Community cookbooks exist only in the Berkshelf. The code does not exist anywhere.
+  - Exceptions are the 'aws' and 'r' cookbooks. There are 'forks' of them in the NativeX git repo.
+- The code for NativeX cookbooks are individual repositories like 'cookbook-<name>-nativex' in the NativeX git repo.
 
 Berks Tasks
 ==========
