@@ -79,7 +79,7 @@ cookbook 'python-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-python
 cookbook 'r-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-r-nativex.git'
 cookbook 'role-apache-webserver-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-apache-webserver-nativex.git'
 cookbook 'role-base-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-base-nativex.git'
-cookbook 'role-datascience-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-datascience-nativex.git'
+cookbook 'role-datascience-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-role-datascience-nativex.git'
 cookbook 'role-domain-controller-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-domain-controller-nativex.git'
 cookbook 'role-dse-devcass1-aws-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-role-dse-devcass1-aws-nativex.git'
 cookbook 'role-dse-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-role-dse-nativex.git'
