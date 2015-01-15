@@ -76,7 +76,7 @@ cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-n
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'pbis-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
 cookbook 'python-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-python-nativex.git'
-cookbook 'r-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-r-nativex.git'
+cookbook 'r-nativex', '0.1.2', git: 'git@github.com:nativex/cookbook-r-nativex.git'
 cookbook 'role-apache-webserver-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-apache-webserver-nativex.git'
 cookbook 'role-base-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-role-base-nativex.git'
 cookbook 'role-datascience-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-role-datascience-nativex.git'
