@@ -108,31 +108,31 @@ DEPENDENCIES
   rabbitmq (= 3.2.2)
   role-apache-webserver-nativex
     git: git@github.com:nativex/cookbook-role-apache-webserver-nativex.git
-    revision: ba3e819f02f26deaf40b613d8b38436bfd11ab06
+    revision: 92a23a9bf2786a1e9813b280643de5978a3634be
   role-base-nativex
     git: git@github.com:nativex/cookbook-role-base-nativex.git
-    revision: c38da6ef2ac715f5f56ab562534bc42d6a4de442
+    revision: 43a942b7eee9dc7d1ebcc8c180d1030be3790fa4
   role-datascience-nativex
     git: git@github.com:nativex/cookbook-role-datascience-nativex.git
-    revision: e757d3ef3accc01a76cc6c646223979869c298db
+    revision: b71b953b6f255c6e52c3a6931aeb81421dfc1e0d
   role-domain-controller-nativex
     git: git@github.com:nativex/cookbook-role-domain-controller-nativex.git
     revision: 11630fb6e523001eccda333ed9b515dde57796d5
   role-dse-devcass1-aws-nativex
     git: git@github.com:nativex/cookbook-role-dse-devcass1-aws-nativex.git
-    revision: 65fc933c0e5d859d04972cf91ba92ef4d6894ea8
+    revision: eae7ec68971b0b1649a9b4e5bd130e3c10467d88
   role-dse-nativex
     git: git@github.com:nativex/cookbook-role-dse-nativex.git
-    revision: b7a7907c34e2da18f6712c461921362eb99499ef
+    revision: f4d3b10616f1f4d3d5368e25865994fd3c56bb26
   role-nas-nativex
     git: git@github.com:nativex/cookbook-role-nas-nativex.git
-    revision: b859ccd89dcf5aa48e6424430b12189754dd6dd6
+    revision: 2b9802cf15834037c5664967a96fa7af462caf84
   role-nat-nativex
     git: git@github.com:nativex/cookbook-role-nat-nativex.git
-    revision: 9dbc3805cbc7571180ae9111f1eb1db08fa195d7
+    revision: 345a4ea4aa65e235b3fbfef20a62ff036f0188cf
   role-privoxy-nativex
     git: git@github.com:nativex/cookbook-role-privoxy-nativex.git
-    revision: 3acec41ca55c615d0d9afa4d9d913aaa559671cb
+    revision: b1fd13cc435baeb94ca393d682167d44a8334a0a
   role-spacewalk-server-nativex
     git: git@github.com:nativex/cookbook-role-spacewalk-server-nativex.git
     revision: 46856c520523fc8f226081b3aeb9ffa6de4682a7
@@ -165,7 +165,7 @@ DEPENDENCIES
   yum-erlang_solutions (= 0.2.0)
   yum-nativex
     git: git@github.com:nativex/cookbook-yum-nativex.git
-    revision: 7e3a48b72d08ac19c4e2187ca58c65101aa23408
+    revision: df47070f1d13f677763899b6d21f4d9304b49119
 
 GRAPH
   7-zip (1.0.2)
@@ -325,11 +325,11 @@ GRAPH
     erlang (>= 0.9.0)
   rbac (1.0.2)
   resource-control (0.1.1)
-  role-apache-webserver-nativex (0.1.0)
+  role-apache-webserver-nativex (0.2.0)
     apache2 (= 1.10.4)
     iptables-nativex (= 0.1.0)
-    role-base-nativex (= 0.1.0)
-  role-base-nativex (0.1.0)
+    role-base-nativex (= 0.2.0)
+  role-base-nativex (0.2.0)
     auto-patch (= 0.1.9)
     aws (= 2.6.0)
     bash-completion (= 0.1.0)
@@ -351,8 +351,8 @@ GRAPH
     tuned-nativex (= 0.1.0)
     vim (= 1.1.2)
     yum-epel (= 0.4.0)
-    yum-nativex (= 0.2.0)
-  role-datascience-nativex (1.0.0)
+    yum-nativex (= 0.3.0)
+  role-datascience-nativex (1.1.0)
     blockdevice-nativex (= 0.2.0)
     cifs-nativex (= 0.1.0)
     git (= 4.0.2)
@@ -364,7 +364,7 @@ GRAPH
     r (= 0.3.0)
     r-nativex (= 0.1.2)
     rabbitmq (= 3.2.2)
-    role-base-nativex (= 0.1.0)
+    role-base-nativex (= 0.2.0)
     tuned-nativex (= 0.1.0)
   role-domain-controller-nativex (0.1.0)
     ad-nativex (= 1.0.0)
@@ -372,25 +372,25 @@ GRAPH
     chef-client (= 3.8.0)
     dnsupdate-nativex (= 1.1.0)
     windows (= 1.34.6)
-  role-dse-devcass1-aws-nativex (1.0.0)
-    role-dse-nativex (= 1.0.0)
-  role-dse-nativex (1.0.0)
+  role-dse-devcass1-aws-nativex (1.1.0)
+    role-dse-nativex (= 1.1.0)
+  role-dse-nativex (1.1.0)
     dse-nativex (= 1.0.0)
-    role-base-nativex (= 0.1.0)
+    role-base-nativex (= 0.2.0)
     tuned-nativex (= 0.1.0)
-  role-nas-nativex (0.1.0)
+  role-nas-nativex (0.2.0)
     blockdevice-nativex (= 0.2.0)
     nfs (= 2.0.0)
     nfs-nativex (= 0.1.0)
-    role-base-nativex (= 0.1.0)
+    role-base-nativex (= 0.2.0)
     tuned-nativex (= 0.1.0)
-  role-nat-nativex (0.1.0)
+  role-nat-nativex (0.2.0)
     aws (= 2.6.0)
     bash-completion (= 0.1.0)
     chef-client (= 3.8.0)
     dnsupdate-nativex (= 1.1.0)
     dstat (= 0.1.1)
-    ephemeral_lvm (= 1.0.7)
+    ephemeral_lvm-nativex (= 0.1.0)
     hostname-nativex (= 0.1.0)
     motd (= 0.5.0)
     nano (= 1.0.0)
@@ -403,11 +403,11 @@ GRAPH
     spacewalk-nativex (= 0.3.0)
     tuned-nativex (= 0.1.0)
     vim (= 1.1.2)
-    yum-nativex (= 0.2.0)
-  role-privoxy-nativex (0.1.0)
+    yum-nativex (= 0.3.0)
+  role-privoxy-nativex (0.2.0)
     iptables-nativex (= 0.1.0)
     privoxy (= 1.0.3)
-    role-base-nativex (= 0.1.0)
+    role-base-nativex (= 0.2.0)
   role-spacewalk-server-nativex (0.1.0)
     chef-client (= 3.8.0)
     motd (= 0.5.0)
@@ -471,5 +471,5 @@ GRAPH
     yum (~> 3.0)
   yum-mysql-community (0.1.11)
     yum (>= 3.0)
-  yum-nativex (0.2.0)
+  yum-nativex (0.3.0)
     yum (>= 0.0.0)
