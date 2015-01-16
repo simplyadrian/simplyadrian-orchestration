@@ -165,7 +165,7 @@ DEPENDENCIES
   yum-erlang_solutions (= 0.2.0)
   yum-nativex
     git: git@github.com:nativex/cookbook-yum-nativex.git
-    revision: df47070f1d13f677763899b6d21f4d9304b49119
+    revision: 07fab521b59191fc1c72173ad83232d48600a918
 
 GRAPH
   7-zip (1.0.2)
@@ -264,7 +264,7 @@ GRAPH
     windows (>= 0.0.0)
   ms_dotnet45 (1.1.2)
     windows (>= 0.0.0)
-  mysql (6.0.6)
+  mysql (6.0.7)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
   mysql-chef_gem (0.0.2)
