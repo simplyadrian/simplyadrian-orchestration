@@ -30,3 +30,17 @@ Changes
  - Simplified 'ou' vs 'oupath' confusion in ad and pbis nativex cookbooks. Settled on 'oupath'. [ISE-281]
  - Expanded and componentized 'oupath' in pbis/ad nativex cookbooks for our 6-level OU Path in ActiveDirectory. [ISE-293 and 294]
  - dse-nativex v1.0.0 supports DSE 4.6. Still using 4.5.3 for existing servers at this time.
+
+**********************************************************
+*************** Release v2.1, 01/16/2015 *****************
+**********************************************************
+
+Changes
+ - Moved NativeX cookbooks into their own git repositories "coobook-<name>-nativex" [ISE-306}
+ - Removed community cookbooks from chef-nativex repository. [ISE-307]
+ - Transitioned all cookbook version management to Berkshelf (http://berkshelf.com) [ISE-304]
+ - Created README files for all cookbooks and misc chef-nativex directories. [ISE-308]
+ - Fixed hang on r-nativex cookbook at runtime. [ISE-315]
+ - Created git forks of community cookbooks in NativeX GitHub account for community cookbooks we changed. (aws, r, nodejs)
+ - Make yum/spacewalk first-run repository initialization & cleanup idempotent.
+ - Rename 'mkdirs' (-> mkdirs-nativex) and 'apache-nativex2' (-> apache2-nativex) cookbooks to follow naming standards.
