@@ -95,6 +95,9 @@ DEPENDENCIES
   postgresql (= 3.4.0)
   powershell (= 3.0.7)
   privoxy (= 1.0.3)
+  privoxy-nativex
+    git: git@github.com:nativex/cookbook-privoxy-nativex.git
+    revision: 65fe25c8f30ab50c50de68d0b239de01a9b1bc40
   python (= 1.4.6)
   python-nativex
     git: git@github.com:nativex/cookbook-python-nativex.git
@@ -132,7 +135,7 @@ DEPENDENCIES
     revision: 345a4ea4aa65e235b3fbfef20a62ff036f0188cf
   role-privoxy-nativex
     git: git@github.com:nativex/cookbook-role-privoxy-nativex.git
-    revision: b1fd13cc435baeb94ca393d682167d44a8334a0a
+    revision: 0c81c558c46b254de5c85a1b658a219ed42afd0c
   role-spacewalk-server-nativex
     git: git@github.com:nativex/cookbook-role-spacewalk-server-nativex.git
     revision: 46856c520523fc8f226081b3aeb9ffa6de4682a7
@@ -264,7 +267,7 @@ GRAPH
     windows (>= 0.0.0)
   ms_dotnet45 (1.1.2)
     windows (>= 0.0.0)
-  mysql (6.0.7)
+  mysql (6.0.10)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
   mysql-chef_gem (0.0.2)
@@ -309,6 +312,8 @@ GRAPH
   privoxy (1.0.3)
     checkinstall (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  privoxy-nativex (0.1.0)
+    privoxy (~> 1.0)
   python (1.4.6)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
@@ -404,9 +409,9 @@ GRAPH
     tuned-nativex (= 0.1.0)
     vim (= 1.1.2)
     yum-nativex (= 0.3.0)
-  role-privoxy-nativex (0.2.0)
+  role-privoxy-nativex (0.3.0)
     iptables-nativex (= 0.1.0)
-    privoxy (= 1.0.3)
+    privoxy-nativex (= 0.1.0)
     role-base-nativex (= 0.2.0)
   role-spacewalk-server-nativex (0.1.0)
     chef-client (= 3.8.0)
