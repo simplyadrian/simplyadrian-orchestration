@@ -78,7 +78,7 @@
     "role-dse-nativex": "= 0.1.0",
     "role-nas-nativex": "= 0.2.0",
     "role-nat-nativex": "= 0.2.0",
-    "role-privoxy-nativex": "= 0.2.0",
+    "role-privoxy-nativex": "= 0.3.0",
     "role-spacewalk-server-nativex": "= 0.1.0",
     "role-theano-nativex": "= 0.1.0",
     "role-win-base-nativex": "= 0.1.0",
