@@ -60,6 +60,7 @@ DEPENDENCIES
   line
     git: git://github.com/someara/line-cookbook.git
     revision: 82523b523ab04cdbc5e6b27521c874346155cf80
+    ref: 82523b5
   logrotate (= 1.7.0)
   lvm (= 1.1.0)
   mkdirs-nativex
@@ -155,6 +156,7 @@ DEPENDENCIES
   syncdata-nativex
     git: git@github.com:nativex/cookbook-syncdata-nativex.git
     revision: 7caacbbe88c241c6b7fc605d0130c5c2fbd4a3ba
+    ref: 7caacbb
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
@@ -474,7 +476,7 @@ GRAPH
     yum (~> 3.0)
   yum-erlang_solutions (0.2.0)
     yum (~> 3.0)
-  yum-mysql-community (0.1.11)
+  yum-mysql-community (0.1.12)
     yum (>= 3.0)
   yum-nativex (0.3.0)
     yum (>= 0.0.0)
