@@ -1,6 +1,6 @@
 {
-  "name": "COOKBOOK-dev",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-COOKBOOK-nativex cookbook.",
+  "name": "domain-controller-dev",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-domain-controller-nativex cookbook.",
   "cookbook_versions": {
   },
   "json_class": "Chef::Environment",

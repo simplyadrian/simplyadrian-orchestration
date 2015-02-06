@@ -1,6 +1,6 @@
 {
-  "name": "COOKBOOK-prod",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-COOKBOOK-nativex cookbook.",
+  "name": "iis-webserver-prod",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-iis-webserver-nativex cookbook.",
   "cookbook_versions": {
   },
   "json_class": "Chef::Environment",
