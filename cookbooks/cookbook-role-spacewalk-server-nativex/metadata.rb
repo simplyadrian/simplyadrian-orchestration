@@ -1,0 +1,10 @@
+name             'role-spacewalk-server-nativex'
+maintainer       'NativeX'
+maintainer_email 'adrian.herrera@nativex.com'
+license          'All rights reserved'
+description      'Installs/Configures role-spacewalk-server-nativex'
+version          '0.1.0'
+
+depends 'motd', '=0.5.0'
+depends 'spacewalk-nativex', '=0.3.0'
+depends 'chef-client', '=3.8.0'
