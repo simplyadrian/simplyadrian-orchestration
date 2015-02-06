@@ -1,3 +1,8 @@
 source "https://supermarket.getchef.com"
 
 metadata
+
+cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
+cookbook 'chef-client', '3.8.0'
+cookbook 'cron', '1.6.1'
+cookbook 'motd', '0.5.0'
