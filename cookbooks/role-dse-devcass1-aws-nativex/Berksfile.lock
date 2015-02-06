@@ -63,6 +63,7 @@ DEPENDENCIES
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
   vim (= 1.1.2)
+  windows (= 1.34.6)
   xfs (= 1.1.0)
   yum (~> 3.0)
   yum-epel (= 0.4.0)
@@ -158,7 +159,7 @@ GRAPH
     cron (>= 0.0.0)
   tuned-nativex (0.1.0)
   vim (1.1.2)
-  windows (1.36.1)
+  windows (1.34.6)
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
   yum (3.5.2)
