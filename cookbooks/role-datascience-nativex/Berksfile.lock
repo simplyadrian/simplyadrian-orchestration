@@ -1,0 +1,237 @@
+DEPENDENCIES
+  ad-nativex
+    git: git@github.com:nativex/cookbook-ad-nativex.git
+    revision: 203f25f499b4b6efc217c30048d160b45e920287
+  auto-patch (= 0.1.9)
+  aws
+    git: git://github.com/nativex/aws.git
+    revision: 476fb71977511b7370d213940be7e76a410cc8ba
+  bash-completion (= 0.1.0)
+  blockdevice-nativex
+    git: git@github.com:nativex/cookbook-blockdevice-nativex.git
+    revision: 3ffe2ba2309c40190c02132d1632615ec31a4996
+  chef-client (= 3.8.0)
+  cifs-nativex
+    git: git@github.com:nativex/cookbook-cifs-nativex.git
+    revision: 6f60af481581d966acbe01ec775123cd4ee59406
+  cron (= 1.6.1)
+  dnsupdate-nativex
+    git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
+    revision: 6e8e309d318dc5d9aceef726f635017ac1972c23
+  dstat (= 0.1.1)
+  ephemeral_lvm (= 1.0.7)
+  ephemeral_lvm-nativex
+    git: git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git
+    revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
+  git (= 4.0.2)
+  hostname-nativex
+    git: git@github.com:nativex/cookbook-hostname-nativex.git
+    revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
+  hostsfile (= 2.4.5)
+  iptables (= 0.13.2)
+  iptables-nativex
+    git: git@github.com:nativex/cookbook-iptables-nativex.git
+    revision: 5cd3ba67f3f027cb567c01cb9f97d4f672f5495d
+  mkdirs-nativex
+    git: git@github.com:nativex/cookbook-mkdirs-nativex.git
+    revision: 888627d57a90b219d70d1224734ce9401738935b
+  motd (= 0.5.0)
+  nano (= 1.0.0)
+  nfs (= 2.0.0)
+  nodejs
+    git: git://github.com/nativex/nodejs.git
+    revision: a00cb42c43d44dbfb3c62576980a5f325bf73e4c
+  ntp (= 1.6.4)
+  numad-nativex
+    git: git@github.com:nativex/cookbook-numad-nativex.git
+    revision: 90339780f273b1e8f2d8b99d4d71280a35b3bc7c
+  ohai (= 2.0.1)
+  ohai-nativex
+    git: git@github.com:nativex/cookbook-ohai-nativex.git
+    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+  pbis-nativex
+    git: git@github.com:nativex/cookbook-pbis-nativex.git
+    revision: edfa9815bf75b5a5addb37cfe2f788cb51e01533
+  python (= 1.4.6)
+  python-nativex
+    git: git@github.com:nativex/cookbook-python-nativex.git
+    revision: dfe787291cf32ab53061deab253278f05d48d565
+  r
+    git: git://github.com/nativex/cookbook-r.git
+    revision: 9b656a4721ed7cfaa0468e51a968610cb709811f
+  r-nativex
+    git: git@github.com:nativex/cookbook-r-nativex.git
+    revision: 00a26d64dc860812e398cb9e99932063822b9af7
+  rabbitmq (= 3.2.2)
+  role-base-nativex
+    git: git@github.com:nativex/cookbook-role-base-nativex.git
+    revision: 43a942b7eee9dc7d1ebcc8c180d1030be3790fa4
+  role-datascience-nativex
+    path: .
+    metadata: true
+  route53 (= 0.3.8)
+  snmp (= 3.0.1)
+  spacewalk-nativex
+    git: git@github.com:nativex/cookbook-spacewalk-nativex.git
+    revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
+  tuned-nativex
+    git: git@github.com:nativex/cookbook-tuned-nativex.git
+    revision: f787ae47052cd01293f068cef599949ee00ac073
+  vim (= 1.1.2)
+  xfs (= 1.1.0)
+  yum (= 3.2.2)
+  yum-epel (= 0.4.0)
+  yum-nativex
+    git: git@github.com:nativex/cookbook-yum-nativex.git
+    revision: 07fab521b59191fc1c72173ad83232d48600a918
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  ad-nativex (1.0.0)
+    ohai-nativex (>= 0.0.0)
+    windows (>= 0.0.0)
+  apt (2.6.1)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  auto-patch (0.1.9)
+    cron (>= 0.0.0)
+  aws (2.6.0)
+  bash-completion (0.1.0)
+  blockdevice-nativex (0.2.0)
+    aws (>= 0.0.0)
+    ohai-nativex (>= 0.0.0)
+    xfs (>= 0.0.0)
+  build-essential (2.1.3)
+  chef-client (3.8.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef_handler (1.1.6)
+  cifs-nativex (0.1.0)
+  cron (1.6.1)
+  dmg (2.2.2)
+  dnsupdate-nativex (1.1.0)
+    route53 (>= 0.0.0)
+  dstat (0.1.1)
+  ephemeral_lvm (1.0.7)
+    lvm (~> 1.1.0)
+  ephemeral_lvm-nativex (0.1.0)
+    ephemeral_lvm (>= 0.0.0)
+    xfs (>= 0.0.0)
+  erlang (1.5.6)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  git (4.0.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  hostname-nativex (0.1.0)
+    hostsfile (>= 0.0.0)
+    route53 (>= 0.0.0)
+  hostsfile (2.4.5)
+  iptables (0.13.2)
+  iptables-nativex (0.1.0)
+    iptables (>= 0.0.0)
+  java (1.31.0)
+  line (0.6.0)
+  logrotate (1.8.0)
+  lvm (1.1.2)
+  mkdirs-nativex (0.1.0)
+  motd (0.5.0)
+    chef_handler (>= 0.0.0)
+  nano (1.0.0)
+  nfs (2.0.0)
+    line (>= 0.0.0)
+  nodejs (2.2.2)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  ntp (1.6.4)
+  numad-nativex (0.1.0)
+  ohai (2.0.1)
+  ohai-nativex (0.1.1)
+    ohai (>= 0.0.0)
+  pbis-nativex (1.0.0)
+    ad-nativex (>= 0.0.0)
+    ohai-nativex (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  python-nativex (0.1.0)
+    python (>= 0.0.0)
+  r (0.3.0)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    java (>= 0.0.0)
+  r-nativex (0.1.2)
+    r (>= 0.0.0)
+  rabbitmq (3.2.2)
+    erlang (>= 0.9.0)
+  role-base-nativex (0.2.0)
+    auto-patch (= 0.1.9)
+    aws (= 2.6.0)
+    bash-completion (= 0.1.0)
+    chef-client (= 3.8.0)
+    dnsupdate-nativex (= 1.1.0)
+    dstat (= 0.1.1)
+    ephemeral_lvm-nativex (= 0.1.0)
+    hostname-nativex (= 0.1.0)
+    iptables (= 0.13.2)
+    motd (= 0.5.0)
+    nano (= 1.0.0)
+    nfs (= 2.0.0)
+    ntp (= 1.6.4)
+    numad-nativex (= 0.1.0)
+    ohai-nativex (= 0.1.1)
+    pbis-nativex (= 1.0.0)
+    snmp (= 3.0.1)
+    spacewalk-nativex (= 0.3.0)
+    tuned-nativex (= 0.1.0)
+    vim (= 1.1.2)
+    yum-epel (= 0.4.0)
+    yum-nativex (= 0.3.0)
+  role-datascience-nativex (1.1.0)
+    blockdevice-nativex (= 0.2.0)
+    cifs-nativex (= 0.1.0)
+    git (= 4.0.2)
+    iptables-nativex (= 0.1.0)
+    mkdirs-nativex (= 0.1.0)
+    nodejs (= 2.2.2)
+    python (= 1.4.6)
+    python-nativex (= 0.1.0)
+    r (= 0.3.0)
+    r-nativex (= 0.1.2)
+    rabbitmq (= 3.2.2)
+    role-base-nativex (= 0.2.0)
+    tuned-nativex (= 0.1.0)
+  route53 (0.3.8)
+    build-essential (>= 0.0.0)
+  runit (1.5.14)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  snmp (3.0.1)
+  spacewalk-nativex (0.3.0)
+    cron (>= 0.0.0)
+  tuned-nativex (0.1.0)
+  vim (1.1.2)
+  windows (1.36.1)
+    chef_handler (>= 0.0.0)
+  xfs (1.1.0)
+  yum (3.2.2)
+  yum-epel (0.4.0)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)
+  yum-nativex (0.3.0)
+    yum (>= 0.0.0)
