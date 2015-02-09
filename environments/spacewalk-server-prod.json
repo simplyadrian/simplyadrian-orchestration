@@ -2,6 +2,14 @@
   "name": "spacewalk-server-prod",
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-spacewalk-server-nativex cookbook.",
   "cookbook_versions": {
+    "chef-client": "= 3.8.0",
+    "chef_handler": "= 1.1.6",
+    "cron": "= 1.6.1",
+    "logrotate": "= 1.8.0",
+    "motd": "= 0.5.0",
+    "role-spacewalk-server-nativex": "= 0.1.0",
+    "spacewalk-nativex": "= 0.3.0",
+    "windows": "= 1.36.1"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
