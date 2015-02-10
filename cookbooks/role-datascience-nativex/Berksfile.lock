@@ -1,7 +1,10 @@
 DEPENDENCIES
+  7-zip (= 1.0.2)
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
     revision: 203f25f499b4b6efc217c30048d160b45e920287
+  apt (= 2.6.1)
+  ark (= 0.9.0)
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
@@ -10,6 +13,7 @@ DEPENDENCIES
   blockdevice-nativex
     git: git@github.com:nativex/cookbook-blockdevice-nativex.git
     revision: 3ffe2ba2309c40190c02132d1632615ec31a4996
+  build-essential (= 2.1.3)
   chef-client (= 3.8.0)
   cifs-nativex
     git: git@github.com:nativex/cookbook-cifs-nativex.git
@@ -32,6 +36,8 @@ DEPENDENCIES
   iptables-nativex
     git: git@github.com:nativex/cookbook-iptables-nativex.git
     revision: 5cd3ba67f3f027cb567c01cb9f97d4f672f5495d
+  java (= 1.31.0)
+  line (= 0.6.0)
   mkdirs-nativex
     git: git@github.com:nativex/cookbook-mkdirs-nativex.git
     revision: 888627d57a90b219d70d1224734ce9401738935b
