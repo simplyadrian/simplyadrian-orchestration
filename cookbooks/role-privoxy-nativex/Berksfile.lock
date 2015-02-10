@@ -42,7 +42,7 @@ DEPENDENCIES
   privoxy (~> 1.0.3)
   privoxy-nativex
     git: git@github.com:nativex/cookbook-privoxy-nativex.git
-    revision: 65fe25c8f30ab50c50de68d0b239de01a9b1bc40
+    revision: 26e74b8bb4f7f36054b0bcafc7a9d6886b0e10cb
   role-base-nativex
     path: ../role-base-nativex
   role-privoxy-nativex
@@ -116,7 +116,7 @@ GRAPH
     checkinstall (>= 0.0.0)
     yum-epel (>= 0.0.0)
   privoxy-nativex (0.1.0)
-    privoxy (~> 1.0)
+    privoxy (>= 0.0.0)
   role-base-nativex (0.2.0)
     auto-patch (>= 0.0.0)
     aws (>= 0.0.0)
