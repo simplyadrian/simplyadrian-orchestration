@@ -44,3 +44,14 @@ Changes
  - Created git forks of community cookbooks in NativeX GitHub account for community cookbooks we changed. (aws, r, nodejs)
  - Make yum/spacewalk first-run repository initialization & cleanup idempotent.
  - Rename 'mkdirs' (-> mkdirs-nativex) and 'apache-nativex2' (-> apache2-nativex) cookbooks to follow naming standards.
+
+**********************************************************
+*************** Release v2.2, 02/11/2015 *****************
+**********************************************************
+
+Changes
+- Moved role-cookbooks back into chef-nativex as top level management of roles and environments. [ISE-339]
+- Moved Berskfile and Berksfile.lock files to role-cookbook directories. [ISE-339]
+- Created environment files for both dev and production that compliment the role-cookbooks "<role-cookbook-name>-<env>". [ISE-339]
+- Removed cookbook version specificity from metadata files in individual cookbooks in favor of management in Berksfile. [ISE-339]
+
