@@ -7,11 +7,13 @@ DEPENDENCIES
     git: git://github.com/nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
   bash-completion (= 0.1.0)
+  build-essential (= 2.1.3)
   chef-client (= 3.8.0)
+  chef_handler (= 1.1.6)
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 6e8e309d318dc5d9aceef726f635017ac1972c23
+    revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
     revision: d2150a0a86de4cd2fe1d7e6c2742d1858ab3068f
@@ -31,6 +33,8 @@ DEPENDENCIES
     git: git://github.com/someara/line-cookbook.git
     revision: 82523b523ab04cdbc5e6b27521c874346155cf80
     ref: 82523b5
+  logrotate (= 1.8.0)
+  lvm (= 1.1.2)
   motd (= 0.5.0)
   nano (= 1.0.0)
   nfs (= 2.0.0)
