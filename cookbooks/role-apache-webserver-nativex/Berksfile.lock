@@ -8,11 +8,12 @@ DEPENDENCIES
     git: git://github.com/nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
   bash-completion (= 0.1.0)
+  build-essential (= 2.1.3)
   chef-client (= 3.8.0)
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 6e8e309d318dc5d9aceef726f635017ac1972c23
+    revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -26,6 +27,9 @@ DEPENDENCIES
   iptables-nativex
     git: git@github.com:nativex/cookbook-iptables-nativex.git
     revision: 5cd3ba67f3f027cb567c01cb9f97d4f672f5495d
+  line (= 0.6.0)
+  logrotate (= 1.8.0)
+  lvm (= 1.1.2)
   motd (= 0.5.0)
   nano (= 1.0.0)
   nfs (= 2.0.0)
@@ -37,6 +41,7 @@ DEPENDENCIES
   ohai-nativex
     git: git@github.com:nativex/cookbook-ohai-nativex.git
     revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+  pacman (= 1.1.1)
   pbis-nativex
     git: git@github.com:nativex/cookbook-pbis-nativex.git
     revision: edfa9815bf75b5a5addb37cfe2f788cb51e01533
