@@ -10,11 +10,13 @@ DEPENDENCIES
   blockdevice-nativex
     git: git@github.com:nativex/cookbook-blockdevice-nativex.git
     revision: 3ffe2ba2309c40190c02132d1632615ec31a4996
+  build-essential (= 2.1.3)
   chef-client (= 3.8.0)
+  chef_handler (= 1.1.6)
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 6e8e309d318dc5d9aceef726f635017ac1972c23
+    revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -25,6 +27,9 @@ DEPENDENCIES
     revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
   hostsfile (= 2.4.5)
   iptables (= 0.13.2)
+  line (= 0.6.0)
+  logrotate (= 1.8.0)
+  lvm (= 1.1.2)
   motd (= 0.5.0)
   nano (= 1.0.0)
   nfs (= 2.0.0)
