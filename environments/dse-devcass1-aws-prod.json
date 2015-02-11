@@ -48,6 +48,12 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "cassandra": {
+      "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch"
+    },
+    "dse": {
+      "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
+    },
     "spacewalk-nativex": {
       "activation_key": "1-prod-centos6"
     }

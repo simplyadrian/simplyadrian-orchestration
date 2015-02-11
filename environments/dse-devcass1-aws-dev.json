@@ -48,9 +48,18 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "cassandra": {
+      "endpoint_snitch": "com.datastax.bdp.snitch.DseDelegateSnitch"
+    },
     "chef_client": {
       "interval": "600",
       "log_file": "chefclt.log"
+    },
+    "dse": {
+      "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
+    },
+    "opscenter-agent": {
+      "opscenter-ip": "10.15.72.5"
     },
     "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
