@@ -8,7 +8,7 @@ cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook
 cookbook 'hostname-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-hostname-nativex.git'
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
-cookbook 'pbis-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
+cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
 cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git'

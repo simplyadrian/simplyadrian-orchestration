@@ -11,7 +11,7 @@ cookbook 'nfs-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-nfs-nativ
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'role-base-nativex', '0.2.0', path: '../role-base-nativex'
-cookbook 'pbis-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
+cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
 cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git'

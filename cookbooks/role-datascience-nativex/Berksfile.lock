@@ -62,7 +62,7 @@ DEPENDENCIES
     revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
   pbis-nativex
     git: git@github.com:nativex/cookbook-pbis-nativex.git
-    revision: edfa9815bf75b5a5addb37cfe2f788cb51e01533
+    revision: 1a6125adf6f00c330933aa569d2ae81bf4856862
   python (= 1.4.6)
   python-nativex
     git: git@github.com:nativex/cookbook-python-nativex.git
@@ -173,7 +173,7 @@ GRAPH
   ohai (2.0.1)
   ohai-nativex (0.1.1)
     ohai (>= 0.0.0)
-  pbis-nativex (1.0.0)
+  pbis-nativex (1.0.1)
     ad-nativex (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
   python (1.4.6)
