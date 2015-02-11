@@ -15,18 +15,21 @@ DEPENDENCIES
     revision: 3ffe2ba2309c40190c02132d1632615ec31a4996
   build-essential (= 2.1.3)
   chef-client (= 3.8.0)
+  chef_handler (= 1.1.6)
   cifs-nativex
     git: git@github.com:nativex/cookbook-cifs-nativex.git
     revision: 6f60af481581d966acbe01ec775123cd4ee59406
   cron (= 1.6.1)
+  dmg (= 2.2.2)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 6e8e309d318dc5d9aceef726f635017ac1972c23
+    revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
     git: git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git
     revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
+  erlang (= 1.5.6)
   git (= 4.0.2)
   hostname-nativex
     git: git@github.com:nativex/cookbook-hostname-nativex.git
@@ -38,6 +41,8 @@ DEPENDENCIES
     revision: 5cd3ba67f3f027cb567c01cb9f97d4f672f5495d
   java (= 1.31.0)
   line (= 0.6.0)
+  logrotate (= 1.8.0)
+  lvm (= 1.1.2)
   mkdirs-nativex
     git: git@github.com:nativex/cookbook-mkdirs-nativex.git
     revision: 888627d57a90b219d70d1224734ce9401738935b
@@ -75,6 +80,7 @@ DEPENDENCIES
     path: .
     metadata: true
   route53 (= 0.3.8)
+  runit (= 1.5.14)
   snmp (= 3.0.1)
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
@@ -87,6 +93,7 @@ DEPENDENCIES
   xfs (= 1.1.0)
   yum (= 3.2.2)
   yum-epel (= 0.4.0)
+  yum-erlang_solutions (= 0.2.0)
   yum-nativex
     git: git@github.com:nativex/cookbook-yum-nativex.git
     revision: 07fab521b59191fc1c72173ad83232d48600a918
