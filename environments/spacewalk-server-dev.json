@@ -1,4 +1,4 @@
-{
+nvm{
   "name": "spacewalk-server-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-spacewalk-server-nativex cookbook.",
   "cookbook_versions": {
