@@ -2,7 +2,7 @@ source "https://supermarket.getchef.com"
 
 metadata
 
-cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
+cookbook 'spacewalk-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
 cookbook 'chef-client', '3.8.0'
 cookbook 'chef_handler', '1.1.6'
 cookbook 'cron', '1.6.1'

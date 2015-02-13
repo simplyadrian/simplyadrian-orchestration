@@ -47,6 +47,7 @@ DEPENDENCIES
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
     revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
+    ref: bd99996
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
