@@ -35,7 +35,7 @@
     "role-base-nativex": "= 0.2.0",
     "route53": "= 0.3.8",
     "snmp": "= 3.0.1",
-    "spacewalk-nativex": "= 0.3.0",
+    "spacewalk-nativex": "= 0.4.0",
     "tuned-nativex": "= 0.1.0",
     "vim": "= 1.1.2",
     "windows": "= 1.34.6",
