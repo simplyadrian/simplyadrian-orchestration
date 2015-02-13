@@ -12,7 +12,7 @@ cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nat
 cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
 cookbook 'privoxy-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-privoxy-nativex.git'
 cookbook 'role-base-nativex', '0.2.0', path: '../role-base-nativex'
-cookbook 'spacewalk-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git'
+cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git', ref: 'bd9999636674eb40f8652d6d0f762cf2a6a2304e'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git'
 cookbook 'auto-patch', '0.1.9'
