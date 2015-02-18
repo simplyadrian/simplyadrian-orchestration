@@ -55,3 +55,18 @@ Changes
 - Created environment files for both dev and production that compliment the role-cookbooks "<role-cookbook-name>-<env>". [ISE-339]
 - Removed cookbook version specificity from metadata files in individual cookbooks in favor of management in Berksfile. [ISE-339]
 
+**********************************************************
+*************** Release v2.2.1, 02/13/2015 ***************
+**********************************************************
+
+Changes
+- Updated spacewalk-nativex cookbook to fix [ISE-321] and versioned roles appropriately
+
+**********************************************************
+*************** Release v2.2.2, 02/18/2015 ***************
+**********************************************************
+
+Changes
+- dse-nativex now installs OpsCenter v5.1.0 agents
+- Fixes role-dse-devcass1-aws-nativex Berksfile not pointing to correct version of dse-nativex.
+
