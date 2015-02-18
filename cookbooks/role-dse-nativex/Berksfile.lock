@@ -16,7 +16,8 @@ DEPENDENCIES
     revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
-    revision: eec99679cf55fd57960cd453a6fcf94436305c81
+    revision: 9eb45b4056de4a8827347b250f27bb01a795d15f
+    ref: 9eb45b4
     branch: dse453
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
@@ -90,7 +91,7 @@ GRAPH
   cron (1.6.1)
   dnsupdate-nativex (1.1.0)
     route53 (>= 0.0.0)
-  dse-nativex (0.1.0)
+  dse-nativex (0.1.1)
     java (>= 0.0.0)
     limits (>= 0.0.0)
     line (>= 0.0.0)
@@ -162,7 +163,7 @@ GRAPH
   windows (1.34.6)
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
-  yum (3.5.2)
+  yum (3.5.3)
   yum-epel (0.4.0)
     yum (~> 3.0)
   yum-nativex (0.3.0)
