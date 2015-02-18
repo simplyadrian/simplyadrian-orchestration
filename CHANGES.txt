@@ -56,7 +56,14 @@ Changes
 - Removed cookbook version specificity from metadata files in individual cookbooks in favor of management in Berksfile. [ISE-339]
 
 **********************************************************
-*************** Release v2.2.1, 02/18/2015 ***************
+*************** Release v2.2.1, 02/13/2015 ***************
+**********************************************************
+
+Changes
+- Updated spacewalk-nativex cookbook to fix [ISE-321] and versioned roles appropriately
+
+**********************************************************
+*************** Release v2.2.2, 02/18/2015 ***************
 **********************************************************
 
 Changes
