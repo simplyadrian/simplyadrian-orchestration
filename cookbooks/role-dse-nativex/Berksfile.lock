@@ -16,8 +16,8 @@ DEPENDENCIES
     revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
-    revision: 9eb45b4056de4a8827347b250f27bb01a795d15f
-    ref: 9eb45b4
+    revision: 89767a4e8adf86f9127c4263e553145e6416cfba
+    ref: 89767a4
     branch: dse453
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
