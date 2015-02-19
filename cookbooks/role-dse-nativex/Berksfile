@@ -4,7 +4,7 @@ metadata
 
 cookbook 'ad-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-ad-nativex.git'
 cookbook 'dnsupdate-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git'
-cookbook 'dse-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-dse-nativex.git', branch: 'dse453'
+cookbook 'dse-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-dse-nativex.git', branch: 'dse453', ref: '89767a4e8adf86f9127c4263e553145e6416cfba'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-hostname-nativex.git'
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
