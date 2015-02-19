@@ -3,6 +3,7 @@ DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
     revision: 203f25f499b4b6efc217c30048d160b45e920287
+    ref: 203f25f
   apt (= 2.6.1)
   ark (= 0.9.0)
   auto-patch (= 0.1.9)

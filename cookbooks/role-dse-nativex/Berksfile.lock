@@ -2,6 +2,7 @@ DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
     revision: 203f25f499b4b6efc217c30048d160b45e920287
+    ref: 203f25f
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
