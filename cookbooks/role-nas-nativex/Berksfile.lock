@@ -1,8 +1,8 @@
 DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: 203f25f499b4b6efc217c30048d160b45e920287
-    ref: 203f25f
+    revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
+    ref: 4d2d0b7
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
@@ -72,7 +72,7 @@ DEPENDENCIES
     revision: 07fab521b59191fc1c72173ad83232d48600a918
 
 GRAPH
-  ad-nativex (1.0.0)
+  ad-nativex (1.0.1)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   auto-patch (0.1.9)

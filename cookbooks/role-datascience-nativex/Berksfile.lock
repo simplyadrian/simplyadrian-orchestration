@@ -2,8 +2,8 @@ DEPENDENCIES
   7-zip (= 1.0.2)
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: 203f25f499b4b6efc217c30048d160b45e920287
-    ref: 203f25f
+    revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
+    ref: 4d2d0b7
   apt (= 2.6.1)
   ark (= 0.9.0)
   auto-patch (= 0.1.9)
@@ -103,7 +103,7 @@ DEPENDENCIES
 GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
-  ad-nativex (1.0.0)
+  ad-nativex (1.0.1)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   apt (2.6.1)
