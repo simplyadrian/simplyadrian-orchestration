@@ -2,7 +2,7 @@
   "name": "dse-cdccass1-aws-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-dse-cdccass1-aws-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 1.0.0",
+    "ad-nativex": "= 1.0.1",
     "auto-patch": "= 0.1.9",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
