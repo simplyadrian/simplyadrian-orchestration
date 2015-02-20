@@ -2,6 +2,7 @@ DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
     revision: 203f25f499b4b6efc217c30048d160b45e920287
+    ref: 203f25f
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
@@ -16,9 +17,8 @@ DEPENDENCIES
     revision: 8b543b87159881e114484937b16721c4baf4ac8f
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
-    revision: 89767a4e8adf86f9127c4263e553145e6416cfba
-    ref: 89767a4
-    branch: dse453
+    revision: b3839d2d356527f3bad5ff495d37ecde1b09d419
+    ref: b3839d2
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -92,7 +92,7 @@ GRAPH
   cron (1.6.1)
   dnsupdate-nativex (1.1.0)
     route53 (>= 0.0.0)
-  dse-nativex (0.1.1)
+  dse-nativex (0.2.0)
     java (>= 0.0.0)
     limits (>= 0.0.0)
     line (>= 0.0.0)
