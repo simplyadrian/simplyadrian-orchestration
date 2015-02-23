@@ -70,3 +70,10 @@ Changes
 - dse-nativex now installs OpsCenter v5.1.0 agents
 - Fixes role-dse-devcass1-aws-nativex Berksfile not pointing to correct version of dse-nativex.
 
+**********************************************************
+*************** Release v2.2.3, 02/23/2015 ***************
+**********************************************************
+
+Changes
+- Fix ability to knife new Windows instances due to improper OU path and not able to join the domain. [ISE-346]
+- Rollout Chef code providing ability to create and manage Production C* node deployment in AWS. [ISE-342]

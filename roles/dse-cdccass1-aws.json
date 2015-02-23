@@ -1,0 +1,15 @@
+{
+  "name": "dse-cdccass1-aws",
+  "description": "A role to manage the configuration of a DataStax Enterprise Server in EC2 that belongs to the cdc-cass1 production cluster.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[role-dse-cdccass1-aws-nativex]"
+  ],
+  "env_run_lists": {
+  }
+}

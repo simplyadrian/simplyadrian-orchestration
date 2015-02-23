@@ -53,7 +53,7 @@ DEPENDENCIES
     revision: 1a6125adf6f00c330933aa569d2ae81bf4856862
   role-base-nativex
     path: ../role-base-nativex
-  role-dse-devcass1-aws-nativex
+  role-dse-cdccass1-aws-nativex
     path: .
     metadata: true
   role-dse-nativex
@@ -62,8 +62,7 @@ DEPENDENCIES
   snmp (= 3.0.1)
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
-    revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
-    ref: bd99996
+    revision: 4b4ebfff8572fe9f3dba90238e648c8bf63f0893
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
@@ -151,7 +150,7 @@ GRAPH
     vim (>= 0.0.0)
     yum-epel (>= 0.0.0)
     yum-nativex (>= 0.0.0)
-  role-dse-devcass1-aws-nativex (1.1.0)
+  role-dse-cdccass1-aws-nativex (1.0.0)
     role-dse-nativex (>= 0.0.0)
   role-dse-nativex (1.1.0)
     dse-nativex (>= 0.0.0)
@@ -160,7 +159,7 @@ GRAPH
   route53 (0.3.8)
     build-essential (>= 0.0.0)
   snmp (3.0.1)
-  spacewalk-nativex (0.3.0)
+  spacewalk-nativex (0.4.0)
     cron (>= 0.0.0)
   tuned-nativex (0.1.0)
   vim (1.1.2)

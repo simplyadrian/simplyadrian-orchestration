@@ -2,7 +2,7 @@ source "https://supermarket.getchef.com"
 
 metadata
 
-cookbook 'ad-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '203f25f499b4b6efc217c30048d160b45e920287'
+cookbook 'ad-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '4d2d0b71cac6cc2ff2cc6b96ada2edf603407079'
 cookbook 'dnsupdate-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git'
 cookbook 'iis-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-iis-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
