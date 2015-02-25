@@ -11,6 +11,7 @@ node.default['blockdevice_nativex']['dir'] = "/mnt/ebs"
 node.default['blockdevice_nativex']['filesystem'] = "xfs"
 node.default['blockdevice_nativex']['mount_point_group'] = "predictive_analytics"
 node.default['blockdevice_nativex']['ebs']['raid'] = true
+node.default['blockdevice_nativex']['hvm'] = true
 node.default['ephemeral_lvm']['mount_point'] = "/mnt/ephemeral"
 node.default['ephemeral_lvm']['filesystem'] = "xfs"
 node.default['ephemeral_lvm']['volume_group_name'] = "vg_data_ephem"
