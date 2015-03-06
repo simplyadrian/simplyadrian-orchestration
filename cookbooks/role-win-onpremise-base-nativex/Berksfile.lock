@@ -1,0 +1,21 @@
+DEPENDENCIES
+  autopatch-nativex
+    git: git@github.com:nativex/cookbook-autopatch-nativex.git
+    revision: e3d0d0c575ff7d95a77d5d6081aab74632b73e79
+    ref: e3d0d0c
+  role-win-onpremise-base-nativex
+    path: .
+    metadata: true
+  windows
+    git: git@github.com:nativex/windows.git
+    revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d
+    ref: 42013d8
+
+GRAPH
+  autopatch-nativex (0.1.0)
+    windows (>= 0.0.0)
+  chef_handler (1.1.6)
+  role-win-onpremise-base-nativex (0.1.0)
+    autopatch-nativex (>= 0.0.0)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)

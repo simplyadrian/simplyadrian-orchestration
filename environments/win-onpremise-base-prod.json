@@ -2,6 +2,10 @@
   "name": "win-onpremise-base-prod",
   "description": "",
   "cookbook_versions": {
+    "autopatch-nativex": "= 0.1.0",
+    "chef_handler": "= 1.1.6",
+    "role-win-onpremise-base-nativex": "= 0.1.0",
+    "windows": "= 1.37.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
