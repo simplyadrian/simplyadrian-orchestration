@@ -77,3 +77,12 @@ Changes
 Changes
 - Fix ability to knife new Windows instances due to improper OU path and not able to join the domain. [ISE-346]
 - Rollout Chef code providing ability to create and manage Production C* node deployment in AWS. [ISE-342]
+
+**********************************************************
+*************** Release v2.3.0, 03/10/2015 ***************
+**********************************************************
+
+Changes
+- Fixes Spacewalk channel cloner running on days it wasn't intended to. [ISE-344]
+- Includes New functionality for automatically patching Windows machines in STHO/CDC. [ISE-66, ISE-297]
+
