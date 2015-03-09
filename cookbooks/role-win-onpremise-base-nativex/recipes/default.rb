@@ -8,3 +8,5 @@
 #
 
 include_recipe "autopatch-nativex::default"
+include_recipe "chef-client::delete_validation"
+include_recipe "chef-client"
