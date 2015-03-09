@@ -1,6 +1,6 @@
 {
   "name": "win-onpremise-base-prod",
-  "description": "",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-win-onpremise-base-nativex cookbook.",
   "cookbook_versions": {
     "autopatch-nativex": "= 0.1.0",
     "chef_handler": "= 1.1.6",
