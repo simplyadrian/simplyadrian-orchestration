@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+node['autopatch-nativex']['auto_reboot_enabled'] = true
+
 include_recipe "autopatch-nativex::default"
 include_recipe "chef-client::delete_validation"
 include_recipe "chef-client"
