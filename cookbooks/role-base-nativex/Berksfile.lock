@@ -4,6 +4,10 @@ DEPENDENCIES
     revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
     ref: 4d2d0b7
   auto-patch (= 0.1.9)
+  autopatch-nativex
+    git: git@github.com:nativex/cookbook-autopatch-nativex.git
+    revision: 0dd54a6e0b4fec2ee6a35a5a55cf7d9661cacd5d
+    ref: 0dd54a6
   aws
     git: git://github.com/nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
@@ -69,6 +73,10 @@ GRAPH
     windows (>= 0.0.0)
   auto-patch (0.1.9)
     cron (>= 0.0.0)
+  autopatch-nativex (1.0.0)
+    auto-patch (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    windows (>= 0.0.0)
   aws (2.6.0)
   bash-completion (0.1.0)
   build-essential (2.1.3)
@@ -107,8 +115,9 @@ GRAPH
   pbis-nativex (1.0.1)
     ad-nativex (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
-  role-base-nativex (0.2.0)
+  role-base-nativex (0.3.0)
     auto-patch (>= 0.0.0)
+    autopatch-nativex (>= 0.0.0)
     aws (>= 0.0.0)
     bash-completion (>= 0.0.0)
     chef-client (>= 0.0.0)
