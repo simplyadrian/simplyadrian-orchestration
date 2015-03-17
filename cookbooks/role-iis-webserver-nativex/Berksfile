@@ -6,7 +6,7 @@ cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex
 cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'ed99d04f13b48805d7ca2aaf97d8576e299e57e9'
 cookbook 'iis-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-iis-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
-cookbook 'role-win-base-nativex', '0.1.0', path: '../role-win-base-nativex'
+cookbook 'role-win-base-nativex', '0.2.0', path: '../role-win-base-nativex'
 cookbook 'aws', '2.6.0', git: 'git://github.com/nativex/aws.git'
 cookbook 'build-essential', '2.1.3'
 cookbook 'chef-client', '3.8.0'

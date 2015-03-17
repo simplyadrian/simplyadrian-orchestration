@@ -3,8 +3,8 @@ maintainer       'NativeX'
 maintainer_email 'adrian.herrera@nativex.com'
 license          'All rights reserved'
 description      'Installs/Configures role-privoxy-nativex'
-version          '0.3.0'
+version          '1.3.0'
 
 depends 'role-base-nativex'
 depends 'privoxy-nativex'
-depends 'iptables-nativex'
+
