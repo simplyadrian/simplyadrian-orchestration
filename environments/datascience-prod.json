@@ -3,7 +3,7 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-datascience-nativex cookbook.",
   "cookbook_versions": {
     "7-zip": "= 1.0.2",
-    "ad-nativex": "= 1.0.1",
+    "ad-nativex": "= 2.1.1",
     "apt": "= 2.6.1",
     "ark": "= 0.9.0",
     "auto-patch": "= 0.1.9",
@@ -12,11 +12,12 @@
     "blockdevice-nativex": "= 0.2.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
+    "chef-sugar": "= 3.0.0",
     "chef_handler": "= 1.1.6",
     "cifs-nativex": "= 0.1.0",
     "cron": "= 1.6.1",
     "dmg": "= 2.2.2",
-    "dnsupdate-nativex": "= 1.1.0",
+    "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
     "ephemeral_lvm": "= 1.0.7",
     "ephemeral_lvm-nativex": "= 0.1.0",
@@ -24,8 +25,6 @@
     "git": "= 4.0.2",
     "hostname-nativex": "= 0.1.0",
     "hostsfile": "= 2.4.5",
-    "iptables": "= 0.13.2",
-    "iptables-nativex": "= 0.1.0",
     "java": "= 1.31.0",
     "line": "= 0.6.0",
     "logrotate": "= 1.8.0",
@@ -45,9 +44,9 @@
     "r": "= 0.3.0",
     "r-nativex": "= 0.1.2",
     "rabbitmq": "= 3.2.2",
-    "role-base-nativex": "= 0.2.0",
-    "role-datascience-nativex": "= 1.1.0",
-    "route53": "= 0.3.8",
+    "role-base-nativex": "= 1.2.0",
+    "role-datascience-nativex": "= 2.1.0",
+    "route53": "= 0.4.0",
     "runit": "= 1.5.14",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",
@@ -55,6 +54,7 @@
     "vim": "= 1.1.2",
     "windows": "= 1.34.6",
     "xfs": "= 1.1.0",
+    "xml": "= 1.2.13",
     "yum": "= 3.2.2",
     "yum-epel": "= 0.4.0",
     "yum-erlang_solutions": "= 0.2.0",
@@ -68,5 +68,6 @@
     }
   },
   "override_attributes": {
+
   }
 }

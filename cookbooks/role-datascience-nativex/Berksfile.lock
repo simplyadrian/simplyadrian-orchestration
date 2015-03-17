@@ -2,8 +2,8 @@ DEPENDENCIES
   7-zip (= 1.0.2)
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
-    ref: 4d2d0b7
+    revision: bb86c85f58c5c02f70de8bd8c62126cd38c54af3
+    ref: bb86c85
   apt (= 2.6.1)
   ark (= 0.9.0)
   auto-patch (= 0.1.9)
@@ -14,6 +14,7 @@ DEPENDENCIES
   blockdevice-nativex
     git: git@github.com:nativex/cookbook-blockdevice-nativex.git
     revision: 3ffe2ba2309c40190c02132d1632615ec31a4996
+    ref: 3ffe2ba
   build-essential (= 2.1.3)
   chef-client (= 3.8.0)
   chef_handler (= 1.1.6)
@@ -24,7 +25,8 @@ DEPENDENCIES
   dmg (= 2.2.2)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 8b543b87159881e114484937b16721c4baf4ac8f
+    revision: ed99d04f13b48805d7ca2aaf97d8576e299e57e9
+    ref: ed99d04
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -36,10 +38,6 @@ DEPENDENCIES
     git: git@github.com:nativex/cookbook-hostname-nativex.git
     revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
   hostsfile (= 2.4.5)
-  iptables (= 0.13.2)
-  iptables-nativex
-    git: git@github.com:nativex/cookbook-iptables-nativex.git
-    revision: 5cd3ba67f3f027cb567c01cb9f97d4f672f5495d
   java (= 1.31.0)
   line (= 0.6.0)
   logrotate (= 1.8.0)
@@ -80,7 +78,6 @@ DEPENDENCIES
   role-datascience-nativex
     path: .
     metadata: true
-  route53 (= 0.3.8)
   runit (= 1.5.14)
   snmp (= 3.0.1)
   spacewalk-nativex
@@ -103,7 +100,7 @@ DEPENDENCIES
 GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
-  ad-nativex (1.0.1)
+  ad-nativex (2.1.1)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   apt (2.6.1)
@@ -123,12 +120,12 @@ GRAPH
     cron (>= 1.2.0)
     logrotate (>= 1.2.0)
     windows (~> 1.11)
+  chef-sugar (3.0.0)
   chef_handler (1.1.6)
   cifs-nativex (0.1.0)
   cron (1.6.1)
   dmg (2.2.2)
-  dnsupdate-nativex (1.1.0)
-    route53 (>= 0.0.0)
+  dnsupdate-nativex (2.1.0)
   dstat (0.1.1)
   ephemeral_lvm (1.0.7)
     lvm (~> 1.1.0)
@@ -152,9 +149,6 @@ GRAPH
     hostsfile (>= 0.0.0)
     route53 (>= 0.0.0)
   hostsfile (2.4.5)
-  iptables (0.13.2)
-  iptables-nativex (0.1.0)
-    iptables (>= 0.0.0)
   java (1.31.0)
   line (0.6.0)
   logrotate (1.8.0)
@@ -192,7 +186,7 @@ GRAPH
     r (>= 0.0.0)
   rabbitmq (3.2.2)
     erlang (>= 0.9.0)
-  role-base-nativex (0.2.0)
+  role-base-nativex (1.2.0)
     auto-patch (>= 0.0.0)
     aws (>= 0.0.0)
     bash-completion (>= 0.0.0)
@@ -201,7 +195,6 @@ GRAPH
     dstat (>= 0.0.0)
     ephemeral_lvm-nativex (>= 0.0.0)
     hostname-nativex (>= 0.0.0)
-    iptables (>= 0.0.0)
     motd (>= 0.0.0)
     nano (>= 0.0.0)
     nfs (>= 0.0.0)
@@ -215,11 +208,10 @@ GRAPH
     vim (>= 0.0.0)
     yum-epel (>= 0.0.0)
     yum-nativex (>= 0.0.0)
-  role-datascience-nativex (1.1.0)
+  role-datascience-nativex (2.1.0)
     blockdevice-nativex (>= 0.0.0)
     cifs-nativex (>= 0.0.0)
     git (>= 0.0.0)
-    iptables-nativex (>= 0.0.0)
     mkdirs-nativex (>= 0.0.0)
     nodejs (>= 0.0.0)
     python (>= 0.0.0)
@@ -229,8 +221,8 @@ GRAPH
     rabbitmq (>= 0.0.0)
     role-base-nativex (>= 0.0.0)
     tuned-nativex (>= 0.0.0)
-  route53 (0.3.8)
-    build-essential (>= 0.0.0)
+  route53 (0.4.0)
+    xml (>= 0.0.0)
   runit (1.5.14)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
@@ -243,6 +235,9 @@ GRAPH
   windows (1.34.6)
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
+  xml (1.2.13)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
   yum (3.2.2)
   yum-epel (0.4.0)
     yum (~> 3.0)
