@@ -1,8 +1,8 @@
 DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
-    ref: 4d2d0b7
+    revision: bb86c85f58c5c02f70de8bd8c62126cd38c54af3
+    ref: bb86c85
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
@@ -14,7 +14,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 8b543b87159881e114484937b16721c4baf4ac8f
+    revision: ed99d04f13b48805d7ca2aaf97d8576e299e57e9
+    ref: ed99d04
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
     revision: b3839d2d356527f3bad5ff495d37ecde1b09d419
@@ -28,7 +29,6 @@ DEPENDENCIES
     git: git@github.com:nativex/cookbook-hostname-nativex.git
     revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
   hostsfile (= 2.4.5)
-  iptables (= 0.13.2)
   java (= 1.24.0)
   limits (= 0.2.0)
   line
@@ -58,11 +58,11 @@ DEPENDENCIES
     metadata: true
   role-dse-nativex
     path: ../role-dse-nativex
-  route53 (= 0.3.8)
   snmp (= 3.0.1)
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
     revision: 4b4ebfff8572fe9f3dba90238e648c8bf63f0893
+    ref: 4b4ebff
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
@@ -76,7 +76,7 @@ DEPENDENCIES
     revision: 07fab521b59191fc1c72173ad83232d48600a918
 
 GRAPH
-  ad-nativex (1.0.1)
+  ad-nativex (2.1.1)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   auto-patch (0.1.9)
@@ -88,10 +88,10 @@ GRAPH
     cron (>= 1.2.0)
     logrotate (>= 1.2.0)
     windows (~> 1.11)
+  chef-sugar (3.0.0)
   chef_handler (1.1.6)
   cron (1.6.1)
-  dnsupdate-nativex (1.1.0)
-    route53 (>= 0.0.0)
+  dnsupdate-nativex (2.1.0)
   dse-nativex (0.2.0)
     java (>= 0.0.0)
     limits (>= 0.0.0)
@@ -108,7 +108,6 @@ GRAPH
     hostsfile (>= 0.0.0)
     route53 (>= 0.0.0)
   hostsfile (2.4.5)
-  iptables (0.13.2)
   java (1.24.0)
   limits (0.2.0)
   line (0.5.1)
@@ -127,7 +126,7 @@ GRAPH
   pbis-nativex (1.0.1)
     ad-nativex (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
-  role-base-nativex (0.2.0)
+  role-base-nativex (1.2.0)
     auto-patch (>= 0.0.0)
     aws (>= 0.0.0)
     bash-completion (>= 0.0.0)
@@ -136,7 +135,6 @@ GRAPH
     dstat (>= 0.0.0)
     ephemeral_lvm-nativex (>= 0.0.0)
     hostname-nativex (>= 0.0.0)
-    iptables (>= 0.0.0)
     motd (>= 0.0.0)
     nano (>= 0.0.0)
     nfs (>= 0.0.0)
@@ -156,8 +154,8 @@ GRAPH
     dse-nativex (>= 0.0.0)
     role-base-nativex (>= 0.0.0)
     tuned-nativex (>= 0.0.0)
-  route53 (0.3.8)
-    build-essential (>= 0.0.0)
+  route53 (0.4.0)
+    xml (>= 0.0.0)
   snmp (3.0.1)
   spacewalk-nativex (0.4.0)
     cron (>= 0.0.0)
@@ -166,6 +164,9 @@ GRAPH
   windows (1.34.6)
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
+  xml (1.2.13)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
   yum (3.5.3)
   yum-epel (0.4.0)
     yum (~> 3.0)
