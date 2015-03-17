@@ -6,7 +6,7 @@
     "auto-patch": "= 0.1.9",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
-    "blockdevice-nativex": "= 0.2.0",
+    "blockdevice-nativex": "= 0.3.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
     "chef_handler": "= 1.1.6",
