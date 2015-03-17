@@ -3,8 +3,8 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'ad-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '4d2d0b71cac6cc2ff2cc6b96ada2edf603407079'
-cookbook 'autopatch-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '0dd54a6e0b4fec2ee6a35a5a55cf7d9661cacd5d'
-cookbook 'dnsupdate-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git'
+cookbook 'autopatch-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '779410b734c5035a1153162da057b2eae9392385'
+cookbook 'dnsupdate-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: '8b543b87159881e114484937b16721c4baf4ac8f'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-hostname-nativex.git'
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
