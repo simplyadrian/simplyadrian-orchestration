@@ -11,7 +11,8 @@ node.default['ad-nativex']['oupath'] = "OU=Domain Controllers,DC=teamfreeze,DC=c
 
 include_recipe "aws"
 include_recipe "windows"
-include_recipe "ad-nativex::joindomain"
+include_recipe "ad-nativex::joindomain",
+include_recipe "ad-nativex::renamecomputer",
 include_recipe "ad-nativex::installdomaincontroller"
 include_recipe "dnsupdate-nativex::addprv"
 include_recipe "chef-client::delete_validation"
