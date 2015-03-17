@@ -21,6 +21,7 @@ node.default['snmp']['syscontact'] = "sysadmins <sysadmins@w3i.com>"
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
+include_recipe 'chef-sugar'
 include_recipe 'aws'
 include_recipe 'vim'
 include_recipe 'nano'
@@ -37,8 +38,9 @@ include_recipe 'hostname-nativex::updatehostname'
 include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalk-nativex'
-include_recipe 'pbis-nativex'
-include_recipe "auto-patch"
+#include_recipe 'pbis-nativex'
+include_recipe 'ad-nativex'
+include_recipe 'auto-patch'
 include_recipe 'yum-nativex::deleterepo'
 include_recipe 'ntp'
 include_recipe 'motd'
