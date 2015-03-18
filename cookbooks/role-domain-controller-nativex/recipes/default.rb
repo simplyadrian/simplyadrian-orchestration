@@ -14,7 +14,7 @@ include_recipe "windows"
 include_recipe "ad-nativex::joindomain"
 include_recipe "ad-nativex::renamecomputer"
 include_recipe "ad-nativex::installdomaincontroller"
-include_recipe "dnsupdate-nativex::addprv"
+include_recipe "dnsupdate-nativex"
 include_recipe "chef-client::delete_validation"
 include_recipe "chef-client"
 
