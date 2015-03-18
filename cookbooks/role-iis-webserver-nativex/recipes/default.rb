@@ -15,9 +15,9 @@ node.default['iis-nativex']['features'] = ["IIS-HttpLogging","IIS-CustomLogging"
 										   "IIS-ApplicationDevelopment","IIS-ISAPIExtensions","IIS-ISAPIFilter","NetFx4Extended-ASPNET45",
 										   "IIS-NetFxExtensibility45","IIS-ApplicationInit","IIS-ASP","IIS-ASPNET45","IIS-CGI","IIS-ServerSideIncludes","IIS-WebSockets",
 										   "IIS-HttpCompressionDynamic","IIS-WebServerManagementTools","IIS-ManagementConsole","IIS-ManagementService",
-										   "IIS-ManagementScriptingTools","IIS-HttpRedirect","MSMQ","MSMQ-Services","MSMQ-Server","WCF-HTTP-Activation45","ManagementOdata",
-										   "WCF-MSMQ-Activation45","WCF-Pipe-Activation45","WCF-TCP-Activation45","Server-RSAT-SNMP","SNMP","WMISNMPProvider",
-										   "Microsoft-Windows-Web-Services-for-Management-IIS-Extension"]
+										   "IIS-ManagementScriptingTools","IIS-HttpRedirect","MSMQ","MSMQ-Services","MSMQ-Server","WAS-WindowsActivationService",
+										   "WAS-ProcessModel","WAS-ConfigurationAPI","WCF-HTTP-Activation45","WCF-MSMQ-Activation45","WCF-Pipe-Activation45","WCF-TCP-Activation45",
+										   "Server-RSAT-SNMP","SNMP","WMISNMPProvider","ManagementOdata","Microsoft-Windows-Web-Services-for-Management-IIS-Extension"]
 
 node.default['iis-nativex']['enabled_pools'] = [{:pool_name => 'api.w3i.com',
 													:runtime_version => '4.0',
