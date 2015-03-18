@@ -2,14 +2,15 @@
   "name": "nat-prod",
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-nat-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 1.0.1",
+    "ad-nativex": "= 2.1.1",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
+    "chef-sugar": "= 3.0.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
-    "dnsupdate-nativex": "= 1.1.0",
+    "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
     "ephemeral_lvm": "= 1.0.7",
     "ephemeral_lvm-nativex": "= 0.1.0",
@@ -27,13 +28,13 @@
     "ohai-nativex": "= 0.1.1",
     "pbis-nativex": "= 1.0.1",
     "role-nat-nativex": "= 0.2.0",
-    "route53": "= 0.3.8",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",
     "tuned-nativex": "= 0.1.0",
     "vim": "= 1.1.2",
     "windows": "= 1.34.6",
     "xfs": "= 1.1.0",
+    "xml": "= 1.2.13",
     "yum": "= 3.2.2",
     "yum-nativex": "= 0.3.0"
   },
@@ -45,5 +46,6 @@
     }
   },
   "override_attributes": {
+
   }
 }

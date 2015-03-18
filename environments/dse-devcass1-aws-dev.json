@@ -34,7 +34,6 @@
     "role-base-nativex": "= 1.2.0",
     "role-dse-devcass1-aws-nativex": "= 1.1.0",
     "role-dse-nativex": "= 1.1.0",
-    "route53": "= 0.4.0",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",
     "tuned-nativex": "= 0.1.0",

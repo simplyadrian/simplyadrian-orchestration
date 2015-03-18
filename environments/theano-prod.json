@@ -11,13 +11,12 @@
     "chef-sugar": "= 2.5.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
-    "dnsupdate-nativex": "= 1.1.0",
+    "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
     "ephemeral_lvm": "= 1.0.7",
     "ephemeral_lvm-nativex": "= 0.1.0",
     "hostname-nativex": "= 0.1.0",
     "hostsfile": "= 2.4.5",
-    "iptables": "= 0.13.2",
     "logrotate": "= 1.8.0",
     "lvm": "= 1.1.2",
     "motd": "= 0.5.0",
@@ -26,7 +25,6 @@
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
     "role-theano-nativex": "= 0.1.0",
-    "route53": "= 0.3.8",
     "snmp": "= 3.0.1",
     "sudo": "= 2.6.0",
     "users": "= 1.7.0",
@@ -43,5 +41,6 @@
     }
   },
   "override_attributes": {
+
   }
 }

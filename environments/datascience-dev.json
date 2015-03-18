@@ -46,7 +46,6 @@
     "rabbitmq": "= 3.2.2",
     "role-base-nativex": "= 1.2.0",
     "role-datascience-nativex": "= 2.1.0",
-    "route53": "= 0.4.0",
     "runit": "= 1.5.14",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",

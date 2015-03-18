@@ -2,19 +2,19 @@
   "name": "win-base-prod",
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-win-base-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 1.0.1",
+    "ad-nativex": "= 2.1.1",
+    "autopatch-nativex": "= 0.1.0",
     "aws": "= 2.6.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
-    "dnsupdate-nativex": "= 1.1.0",
-    "logrotate": "= 1.8.0",
+    "dnsupdate-nativex": "= 2.1.0",
+    "logrotate": "= 1.9.0",
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
-    "role-win-base-nativex": "= 0.1.0",
-    "route53": "= 0.3.8",
-    "windows": "= 1.34.6"
+    "role-win-base-nativex": "= 0.2.0",
+    "windows": "= 1.37.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
@@ -24,5 +24,6 @@
     }
   },
   "override_attributes": {
+
   }
 }
