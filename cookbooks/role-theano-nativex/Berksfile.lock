@@ -24,7 +24,8 @@ DEPENDENCIES
     revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
   hostname-nativex
     git: git@github.com:nativex/cookbook-hostname-nativex.git
-    revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
+    revision: 532658bfb6a97f39dc0e7505521f1373ed20b62c
+    ref: 532658b
   hostsfile (= 2.4.5)
   logrotate (= 1.8.0)
   lvm (= 1.1.2)
@@ -69,9 +70,8 @@ GRAPH
   ephemeral_lvm-nativex (0.1.0)
     ephemeral_lvm (>= 0.0.0)
     xfs (>= 0.0.0)
-  hostname-nativex (0.1.0)
+  hostname-nativex (0.1.1)
     hostsfile (>= 0.0.0)
-    route53 (>= 0.0.0)
   hostsfile (2.4.5)
   logrotate (1.8.0)
   lvm (1.1.2)
@@ -100,8 +100,6 @@ GRAPH
     sudo (>= 0.0.0)
     users (>= 0.0.0)
     vim (>= 0.0.0)
-    xml (>= 0.0.0)
-  route53 (0.4.0)
     xml (>= 0.0.0)
   snmp (3.0.1)
   sudo (2.6.0)

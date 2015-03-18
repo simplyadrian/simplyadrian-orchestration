@@ -5,7 +5,7 @@ metadata
 cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: 'bb86c85f58c5c02f70de8bd8c62126cd38c54af3'
 cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'ed99d04f13b48805d7ca2aaf97d8576e299e57e9'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
-cookbook 'hostname-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-hostname-nativex.git'
+cookbook 'hostname-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '532658bfb6a97f39dc0e7505521f1373ed20b62c'
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
