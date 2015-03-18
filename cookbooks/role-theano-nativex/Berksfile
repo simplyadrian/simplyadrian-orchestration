@@ -3,7 +3,7 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'blockdevice-nativex', '0.2.0', git: 'git@github.com:nativex/cookbook-blockdevice-nativex.git', ref: '3ffe2ba2309c40190c02132d1632615ec31a4996'
-cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: '648b5d802bb8f8b11d161c9478ff892b9855cf95'
+cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'f328503bc18140bba347191cde10d74fd40488a3'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '532658bfb6a97f39dc0e7505521f1373ed20b62c'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
