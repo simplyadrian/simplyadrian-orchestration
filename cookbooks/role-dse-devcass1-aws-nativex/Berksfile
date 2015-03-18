@@ -3,7 +3,7 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '9a659d0a3f976aba4104837b2d2c1ce59b73c176'
-cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'f328503bc18140bba347191cde10d74fd40488a3'
+cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07'
 cookbook 'dse-nativex', '0.2.0', git: 'git@github.com:nativex/cookbook-dse-nativex.git', ref: 'b3839d2d356527f3bad5ff495d37ecde1b09d419'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '532658bfb6a97f39dc0e7505521f1373ed20b62c'

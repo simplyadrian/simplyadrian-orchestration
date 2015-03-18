@@ -4,7 +4,7 @@ metadata
 
 cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '9a659d0a3f976aba4104837b2d2c1ce59b73c176'
 cookbook 'autopatch-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: 'e3d0d0c575ff7d95a77d5d6081aab74632b73e79'
-cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'f328503bc18140bba347191cde10d74fd40488a3'
+cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'aws', '2.6.0', git: 'git://github.com/nativex/aws.git'
 cookbook 'build-essential', '2.1.3'

@@ -25,8 +25,8 @@ DEPENDENCIES
   dmg (= 2.2.2)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: f328503bc18140bba347191cde10d74fd40488a3
-    ref: f328503
+    revision: c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07
+    ref: c41b990
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
