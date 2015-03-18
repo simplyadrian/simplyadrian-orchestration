@@ -1,7 +1,7 @@
 DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: bb86c85f58c5c02f70de8bd8c62126cd38c54af3
+    revision: 9a659d0a3f976aba4104837b2d2c1ce59b73c176
     ref: bb86c85
   apache2 (= 1.10.4)
   auto-patch (= 0.1.9)
