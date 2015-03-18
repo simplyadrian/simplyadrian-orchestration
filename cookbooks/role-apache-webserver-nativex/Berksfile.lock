@@ -2,7 +2,7 @@ DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
     revision: 9a659d0a3f976aba4104837b2d2c1ce59b73c176
-    ref: bb86c85
+    ref: 9a659d0
   apache2 (= 1.10.4)
   auto-patch (= 0.1.9)
   aws
@@ -15,8 +15,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 648b5d802bb8f8b11d161c9478ff892b9855cf95
-    ref: 648b5d8
+    revision: f328503bc18140bba347191cde10d74fd40488a3
+    ref: f328503
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
