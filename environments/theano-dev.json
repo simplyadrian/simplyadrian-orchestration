@@ -25,6 +25,7 @@
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
     "role-theano-nativex": "= 0.1.0",
+    "route53": "= 0.4.0",
     "snmp": "= 3.0.1",
     "sudo": "= 2.6.0",
     "users": "= 1.7.0",
