@@ -12,8 +12,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: ed99d04f13b48805d7ca2aaf97d8576e299e57e9
-    ref: ed99d04
+    revision: 648b5d802bb8f8b11d161c9478ff892b9855cf95
+    ref: 648b5d8
   logrotate (= 1.8.0)
   ohai (= 2.0.1)
   ohai-nativex

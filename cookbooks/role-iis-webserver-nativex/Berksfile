@@ -4,7 +4,7 @@ metadata
 
 cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: 'bb86c85f58c5c02f70de8bd8c62126cd38c54af3'
 cookbook 'autopatch-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: 'e3d0d0c575ff7d95a77d5d6081aab74632b73e79'
-cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'ed99d04f13b48805d7ca2aaf97d8576e299e57e9'
+cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: '648b5d802bb8f8b11d161c9478ff892b9855cf95'
 cookbook 'iis-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-iis-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'role-win-base-nativex', '0.2.0', path: '../role-win-base-nativex'
