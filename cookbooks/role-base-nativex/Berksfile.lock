@@ -1,8 +1,8 @@
 DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: 4d2d0b71cac6cc2ff2cc6b96ada2edf603407079
-    ref: 4d2d0b7
+    revision: 9a659d0a3f976aba4104837b2d2c1ce59b73c176
+    ref: 9a659d0
   auto-patch (= 0.1.9)
   aws
     git: git://github.com/nativex/aws.git
@@ -14,7 +14,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dnsupdate-nativex
     git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: 8b543b87159881e114484937b16721c4baf4ac8f
+    revision: c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07
+    ref: c41b990
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -22,9 +23,9 @@ DEPENDENCIES
     revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
   hostname-nativex
     git: git@github.com:nativex/cookbook-hostname-nativex.git
-    revision: af0cbcf64788ccb2a60d0a1c98b9dfa98c7959d4
+    revision: 532658bfb6a97f39dc0e7505521f1373ed20b62c
+    ref: 532658b
   hostsfile (= 2.4.5)
-  iptables (= 0.13.2)
   line (= 0.6.0)
   logrotate (= 1.8.0)
   lvm (= 1.1.2)
@@ -45,7 +46,6 @@ DEPENDENCIES
   role-base-nativex
     path: .
     metadata: true
-  route53 (= 0.3.8)
   snmp (= 3.0.1)
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
@@ -64,7 +64,7 @@ DEPENDENCIES
     revision: 07fab521b59191fc1c72173ad83232d48600a918
 
 GRAPH
-  ad-nativex (1.0.1)
+  ad-nativex (2.1.1)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   auto-patch (0.1.9)
@@ -78,19 +78,16 @@ GRAPH
     windows (~> 1.11)
   chef_handler (1.1.6)
   cron (1.6.1)
-  dnsupdate-nativex (1.1.0)
-    route53 (>= 0.0.0)
+  dnsupdate-nativex (2.1.0)
   dstat (0.1.1)
   ephemeral_lvm (1.0.7)
     lvm (~> 1.1.0)
   ephemeral_lvm-nativex (0.1.0)
     ephemeral_lvm (>= 0.0.0)
     xfs (>= 0.0.0)
-  hostname-nativex (0.1.0)
+  hostname-nativex (0.1.1)
     hostsfile (>= 0.0.0)
-    route53 (>= 0.0.0)
   hostsfile (2.4.5)
-  iptables (0.13.2)
   line (0.6.0)
   logrotate (1.8.0)
   lvm (1.1.2)
@@ -107,7 +104,7 @@ GRAPH
   pbis-nativex (1.0.1)
     ad-nativex (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
-  role-base-nativex (0.2.0)
+  role-base-nativex (1.2.0)
     auto-patch (>= 0.0.0)
     aws (>= 0.0.0)
     bash-completion (>= 0.0.0)
@@ -116,7 +113,6 @@ GRAPH
     dstat (>= 0.0.0)
     ephemeral_lvm-nativex (>= 0.0.0)
     hostname-nativex (>= 0.0.0)
-    iptables (>= 0.0.0)
     motd (>= 0.0.0)
     nano (>= 0.0.0)
     nfs (>= 0.0.0)
@@ -130,8 +126,6 @@ GRAPH
     vim (>= 0.0.0)
     yum-epel (>= 0.0.0)
     yum-nativex (>= 0.0.0)
-  route53 (0.3.8)
-    build-essential (>= 0.0.0)
   snmp (3.0.1)
   spacewalk-nativex (0.3.0)
     cron (>= 0.0.0)

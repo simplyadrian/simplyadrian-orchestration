@@ -11,5 +11,3 @@ node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe "role-base-nativex"
 include_recipe "privoxy-nativex"
-include_recipe "iptables-nativex::privoxy"
-include_recipe "iptables-nativex::ssh"
