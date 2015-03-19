@@ -10,7 +10,7 @@ DEPENDENCIES
   bash-completion (= 0.1.0)
   blockdevice-nativex
     git: git@github.com:nativex/cookbook-blockdevice-nativex.git
-    revision: f0e72c66699558f7ed3ae4671b788ef843877c7b
+    revision: 1a00ade21ee07097b84672d95eb1279a00d44cbf
   build-essential (= 2.1.3)
   chef-client (= 3.8.0)
   chef_handler (= 1.1.6)
