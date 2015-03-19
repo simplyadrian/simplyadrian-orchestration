@@ -29,3 +29,5 @@ include_recipe 'blockdevice-nativex::tags'
 include_recipe 'nodejs'
 include_recipe 'maven'
 include_recipe 'tuned-nativex::apply_profile'
+include_recipe 'snowflake-nativex'
+
