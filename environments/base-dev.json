@@ -61,7 +61,12 @@
       "chpass_provider": "krb5",
       "auth_provider": "krb5",
       "ldap_sudo": true
-
+    },
+    "ad-nativex": {
+      "kdc_servers": [
+        "PAW1AM-DC-04",
+        "CDC-DC-1"
+      ]
     }
   },
   "override_attributes": {
