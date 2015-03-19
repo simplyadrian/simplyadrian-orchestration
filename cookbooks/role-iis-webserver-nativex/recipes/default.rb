@@ -63,7 +63,7 @@ node.default['iis-nativex']['arr_helper']['x_forwarded_for_header_name'] = 'nati
 node.default['iis-nativex']['arr_helper']['ssl_header_name'] = 'X-ARR-SSL'
 node.default['iis-nativex']['arr_helper']['client_header_name'] = 'X-ARR-ClientCert'
 node.default['iis-nativex']['arr_helper']['log_guid_name'] = 'X-ARR-LOG-ID'
-
+node.default['ad-nativex']['organizational_unit_level_5'] = 'Web Servers'
 include_recipe 'role-win-base-nativex'
 include_recipe 'iis-nativex'
 include_recipe 'iis-nativex::install-arr-features'
