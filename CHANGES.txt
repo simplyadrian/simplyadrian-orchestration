@@ -86,3 +86,17 @@ Changes
 - Fixes Spacewalk channel cloner running on days it wasn't intended to. [ISE-344]
 - Includes New functionality for automatically patching Windows machines in STHO/CDC. [ISE-66, ISE-297]
 
+**********************************************************
+*************** Release v3.0.0, 03/18/2015 ***************
+**********************************************************
+
+Changes
+- removed route53 dependencies
+- specified nokogiri version to support aws-sdk-v1
+- deprecated iptables-nativex
+- separated join domain and rename computer functions into two separate recipes in the ad-nativex cookbook.
+- released iis-nativex cookbook
+- patch to spacewalk-nativex
+- released snapshot and restore functionality to block device cookbook
+- added auto-patch cookbook to role-win-base-nativex cookbook.
+- updated credentials ad / credentials pbis data_bags to reflect the update to the AD account changes for the Chef user.

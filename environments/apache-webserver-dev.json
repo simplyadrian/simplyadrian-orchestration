@@ -2,7 +2,7 @@
   "name": "apache-webserver-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-apache-webserver-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 1.0.1",
+    "ad-nativex": "= 2.1.1",
     "apache2": "= 1.10.4",
     "auto-patch": "= 0.1.9",
     "aws": "= 2.6.0",
@@ -11,14 +11,13 @@
     "chef-client": "= 3.8.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
-    "dnsupdate-nativex": "= 1.1.0",
+    "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
     "ephemeral_lvm": "= 1.0.7",
     "ephemeral_lvm-nativex": "= 0.1.0",
-    "hostname-nativex": "= 0.1.0",
+    "hostname-nativex": "= 0.1.1",
     "hostsfile": "= 2.4.5",
-    "iptables": "= 0.13.2",
-    "iptables-nativex": "= 0.1.0",
+    "iptables": "= 0.14.1",
     "line": "= 0.6.0",
     "logrotate": "= 1.8.0",
     "lvm": "= 1.1.2",
@@ -31,9 +30,8 @@
     "ohai-nativex": "= 0.1.1",
     "pacman": "= 1.1.1",
     "pbis-nativex": "= 1.0.1",
-    "role-apache-webserver-nativex": "= 0.2.0",
-    "role-base-nativex": "= 0.2.0",
-    "route53": "= 0.3.8",
+    "role-apache-webserver-nativex": "= 1.2.0",
+    "role-base-nativex": "= 1.2.0",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",
     "tuned-nativex": "= 0.1.0",
@@ -56,5 +54,6 @@
     }
   },
   "override_attributes": {
+
   }
 }
