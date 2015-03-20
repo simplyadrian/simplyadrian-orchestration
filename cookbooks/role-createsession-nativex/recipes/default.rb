@@ -8,7 +8,7 @@
 #
 
 node.default['blockdevice_nativex']['dir'] = "/mnt/ebs"
-node.default['blockdevice_nativex']['mount_point_group'] = "Product Team"
+node.default['blockdevice_nativex']['mount_point_group'] = "Product_Engineering"
 node.default['blockdevice_nativex']['recurse_permissions'] = false
 node.default['blockdevice_nativex']['filesystem'] = "xfs"
 node.default['blockdevice_nativex']['ebs']['raid'] = false
