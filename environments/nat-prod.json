@@ -3,6 +3,8 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-nat-nativex cookbook.",
   "cookbook_versions": {
     "ad-nativex": "= 2.1.1",
+    "auto-patch": "= 0.1.9",
+    "autopatch-nativex": "= 1.0.0",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
     "build-essential": "= 2.1.3",
@@ -26,7 +28,7 @@
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
     "pbis-nativex": "= 1.0.1",
-    "role-nat-nativex": "= 0.2.0",
+    "role-nat-nativex": "= 0.3.0",
     "snmp": "= 3.0.1",
     "spacewalk-nativex": "= 0.3.0",
     "tuned-nativex": "= 0.1.0",
@@ -44,6 +46,5 @@
     }
   },
   "override_attributes": {
-
   }
 }
