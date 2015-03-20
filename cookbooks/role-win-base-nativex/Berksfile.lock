@@ -45,7 +45,7 @@ GRAPH
   chef_handler (1.1.6)
   cron (1.6.1)
   dnsupdate-nativex (2.1.0)
-  logrotate (1.9.0)
+  logrotate (1.9.1)
   ohai (2.0.1)
   ohai-nativex (0.1.1)
     ohai (>= 0.0.0)
