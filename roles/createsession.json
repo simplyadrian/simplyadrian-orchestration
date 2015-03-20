@@ -1,0 +1,15 @@
+{
+  "name": "createsession",
+  "description": "A role to manage the configuration of a product teams R&D server in EC2",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[role-createsession-nativex]"
+  ],
+  "env_run_lists": {
+  }
+}

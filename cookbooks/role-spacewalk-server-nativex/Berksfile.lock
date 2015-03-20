@@ -18,7 +18,7 @@ GRAPH
     windows (~> 1.11)
   chef_handler (1.1.6)
   cron (1.6.1)
-  logrotate (1.9.0)
+  logrotate (1.9.1)
   motd (0.5.0)
     chef_handler (>= 0.0.0)
   role-spacewalk-server-nativex (0.1.0)
