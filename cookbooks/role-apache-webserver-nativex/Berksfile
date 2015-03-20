@@ -3,13 +3,14 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'ad-nativex', '2.1.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: '9a659d0a3f976aba4104837b2d2c1ce59b73c176'
+cookbook 'autopatch-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '779410b734c5035a1153162da057b2eae9392385'
 cookbook 'dnsupdate-nativex', '2.1.0', git: 'git@github.com:nativex/cookbook-dnsupdate-nativex.git', ref: 'c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '532658bfb6a97f39dc0e7505521f1373ed20b62c'
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
-cookbook 'role-base-nativex', '1.2.0', path: '../role-base-nativex'
+cookbook 'role-base-nativex', '1.3.0', path: '../role-base-nativex'
 cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git', ref: 'bd9999636674eb40f8652d6d0f762cf2a6a2304e'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git'
