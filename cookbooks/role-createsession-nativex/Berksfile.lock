@@ -64,6 +64,10 @@ DEPENDENCIES
     metadata: true
   runit (= 1.5.14)
   snmp (= 3.0.1)
+  snowflake-nativex
+    git: git@github.com:nativex/cookbook-snowflake-nativex.git
+    revision: 0a8aa10b2a0c7d95f3a6ec96323101af22bce4a0
+    ref: 0a8aa10
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
     revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
@@ -177,12 +181,15 @@ GRAPH
     maven (>= 0.0.0)
     nodejs (>= 0.0.0)
     role-base-nativex (>= 0.0.0)
+    snowflake-nativex (>= 0.0.0)
     tuned-nativex (>= 0.0.0)
   runit (1.5.14)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   snmp (3.0.1)
+  snowflake-nativex (0.1.0)
+    git (>= 0.0.0)
   spacewalk-nativex (0.3.0)
     cron (>= 0.0.0)
   tuned-nativex (0.1.0)
