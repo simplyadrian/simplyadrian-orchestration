@@ -100,3 +100,14 @@ Changes
 - released snapshot and restore functionality to block device cookbook
 - added auto-patch cookbook to role-win-base-nativex cookbook.
 - updated credentials ad / credentials pbis data_bags to reflect the update to the AD account changes for the Chef user.
+
+**********************************************************
+*************** Release v3.1.0, 03/20/2015 ***************
+**********************************************************
+
+Changes
+- created new credentials data_bag for github user
+- created createsession_dev and createsession_prod environment files
+- created create session role
+- created role cookbook role-createsession-nativex
+- created cookbook snowflake-nativex
