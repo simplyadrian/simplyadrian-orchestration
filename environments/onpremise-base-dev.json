@@ -1,0 +1,19 @@
+{
+  "name": "onpremise-base-dev",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-onpremise-base-nativex cookbook.",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "chef_client": {
+      "interval": "600",
+      "log_file": "chefclt.log"
+    },
+    "spacewalk-nativex": {
+      "activation_key": "1-dev-centos6"
+    }
+  },
+  "override_attributes": {
+  }
+}

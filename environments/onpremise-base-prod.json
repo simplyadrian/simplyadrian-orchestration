@@ -1,0 +1,15 @@
+{
+  "name": "onpremise-base-prod",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-onpremise-base-nativex cookbook.",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "spacewalk-nativex": {
+      "activation_key": "1-prod-centos6"
+    }
+  },
+  "override_attributes": {
+  }
+}
