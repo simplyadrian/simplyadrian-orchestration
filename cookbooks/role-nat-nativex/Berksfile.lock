@@ -64,7 +64,8 @@ DEPENDENCIES
   yum (= 3.2.2)
   yum-nativex
     git: git@github.com:nativex/cookbook-yum-nativex.git
-    revision: 07fab521b59191fc1c72173ad83232d48600a918
+    revision: 5e87cd98a54d13f9b130e0d709367fc8dc4d0ad1
+    ref: 5e87cd9
 
 GRAPH
   ad-nativex (2.1.1)
@@ -141,5 +142,5 @@ GRAPH
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
   yum (3.2.2)
-  yum-nativex (0.3.0)
+  yum-nativex (0.4.0)
     yum (>= 0.0.0)
