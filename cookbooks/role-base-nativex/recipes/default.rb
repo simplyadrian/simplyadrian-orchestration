@@ -34,9 +34,9 @@ include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalk-nativex'
 include_recipe 'pbis-nativex'
+include_recipe 'yum-nativex::deleterepo'
 include_recipe "yum-nativex::doupgrade_once"
 include_recipe "autopatch-nativex::default"
-include_recipe 'yum-nativex::deleterepo'
 include_recipe 'ntp'
 include_recipe 'motd'
 include_recipe 'chef-client::delete_validation'
