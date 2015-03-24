@@ -22,7 +22,7 @@ GRAPH
     windows (~> 1.11)
   chef_handler (1.1.6)
   cron (1.6.1)
-  logrotate (1.9.0)
+  logrotate (1.9.1)
   role-win-onpremise-base-nativex (0.1.0)
     autopatch-nativex (>= 0.0.0)
     chef-client (>= 0.0.0)
