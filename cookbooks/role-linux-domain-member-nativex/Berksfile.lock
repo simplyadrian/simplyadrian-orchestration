@@ -1,0 +1,33 @@
+DEPENDENCIES
+  autofs-nativex
+    git: git@github.com:nativex/cookbook-autofs-nativex.git
+    revision: f4b878de887d0f953552d6d2083c7e7fd3a91711
+    ref: f4b878d
+  chef-sugar (= 2.5.0)
+  line (= 0.6.0)
+  ohai (= 2.0.1)
+  ohai-nativex
+    git: git@github.com:nativex/cookbook-ohai-nativex.git
+    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+  resource (~> 0.2.1)
+  role-linux-domain-member-nativex
+    path: .
+    metadata: true
+
+GRAPH
+  autofs-nativex (0.1.0)
+    chef-sugar (>= 0.0.0)
+    line (>= 0.0.0)
+    ohai-nativex (>= 0.0.0)
+    resource (>= 0.0.0)
+  chef-sugar (2.5.0)
+  line (0.6.0)
+  ohai (2.0.1)
+  ohai-nativex (0.1.1)
+    ohai (>= 0.0.0)
+  resource (0.2.1)
+  role-linux-domain-member-nativex (0.1.0)
+    chef-sugar (>= 0.0.0)
+    line (>= 0.0.0)
+    ohai-nativex (>= 0.0.0)
+    resource (>= 0.0.0)
