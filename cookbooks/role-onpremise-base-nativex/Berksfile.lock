@@ -1,0 +1,33 @@
+DEPENDENCIES
+  auto-patch (= 0.1.9)
+  autopatch-nativex
+    git: git@github.com:nativex/cookbook-autopatch-nativex.git
+    revision: 779410b734c5035a1153162da057b2eae9392385
+    ref: 779410b
+  chef-client (= 4.2.4)
+  chef_handler (= 1.1.6)
+  cron (= 1.6.1)
+  logrotate (= 1.9.1)
+  role-onpremise-base-nativex
+    path: .
+    metadata: true
+
+GRAPH
+  auto-patch (0.1.9)
+    cron (>= 0.0.0)
+  autopatch-nativex (1.0.0)
+    auto-patch (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    windows (>= 0.0.0)
+  chef-client (4.2.4)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  logrotate (1.9.1)
+  role-onpremise-base-nativex (0.1.0)
+    autopatch-nativex (>= 0.0.0)
+    chef-client (>= 0.0.0)
+  windows (1.36.6)
+    chef_handler (>= 0.0.0)
