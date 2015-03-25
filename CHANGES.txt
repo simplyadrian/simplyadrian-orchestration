@@ -111,3 +111,14 @@ Changes
 - created create session role
 - created role cookbook role-createsession-nativex
 - created cookbook snowflake-nativex
+
+**********************************************************
+*************** Release v3.2.0, 03/25/2015 ***************
+**********************************************************
+
+Changes
+- Created onpremise-base-dev and onpremise-base-prod environment files [ISE-297]
+- Created onpremise-base role and role-onpremise-base-nativex role cookbook [ISE-297]
+- Updated role-base-nativex & role-nat-nativex cookbooks with autopatch functionality [ISE-297]
+- Added ability to do a one-time yum upgrade on Linux instances at bootstrap.
+- Combined NativeX-specific patching functionality for both Linux and Windows into autopatch-nativex cookbook [ISE-352]

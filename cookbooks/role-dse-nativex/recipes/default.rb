@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# Override 'role-base-nativex' setting of true
+node.normal['autopatch-nativex']['auto_reboot_enabled'] = false
 node.default['ephemeral_lvm']['mount_point'] = "/var/lib/cassandra"
 node.default['ephemeral_lvm']['filesystem'] = "xfs"
 node.default['ephemeral_lvm']['volume_group_name'] = "vg_data_ephem"
