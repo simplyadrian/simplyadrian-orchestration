@@ -7,10 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node.default['auto-patch']['monthly'] = "third tuesday"
-node.default['auto-patch']['prep']['disable'] = false
-node.default['auto-patch']['prep']['hour'] = 3
-node.default['auto-patch']['prep']['monthly'] = "third tuesday"
+node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['build-essential']['compile_time'] = true
 node.default['ntp']['servers'] = ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
 node.default['snmp']['community'] = "xmass1970"
@@ -37,8 +34,9 @@ include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalk-nativex'
 include_recipe 'pbis-nativex'
-include_recipe "auto-patch"
 include_recipe 'yum-nativex::deleterepo'
+include_recipe "yum-nativex::doupgrade_once"
+include_recipe "autopatch-nativex::default"
 include_recipe 'ntp'
 include_recipe 'motd'
 include_recipe 'chef-client::delete_validation'
