@@ -3,7 +3,7 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-spacewalk-server-nativex cookbook.",
   "cookbook_versions": {
     "auto-patch": "= 0.1.9",
-    "autopatch-nativex": "= 1.0.0",
+    "autopatch-nativex": "= 1.1.0",
     "chef-client": "= 3.8.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
