@@ -122,3 +122,20 @@ Changes
 - Updated role-base-nativex & role-nat-nativex cookbooks with autopatch functionality [ISE-297]
 - Added ability to do a one-time yum upgrade on Linux instances at bootstrap.
 - Combined NativeX-specific patching functionality for both Linux and Windows into autopatch-nativex cookbook [ISE-352]
+
+**********************************************************
+*************** Release v3.3.0, 03/27/2015 ***************
+**********************************************************
+
+Role Cookbook Changes
+- Most roles now reference v1.1.0 of autopatch-nativex
+- role-domain-controller-nativex (upversioned to v0.3.0) now has autopatch functionality
+- role-win-onpremise-base-nativex (1.0.0) and role-win-base-nativex (1.0.0) were both upversioned with a fix for 
+  making the chef-client service starup mode be "Automatic (Delayed)"
+Dependent Cookbook Changes
+- Default autopatch random splay time reduced to 1 hour from 90 minutes.
+- autopatch splay (random wait) moved to before update check to prevent hammering WSUS/Spacewalk
+- autopatch Linux script template now only uses autopatch-nativex attributes.
+- autopatch will now always email SysEngineers regardless of reboot/error status. Requested until we are more comfortable with the feature.
+- autopatch for Linux now supports "update_command_options" attribute to support things like '--nogpgcheck'
+- Use yum 'upgrade' instead of update to be consistent with yum cookbook.

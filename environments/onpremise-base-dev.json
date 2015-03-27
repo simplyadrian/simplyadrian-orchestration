@@ -3,12 +3,12 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-onpremise-base-nativex cookbook.",
   "cookbook_versions": {
     "auto-patch": "= 0.1.9",
-    "autopatch-nativex": "= 1.0.0",
+    "autopatch-nativex": "= 1.1.0",
     "chef-client": "= 4.2.4",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
     "logrotate": "= 1.9.1",
-    "role-onpremise-base-nativex": "= 0.1.0",
+    "role-onpremise-base-nativex": "= 1.0.0",
     "windows": "= 1.36.6"
   },
   "json_class": "Chef::Environment",

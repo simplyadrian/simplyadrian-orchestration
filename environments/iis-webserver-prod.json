@@ -3,7 +3,8 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-iis-webserver-nativex cookbook.",
   "cookbook_versions": {
     "ad-nativex": "= 2.1.1",
-    "autopatch-nativex": "= 0.1.0",
+    "auto-patch": "= 0.1.9",
+    "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
@@ -16,7 +17,7 @@
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
     "role-iis-webserver-nativex": "= 0.1.0",
-    "role-win-base-nativex": "= 0.2.0",
+    "role-win-base-nativex": "= 1.0.0",
     "windows": "= 1.37.0"
   },
   "json_class": "Chef::Environment",
@@ -27,6 +28,5 @@
     }
   },
   "override_attributes": {
-
   }
 }

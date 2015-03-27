@@ -5,7 +5,7 @@
     "ad-nativex": "= 2.1.1",
     "apache2": "= 1.10.4",
     "auto-patch": "= 0.1.9",
-    "autopatch-nativex": "= 1.0.0",
+    "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
     "build-essential": "= 2.1.3",
