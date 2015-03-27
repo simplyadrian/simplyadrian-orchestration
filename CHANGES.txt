@@ -86,3 +86,57 @@ Changes
 - Fixes Spacewalk channel cloner running on days it wasn't intended to. [ISE-344]
 - Includes New functionality for automatically patching Windows machines in STHO/CDC. [ISE-66, ISE-297]
 
+**********************************************************
+*************** Release v3.0.0, 03/18/2015 ***************
+**********************************************************
+
+Changes
+- removed route53 dependencies
+- specified nokogiri version to support aws-sdk-v1
+- deprecated iptables-nativex
+- separated join domain and rename computer functions into two separate recipes in the ad-nativex cookbook.
+- released iis-nativex cookbook
+- patch to spacewalk-nativex
+- released snapshot and restore functionality to block device cookbook
+- added auto-patch cookbook to role-win-base-nativex cookbook.
+- updated credentials ad / credentials pbis data_bags to reflect the update to the AD account changes for the Chef user.
+
+**********************************************************
+*************** Release v3.1.0, 03/20/2015 ***************
+**********************************************************
+
+Changes
+- created new credentials data_bag for github user
+- created createsession_dev and createsession_prod environment files
+- created create session role
+- created role cookbook role-createsession-nativex
+- created cookbook snowflake-nativex
+
+**********************************************************
+*************** Release v3.2.0, 03/25/2015 ***************
+**********************************************************
+
+Changes
+- Created onpremise-base-dev and onpremise-base-prod environment files [ISE-297]
+- Created onpremise-base role and role-onpremise-base-nativex role cookbook [ISE-297]
+- Updated role-base-nativex & role-nat-nativex cookbooks with autopatch functionality [ISE-297]
+- Added ability to do a one-time yum upgrade on Linux instances at bootstrap.
+- Combined NativeX-specific patching functionality for both Linux and Windows into autopatch-nativex cookbook [ISE-352]
+
+**********************************************************
+*************** Release v3.3.0, 03/27/2015 ***************
+**********************************************************
+
+Role Cookbook Changes
+- Most roles now reference v1.1.0 of autopatch-nativex
+- role-domain-controller-nativex (upversioned to v0.3.0) now has autopatch functionality
+- role-win-onpremise-base-nativex (1.0.0) and role-win-base-nativex (1.0.0) were both upversioned with a fix for 
+  making the chef-client service starup mode be "Automatic (Delayed)"
+- role-dse* upversioned with increased attribute precedence so that role-base-nativex attributes are overridden.
+Dependent Cookbook Changes
+- Default autopatch random splay time reduced to 1 hour from 90 minutes.
+- autopatch splay (random wait) moved to before update check to prevent hammering WSUS/Spacewalk
+- autopatch Linux script template now only uses autopatch-nativex attributes.
+- autopatch will now always email SysEngineers regardless of reboot/error status. Requested until we are more comfortable with the feature.
+- autopatch for Linux now supports "update_command_options" attribute to support things like '--nogpgcheck'
+- Use yum 'upgrade' instead of update to be consistent with yum cookbook.

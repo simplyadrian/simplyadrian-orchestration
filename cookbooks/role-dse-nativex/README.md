@@ -21,6 +21,7 @@ This cookbook encapsulates these concepts that are deemed common to all DSE inst
 Like other Role cookbooks, specify `role-dse-nativex:default` in your run list for the node.
 
 ## Attributes
+* `node.normal['autopatch-nativex']['auto_reboot_enabled'] = false` We are OK with automated patching, but want to control the reboots manually.
 * `node.default['ephemeral_lvm']['mount_point'] = "/var/lib/cassandra"` We want Cassandra data, commitlog, and saved caches to always reside here.
 * `node.default['ephemeral_lvm']['filesystem'] = "xfs"` 
 * `node.default['ephemeral_lvm']['volume_group_name'] = "vg_data_ephem"` Cassandra Data will occupy most of the LVM volume group.

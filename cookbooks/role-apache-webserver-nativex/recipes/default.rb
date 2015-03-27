@@ -14,8 +14,6 @@ node.default['apache2']['contact'] = "SysEngineers@nativex.com"
 node.default['pbis-nativex']['organizational_unit_level_5'] = "Web Servers"
 
 include_recipe 'role-base-nativex'
-include_recipe 'iptables-nativex::ssh'
-include_recipe 'iptables-nativex::web'
 include_recipe 'apache2'
 include_recipe 'apache2::mod_ssl'
 include_recipe 'apache2::logrotate'

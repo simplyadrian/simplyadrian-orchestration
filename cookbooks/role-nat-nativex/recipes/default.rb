@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['ephemeral_lvm']['mount_point'] = "/mnt/ephemeral"
 node.default['ephemeral_lvm']['filesystem'] = "xfs"
 node.default['ephemeral_lvm']['volume_group_name'] = "vg_data_ephem"
@@ -30,14 +31,15 @@ include_recipe "tuned-nativex"
 include_recipe "nfs"
 include_recipe "ephemeral_lvm-nativex"
 include_recipe "snmp"
-include_recipe "dnsupdate-nativex::addprv"
-include_recipe "hostname-nativex::updatehostname"
+include_recipe "dnsupdate-nativex"
+include_recipe "hostname-nativex"
 include_recipe "yum-nativex::customrepo"
 include_recipe "spacewalk-nativex"
 include_recipe "pbis-nativex"
-include_recipe "yum-nativex::doupgrade"
 include_recipe "yum-nativex::deleterepo"
 include_recipe "ntp"
 include_recipe "motd"
+include_recipe "autopatch-nativex::default"
+include_recipe "yum-nativex::doupgrade_once"
 include_recipe "chef-client::delete_validation"
 include_recipe "chef-client"
