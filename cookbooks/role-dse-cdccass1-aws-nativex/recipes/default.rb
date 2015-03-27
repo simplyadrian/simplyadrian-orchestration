@@ -10,7 +10,8 @@
 # Listing most attributes to have some security around defaults changing in Production as well as a single place to view attributes.
 # Some are pushed up to the environment to allow testing the role in dev without joining the production cluster (seeds, cluster name, etc)
 # General info
-node.default['tuned']['active_profile']                                  = "cassandra-ssd-storage"
+# Override 'role-dse-nativex' (which itself overrides role-base-nativex)
+node.override['tuned']['active_profile']                                 = "cassandra-ssd-storage"
 node.default['cassandra']['dse_version']                                 = "4.5.3-1"
 node.default['cassandra']['user']                                        = "cassandra"
 node.default['cassandra']['group']                                       = "cassandra"
