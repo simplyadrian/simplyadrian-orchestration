@@ -7,7 +7,7 @@
     "apt": "= 2.6.1",
     "ark": "= 0.9.0",
     "auto-patch": "= 0.1.9",
-    "autopatch-nativex": "= 1.0.0",
+    "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
     "blockdevice-nativex": "= 0.2.0",

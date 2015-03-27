@@ -3,7 +3,7 @@ maintainer       'NativeX'
 maintainer_email 'adrian.herrera@nativex.com'
 license          'All rights reserved'
 description      'Installs/Configures role-win-base-nativex'
-version          '0.2.0'
+version          '1.0.0'
 
 depends 'ohai-nativex'
 depends 'aws'
