@@ -37,6 +37,7 @@ include_recipe 'spacewalk-nativex'
 #include_recipe 'pbis-nativex'
 include_recipe 'ad-nativex'
 include_recipe 'auto-patch'
+include_recipe 'autofs-nativex'
 include_recipe 'yum-nativex::deleterepo'
 include_recipe "yum-nativex::doupgrade_once"
 include_recipe "autopatch-nativex::default"
