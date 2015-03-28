@@ -7,6 +7,7 @@ version          '1.3.0'
 
 depends 'ohai-nativex'
 depends 'chef-sugar'
+depends 'autofs-nativex'
 depends 'autopatch-nativex'
 depends 'auto-patch'
 depends 'aws'
