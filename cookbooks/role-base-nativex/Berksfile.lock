@@ -4,6 +4,10 @@ DEPENDENCIES
     revision: 9a659d0a3f976aba4104837b2d2c1ce59b73c176
     ref: 9a659d0
   auto-patch (= 0.1.9)
+  autofs-nativex
+    git: git@github.com:nativex/cookbook-autofs-nativex.git
+    revision: 7784367020e89cbb41d79e2c5b79ce438aab50dc
+    ref: 7784367
   autopatch-nativex
     git: git@github.com:nativex/cookbook-autopatch-nativex.git
     revision: 0f78b57da9839d9bb792a3ab71233658e8b4549d
@@ -75,6 +79,8 @@ GRAPH
     windows (>= 0.0.0)
   auto-patch (0.1.9)
     cron (>= 0.0.0)
+  autofs-nativex (0.1.0)
+    ohai-nativex (>= 0.0.0)
   autopatch-nativex (1.1.0)
     auto-patch (>= 0.0.0)
     logrotate (>= 0.0.0)

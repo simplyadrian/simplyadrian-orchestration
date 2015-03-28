@@ -4,13 +4,14 @@
   "cookbook_versions": {
     "ad-nativex": "= 2.1.1",
     "auto-patch": "= 0.1.9",
+    "autofs-nativex": "= 0.1.0",
     "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
-    "chef_handler": "= 1.1.6",
     "chef-sugar": "= 2.5.0",
+    "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
     "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
@@ -31,7 +32,6 @@
     "pbis-nativex": "= 1.0.1",
     "role-base-nativex": "= 1.3.0",
     "snmp": "= 3.0.1",
-    "sssd_ldap": "= 1.0.2",
     "spacewalk-nativex": "= 0.3.0",
     "tuned-nativex": "= 0.1.0",
     "vim": "= 1.1.2",
@@ -50,26 +50,9 @@
     },
     "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
-    },
-    "ad-nativex": {
-      "krb5": {
-        "kdc_servers": [
-          "PAW1AM-DC-04",
-          "CDC-DC-1"
-        ]
-      },
-      "sssd_ldap": {
-        "ldap_uri": "ldap://teamfreeze.com",
-        "ldap_search_base": "dc=teamfreeze,dc=com",
-        "ldap_user_search_base": "dc=teamfreeze,dc=com",
-        "ldap_group_search_base": "dc=teamfreeze,dc=com",
-        "chpass_provider": "krb5",
-        "auth_provider": "krb5",
-        "ldap_sudo": true,
-        "override_homedir": "/home/TEAMFREEZE/%u"
-      }
     }
   },
   "override_attributes": {
+
   }
 }

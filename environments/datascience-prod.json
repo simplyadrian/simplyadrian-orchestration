@@ -13,6 +13,7 @@
     "blockdevice-nativex": "= 0.2.0",
     "build-essential": "= 2.1.3",
     "chef-client": "= 3.8.0",
+    "chef-sugar": "= 3.1.0",
     "chef_handler": "= 1.1.6",
     "cifs-nativex": "= 0.1.0",
     "cron": "= 1.6.1",
@@ -66,5 +67,6 @@
     }
   },
   "override_attributes": {
+
   }
 }
