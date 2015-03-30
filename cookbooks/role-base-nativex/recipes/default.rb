@@ -28,10 +28,12 @@ node.default['sshd']['sshd_config'] = {
   'ChallengeResponseAuthentication' => 'yes',
   'X11Forwarding' => 'yes',
   'Subsystem' => 'sftp /usr/libexec/openssh/sftp-server',
+  'GSSAPIKeyExchange' => 'yes',
   'GSSAPIAuthentication' => 'yes',
   'GSSAPICleanupCredentials' => 'yes',
   'UsePAM' => 'yes',
-  'SyslogFacility' => 'AUTHPRIV'
+  'SyslogFacility' => 'AUTHPRIV',
+  'UseDNS' => 'no'
 }
 node.default['tuned']['active_profile'] = "virtual-guest"
 
