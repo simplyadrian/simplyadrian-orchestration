@@ -6,3 +6,5 @@ description      'Installs/Configures role-cdccass1-onprem-nativex'
 long_description 'Installs/Configures role-cdccass1-onprem-nativex'
 version          '0.1.0'
 
+depends "role-onpremise-base-nativex"
+depends "cron"
