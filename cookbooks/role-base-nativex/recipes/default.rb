@@ -16,8 +16,22 @@ node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
 node.default['snmp']['syslocationVirtual'] = "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server"
 node.default['snmp']['syscontact'] = "sysadmins <sysadmins@w3i.com>"
 node.default['sshd']['sshd_config'] = {
+  'Port' => 22,
+  'Protocol' => 2,
+  'AcceptEnv' => 'LANG LC_*',
+  'HostKey' => %w(/etc/ssh/ssh_host_rsa_key
+                  /etc/ssh/ssh_host_ed25519_key
+                  /etc/ssh/ssh_host_dsa_key
+                  /etc/ssh/ssh_host_ecdsa_key),
+  'AcceptEnv' => 'LANG LANGUAGE LC_* XMODIFIERS',
   'PasswordAuthentication' => 'yes',
   'ChallengeResponseAuthentication' => 'yes',
+  'X11Forwarding' => 'yes',
+  'Subsystem' => 'sftp /usr/libexec/openssh/sftp-server',
+  'GSSAPIAuthentication' => 'yes'
+  'GSSAPICleanupCredentials' => 'yes',
+  'UsePAM' => 'yes',
+  'SyslogFacility' => 'AUTHPRIV'
 }
 node.default['tuned']['active_profile'] = "virtual-guest"
 
