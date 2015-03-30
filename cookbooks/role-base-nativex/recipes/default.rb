@@ -15,6 +15,10 @@ node.default['snmp']['full_systemview'] = true
 node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
 node.default['snmp']['syslocationVirtual'] = "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server"
 node.default['snmp']['syscontact'] = "sysadmins <sysadmins@w3i.com>"
+node.default['sshd']['sshd_config'] = {
+  'PasswordAuthentication' => 'yes',
+  'ChallengeResponseAuthentication' => 'yes',
+}
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
@@ -29,6 +33,7 @@ include_recipe 'tuned-nativex'
 include_recipe 'nfs'
 include_recipe 'ephemeral_lvm-nativex'
 include_recipe 'snmp'
+include_recipe 'sshd'
 include_recipe 'dnsupdate-nativex'
 include_recipe 'hostname-nativex'
 include_recipe 'yum-nativex'
@@ -39,8 +44,8 @@ include_recipe 'ad-nativex'
 include_recipe 'auto-patch'
 include_recipe 'autofs-nativex'
 include_recipe 'yum-nativex::deleterepo'
-include_recipe "yum-nativex::doupgrade_once"
-include_recipe "autopatch-nativex::default"
+include_recipe 'yum-nativex::doupgrade_once'
+include_recipe 'autopatch-nativex::default'
 include_recipe 'ntp'
 include_recipe 'motd'
 include_recipe 'chef-client::delete_validation'
