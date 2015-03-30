@@ -1,0 +1,12 @@
+{
+  "name": "cdccass1-onprem-prod",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-cdccass1-onprem-nativex cookbook.",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  }
+}
