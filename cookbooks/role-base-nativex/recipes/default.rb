@@ -35,7 +35,8 @@ node.default['sshd']['sshd_config'] = {
   'UseDNS' => 'no',
   'LoginGraceTime' => '2m',
   'StrictModes' => 'yes',
-  'MaxAuthTries' => 6
+  'MaxAuthTries' => 6,
+  'AllowGroups' => ['root','admins','predictive_analytics','it_backup','mobilerelease']
 }
 node.default['authorization']['sudo']['sudoers_defaults'] = [ 
   'requiretty',
