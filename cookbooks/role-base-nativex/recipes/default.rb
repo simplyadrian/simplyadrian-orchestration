@@ -35,7 +35,7 @@ node.default['sshd']['sshd_config'] = {
   'SyslogFacility' => 'AUTHPRIV',
   'UseDNS' => 'no'
 }
-node.default['sudo']['groups'] = ['sysadmin']
+node.default['sudo']['groups'] = ['admins']
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
@@ -51,6 +51,7 @@ include_recipe 'nfs'
 include_recipe 'ephemeral_lvm-nativex'
 include_recipe 'snmp'
 include_recipe 'sshd'
+include_recipe 'sudo'
 include_recipe 'dnsupdate-nativex'
 include_recipe 'hostname-nativex'
 include_recipe 'yum-nativex'
