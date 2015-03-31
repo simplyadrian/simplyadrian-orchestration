@@ -18,7 +18,6 @@ node.default['snmp']['syscontact'] = "sysadmins <sysadmins@w3i.com>"
 node.default['sshd']['sshd_config'] = {
   'Port' => 22,
   'Protocol' => 2,
-  'AcceptEnv' => 'LANG LC_*',
   'HostKey' => %w(/etc/ssh/ssh_host_rsa_key
                   /etc/ssh/ssh_host_ed25519_key
                   /etc/ssh/ssh_host_dsa_key
@@ -36,8 +35,7 @@ node.default['sshd']['sshd_config'] = {
   'UseDNS' => 'no',
   'LoginGraceTime' => '2m',
   'StrictModes' => 'yes',
-  'MaxAuthTries' => 6,
-  'AllowGroups' => 'admins'
+  'MaxAuthTries' => 6
 }
 node.default['authorization']['sudo']['sudoers_defaults'] = [ 
   'requiretty',
