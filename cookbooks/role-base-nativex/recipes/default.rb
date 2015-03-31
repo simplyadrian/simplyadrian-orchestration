@@ -48,10 +48,7 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
   'always_set_home', 
   'secure_path = /sbin:/bin:/usr/sbin:/usr/bin' 
 ]
-node.default['authorization']['sudo']['groups'] = ['admins']
-node.default['authorization']['sudo']['groups'] = ['predictive_analytics']
-node.default['authorization']['sudo']['groups'] = ['it_backup']
-node.default['authorization']['sudo']['groups'] = ['mobilerelease']
+node.default['authorization']['sudo']['groups'] = ['admins','predictive_analytics','it_backup','mobilerelease']
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
