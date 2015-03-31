@@ -33,7 +33,11 @@ node.default['sshd']['sshd_config'] = {
   'GSSAPICleanupCredentials' => 'yes',
   'UsePAM' => 'yes',
   'SyslogFacility' => 'AUTHPRIV',
-  'UseDNS' => 'no'
+  'UseDNS' => 'no',
+  'LoginGraceTime' => '2m',
+  'StrictModes' => 'yes',
+  'MaxAuthTries' => 6,
+  'AllowGroups' => 'admins'
 }
 node.default['authorization']['sudo']['sudoers_defaults'] = [ 
   'requiretty',
