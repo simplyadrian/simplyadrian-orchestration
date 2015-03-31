@@ -35,6 +35,7 @@ node.default['sshd']['sshd_config'] = {
   'SyslogFacility' => 'AUTHPRIV',
   'UseDNS' => 'no'
 }
+node.default['sudo']['groups'] = ['sysadmin']
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
