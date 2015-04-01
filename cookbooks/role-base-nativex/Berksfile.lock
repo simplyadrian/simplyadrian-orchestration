@@ -6,8 +6,8 @@ DEPENDENCIES
   auto-patch (= 0.1.9)
   autofs-nativex
     git: git@github.com:nativex/cookbook-autofs-nativex.git
-    revision: 2da89eb66f70259fe0f53f475342e7c954185163
-    ref: 2da89eb
+    revision: 7826a9d781a9b40af3488870d39bae9cf4de484b
+    ref: 7826a9d
   autopatch-nativex
     git: git@github.com:nativex/cookbook-autopatch-nativex.git
     revision: 0f78b57da9839d9bb792a3ab71233658e8b4549d
