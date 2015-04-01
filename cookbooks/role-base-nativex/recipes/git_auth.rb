@@ -12,8 +12,8 @@ creds = Chef::EncryptedDataBagItem.load('credentials', 'github_chef_user_private
 
 # Create the directory for the ssh_keys
 directory "#{node['role-base-nativex']['ssh']['home']}" do
-	owner node['snowflake-nativex']['ssh']['user']
-	group node['snowflake-nativex']['ssh']['group']
+	owner node['role-base-nativex']['ssh']['user']
+	group node['role-base-nativex']['ssh']['group']
 	mode '0600'
 	action :create
 end
@@ -21,8 +21,8 @@ end
 # Store private key on disk
 file "#{node['role-base-nativex']['ssh']['home']}/git_nativex" do
   content "#{creds['priv']}"
-  owner node['snowflake-nativex']['ssh']['user']
-  group node['snowflake-nativex']['ssh']['group']
+  owner node['role-base-nativex']['ssh']['user']
+  group node['role-base-nativex']['ssh']['group']
   mode 00600
   action :create
 end

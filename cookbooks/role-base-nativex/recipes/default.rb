@@ -10,6 +10,9 @@
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['build-essential']['compile_time'] = true
 node.default['ntp']['servers'] = ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
+node.default['role-base-nativex']['ssh']['home'] = '/root/.ssh'
+node.default['role-base-nativex']['ssh']['user'] = 'root'
+node.default['role-base-nativex']['ssh']['group'] = 'root'
 node.default['snmp']['community'] = "xmass1970"
 node.default['snmp']['full_systemview'] = true
 node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
