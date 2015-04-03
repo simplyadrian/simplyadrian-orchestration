@@ -140,3 +140,15 @@ Dependent Cookbook Changes
 - autopatch will now always email SysEngineers regardless of reboot/error status. Requested until we are more comfortable with the feature.
 - autopatch for Linux now supports "update_command_options" attribute to support things like '--nogpgcheck'
 - Use yum 'upgrade' instead of update to be consistent with yum cookbook.
+
+**********************************************************
+*************** Release v4.0.0, 04/03/2015 ***************
+**********************************************************
+
+Role Cookbook Changes
+- removed all references to dnsupdate-nativex cookbook and deprecated the same.
+- updated all references to hostname-nativex (v0.1.2) to the latest version and commit reference.
+Dependent Cookbook Changes
+- added idempotence check to hostname-nativex cookbook that checks the node.name attribute for the FQDN.
+- updated the domain_name attribute to use teamfreeze.com and deprecated the nativexintern.com domain name.
+

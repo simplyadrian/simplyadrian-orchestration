@@ -7,7 +7,6 @@ version          '0.3.0'
 
 depends 'ad-nativex'
 depends 'autopatch-nativex'
-depends 'dnsupdate-nativex'
 depends 'aws'
 depends 'chef-client'
 depends 'windows'
