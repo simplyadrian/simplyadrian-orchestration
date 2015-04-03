@@ -33,6 +33,7 @@ node.default['rabbitmq']['enabled_users'] =
   [{ :name => 'datascience', :password => 'datascience', :tag => 'administrator', :rights =>
     [{ :conf => '.*', :write => '.*', :read => '.*' }]
   }]
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].push('predictive_analytics')
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'role-base-nativex'

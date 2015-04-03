@@ -19,6 +19,7 @@ node.default['java']['jdk_version'] = "7"
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
 node.default['opscenter-agent']['enabled'] = true
 node.default['pbis-nativex']['organizational_unit_level_5'] = "Cassandra Servers"
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].push('mobilerelease')
 # Override 'role-base-nativex' setting of 'virtual-guest'
 node.normal['tuned']['active_profile'] = "throughput-performance"
 

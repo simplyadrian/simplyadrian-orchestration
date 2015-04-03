@@ -15,6 +15,8 @@ node.default['snmp']['full_systemview'] = true
 node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
 node.default['snmp']['syslocationVirtual'] = "AWS Cloud - Virtual Pool, CentOS Linux 6.5, Linux Server"
 node.default['snmp']['syscontact'] = "sysadmins <sysadmins@w3i.com>"
+node.default['sudoers']['allowed_groups'] = ['admins']
+node.default['sshd']['allowed_groups'] = ['root', 'admins'].concat(node['sudoers']['allowed_groups']).uniq
 node.default['sshd']['sshd_config'] = {
   'Port' => 22,
   'Protocol' => 2,
@@ -36,7 +38,7 @@ node.default['sshd']['sshd_config'] = {
   'LoginGraceTime' => '2m',
   'StrictModes' => 'yes',
   'MaxAuthTries' => 6,
-  'AllowGroups' => ['root','admins','predictive_analytics','it_backup','mobilerelease']
+  'AllowGroups' => node['sshd']['allowed_groups']
 }
 node.default['authorization']['sudo']['sudoers_defaults'] = [ 
   'requiretty',
@@ -51,7 +53,7 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
   'always_set_home', 
   'secure_path = /sbin:/bin:/usr/sbin:/usr/bin' 
 ]
-node.default['authorization']['sudo']['groups'] = ['admins','predictive_analytics','it_backup','mobilerelease']
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups']
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
