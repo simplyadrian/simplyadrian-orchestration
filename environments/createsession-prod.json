@@ -16,12 +16,11 @@
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
     "dmg": "= 2.2.2",
-    "dnsupdate-nativex": "= 2.1.0",
     "dstat": "= 0.1.1",
     "ephemeral_lvm": "= 1.0.7",
     "ephemeral_lvm-nativex": "= 0.1.0",
     "git": "= 4.1.0",
-    "hostname-nativex": "= 0.1.1",
+    "hostname-nativex": "= 0.1.2",
     "hostsfile": "= 2.4.5",
     "java": "= 1.31.0",
     "line": "= 0.6.0",
@@ -59,5 +58,6 @@
     }
   },
   "override_attributes": {
+
   }
 }
