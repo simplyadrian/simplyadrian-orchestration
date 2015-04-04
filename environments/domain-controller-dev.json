@@ -10,7 +10,6 @@
     "chef-client": "= 3.8.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
-    "dnsupdate-nativex": "= 2.1.0",
     "logrotate": "= 1.8.0",
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",

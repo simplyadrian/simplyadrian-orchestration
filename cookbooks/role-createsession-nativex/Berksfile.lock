@@ -29,10 +29,6 @@ DEPENDENCIES
   chef_handler (= 1.1.6)
   cron (= 1.6.1)
   dmg (= 2.2.2)
-  dnsupdate-nativex
-    git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07
-    ref: c41b990
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -41,8 +37,8 @@ DEPENDENCIES
   git (~> 4.1.0)
   hostname-nativex
     git: git@github.com:nativex/cookbook-hostname-nativex.git
-    revision: 532658bfb6a97f39dc0e7505521f1373ed20b62c
-    ref: 532658b
+    revision: 92c4ebd4ebcd123133bda7f30a9b1236d226ab47
+    ref: 92c4ebd
   hostsfile (= 2.4.5)
   java (= 1.31.0)
   line (= 0.6.0)
@@ -129,7 +125,6 @@ GRAPH
   chef_handler (1.1.6)
   cron (1.6.1)
   dmg (2.2.2)
-  dnsupdate-nativex (2.1.0)
   dstat (0.1.1)
   ephemeral_lvm (1.0.7)
     lvm (~> 1.1.0)
@@ -143,7 +138,7 @@ GRAPH
     windows (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  hostname-nativex (0.1.1)
+  hostname-nativex (0.1.2)
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
   java (1.31.0)
@@ -181,7 +176,6 @@ GRAPH
     bash-completion (>= 0.0.0)
     chef-client (>= 0.0.0)
     chef-sugar (>= 0.0.0)
-    dnsupdate-nativex (>= 0.0.0)
     dstat (>= 0.0.0)
     ephemeral_lvm-nativex (>= 0.0.0)
     hostname-nativex (>= 0.0.0)
