@@ -1,6 +1,6 @@
 default['role-cdccass1-onprem-nativex']['cron_repair_enabled'] = true
 default['role-cdccass1-onprem-nativex']['cron_activitytracking_drop_enabled'] = true
-default['role-cdccass1-onprem-nativex']['cron_activitytracking_file_cleanup_enabled'] = true
+default['role-cdccass1-onprem-nativex']['cron_activitytracking_file_cleanup_enabled'] = node['role-cdccass1-onprem-nativex']['cron_activitytracking_drop_enabled']
 default['role-cdccass1-onprem-nativex']['cron_take_snapshot_enabled'] = true
 default['role-cdccass1-onprem-nativex']['cron_clear_snapshot_enabled'] = true
 default['role-cdccass1-onprem-nativex']['cron_remove_backups_enabled'] = true
