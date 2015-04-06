@@ -19,7 +19,7 @@ directory "#{node['role-base-nativex']['ssh']['home']}" do
 end
 
 # Store private key on disk
-file "#{node['role-base-nativex']['ssh']['home']}/git_nativex" do
+file "#{node['role-base-nativex']['ssh']['home']}/#{node['role-base-nativex']['ssh']['key_name']}" do
   content "#{creds['priv']}"
   owner node['role-base-nativex']['ssh']['user']
   group node['role-base-nativex']['ssh']['group']
