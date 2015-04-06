@@ -20,6 +20,7 @@ node.default['java']['oracle']['accept_oracle_download_terms'] = true
 node.default['nodejs']['npm_packages'] = [{:name => "async", :name => "aws-sdk", :name => "moment"}]
 
 include_recipe 'role-base-nativex'
+include_recipe 'role-base-nativex::git_auth'
 include_recipe 'blockdevice-nativex'
 include_recipe 'blockdevice-nativex::tags'
 include_recipe 'git'
