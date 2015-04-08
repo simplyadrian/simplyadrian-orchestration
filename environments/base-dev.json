@@ -54,8 +54,8 @@
     "ad-nativex": {
       "krb5": {
         "kdc_servers": [
-          "PAW1AM-DC-04",
-          "CDC-DC-1"
+          "CDC-DC-1",
+          "PAW2AM-DC-01"
         ]
       },
       "sssd_ldap": {
@@ -63,9 +63,7 @@
         "ldap_search_base": "dc=teamfreeze,dc=com",
         "ldap_user_search_base": "dc=teamfreeze,dc=com",
         "ldap_group_search_base": "dc=teamfreeze,dc=com",
-        "chpass_provider": "krb5",
-        "auth_provider": "krb5",
-        "ldap_sudo": true,
+        "ldap_sudo": false,
         "override_homedir": "/home/TEAMFREEZE/%u"
       }
     }
