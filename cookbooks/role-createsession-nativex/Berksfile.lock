@@ -66,8 +66,8 @@ DEPENDENCIES
   snmp (= 3.0.1)
   snowflake-nativex
     git: git@github.com:nativex/cookbook-snowflake-nativex.git
-    revision: b4d01d30e3eedd3ca44732fb751d3f0f76076667
-    ref: b4d01d3
+    revision: 004f3520538006843c30e282a581faec91aec535
+    ref: 004f352
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
     revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
