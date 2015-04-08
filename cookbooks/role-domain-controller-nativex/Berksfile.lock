@@ -14,10 +14,6 @@ DEPENDENCIES
   chef-client (= 3.8.0)
   chef_handler (= 1.1.6)
   cron (= 1.6.1)
-  dnsupdate-nativex
-    git: git@github.com:nativex/cookbook-dnsupdate-nativex.git
-    revision: c41b990ffd3c7e3c74eb4eb9f47b2dd3e4a71e07
-    ref: c41b990
   logrotate (= 1.8.0)
   ohai (= 2.0.1)
   ohai-nativex
@@ -49,7 +45,6 @@ GRAPH
     windows (~> 1.11)
   chef_handler (1.1.6)
   cron (1.6.1)
-  dnsupdate-nativex (2.1.0)
   logrotate (1.8.0)
   ohai (2.0.1)
   ohai-nativex (0.1.1)
@@ -59,7 +54,6 @@ GRAPH
     autopatch-nativex (>= 0.0.0)
     aws (>= 0.0.0)
     chef-client (>= 0.0.0)
-    dnsupdate-nativex (>= 0.0.0)
     windows (>= 0.0.0)
   windows (1.37.0)
     chef_handler (>= 0.0.0)
