@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+node.default['aws']['right_aws_version'] = "3.1.0"
 node.default['blockdevice_nativex']['dir'] = "/mnt/ebs"
 node.default['blockdevice_nativex']['mount_point_group'] = "Product_Engineering"
 node.default['blockdevice_nativex']['recurse_permissions'] = false
