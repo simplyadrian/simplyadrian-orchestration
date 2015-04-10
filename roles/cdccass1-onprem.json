@@ -1,0 +1,15 @@
+{
+  "name": "cdccass1-onprem",
+  "description": "A role to manage a subset of the configuration for machines in the Chicago datacenter, cdc-cass1 production cluster.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[role-cdccass1-onprem-nativex]"
+  ],
+  "env_run_lists": {
+  }
+}

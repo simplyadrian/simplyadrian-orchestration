@@ -1,0 +1,11 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook 'autopatch-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '0f78b57da9839d9bb792a3ab71233658e8b4549d'
+cookbook 'role-onpremise-base-nativex', '1.0.0', path: '../role-onpremise-base-nativex'
+cookbook 'auto-patch', '0.1.9'
+cookbook 'chef-client', '4.2.4'
+cookbook 'chef_handler', '1.1.6'
+cookbook 'cron', '1.6.1'
+cookbook 'logrotate', '1.9.1'
