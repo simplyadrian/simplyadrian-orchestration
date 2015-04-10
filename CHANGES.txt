@@ -152,3 +152,16 @@ Dependent Cookbook Changes
 - added idempotence check to hostname-nativex cookbook that checks the node.name attribute for the FQDN.
 - updated the domain_name attribute to use teamfreeze.com and deprecated the nativexintern.com domain name.
 
+**********************************************************
+*************** Release v4.1.0, 04/10/2015 ***************
+**********************************************************
+
+Role Cookbook Changes
+- new role cookbook 'role-cdccass1-onprem-nativex' to manage autopatch and C* maintenance tasks
+  previously delivered via ActiveDirectory GroupPolicy. This role also enables PBIS replacement in the future.
+- Updated references to dse-nativex (v0.3.0) in role-dse-cdccass1-aws-nativex
+- Added dse-natives::maintenance_tasks recipe to runlist for role-dse-cdccass1-aws-nativex (now at v1.1.0)
+Dependent Cookbook Changes
+- Added maintenance_task recipe & attribute file to dse-nativex cookbook (v0.3.0) that introduces capability
+  to support rich configuration of C* maintenance tasks in AWS cluster in the future.
+
