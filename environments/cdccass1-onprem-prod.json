@@ -15,6 +15,9 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "role-cdccass1-onprem-nativex": {
+      "cron_repair_enabled": false
+    }
   },
   "override_attributes": {
   }
