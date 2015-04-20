@@ -6,7 +6,7 @@ description      'Installs/Configures role-createsession-nativex'
 version          '0.1.0'
 
 depends 'role-base-nativex'
-depends 'blockdevice-nativex'
+depends 'ark'
 depends 'git'
 depends 'maven'
 depends 'nodejs'
