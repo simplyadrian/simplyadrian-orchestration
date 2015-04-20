@@ -7,4 +7,5 @@ long_description 'Installs/Configures role-onpremise-base-nativex'
 version          '1.0.0'
 
 depends 'autopatch-nativex'
+depends 'autofs-nativex'
 depends 'chef-client'

@@ -3,6 +3,7 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'autopatch-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '0f78b57da9839d9bb792a3ab71233658e8b4549d'
+cookbook 'autofs-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-autofs-nativex.git', ref: 'd724bec9b88031b96a9af37d82ae218977df6d3b'
 cookbook 'auto-patch', '0.1.9'
 cookbook 'chef-client', '4.2.4'
 cookbook 'chef_handler', '1.1.6'
