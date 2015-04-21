@@ -47,6 +47,12 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
     'secure_path = /sbin:/bin:/usr/sbin:/usr/bin'
 ]
 node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups']
+# mapper options
+default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
+									  :key => 'TEAMFREEZE',
+									  :source => '/etc/auto.TEAMFREEZE',
+									  :options => '-rw,intr,rsize=8192,wsize=8192',
+									  :export => '/linuxhome'}]
 
 include_recipe 'chef-sugar'
 include_recipe 'autopatch-nativex::default'
