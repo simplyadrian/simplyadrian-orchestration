@@ -48,7 +48,7 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
 ]
 node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups']
 # mapper options
-default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
+node.default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
 									  :key => 'TEAMFREEZE',
 									  :source => '/etc/auto.TEAMFREEZE',
 									  :options => '-rw,intr,rsize=8192,wsize=8192',
@@ -59,6 +59,6 @@ include_recipe 'autopatch-nativex::default'
 include_recipe 'sshd'
 include_recipe 'sudo'
 include_recipe 'ad-nativex'
-#include_recipe 'autofs-nativex'
+include_recipe 'autofs-nativex'
 include_recipe 'chef-client::delete_validation'
 include_recipe 'chef-client'
