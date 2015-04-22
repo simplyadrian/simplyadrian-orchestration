@@ -31,7 +31,6 @@
     "numad-nativex": "= 0.1.0",
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
-    "pbis-nativex": "= 1.0.1",
     "role-base-nativex": "= 1.3.0",
     "role-dse-cdccass1-aws-nativex": "= 1.0.1",
     "role-dse-nativex": "= 1.2.1",

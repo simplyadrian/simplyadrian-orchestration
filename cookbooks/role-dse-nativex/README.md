@@ -30,7 +30,8 @@ Like other Role cookbooks, specify `role-dse-nativex:default` in your run list f
 * `node.default['java']['jdk_version'] = "7"` 
 * `node.default['java']['oracle']['accept_oracle_download_terms'] = true` 
 * `node.default['opscenter-agent']['enabled'] = true` We always want to use OpsCenter.
-* `node.default['pbis-nativex']['organizational_unit_level_5'] = "Cassandra Servers"` We have a special OU in ActiveDirectory for Cassandra servers.
+* `node.default['pbis-nativex']['organizational_unit_level_5'] = "Cassandra Servers"` Will be depreciated after SSSD migration and can be safely removed. ad-nativex attribute replaces this.
+* `node.default['ad-nativex']['organizational_unit_level_5'] = "Cassandra Servers"` We have a special OU in ActiveDirectory for Cassandra servers.
 * `node.default['tuned']['active_profile'] = "throughput-performance"` Being a database, at least use the throughput-performance tuned profile.
 
 ## Direct Dependencies

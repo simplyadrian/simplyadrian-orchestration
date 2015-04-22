@@ -47,9 +47,6 @@ DEPENDENCIES
     git: git@github.com:nativex/cookbook-ohai-nativex.git
     revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
   pacman (= 1.1.1)
-  pbis-nativex
-    git: git@github.com:nativex/cookbook-pbis-nativex.git
-    revision: 1a6125adf6f00c330933aa569d2ae81bf4856862
   role-apache-webserver-nativex
     path: .
     metadata: true
@@ -125,9 +122,6 @@ GRAPH
   ohai-nativex (0.1.1)
     ohai (>= 0.0.0)
   pacman (1.1.1)
-  pbis-nativex (1.0.1)
-    ad-nativex (>= 0.0.0)
-    ohai-nativex (>= 0.0.0)
   role-apache-webserver-nativex (1.2.0)
     apache2 (>= 0.0.0)
     role-base-nativex (>= 0.0.0)
