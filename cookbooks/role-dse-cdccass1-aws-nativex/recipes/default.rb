@@ -153,4 +153,12 @@ node.default['cassandra']['os']['90_nproc_limits_ary']                   = [
                                                                            ]
 node.default['cassandra']['os']['sysctl_vm_max_map_count']               = 131072
 
+# Maintenace Task settings
+node.default['dse-nativex']['cron_activitytracking_drop_enabled']        = false # until this is the primary cluster
+node.default['dse-nativex']['cron_activitytracking_file_cleanup_enabled'] = true
+node.default['dse-nativex']['cron_cluster_repair_enabled']               = true
+node.default['dse-nativex']['cron_take_snapshot_enabled']                = false # until this is primary cluster & have backup strategy
+node.default['dse-nativex']['cron_clear_snapshot_enabled']               = false # until this is primary cluster & have backup strategy
+
 include_recipe "role-dse-nativex"
+include_recipe "dse-nativex::maintenance_tasks"
