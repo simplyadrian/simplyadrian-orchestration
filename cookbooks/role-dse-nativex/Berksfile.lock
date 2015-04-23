@@ -23,8 +23,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
-    revision: b3839d2d356527f3bad5ff495d37ecde1b09d419
-    ref: b3839d2
+    revision: c3424110a2ea9096a8056f6913aca750e38be795
+    ref: c342411
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -104,7 +104,7 @@ GRAPH
   chef-sugar (2.5.0)
   chef_handler (1.1.6)
   cron (1.6.1)
-  dse-nativex (0.2.0)
+  dse-nativex (0.4.0)
     java (>= 0.0.0)
     limits (>= 0.0.0)
     line (>= 0.0.0)
@@ -177,7 +177,7 @@ GRAPH
   windows (1.34.6)
     chef_handler (>= 0.0.0)
   xfs (1.1.0)
-  yum (3.5.3)
+  yum (3.5.4)
   yum-epel (0.4.0)
     yum (~> 3.0)
   yum-nativex (0.4.0)
