@@ -2,8 +2,8 @@ source "https://supermarket.getchef.com"
 
 metadata
 
-cookbook 'ad-nativex', '2.2.0', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: 'e0c2becb3a0af0fbe7bc1f15f299db5c7a28d0e5'
-cookbook 'autofs-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-autofs-nativex.git', ref: 'd724bec9b88031b96a9af37d82ae218977df6d3b'
+cookbook 'ad-nativex', '3.0.0', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: 'c6f7345c5b8d6c59367492c15f6ce3d63097f31f'
+cookbook 'autofs-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-autofs-nativex.git', ref: 'a6346b5c63e7b6c8e5b71e7f83ba7487a09e0a87'
 cookbook 'autopatch-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '0f78b57da9839d9bb792a3ab71233658e8b4549d'
 cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-ephemeral_lvm-nativex.git'
 cookbook 'hostname-nativex', '0.1.2', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '92c4ebd4ebcd123133bda7f30a9b1236d226ab47'

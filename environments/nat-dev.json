@@ -2,9 +2,9 @@
   "name": "nat-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-nat-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 2.1.1",
+    "ad-nativex": "= 3.0.0",
     "auto-patch": "= 0.1.9",
-    "autofs-nativex": "= 0.1.0",
+    "autofs-nativex": "= 1.0.0",
     "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
     "bash-completion": "= 0.1.0",

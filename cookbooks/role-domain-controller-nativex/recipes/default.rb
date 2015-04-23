@@ -12,6 +12,7 @@ node.default['autopatch-nativex']['auto_reboot_enabled'] = false
 
 include_recipe "aws"
 include_recipe "windows"
+include_recipe "chef-sugar"
 include_recipe "ad-nativex::joindomain"
 include_recipe "ad-nativex::renamecomputer"
 include_recipe "ad-nativex::installdomaincontroller"
