@@ -19,7 +19,8 @@ node.default['java']['jdk_version'] = "7"
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
 node.default['mkdirs-nativex']['path'] = ["/automnt"]
 node.default['nodejs']['npm_packages'] = [{:name => "async", :name => "aws-sdk", :name => "moment"}]
-node.default['pbis-nativex']['organizational_unit_level_5'] = "Predictive Analytics"
+node.default['pbis-nativex']['organizational_unit_level_5'] = "Predictive Analytics" if File.directory?('/etc/pbis')
+node.default['ad-nativex']['organizational_unit_level_5'] = "Predictive Analytics"
 node.default['python']['install_method'] = "source"
 node.default['python']['version'] = "3.3.5"
 node.default['python-nativex']['packages'] = ["pyyaml", "kombu", "lockfile", "asyncio", "paramiko", "boto", "awscli"]
@@ -33,6 +34,7 @@ node.default['rabbitmq']['enabled_users'] =
   [{ :name => 'datascience', :password => 'datascience', :tag => 'administrator', :rights =>
     [{ :conf => '.*', :write => '.*', :read => '.*' }]
   }]
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].push('predictive_analytics')
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'role-base-nativex'

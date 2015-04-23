@@ -2,20 +2,29 @@
   "name": "cdccass1-onprem-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-cdccass1-onprem-nativex cookbook.",
   "cookbook_versions": {
+    "ad-nativex": "= 3.0.0",
     "auto-patch": "= 0.1.9",
+    "autofs-nativex": "= 1.0.0",
     "autopatch-nativex": "= 1.1.0",
     "chef-client": "= 4.2.4",
+    "chef-sugar": "= 2.5.0",
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
     "logrotate": "= 1.9.1",
+    "ohai": "= 2.0.1",
+    "ohai-nativex": "= 0.1.1",
     "role-cdccass1-onprem-nativex": "= 0.1.0",
     "role-onpremise-base-nativex": "= 1.0.0",
+    "sshd": "= 1.1.1",
+    "sudo": "= 2.7.1",
     "windows": "= 1.36.6"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+
   },
   "override_attributes": {
+
   }
 }

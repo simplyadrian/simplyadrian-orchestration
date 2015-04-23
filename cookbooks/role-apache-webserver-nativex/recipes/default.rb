@@ -11,7 +11,8 @@ node.default['ephemeral_lvm']['mount_point'] = "/mnt/www"
 node.default['apache2']['listen_ports'] = ["80", "443"]
 node.default['apache2']['docroot_dir'] = "/mnt/www"
 node.default['apache2']['contact'] = "SysEngineers@nativex.com"
-node.default['pbis-nativex']['organizational_unit_level_5'] = "Web Servers"
+node.default['pbis-nativex']['organizational_unit_level_5'] = "Web Servers" if File.directory?('/etc/pbis')
+node.default['ad-nativex']['organizational_unit_level_5'] = "Web Servers"
 
 include_recipe 'role-base-nativex'
 include_recipe 'apache2'
