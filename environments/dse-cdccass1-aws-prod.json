@@ -62,12 +62,14 @@
         },
         "us-west-2": {
           "seeds": [
-
+            "172.21.12.157",
+            "172.21.22.253",
+            "172.21.32.141"
           ]
         }
       },
       "cluster_name": "cdc-cass1",
-      "seeds": "10.15.70.101,10.15.70.102,10.15.70.103"
+      "seeds": "10.15.70.101,10.15.70.102,10.15.70.103,172.21.12.157,172.21.22.253,172.21.32.141"
     },
     "dse": {
       "delegated_snitch": "org.apache.cassandra.locator.GossipingPropertyFileSnitch"
