@@ -63,8 +63,8 @@ DEPENDENCIES
   snmp (= 3.0.1)
   snowflake-nativex
     git: git@github.com:nativex/cookbook-snowflake-nativex.git
-    revision: 13c4ae8aa142902106639c94fa4f00f111568630
-    ref: 13c4ae8
+    revision: d8f8ca3b87c2722b48bb19157cadc66be86323b2
+    ref: d8f8ca3
   spacewalk-nativex
     git: git@github.com:nativex/cookbook-spacewalk-nativex.git
     revision: bd9999636674eb40f8652d6d0f762cf2a6a2304e
@@ -185,7 +185,8 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   snmp (3.0.1)
-  snowflake-nativex (0.1.0)
+  snowflake-nativex (0.2.0)
+    ark (>= 0.0.0)
     aws (>= 0.0.0)
     git (>= 0.0.0)
     maven (>= 0.0.0)
