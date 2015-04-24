@@ -10,7 +10,7 @@ cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-n
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'pbis-nativex', '1.0.1', git: 'git@github.com:nativex/cookbook-pbis-nativex.git'
 cookbook 'role-base-nativex', '1.3.0', path: '../role-base-nativex'
-cookbook 'snowflake-nativex', '0.2.0', git: 'git@github.com:nativex/cookbook-snowflake-nativex.git', ref: 'd8f8ca3b87c2722b48bb19157cadc66be86323b2'
+cookbook 'snowflake-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-snowflake-nativex.git', ref: '9b30d011cf1e8880697bf43d2df8090895f9341f'
 cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git', ref: 'bd9999636674eb40f8652d6d0f762cf2a6a2304e'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git', ref: '5e87cd98a54d13f9b130e0d709367fc8dc4d0ad1'
