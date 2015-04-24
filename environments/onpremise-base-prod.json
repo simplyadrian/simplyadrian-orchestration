@@ -2,7 +2,7 @@
   "name": "onpremise-base-prod",
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-onpremise-base-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.0",
+    "ad-nativex": "= 3.0.1",
     "auto-patch": "= 0.1.9",
     "autofs-nativex": "= 1.0.0",
     "autopatch-nativex": "= 1.1.0",

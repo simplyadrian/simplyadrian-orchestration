@@ -20,11 +20,13 @@ node.default['java']['oracle']['accept_oracle_download_terms'] = true
 node.default['opscenter-agent']['enabled'] = true
 node.default['pbis-nativex']['organizational_unit_level_5'] = "Cassandra Servers" if File.directory?('/etc/pbis')
 node.default['ad-nativex']['organizational_unit_level_5'] = "Cassandra Servers"
-node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].push('mobilerelease')
 # Override 'role-base-nativex' setting of 'virtual-guest'
 node.normal['tuned']['active_profile'] = "throughput-performance"
 
 include_recipe 'role-base-nativex'
+
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].concat(['mobilerelease'])
+
 include_recipe 'tuned-nativex::apply_profile'
 include_recipe 'dse-nativex::determine_ec2_topology'
 include_recipe 'dse-nativex::default'

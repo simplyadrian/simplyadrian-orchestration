@@ -24,7 +24,7 @@ node.default['ad-nativex']['organizational_unit_level_5'] = "Predictive Analytic
 node.default['python']['install_method'] = "source"
 node.default['python']['version'] = "3.3.5"
 node.default['python-nativex']['packages'] = ["pyyaml", "kombu", "lockfile", "asyncio", "paramiko", "boto", "awscli"]
-node.default['r']['version'] = "3.1.2-1.el6"
+node.default['r']['version'] = nil
 node.default['r']['install_dir'] = "/usr/lib64/R"
 node.default['r_nativex']['packages'] = ["optparse", "yaml", "data.table", "ffbase", "ROCR", "ETLUtils", "rjson", "RODBC", "ff", "gbm", "LaF"]
 node.default['rabbitmq']['version'] = "3.3.5"
@@ -34,10 +34,12 @@ node.default['rabbitmq']['enabled_users'] =
   [{ :name => 'datascience', :password => 'datascience', :tag => 'administrator', :rights =>
     [{ :conf => '.*', :write => '.*', :read => '.*' }]
   }]
-node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].push('predictive_analytics')
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'role-base-nativex'
+
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].concat(['predictive_analytics'])
+
 include_recipe 'cifs-nativex'
 include_recipe 'git'
 include_recipe 'blockdevice-nativex'

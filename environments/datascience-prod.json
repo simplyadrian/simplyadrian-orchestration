@@ -3,7 +3,7 @@
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-datascience-nativex cookbook.",
   "cookbook_versions": {
     "7-zip": "= 1.0.2",
-    "ad-nativex": "= 3.0.0",
+    "ad-nativex": "= 3.0.1",
     "apt": "= 2.6.1",
     "ark": "= 0.9.0",
     "auto-patch": "= 0.1.9",
