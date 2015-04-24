@@ -1,8 +1,9 @@
 DEPENDENCIES
   apt (= 2.5.0)
   aws
-    git: git://github.com/nativex/aws.git
+    git: git@github.com:nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
+    ref: 476fb71
   bash-completion (= 0.1.0)
   blockdevice-nativex
     git: git@github.com:nativex/cookbook-blockdevice-nativex.git
