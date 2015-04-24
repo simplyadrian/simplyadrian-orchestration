@@ -2,7 +2,7 @@
   "name": "dse-devcass1-aws-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-dse-devcass1-aws-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.0",
+    "ad-nativex": "= 3.0.1",
     "auto-patch": "= 0.1.9",
     "autofs-nativex": "= 1.0.0",
     "autopatch-nativex": "= 1.1.0",
@@ -42,7 +42,7 @@
     "vim": "= 1.1.2",
     "windows": "= 1.34.6",
     "xfs": "= 1.1.0",
-    "yum": "= 3.5.4",
+    "yum": "= 3.6.0",
     "yum-epel": "= 0.4.0",
     "yum-nativex": "= 0.4.0"
   },

@@ -2,7 +2,7 @@
   "name": "iis-webserver-prod",
   "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-iis-webserver-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.0",
+    "ad-nativex": "= 3.0.1",
     "auto-patch": "= 0.1.9",
     "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",

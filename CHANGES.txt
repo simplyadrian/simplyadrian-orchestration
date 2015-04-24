@@ -177,3 +177,13 @@ Role Cookbook Changes
 Dependent Cookbook Changes
 - Added sssd support to ad-nativex
 - Added autofs-nativex cookbook
+
+**********************************************************
+*************** Release v4.2.1, 04/23/2015 ***************
+**********************************************************
+
+Role Cookbook Changes
+- Updated dse and datascience roles, reordered authorize attribute
+- Up versioned ad-nativex
+Dependent Cookbook Changes
+- Fixed bug in ad-nativex::dynamic_ou
