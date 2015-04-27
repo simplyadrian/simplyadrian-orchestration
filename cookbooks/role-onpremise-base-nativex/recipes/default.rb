@@ -7,6 +7,32 @@
 # All rights reserved - Do Not Redistribute
 #
 
+node.default['ad-nativex']['domain_controllers'] = {
+    'us-west-1' => {
+        'primary' => 'PAW1AM-DC-05',
+        'secondary' => 'PAW1CM-DC-06'
+    },
+    'us-west-2' => {
+        'primary' => 'PAW2AM-DC-01',
+        'secondary' => 'PAW2BM-DC-02'
+    },
+    'us-east-1' => {
+        'primary' => 'PAE1CM-DC-03',
+        'secondary' => 'PAE1DM-DC-04'
+    },
+    'on-premise' => {
+        'primary' => 'STHO-DC-1',
+        'secondary' => 'STHO-DC-2'
+    }
+}
+node.default['ad-nativex']['sssd_ldap'] = {
+    'ldap_uri' => 'ldap://teamfreeze.com',
+    'ldap_search_base' => 'dc=teamfreeze,dc=com',
+    'ldap_user_search_base' => 'dc=teamfreeze,dc=com',
+    'ldap_group_search_base' => 'dc=teamfreeze,dc=com',
+    'ldap_sudo' => true,
+    'override_homedir' => '/home/TEAMFREEZE/%u'
+}
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['sudoers']['allowed_groups'] = ['admins', 'domain\ admins', 'system\ administrators\ gs']
 node.default['sshd']['allowed_groups'] = ['root'].concat(node['sudoers']['allowed_groups'].map{ |group| group.gsub('\ ','?') }).uniq
