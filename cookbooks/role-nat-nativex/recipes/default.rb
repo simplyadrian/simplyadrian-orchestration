@@ -10,19 +10,19 @@
 node.default['ad-nativex']['domain_controllers'] = {
     'us-west-1' => {
         'primary' => 'PAW1AM-DC-05',
-        'secondary' => 'PAW1CM-DC-06'
+        'backup' => 'PAW1CM-DC-06'
     },
     'us-west-2' => {
         'primary' => 'PAW2AM-DC-01',
-        'secondary' => 'PAW2BM-DC-02'
+        'backup' => 'PAW2BM-DC-02'
     },
     'us-east-1' => {
         'primary' => 'PAE1CM-DC-03',
-        'secondary' => 'PAE1DM-DC-04'
+        'backup' => 'PAE1DM-DC-04'
     },
     'on-premise' => {
         'primary' => 'STHO-DC-1',
-        'secondary' => 'STHO-DC-2'
+        'backup' => 'STHO-DC-2'
     }
 }
 node.default['ad-nativex']['sssd_ldap'] = {
