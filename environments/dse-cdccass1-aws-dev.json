@@ -19,7 +19,7 @@
     "ephemeral_lvm-nativex": "= 0.1.0",
     "hostname-nativex": "= 0.1.2",
     "hostsfile": "= 2.4.5",
-    "java": "= 1.24.0",
+    "java": "= 1.31.0",
     "limits": "= 0.2.0",
     "line": "= 0.5.1",
     "logrotate": "= 1.8.0",
