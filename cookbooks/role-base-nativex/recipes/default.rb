@@ -25,17 +25,16 @@ node.default['ad-nativex']['domain_controllers'] = {
         'backup' => 'STHO-DC-2'
     }
 }
-node.default['ad-nativex']['sssd_ldap'] = {
-  'ldap_uri' => 'ldap://teamfreeze.com',
-  'ldap_search_base' => 'dc=teamfreeze,dc=com',
-  'ldap_user_search_base' => 'dc=teamfreeze,dc=com',
-  'ldap_group_search_base' => 'dc=teamfreeze,dc=com',
-  'ldap_sudo' => true,
-  'override_homedir' => '/home/TEAMFREEZE/%u'
-}
+node.default['ad-nativex']['sssd_ldap']['ldap_uri'] = 'ldap://teamfreeze.com'
+node.default['ad-nativex']['sssd_ldap']['ldap_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_user_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_group_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_sudo'] = true
+node.default['ad-nativex']['sssd_ldap']['override_homedir'] = '/home/TEAMFREEZE/%u'
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['build-essential']['compile_time'] = true
 node.default['ntp']['servers'] = ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
+node.default['ntp']['conf_restart_immediate'] = true
 node.default['snmp']['community'] = "xmass1970"
 node.default['snmp']['full_systemview'] = true
 node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
@@ -100,13 +99,13 @@ include_recipe 'hostname-nativex'
 include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalk-nativex'
+include_recipe 'ntp'
 include_recipe 'ad-nativex'
 include_recipe 'auto-patch'
 include_recipe 'autofs-nativex'
 include_recipe 'yum-nativex::deleterepo'
 include_recipe 'yum-nativex::doupgrade_once'
 include_recipe 'autopatch-nativex::default'
-include_recipe 'ntp'
 include_recipe 'motd'
 include_recipe 'chef-client::delete_validation'
 include_recipe 'chef-client'

@@ -39,6 +39,7 @@ node.default['ephemeral_lvm']['filesystem'] = "xfs"
 node.default['ephemeral_lvm']['volume_group_name'] = "vg_data_ephem"
 node.default['ephemeral_lvm']['logical_volume_name'] = "lv_nat_raid0"
 node.default['ntp']['servers'] = ["0.us.pool.ntp.org","1.us.pool.ntp.org","2.us.pool.ntp.org","3.us.pool.ntp.org"]
+node.default['ntp']['conf_restart_immediate'] = true
 node.default['snmp']['community'] = "xmass1970"
 node.default['snmp']['full_systemview'] = true
 node.default['snmp']['sources'] = ["10.15.0.0/16", "localhost"]
@@ -103,9 +104,9 @@ include_recipe "hostname-nativex"
 include_recipe "yum-nativex::customrepo"
 include_recipe "spacewalk-nativex"
 include_recipe "autofs-nativex"
+include_recipe "ntp"
 include_recipe "ad-nativex"
 include_recipe "yum-nativex::deleterepo"
-include_recipe "ntp"
 include_recipe "motd"
 include_recipe "autopatch-nativex::default"
 include_recipe "yum-nativex::doupgrade_once"
