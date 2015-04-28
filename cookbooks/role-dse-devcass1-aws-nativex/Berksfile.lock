@@ -13,8 +13,9 @@ DEPENDENCIES
     revision: 0f78b57da9839d9bb792a3ab71233658e8b4549d
     ref: 0f78b57
   aws
-    git: git://github.com/nativex/aws.git
+    git: git@github.com:nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
+    ref: 476fb71
   bash-completion (= 0.1.0)
   build-essential (= 2.1.3)
   chef-client (= 3.8.0)
