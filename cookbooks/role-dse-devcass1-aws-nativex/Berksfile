@@ -26,7 +26,7 @@ cookbook 'cron', '1.6.1'
 cookbook 'dstat', '0.1.1'
 cookbook 'ephemeral_lvm', '1.0.7'
 cookbook 'hostsfile', '2.4.5'
-cookbook 'java', '1.24.0'
+cookbook 'java', '1.31.0'
 cookbook 'limits', '0.2.0'
 cookbook 'line', '0.5.1', git: 'git://github.com/someara/line-cookbook.git', ref: "82523b523ab04cdbc5e6b27521c874346155cf80"
 cookbook 'logrotate', '1.8.0'
