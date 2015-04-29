@@ -13,8 +13,9 @@ DEPENDENCIES
     revision: 0f78b57da9839d9bb792a3ab71233658e8b4549d
     ref: 0f78b57
   aws
-    git: git://github.com/nativex/aws.git
+    git: git@github.com:nativex/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
+    ref: 476fb71
   bash-completion (= 0.1.0)
   build-essential (= 2.1.3)
   chef-client (= 3.8.0)
@@ -23,8 +24,8 @@ DEPENDENCIES
   cron (= 1.6.1)
   dse-nativex
     git: git@github.com:nativex/cookbook-dse-nativex.git
-    revision: e062d622b8ca209195d67f87685352794a716d44
-    ref: e062d62
+    revision: c3424110a2ea9096a8056f6913aca750e38be795
+    ref: c342411
   dstat (= 0.1.1)
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-nativex
@@ -35,7 +36,7 @@ DEPENDENCIES
     revision: 92c4ebd4ebcd123133bda7f30a9b1236d226ab47
     ref: 92c4ebd
   hostsfile (= 2.4.5)
-  java (= 1.24.0)
+  java (= 1.31.0)
   limits (= 0.2.0)
   line
     git: git://github.com/someara/line-cookbook.git
@@ -103,7 +104,7 @@ GRAPH
   chef-sugar (2.5.0)
   chef_handler (1.1.6)
   cron (1.6.1)
-  dse-nativex (0.3.0)
+  dse-nativex (0.4.0)
     java (>= 0.0.0)
     limits (>= 0.0.0)
     line (>= 0.0.0)
@@ -118,7 +119,7 @@ GRAPH
   hostname-nativex (0.1.2)
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
-  java (1.24.0)
+  java (1.31.0)
   limits (0.2.0)
   line (0.5.1)
   logrotate (1.8.0)

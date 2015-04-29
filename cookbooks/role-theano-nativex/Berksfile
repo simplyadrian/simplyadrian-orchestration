@@ -7,7 +7,7 @@ cookbook 'ephemeral_lvm-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook
 cookbook 'hostname-nativex', '0.1.2', git: 'git@github.com:nativex/cookbook-hostname-nativex.git', ref: '92c4ebd4ebcd123133bda7f30a9b1236d226ab47'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'apt', '2.5.0'
-cookbook 'aws', '2.6.0', git: 'git://github.com/nativex/aws.git'
+cookbook 'aws', '2.6.0', git: 'git@github.com:nativex/aws.git', ref: '476fb71977511b7370d213940be7e76a410cc8ba'
 cookbook 'bash-completion', '0.1.0'
 cookbook 'build-essential', '2.1.3'
 cookbook 'chef-client', '3.8.0'
