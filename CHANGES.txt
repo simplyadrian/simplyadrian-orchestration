@@ -202,3 +202,11 @@ Dependent Cookbook Changes
 - ISE-271 Snowflake initial release
 - ISE-369 latest version of Java cookbook
 - Dereks awsCassUpdates
+
+**********************************************************
+*************** Release v4.3.1, 04/29/2015 ***************
+**********************************************************
+
+- Updated aws commit reference in create session RCB
+- Fixed dse bug, updated reference
+- Fixed ad-nativex bug, updated version and reference
