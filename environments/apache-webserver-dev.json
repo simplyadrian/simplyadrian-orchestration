@@ -2,7 +2,7 @@
   "name": "apache-webserver-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-apache-webserver-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.1",
+    "ad-nativex": "= 3.0.2",
     "apache2": "= 1.10.4",
     "auto-patch": "= 0.1.9",
     "autofs-nativex": "= 1.0.0",

@@ -2,7 +2,7 @@
   "name": "win-base-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-win-base-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.1",
+    "ad-nativex": "= 3.0.2",
     "auto-patch": "= 0.1.9",
     "autopatch-nativex": "= 1.1.0",
     "aws": "= 2.6.0",
