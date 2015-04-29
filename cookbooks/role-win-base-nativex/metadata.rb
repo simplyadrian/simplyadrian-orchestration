@@ -7,6 +7,7 @@ version          '1.0.0'
 
 depends 'ohai-nativex'
 depends 'aws'
+depends 'timezone-nativex'
 depends 'windows'
 depends 'ad-nativex'
 depends 'autopatch-nativex'

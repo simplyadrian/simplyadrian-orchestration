@@ -79,11 +79,14 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
   'secure_path = /sbin:/bin:/usr/sbin:/usr/bin' 
 ]
 node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups']
+node.default['tz'] = "America/Chicago"
 node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
 include_recipe 'chef-sugar'
 include_recipe 'aws'
+include_recipe 'ntp'
+include_recipe 'timezone-nativex'
 include_recipe 'vim'
 include_recipe 'nano'
 include_recipe 'bash-completion'
@@ -99,8 +102,6 @@ include_recipe 'hostname-nativex'
 include_recipe 'yum-nativex'
 include_recipe 'yum-epel'
 include_recipe 'spacewalk-nativex'
-include_recipe 'ntp'
-include_recipe 'timezone-nativex'
 include_recipe 'ad-nativex'
 include_recipe 'auto-patch'
 include_recipe 'autofs-nativex'

@@ -5,6 +5,7 @@ metadata
 cookbook 'ad-nativex', '3.0.1', git: 'git@github.com:nativex/cookbook-ad-nativex.git', ref: 'eadf7f8cb893715b486aa27cb258088f42866ab5'
 cookbook 'autopatch-nativex', '1.1.0', git: 'git@github.com:nativex/cookbook-autopatch-nativex.git', ref: '0f78b57da9839d9bb792a3ab71233658e8b4549d'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
+cookbook 'timezone-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-timezone-nativex.git', ref: 'c37bd8186dde04a7660adcaf8ca00a838c31e951'
 cookbook 'aws', '2.6.0', git: 'git@github.com:nativex/aws.git', ref: '476fb71977511b7370d213940be7e76a410cc8ba'
 cookbook 'build-essential', '2.1.3'
 cookbook 'chef-client', '3.8.0'

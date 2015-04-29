@@ -23,6 +23,10 @@ DEPENDENCIES
   role-win-base-nativex
     path: .
     metadata: true
+  timezone-nativex
+    git: git@github.com:nativex/cookbook-timezone-nativex.git
+    revision: c37bd8186dde04a7660adcaf8ca00a838c31e951
+    ref: c37bd81
   windows
     git: git@github.com:nativex/windows.git
     revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d
@@ -59,6 +63,11 @@ GRAPH
     chef-client (>= 0.0.0)
     chef-sugar (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
+    timezone-nativex (>= 0.0.0)
     windows (>= 0.0.0)
+  timezone-ii (0.2.0)
+  timezone-nativex (1.0.0)
+    chef-sugar (>= 0.0.0)
+    timezone-ii (>= 0.0.0)
   windows (1.37.0)
     chef_handler (>= 0.0.0)
