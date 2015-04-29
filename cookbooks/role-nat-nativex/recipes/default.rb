@@ -25,14 +25,12 @@ node.default['ad-nativex']['domain_controllers'] = {
         'backup' => 'STHO-DC-2'
     }
 }
-node.default['ad-nativex']['sssd_ldap'] = {
-    'ldap_uri' => 'ldap://teamfreeze.com',
-    'ldap_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_user_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_group_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_sudo' => true,
-    'override_homedir' => '/home/TEAMFREEZE/%u'
-}
+node.default['ad-nativex']['sssd_ldap']['ldap_uri'] = 'ldap://teamfreeze.com'
+node.default['ad-nativex']['sssd_ldap']['ldap_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_user_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_group_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_sudo'] = true
+node.default['ad-nativex']['sssd_ldap']['override_homedir'] = '/home/TEAMFREEZE/%u'
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
 node.default['ephemeral_lvm']['mount_point'] = "/mnt/ephemeral"
 node.default['ephemeral_lvm']['filesystem'] = "xfs"
