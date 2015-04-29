@@ -187,3 +187,18 @@ Role Cookbook Changes
 - Up versioned ad-nativex
 Dependent Cookbook Changes
 - Fixed bug in ad-nativex::dynamic_ou
+
+**********************************************************
+*************** Release v4.3.0, 04/29/2015 ***************
+**********************************************************
+
+Release ISE-271, ISE-368, ISE-369, awsCassUpdates
+
+Role Cookbook Changes
+- ISE-271 Snowflake added
+- ISE-368 Fixed ad-nativex attributes in base, onpremise-base, and nat RCBs
+- Up versioned ad-nativex
+Dependent Cookbook Changes
+- ISE-271 Snowflake initial release
+- ISE-369 latest version of Java cookbook
+- Dereks awsCassUpdates
