@@ -25,8 +25,8 @@ DEPENDENCIES
     metadata: true
   timezone-nativex
     git: git@github.com:nativex/cookbook-timezone-nativex.git
-    revision: c37bd8186dde04a7660adcaf8ca00a838c31e951
-    ref: c37bd81
+    revision: 19a3c95e1e008a6b5d0cbeee585df39079622ee3
+    ref: 19a3c95
   windows
     git: git@github.com:nativex/windows.git
     revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d

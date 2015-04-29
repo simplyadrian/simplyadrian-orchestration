@@ -10,7 +10,7 @@ cookbook 'hostname-nativex', '0.1.2', git: 'git@github.com:nativex/cookbook-host
 cookbook 'numad-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-numad-nativex.git'
 cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nativex.git'
 cookbook 'spacewalk-nativex', '0.3.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git', ref: 'bd9999636674eb40f8652d6d0f762cf2a6a2304e'
-cookbook 'timezone-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-timezone-nativex.git', ref: 'c37bd8186dde04a7660adcaf8ca00a838c31e951'
+cookbook 'timezone-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-timezone-nativex.git', ref: '19a3c95e1e008a6b5d0cbeee585df39079622ee3'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git', ref: '5e87cd98a54d13f9b130e0d709367fc8dc4d0ad1'
 cookbook 'auto-patch', '0.1.9'

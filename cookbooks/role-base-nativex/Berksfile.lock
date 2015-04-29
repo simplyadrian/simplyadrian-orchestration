@@ -59,8 +59,8 @@ DEPENDENCIES
   timezone-ii (~> 0.2.0)
   timezone-nativex
     git: git@github.com:nativex/cookbook-timezone-nativex.git
-    revision: c37bd8186dde04a7660adcaf8ca00a838c31e951
-    ref: c37bd81
+    revision: 19a3c95e1e008a6b5d0cbeee585df39079622ee3
+    ref: 19a3c95
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
