@@ -48,6 +48,8 @@ hadoop_users = [
     'Data\ Science'
 ]
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
+node.default['ntp']['servers'] = ["10.15.0.108","10.15.0.109","10.12.34.11","10.12.34.12"]
+node.default['ntp']['conf_restart_immediate'] = true
 node.default['sudoers']['allowed_groups'] = ['admins', 'domain\ admins', 'system\ administrators\ gs']
 node.default['sshd']['allowed_groups'] = ['root'].concat(node['sudoers']['allowed_groups'].map{ |group| group.gsub('\ ','?') }).uniq
 node.default['sshd']['allowed_groups'] = node['sshd']['allowed_groups'].concat(hadoop_users.map{ |group| group.gsub('\ ','?') }).uniq if node['hostname'].upcase.include? 'HDP' # Only on Hadoop nodes
@@ -97,6 +99,7 @@ node.default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
 									  :export => '/linuxhome'}]
 
 include_recipe 'chef-sugar'
+include_recipe 'ntp'
 include_recipe 'autopatch-nativex::default'
 include_recipe 'sshd'
 include_recipe 'sudo'
