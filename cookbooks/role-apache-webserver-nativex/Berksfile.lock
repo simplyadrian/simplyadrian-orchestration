@@ -60,6 +60,10 @@ DEPENDENCIES
     ref: bd99996
   sshd (~> 1.1.1)
   sudo (~> 2.7.1)
+  timezone-nativex
+    git: git@github.com:nativex/cookbook-timezone-nativex.git
+    revision: aa4e5b8268ede8b462661983c7242d15fbba9c34
+    ref: aa4e5b8
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
@@ -150,6 +154,7 @@ GRAPH
     spacewalk-nativex (>= 0.0.0)
     sshd (>= 0.0.0)
     sudo (>= 0.0.0)
+    timezone-nativex (>= 0.0.0)
     tuned-nativex (>= 0.0.0)
     vim (>= 0.0.0)
     yum-epel (>= 0.0.0)
@@ -159,6 +164,10 @@ GRAPH
     cron (>= 0.0.0)
   sshd (1.1.1)
   sudo (2.7.1)
+  timezone-ii (0.2.0)
+  timezone-nativex (1.0.0)
+    chef-sugar (>= 0.0.0)
+    timezone-ii (>= 0.0.0)
   tuned-nativex (0.1.0)
   vim (1.1.2)
   windows (1.34.6)

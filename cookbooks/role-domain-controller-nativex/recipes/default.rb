@@ -11,6 +11,7 @@ node.default['ad-nativex']['oupath'] = "OU=Domain Controllers,DC=teamfreeze,DC=c
 node.default['autopatch-nativex']['auto_reboot_enabled'] = false
 
 include_recipe "aws"
+include_recipe "timezone-nativex"
 include_recipe "windows"
 include_recipe "chef-sugar"
 include_recipe "ad-nativex::joindomain"
