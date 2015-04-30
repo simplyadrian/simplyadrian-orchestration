@@ -25,17 +25,32 @@ node.default['ad-nativex']['domain_controllers'] = {
         'backup' => 'STHO-DC-2'
     }
 }
-node.default['ad-nativex']['sssd_ldap'] = {
-    'ldap_uri' => 'ldap://teamfreeze.com',
-    'ldap_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_user_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_group_search_base' => 'dc=teamfreeze,dc=com',
-    'ldap_sudo' => true,
-    'override_homedir' => '/home/TEAMFREEZE/%u'
-}
+node.default['ad-nativex']['sssd_ldap']['ldap_uri'] = 'ldap://teamfreeze.com'
+node.default['ad-nativex']['sssd_ldap']['ldap_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_user_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_group_search_base'] = 'dc=teamfreeze,dc=com'
+node.default['ad-nativex']['sssd_ldap']['ldap_sudo'] = true
+node.default['ad-nativex']['sssd_ldap']['override_homedir'] = '/home/TEAMFREEZE/%u'
+authorized_users = [
+    'predictive_analytics',
+    'Data\ Science'
+]
+hadoop_users = [
+    'hadoop_admins',
+    'hadoop_developers',
+    'hadoop_release',
+    'Hadoop\ Admins',
+    'Hadoop\ Developers',
+    'Hadoop\ Release',
+    'predictive_analytics',
+    'Data\ Science'
+]
 node.default['autopatch-nativex']['auto_reboot_enabled'] = true
+node.default['ntp']['servers'] = ["10.15.0.108","10.15.0.109","10.12.34.11","10.12.34.12"]
+node.default['ntp']['conf_restart_immediate'] = true
 node.default['sudoers']['allowed_groups'] = ['admins', 'domain\ admins', 'system\ administrators\ gs']
 node.default['sshd']['allowed_groups'] = ['root'].concat(node['sudoers']['allowed_groups'].map{ |group| group.gsub('\ ','?') }).uniq
+node.default['sshd']['allowed_groups'] = node['sshd']['allowed_groups'].concat(hadoop_users.map{ |group| group.gsub('\ ','?') }).uniq if node['hostname'].upcase.include? 'HDP' # Only on Hadoop nodes
 node.default['sshd']['sshd_config'] = {
     'Port' => 22,
     'Protocol' => 2,
@@ -72,7 +87,8 @@ node.default['authorization']['sudo']['sudoers_defaults'] = [
     'always_set_home',
     'secure_path = /sbin:/bin:/usr/sbin:/usr/bin'
 ]
-node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups']
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].concat(authorized_users)
+node.default['authorization']['sudo']['groups'] = node['authorization']['sudo']['groups'].concat(hadoop_users) if node['hostname'].upcase.include? 'HDP' # Only on Hadoop nodes
 # mapper options
 node.default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
 									  :key => 'TEAMFREEZE',
@@ -81,6 +97,7 @@ node.default['autofs-nativex']['maps'] = [{:mount_dir => '/home',
 									  :export => '/linuxhome'}]
 
 include_recipe 'chef-sugar'
+include_recipe 'ntp'
 include_recipe 'autopatch-nativex::default'
 include_recipe 'sshd'
 include_recipe 'sudo'

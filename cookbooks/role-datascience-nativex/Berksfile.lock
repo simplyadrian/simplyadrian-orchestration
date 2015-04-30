@@ -2,8 +2,8 @@ DEPENDENCIES
   7-zip (= 1.0.2)
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: eadf7f8cb893715b486aa27cb258088f42866ab5
-    ref: eadf7f8
+    revision: e1e8e0d2625b884cbece5517185309127d019159
+    ref: e1e8e0d
   apt (= 2.6.1)
   ark (= 0.9.0)
   auto-patch (= 0.1.9)
@@ -107,7 +107,7 @@ DEPENDENCIES
 GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
-  ad-nativex (3.0.1)
+  ad-nativex (3.0.2)
     chef-sugar (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)

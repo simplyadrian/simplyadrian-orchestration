@@ -2,7 +2,7 @@
   "name": "onpremise-base-dev",
   "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-onpremise-base-nativex cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.1",
+    "ad-nativex": "= 3.0.2",
     "auto-patch": "= 0.1.9",
     "autofs-nativex": "= 1.0.0",
     "autopatch-nativex": "= 1.1.0",
@@ -11,6 +11,7 @@
     "chef_handler": "= 1.1.6",
     "cron": "= 1.6.1",
     "logrotate": "= 1.9.1",
+    "ntp": "= 1.6.4",
     "ohai": "= 2.0.1",
     "ohai-nativex": "= 0.1.1",
     "role-onpremise-base-nativex": "= 1.0.0",
@@ -27,6 +28,34 @@
     },
     "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
+    },
+    "ad-nativex": {
+      "domain_controllers": {
+        "us-west-1": {
+          "primary": "PAW1AM-DC-05",
+          "backup": "PAW1CM-DC-06"
+        },
+        "us-west-2": {
+          "primary": "PAW2AM-DC-01",
+          "backup": "PAW2BM-DC-02"
+        },
+        "us-east-1": {
+          "primary": "PAE1CM-DC-03",
+          "backup": "PAE1DM-DC-04"
+        },
+        "on-premise": {
+          "primary": "STHO-DC-1",
+          "backup": "STHO-DC-2"
+        }
+      },
+      "sssd_ldap": {
+        "ldap_uri": "ldap://teamfreeze.com",
+        "ldap_search_base": "dc=teamfreeze,dc=com",
+        "ldap_user_search_base": "dc=teamfreeze,dc=com",
+        "ldap_group_search_base": "dc=teamfreeze,dc=com",
+        "ldap_sudo": true,
+        "override_homedir": "/home/TEAMFREEZE/%u"
+      }
     }
   },
   "override_attributes": {

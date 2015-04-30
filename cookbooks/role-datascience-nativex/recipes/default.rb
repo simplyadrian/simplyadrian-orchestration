@@ -38,7 +38,7 @@ node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'role-base-nativex'
 
-node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].concat(['predictive_analytics'])
+node.default['authorization']['sudo']['groups'] = node['sudoers']['allowed_groups'].concat(['predictive_analytics', 'Data\ Science'])
 
 include_recipe 'cifs-nativex'
 include_recipe 'git'

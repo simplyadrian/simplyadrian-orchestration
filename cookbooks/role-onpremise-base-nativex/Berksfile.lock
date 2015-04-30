@@ -1,8 +1,8 @@
 DEPENDENCIES
   ad-nativex
     git: git@github.com:nativex/cookbook-ad-nativex.git
-    revision: eadf7f8cb893715b486aa27cb258088f42866ab5
-    ref: eadf7f8
+    revision: e1e8e0d2625b884cbece5517185309127d019159
+    ref: e1e8e0d
   auto-patch (= 0.1.9)
   autofs-nativex
     git: git@github.com:nativex/cookbook-autofs-nativex.git
@@ -17,6 +17,7 @@ DEPENDENCIES
   chef_handler (= 1.1.6)
   cron (= 1.6.1)
   logrotate (= 1.9.1)
+  ntp (= 1.6.4)
   ohai-nativex
     git: git@github.com:nativex/cookbook-ohai-nativex.git
     revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
@@ -27,7 +28,7 @@ DEPENDENCIES
   sudo (~> 2.7.1)
 
 GRAPH
-  ad-nativex (3.0.1)
+  ad-nativex (3.0.2)
     chef-sugar (>= 0.0.0)
     ohai-nativex (>= 0.0.0)
     windows (>= 0.0.0)
@@ -48,6 +49,7 @@ GRAPH
   chef_handler (1.1.6)
   cron (1.6.1)
   logrotate (1.9.1)
+  ntp (1.6.4)
   ohai (2.0.1)
   ohai-nativex (0.1.1)
     ohai (>= 0.0.0)
@@ -57,6 +59,7 @@ GRAPH
     autopatch-nativex (>= 0.0.0)
     chef-client (>= 0.0.0)
     chef-sugar (>= 0.0.0)
+    ntp (>= 0.0.0)
     sshd (>= 0.0.0)
     sudo (>= 0.0.0)
   sshd (1.1.1)

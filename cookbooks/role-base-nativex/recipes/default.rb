@@ -84,6 +84,7 @@ node.default['tuned']['active_profile'] = "virtual-guest"
 
 include_recipe 'ohai-nativex'
 include_recipe 'chef-sugar'
+include_recipe 'ntp'
 include_recipe 'aws'
 include_recipe 'ntp'
 include_recipe 'timezone-nativex'
