@@ -13,7 +13,7 @@ cookbook 'ohai-nativex', '0.1.1', git: 'git@github.com:nativex/cookbook-ohai-nat
 cookbook 'role-base-nativex', '1.3.0', path: '../role-base-nativex'
 cookbook 'role-dse-nativex', '1.2.1', path: '../role-dse-nativex'
 cookbook 'spacewalk-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-spacewalk-nativex.git', ref: "4b4ebfff8572fe9f3dba90238e648c8bf63f0893"
-cookbook 'timezone-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-timezone-nativex.git', ref: 'aa4e5b8268ede8b462661983c7242d15fbba9c34'
+cookbook 'timezone-nativex', '1.0.0', git: 'git@github.com:nativex/cookbook-timezone-nativex.git', ref: '6a524051d8237772c41c34e820d8d4053dd39e5e'
 cookbook 'tuned-nativex', '0.1.0', git: 'git@github.com:nativex/cookbook-tuned-nativex.git'
 cookbook 'yum-nativex', '0.4.0', git: 'git@github.com:nativex/cookbook-yum-nativex.git', ref: '5e87cd98a54d13f9b130e0d709367fc8dc4d0ad1'
 cookbook 'auto-patch', '0.1.9'
