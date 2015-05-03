@@ -71,8 +71,8 @@ DEPENDENCIES
   sudo (~> 2.7.1)
   timezone-nativex
     git: git@github.com:nativex/cookbook-timezone-nativex.git
-    revision: aa4e5b8268ede8b462661983c7242d15fbba9c34
-    ref: aa4e5b8
+    revision: 6a524051d8237772c41c34e820d8d4053dd39e5e
+    ref: 6a52405
   tuned-nativex
     git: git@github.com:nativex/cookbook-tuned-nativex.git
     revision: f787ae47052cd01293f068cef599949ee00ac073
