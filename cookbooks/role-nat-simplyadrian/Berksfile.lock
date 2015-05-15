@@ -1,17 +1,17 @@
 DEPENDENCIES
   ad-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ad-simplyadrian.git
-    revision: d8f3b67fe6050eca1b15ae579a49c73266638eba
-    ref: e1e8e0d
+    revision: 70b5d241d724c9ad753cc662d10c97400e65f98e
+    ref: 70b5d24
   auto-patch (= 0.1.9)
   autofs-simplyadrian
     git: git@github.com:simplyadrian/cookbook-autofs-simplyadrian.git
     revision: 6c7f45c531a83d104ca6844adccb8341f4884401
-    ref: a6346b5
+    ref: 6c7f45c
   autopatch-simplyadrian
     git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
     revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
-    ref: 0f78b57
+    ref: 70ee3c0
   aws
     git: git@github.com:simplyadrian/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
@@ -26,11 +26,11 @@ DEPENDENCIES
   ephemeral_lvm (= 1.0.7)
   ephemeral_lvm-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ephemeral_lvm-simplyadrian.git
-    revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
+    revision: 1d13b15b2ea2a4a16a6ec34f79755e74e6c1a417
   hostname-simplyadrian
     git: git@github.com:simplyadrian/cookbook-hostname-simplyadrian.git
     revision: 8b880be5d718c275676c34f59aeb2e20c90c9256
-    ref: 92c4ebd
+    ref: 8b880be
   hostsfile (= 2.4.5)
   line (= 0.6.0)
   logrotate (= 1.8.0)
@@ -41,11 +41,11 @@ DEPENDENCIES
   ntp (= 1.6.4)
   numad-simplyadrian
     git: git@github.com:simplyadrian/cookbook-numad-simplyadrian.git
-    revision: 90339780f273b1e8f2d8b99d4d71280a35b3bc7c
+    revision: 3306abb825acd3973ed2deb1b5ca05153657fb77
   ohai (= 2.0.1)
   ohai-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git
-    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+    revision: ce1ef06558737519469ce223c26c655a37c3ed58
   role-nat-simplyadrian
     path: .
     metadata: true
@@ -53,16 +53,16 @@ DEPENDENCIES
   spacewalk-simplyadrian
     git: git@github.com:simplyadrian/cookbook-spacewalk-simplyadrian.git
     revision: 4449f9d2ba6238b389f5ee21fa185595c8bcac64
-    ref: bd99996
+    ref: 4449f9d
   sshd (~> 1.1.1)
   sudo (~> 2.7.1)
   timezone-simplyadrian
     git: git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git
     revision: 3941eaeb8162f13015403427502024d70719474d
-    ref: 6a52405
+    ref: 3941eae
   tuned-simplyadrian
     git: git@github.com:simplyadrian/cookbook-tuned-simplyadrian.git
-    revision: f787ae47052cd01293f068cef599949ee00ac073
+    revision: d26fdca2d5e35dce43ba9cc06377c438d73093fe
   vim (= 1.1.2)
   windows (= 1.34.6)
   xfs (= 1.1.0)
@@ -70,7 +70,7 @@ DEPENDENCIES
   yum-simplyadrian
     git: git@github.com:simplyadrian/cookbook-yum-simplyadrian.git
     revision: 537334834e4d62edb95c04f3e4b82437ba448ffd
-    ref: 5e87cd9
+    ref: 5373348
 
 GRAPH
   ad-simplyadrian (3.0.2)
@@ -143,7 +143,7 @@ GRAPH
     vim (>= 0.0.0)
     yum-simplyadrian (>= 0.0.0)
   snmp (3.0.1)
-  spacewalk-simplyadrian (0.3.0)
+  spacewalk-simplyadrian (0.5.1)
     cron (>= 0.0.0)
   sshd (1.1.1)
   sudo (2.7.1)

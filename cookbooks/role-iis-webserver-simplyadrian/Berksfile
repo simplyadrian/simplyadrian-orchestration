@@ -2,7 +2,7 @@ source "https://supermarket.getchef.com"
 
 metadata
 
-cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: 'd8f3b67fe6050eca1b15ae579a49c73266638eba'
+cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: '70b5d241d724c9ad753cc662d10c97400e65f98e'
 cookbook 'autopatch-simplyadrian', '1.1.0', git: 'git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git', ref: '70ee3c04751e8b2500389e1cd40ec484b89d4b6f'
 cookbook 'iis-simplyadrian', '0.1.0', git: 'git@github.com:simplyadrian/cookbook-iis-simplyadrian.git'
 cookbook 'ohai-simplyadrian', '0.1.1', git: 'git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git'

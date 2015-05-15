@@ -1,6 +1,6 @@
 {
   "name": "dse-cdccass1-aws-dev",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-dse-cdccass1-aws-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-dse-cdccass1-aws-nativex cookbook.",
   "cookbook_versions": {
     "ad-simplyadrian": "= 3.0.2",
     "auto-patch": "= 0.1.9",
@@ -35,7 +35,7 @@
     "role-dse-cdccass1-aws-simplyadrian": "= 1.1.0",
     "role-dse-simplyadrian": "= 1.2.1",
     "snmp": "= 3.0.1",
-    "spacewalk-simplyadrian": "= 0.4.0",
+    "spacewalk-simplyadrian": "= 0.5.1",
     "sshd": "= 1.1.1",
     "sudo": "= 2.7.1",
     "timezone-ii": "= 0.2.0",
@@ -69,7 +69,7 @@
       "opscenter-ip": "10.15.72.5",
       "is_opscenter_cluster_configured": true
     },
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
     }
   },

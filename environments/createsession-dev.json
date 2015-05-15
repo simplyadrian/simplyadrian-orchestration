@@ -1,6 +1,6 @@
 {
   "name": "createsession-dev",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-createsession-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-createsession-nativex cookbook.",
   "cookbook_versions": {
     "7-zip": "= 1.0.2",
     "ad-simplyadrian": "= 3.0.2",
@@ -41,7 +41,7 @@
     "runit": "= 1.5.14",
     "snmp": "= 3.0.1",
     "snowflake-simplyadrian": "= 1.0.0",
-    "spacewalk-simplyadrian": "= 0.3.0",
+    "spacewalk-simplyadrian": "= 0.5.1",
     "sshd": "= 1.1.1",
     "sudo": "= 2.7.1",
     "timezone-ii": "= 0.2.0",
@@ -61,7 +61,7 @@
       "interval": "600",
       "log_file": "chefclt.log"
     },
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
     }
   },

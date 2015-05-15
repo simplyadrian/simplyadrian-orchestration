@@ -1,12 +1,12 @@
 DEPENDENCIES
   ad-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ad-simplyadrian.git
-    revision: d8f3b67fe6050eca1b15ae579a49c73266638eba
-    ref: e1e8e0d
+    revision: 70b5d241d724c9ad753cc662d10c97400e65f98e
+    ref: 70b5d24
   autopatch-simplyadrian
     git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
     revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
-    ref: 0f78b57
+    ref: 70ee3c0
   aws
     git: git@github.com:simplyadrian/aws.git
     revision: 476fb71977511b7370d213940be7e76a410cc8ba
@@ -20,14 +20,14 @@ DEPENDENCIES
   ohai (= 2.0.1)
   ohai-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git
-    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+    revision: ce1ef06558737519469ce223c26c655a37c3ed58
   role-domain-controller-simplyadrian
     path: .
     metadata: true
   timezone-simplyadrian
     git: git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git
     revision: 3941eaeb8162f13015403427502024d70719474d
-    ref: 6a52405
+    ref: 3941eae
   windows
     git: git@github.com:simplyadrian/windows.git
     revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d
@@ -38,7 +38,7 @@ GRAPH
     chef-sugar (>= 0.0.0)
     ohai-simplyadrian (>= 0.0.0)
     windows (>= 0.0.0)
-  auto-patch (0.1.9)
+  auto-patch (0.1.10)
     cron (>= 0.0.0)
   autopatch-simplyadrian (1.1.0)
     auto-patch (>= 0.0.0)

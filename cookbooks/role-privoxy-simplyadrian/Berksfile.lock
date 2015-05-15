@@ -1,7 +1,7 @@
 DEPENDENCIES
   ad-simplyadrian
     git: git@github.com:simplyadrian/cookbook-ad-simplyadrian.git
-    revision: d8f3b67fe6050eca1b15ae579a49c73266638eba
+    revision: 70b5d241d724c9ad753cc662d10c97400e65f98e
     ref: e1e8e0d
   auto-patch (= 0.1.9)
   autofs-simplyadrian

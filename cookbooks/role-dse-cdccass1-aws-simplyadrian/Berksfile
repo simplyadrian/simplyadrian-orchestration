@@ -2,7 +2,7 @@ source "https://supermarket.getchef.com"
 
 metadata
 
-cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: 'd8f3b67fe6050eca1b15ae579a49c73266638eba'
+cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: '70b5d241d724c9ad753cc662d10c97400e65f98e'
 cookbook 'autofs-simplyadrian', '1.0.0', git: 'git@github.com:simplyadrian/cookbook-autofs-simplyadrian.git', ref: '6c7f45c531a83d104ca6844adccb8341f4884401'
 cookbook 'autopatch-simplyadrian', '1.1.0', git: 'git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git', ref: '70ee3c04751e8b2500389e1cd40ec484b89d4b6f'
 cookbook 'dse-simplyadrian', '0.4.0', git: 'git@github.com:simplyadrian/cookbook-dse-simplyadrian.git', ref: '6154fdd11c8202267000f8c7f85d14c35be0f454'
@@ -12,7 +12,7 @@ cookbook 'numad-simplyadrian', '0.1.0', git: 'git@github.com:simplyadrian/cookbo
 cookbook 'ohai-simplyadrian', '0.1.1', git: 'git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git'
 cookbook 'role-base-simplyadrian', '1.3.0', path: '../role-base-simplyadrian'
 cookbook 'role-dse-simplyadrian', '1.2.1', path: '../role-dse-simplyadrian'
-cookbook 'spacewalk-simplyadrian', '0.4.0', git: 'git@github.com:simplyadrian/cookbook-spacewalk-simplyadrian.git', ref: "4b4ebfff8572fe9f3dba90238e648c8bf63f0893"
+cookbook 'spacewalk-simplyadrian', '0.5.1', git: 'git@github.com:simplyadrian/cookbook-spacewalk-simplyadrian.git', ref: '4449f9d2ba6238b389f5ee21fa185595c8bcac64'
 cookbook 'timezone-simplyadrian', '1.0.0', git: 'git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git', ref: '3941eaeb8162f13015403427502024d70719474d'
 cookbook 'tuned-simplyadrian', '0.1.0', git: 'git@github.com:simplyadrian/cookbook-tuned-simplyadrian.git'
 cookbook 'yum-simplyadrian', '0.4.0', git: 'git@github.com:simplyadrian/cookbook-yum-simplyadrian.git', ref: '537334834e4d62edb95c04f3e4b82437ba448ffd'

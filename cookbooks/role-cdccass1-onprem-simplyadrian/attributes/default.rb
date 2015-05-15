@@ -1,9 +1,0 @@
-default['role-cdccass1-onprem-simplyadrian']['cron_repair_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_activitytracking_drop_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_activitytracking_file_cleanup_enabled'] = node['role-cdccass1-onprem-simplyadrian']['cron_activitytracking_drop_enabled']
-default['role-cdccass1-onprem-simplyadrian']['cron_take_snapshot_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_clear_snapshot_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_remove_backups_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_remove_cvincrem_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_remove_cvfull_enabled'] = true
-default['role-cdccass1-onprem-simplyadrian']['cron_move_cvbackups_enabled'] = true
