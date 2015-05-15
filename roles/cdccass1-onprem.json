@@ -8,7 +8,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-cdccass1-onprem-nativex]"
+    "recipe[role-cdccass1-onprem-simplyadrian]"
   ],
   "env_run_lists": {
   }

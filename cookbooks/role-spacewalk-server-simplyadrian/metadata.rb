@@ -1,0 +1,11 @@
+name             'role-spacewalk-server-simplyadrian'
+maintainer       'simplyadrian'
+maintainer_email 'simplyadrian@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures role-spacewalk-server-simplyadrian'
+version          '0.2.0'
+
+depends 'autopatch-simplyadrian'
+depends 'motd'
+depends 'spacewalk-simplyadrian'
+depends 'chef-client'

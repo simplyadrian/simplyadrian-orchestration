@@ -1,11 +1,11 @@
 {
   "name": "cdccass1-onprem-prod",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-cdccass1-onprem-nativex cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-cdccass1-onprem-simplyadrian cookbook.",
   "cookbook_versions": {
-    "ad-nativex": "= 3.0.2",
+    "ad-simplyadrian": "= 3.0.2",
     "auto-patch": "= 0.1.9",
-    "autofs-nativex": "= 1.0.0",
-    "autopatch-nativex": "= 1.1.0",
+    "autofs-simplyadrian": "= 1.0.0",
+    "autopatch-simplyadrian": "= 1.1.0",
     "chef-client": "= 4.2.4",
     "chef-sugar": "= 2.5.0",
     "chef_handler": "= 1.1.6",
@@ -13,9 +13,9 @@
     "logrotate": "= 1.9.1",
     "ntp": "= 1.8.2",
     "ohai": "= 2.0.1",
-    "ohai-nativex": "= 0.1.1",
-    "role-cdccass1-onprem-nativex": "= 0.1.0",
-    "role-onpremise-base-nativex": "= 1.0.0",
+    "ohai-simplyadrian": "= 0.1.1",
+    "role-cdccass1-onprem-simplyadrian": "= 0.1.0",
+    "role-onpremise-base-simplyadrian": "= 1.0.0",
     "sshd": "= 1.1.1",
     "sudo": "= 2.7.1",
     "windows": "= 1.36.6"
@@ -23,7 +23,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "role-cdccass1-onprem-nativex": {
+    "role-cdccass1-onprem-simplyadrian": {
       "cron_repair_enabled": false
     }
   },

@@ -1,0 +1,10 @@
+name             'role-dse-simplyadrian'
+maintainer       'simplyadrian'
+maintainer_email 'simplyadrian@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures role-dse-simplyadrian'
+version          '1.2.1'
+
+depends 'role-base-simplyadrian'
+depends 'tuned-simplyadrian'
+depends 'dse-simplyadrian'

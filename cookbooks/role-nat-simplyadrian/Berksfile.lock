@@ -1,0 +1,161 @@
+DEPENDENCIES
+  ad-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-ad-simplyadrian.git
+    revision: d8f3b67fe6050eca1b15ae579a49c73266638eba
+    ref: e1e8e0d
+  auto-patch (= 0.1.9)
+  autofs-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-autofs-simplyadrian.git
+    revision: 6c7f45c531a83d104ca6844adccb8341f4884401
+    ref: a6346b5
+  autopatch-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
+    revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
+    ref: 0f78b57
+  aws
+    git: git@github.com:simplyadrian/aws.git
+    revision: 476fb71977511b7370d213940be7e76a410cc8ba
+    ref: 476fb71
+  bash-completion (= 0.1.0)
+  build-essential (= 2.1.3)
+  chef-client (= 3.8.0)
+  chef-sugar (= 2.5.0)
+  chef_handler (= 1.1.6)
+  cron (= 1.6.1)
+  dstat (= 0.1.1)
+  ephemeral_lvm (= 1.0.7)
+  ephemeral_lvm-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-ephemeral_lvm-simplyadrian.git
+    revision: 1366be42e2dd8bfd79ef49eb9c111ece270401b9
+  hostname-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-hostname-simplyadrian.git
+    revision: 8b880be5d718c275676c34f59aeb2e20c90c9256
+    ref: 92c4ebd
+  hostsfile (= 2.4.5)
+  line (= 0.6.0)
+  logrotate (= 1.8.0)
+  lvm (= 1.1.2)
+  motd (= 0.5.0)
+  nano (= 1.0.0)
+  nfs (= 2.0.0)
+  ntp (= 1.6.4)
+  numad-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-numad-simplyadrian.git
+    revision: 90339780f273b1e8f2d8b99d4d71280a35b3bc7c
+  ohai (= 2.0.1)
+  ohai-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git
+    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+  role-nat-simplyadrian
+    path: .
+    metadata: true
+  snmp (= 3.0.1)
+  spacewalk-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-spacewalk-simplyadrian.git
+    revision: 4449f9d2ba6238b389f5ee21fa185595c8bcac64
+    ref: bd99996
+  sshd (~> 1.1.1)
+  sudo (~> 2.7.1)
+  timezone-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git
+    revision: 3941eaeb8162f13015403427502024d70719474d
+    ref: 6a52405
+  tuned-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-tuned-simplyadrian.git
+    revision: f787ae47052cd01293f068cef599949ee00ac073
+  vim (= 1.1.2)
+  windows (= 1.34.6)
+  xfs (= 1.1.0)
+  yum (= 3.2.2)
+  yum-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-yum-simplyadrian.git
+    revision: 537334834e4d62edb95c04f3e4b82437ba448ffd
+    ref: 5e87cd9
+
+GRAPH
+  ad-simplyadrian (3.0.2)
+    chef-sugar (>= 0.0.0)
+    ohai-simplyadrian (>= 0.0.0)
+    windows (>= 0.0.0)
+  auto-patch (0.1.9)
+    cron (>= 0.0.0)
+  autofs-simplyadrian (1.0.0)
+    chef-sugar (>= 0.0.0)
+    ohai-simplyadrian (>= 0.0.0)
+  autopatch-simplyadrian (1.1.0)
+    auto-patch (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    windows (>= 0.0.0)
+  aws (2.6.0)
+  bash-completion (0.1.0)
+  build-essential (2.1.3)
+  chef-client (3.8.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef-sugar (2.5.0)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  dstat (0.1.1)
+  ephemeral_lvm (1.0.7)
+    lvm (~> 1.1.0)
+  ephemeral_lvm-simplyadrian (0.1.0)
+    ephemeral_lvm (>= 0.0.0)
+    xfs (>= 0.0.0)
+  hostname-simplyadrian (0.1.2)
+    hostsfile (>= 0.0.0)
+  hostsfile (2.4.5)
+  line (0.6.0)
+  logrotate (1.8.0)
+  lvm (1.1.2)
+  motd (0.5.0)
+    chef_handler (>= 0.0.0)
+  nano (1.0.0)
+  nfs (2.0.0)
+    line (>= 0.0.0)
+  ntp (1.6.4)
+  numad-simplyadrian (0.1.0)
+  ohai (2.0.1)
+  ohai-simplyadrian (0.1.1)
+    ohai (>= 0.0.0)
+  role-nat-simplyadrian (0.3.0)
+    ad-simplyadrian (>= 0.0.0)
+    autofs-simplyadrian (>= 0.0.0)
+    autopatch-simplyadrian (>= 0.0.0)
+    aws (>= 0.0.0)
+    bash-completion (>= 0.0.0)
+    chef-client (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+    dstat (>= 0.0.0)
+    ephemeral_lvm-simplyadrian (>= 0.0.0)
+    hostname-simplyadrian (>= 0.0.0)
+    motd (>= 0.0.0)
+    nano (>= 0.0.0)
+    nfs (>= 0.0.0)
+    ntp (>= 0.0.0)
+    numad-simplyadrian (>= 0.0.0)
+    ohai-simplyadrian (>= 0.0.0)
+    snmp (>= 0.0.0)
+    spacewalk-simplyadrian (>= 0.0.0)
+    sshd (>= 0.0.0)
+    sudo (>= 0.0.0)
+    tuned-simplyadrian (>= 0.0.0)
+    vim (>= 0.0.0)
+    yum-simplyadrian (>= 0.0.0)
+  snmp (3.0.1)
+  spacewalk-simplyadrian (0.3.0)
+    cron (>= 0.0.0)
+  sshd (1.1.1)
+  sudo (2.7.1)
+  timezone-ii (0.2.0)
+  timezone-simplyadrian (1.0.0)
+    chef-sugar (>= 0.0.0)
+    timezone-ii (>= 0.0.0)
+  tuned-simplyadrian (0.1.0)
+  vim (1.1.2)
+  windows (1.34.6)
+    chef_handler (>= 0.0.0)
+  xfs (1.1.0)
+  yum (3.2.2)
+  yum-simplyadrian (0.4.0)
+    yum (>= 0.0.0)

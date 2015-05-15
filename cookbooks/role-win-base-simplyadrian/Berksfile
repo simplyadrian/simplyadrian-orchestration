@@ -1,0 +1,16 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: 'd8f3b67fe6050eca1b15ae579a49c73266638eba'
+cookbook 'autopatch-simplyadrian', '1.1.0', git: 'git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git', ref: '70ee3c04751e8b2500389e1cd40ec484b89d4b6f'
+cookbook 'ohai-simplyadrian', '0.1.1', git: 'git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git'
+cookbook 'timezone-simplyadrian', '1.0.0', git: 'git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git', ref: '3941eaeb8162f13015403427502024d70719474d'
+cookbook 'aws', '2.6.0', git: 'git@github.com:simplyadrian/aws.git', ref: '476fb71977511b7370d213940be7e76a410cc8ba'
+cookbook 'build-essential', '2.1.3'
+cookbook 'chef-client', '3.8.0'
+cookbook 'chef_handler', '1.1.6'
+cookbook 'chef-sugar', '2.5.0'
+cookbook 'cron', '1.6.1'
+cookbook 'ohai', '2.0.1'
+cookbook 'windows', '1.37.0', git: 'git@github.com:simplyadrian/windows.git', ref: '42013d8ecd323e20d16ab580c41e4a35b5ed627d'

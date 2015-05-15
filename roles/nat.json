@@ -8,7 +8,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-nat-nativex]"
+    "recipe[role-nat-simplyadrian]"
   ],
   "env_run_lists": {
   }

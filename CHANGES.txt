@@ -3,12 +3,12 @@
 **********************************************************
 Additions
  - nodejs v2.2.0 cookbook
- - cifs-nativex v0.1.0 cookbook
+ - cifs-simplyadrian v0.1.0 cookbook
  - auto-patch v0.1.9 cookbook
 
 Changes
  - datascience Role includes 'awscli' python package
- - bug fixes for blockdevice-nativex cookbook
+ - bug fixes for blockdevice-simplyadrian cookbook
  - xml cookbook version bump 1.2.4 to 1.2.6
  - route53 cookbook version bump 0.3.5 to 0.3.8
  - cron cookbook version bump 1.5.0 to 1.6.1
@@ -19,38 +19,38 @@ Changes
 ***************** Release 2, 01/08/2015 ******************
 **********************************************************
 Additions
- - syncdata-nativex v0.1.0
- - mkdirs-nativex
+ - syncdata-simplyadrian v0.1.0
+ - mkdirs-simplyadrian
 
 Changes
  - role to "role cookbook" conversion completed
  - removed the data_bag directory from source control. Now we rely on "knife data bag" resource to handle data bags in chef.
  - updates added to the prod environment file. Restricting the environment to only run "0.1.0" of the "role cookbooks".
- - refactored the dnsupdate-nativex cookbook to use the aws-sdk gem for dns manipulation. 
- - Simplified 'ou' vs 'oupath' confusion in ad and pbis nativex cookbooks. Settled on 'oupath'. [ISE-281]
- - Expanded and componentized 'oupath' in pbis/ad nativex cookbooks for our 6-level OU Path in ActiveDirectory. [ISE-293 and 294]
- - dse-nativex v1.0.0 supports DSE 4.6. Still using 4.5.3 for existing servers at this time.
+ - refactored the dnsupdate-simplyadrian cookbook to use the aws-sdk gem for dns manipulation. 
+ - Simplified 'ou' vs 'oupath' confusion in ad and pbis simplyadrian cookbooks. Settled on 'oupath'. [ISE-281]
+ - Expanded and componentized 'oupath' in pbis/ad simplyadrian cookbooks for our 6-level OU Path in ActiveDirectory. [ISE-293 and 294]
+ - dse-simplyadrian v1.0.0 supports DSE 4.6. Still using 4.5.3 for existing servers at this time.
 
 **********************************************************
 *************** Release v2.1, 01/16/2015 *****************
 **********************************************************
 
 Changes
- - Moved NativeX cookbooks into their own git repositories "coobook-<name>-nativex" [ISE-306}
- - Removed community cookbooks from chef-nativex repository. [ISE-307]
+ - Moved simplyadrian cookbooks into their own git repositories "coobook-<name>-simplyadrian" [ISE-306}
+ - Removed community cookbooks from chef-simplyadrian repository. [ISE-307]
  - Transitioned all cookbook version management to Berkshelf (http://berkshelf.com) [ISE-304]
- - Created README files for all cookbooks and misc chef-nativex directories. [ISE-308]
- - Fixed hang on r-nativex cookbook at runtime. [ISE-315]
- - Created git forks of community cookbooks in NativeX GitHub account for community cookbooks we changed. (aws, r, nodejs)
+ - Created README files for all cookbooks and misc chef-simplyadrian directories. [ISE-308]
+ - Fixed hang on r-simplyadrian cookbook at runtime. [ISE-315]
+ - Created git forks of community cookbooks in simplyadrian GitHub account for community cookbooks we changed. (aws, r, nodejs)
  - Make yum/spacewalk first-run repository initialization & cleanup idempotent.
- - Rename 'mkdirs' (-> mkdirs-nativex) and 'apache-nativex2' (-> apache2-nativex) cookbooks to follow naming standards.
+ - Rename 'mkdirs' (-> mkdirs-simplyadrian) and 'apache-simplyadrian2' (-> apache2-simplyadrian) cookbooks to follow naming standards.
 
 **********************************************************
 *************** Release v2.2, 02/11/2015 *****************
 **********************************************************
 
 Changes
-- Moved role-cookbooks back into chef-nativex as top level management of roles and environments. [ISE-339]
+- Moved role-cookbooks back into chef-simplyadrian as top level management of roles and environments. [ISE-339]
 - Moved Berskfile and Berksfile.lock files to role-cookbook directories. [ISE-339]
 - Created environment files for both dev and production that compliment the role-cookbooks "<role-cookbook-name>-<env>". [ISE-339]
 - Removed cookbook version specificity from metadata files in individual cookbooks in favor of management in Berksfile. [ISE-339]
@@ -60,15 +60,15 @@ Changes
 **********************************************************
 
 Changes
-- Updated spacewalk-nativex cookbook to fix [ISE-321] and versioned roles appropriately
+- Updated spacewalk-simplyadrian cookbook to fix [ISE-321] and versioned roles appropriately
 
 **********************************************************
 *************** Release v2.2.2, 02/18/2015 ***************
 **********************************************************
 
 Changes
-- dse-nativex now installs OpsCenter v5.1.0 agents
-- Fixes role-dse-devcass1-aws-nativex Berksfile not pointing to correct version of dse-nativex.
+- dse-simplyadrian now installs OpsCenter v5.1.0 agents
+- Fixes role-dse-devcass1-aws-simplyadrian Berksfile not pointing to correct version of dse-simplyadrian.
 
 **********************************************************
 *************** Release v2.2.3, 02/23/2015 ***************
@@ -93,12 +93,12 @@ Changes
 Changes
 - removed route53 dependencies
 - specified nokogiri version to support aws-sdk-v1
-- deprecated iptables-nativex
-- separated join domain and rename computer functions into two separate recipes in the ad-nativex cookbook.
-- released iis-nativex cookbook
-- patch to spacewalk-nativex
+- deprecated iptables-simplyadrian
+- separated join domain and rename computer functions into two separate recipes in the ad-simplyadrian cookbook.
+- released iis-simplyadrian cookbook
+- patch to spacewalk-simplyadrian
 - released snapshot and restore functionality to block device cookbook
-- added auto-patch cookbook to role-win-base-nativex cookbook.
+- added auto-patch cookbook to role-win-base-simplyadrian cookbook.
 - updated credentials ad / credentials pbis data_bags to reflect the update to the AD account changes for the Chef user.
 
 **********************************************************
@@ -109,8 +109,8 @@ Changes
 - created new credentials data_bag for github user
 - created createsession_dev and createsession_prod environment files
 - created create session role
-- created role cookbook role-createsession-nativex
-- created cookbook snowflake-nativex
+- created role cookbook role-createsession-simplyadrian
+- created cookbook snowflake-simplyadrian
 
 **********************************************************
 *************** Release v3.2.0, 03/25/2015 ***************
@@ -118,25 +118,25 @@ Changes
 
 Changes
 - Created onpremise-base-dev and onpremise-base-prod environment files [ISE-297]
-- Created onpremise-base role and role-onpremise-base-nativex role cookbook [ISE-297]
-- Updated role-base-nativex & role-nat-nativex cookbooks with autopatch functionality [ISE-297]
+- Created onpremise-base role and role-onpremise-base-simplyadrian role cookbook [ISE-297]
+- Updated role-base-simplyadrian & role-nat-simplyadrian cookbooks with autopatch functionality [ISE-297]
 - Added ability to do a one-time yum upgrade on Linux instances at bootstrap.
-- Combined NativeX-specific patching functionality for both Linux and Windows into autopatch-nativex cookbook [ISE-352]
+- Combined simplyadrian-specific patching functionality for both Linux and Windows into autopatch-simplyadrian cookbook [ISE-352]
 
 **********************************************************
 *************** Release v3.3.0, 03/27/2015 ***************
 **********************************************************
 
 Role Cookbook Changes
-- Most roles now reference v1.1.0 of autopatch-nativex
-- role-domain-controller-nativex (upversioned to v0.3.0) now has autopatch functionality
-- role-win-onpremise-base-nativex (1.0.0) and role-win-base-nativex (1.0.0) were both upversioned with a fix for 
+- Most roles now reference v1.1.0 of autopatch-simplyadrian
+- role-domain-controller-simplyadrian (upversioned to v0.3.0) now has autopatch functionality
+- role-win-onpremise-base-simplyadrian (1.0.0) and role-win-base-simplyadrian (1.0.0) were both upversioned with a fix for 
   making the chef-client service starup mode be "Automatic (Delayed)"
-- role-dse* upversioned with increased attribute precedence so that role-base-nativex attributes are overridden.
+- role-dse* upversioned with increased attribute precedence so that role-base-simplyadrian attributes are overridden.
 Dependent Cookbook Changes
 - Default autopatch random splay time reduced to 1 hour from 90 minutes.
 - autopatch splay (random wait) moved to before update check to prevent hammering WSUS/Spacewalk
-- autopatch Linux script template now only uses autopatch-nativex attributes.
+- autopatch Linux script template now only uses autopatch-simplyadrian attributes.
 - autopatch will now always email SysEngineers regardless of reboot/error status. Requested until we are more comfortable with the feature.
 - autopatch for Linux now supports "update_command_options" attribute to support things like '--nogpgcheck'
 - Use yum 'upgrade' instead of update to be consistent with yum cookbook.
@@ -146,23 +146,23 @@ Dependent Cookbook Changes
 **********************************************************
 
 Role Cookbook Changes
-- removed all references to dnsupdate-nativex cookbook and deprecated the same.
-- updated all references to hostname-nativex (v0.1.2) to the latest version and commit reference.
+- removed all references to dnsupdate-simplyadrian cookbook and deprecated the same.
+- updated all references to hostname-simplyadrian (v0.1.2) to the latest version and commit reference.
 Dependent Cookbook Changes
-- added idempotence check to hostname-nativex cookbook that checks the node.name attribute for the FQDN.
-- updated the domain_name attribute to use teamfreeze.com and deprecated the nativexintern.com domain name.
+- added idempotence check to hostname-simplyadrian cookbook that checks the node.name attribute for the FQDN.
+- updated the domain_name attribute to use teamfreeze.com and deprecated the simplyadrianintern.com domain name.
 
 **********************************************************
 *************** Release v4.1.0, 04/10/2015 ***************
 **********************************************************
 
 Role Cookbook Changes
-- new role cookbook 'role-cdccass1-onprem-nativex' to manage autopatch and C* maintenance tasks
+- new role cookbook 'role-cdccass1-onprem-simplyadrian' to manage autopatch and C* maintenance tasks
   previously delivered via ActiveDirectory GroupPolicy. This role also enables PBIS replacement in the future.
-- Updated references to dse-nativex (v0.3.0) in role-dse-cdccass1-aws-nativex
-- Added dse-natives::maintenance_tasks recipe to runlist for role-dse-cdccass1-aws-nativex (now at v1.1.0)
+- Updated references to dse-simplyadrian (v0.3.0) in role-dse-cdccass1-aws-simplyadrian
+- Added dse-natives::maintenance_tasks recipe to runlist for role-dse-cdccass1-aws-simplyadrian (now at v1.1.0)
 Dependent Cookbook Changes
-- Added maintenance_task recipe & attribute file to dse-nativex cookbook (v0.3.0) that introduces capability
+- Added maintenance_task recipe & attribute file to dse-simplyadrian cookbook (v0.3.0) that introduces capability
   to support rich configuration of C* maintenance tasks in AWS cluster in the future.
 
 **********************************************************
@@ -170,13 +170,13 @@ Dependent Cookbook Changes
 **********************************************************
 
 Role Cookbook Changes
-- Updated references for ad-nativex to v3.0.0 in all roles currently referencing ad-nativex
-- Added ad-nativex and attributes in role-base, role-nat, and role-onpremise
-- Added new references for autofs v1.0.0 in all roles currently referencing ad-nativex
+- Updated references for ad-simplyadrian to v3.0.0 in all roles currently referencing ad-simplyadrian
+- Added ad-simplyadrian and attributes in role-base, role-nat, and role-onpremise
+- Added new references for autofs v1.0.0 in all roles currently referencing ad-simplyadrian
 - Added references and attributes for sshd and and sudo in role-base, role-nat, and role-onpremise
 Dependent Cookbook Changes
-- Added sssd support to ad-nativex
-- Added autofs-nativex cookbook
+- Added sssd support to ad-simplyadrian
+- Added autofs-simplyadrian cookbook
 
 **********************************************************
 *************** Release v4.2.1, 04/23/2015 ***************
@@ -184,9 +184,9 @@ Dependent Cookbook Changes
 
 Role Cookbook Changes
 - Updated dse and datascience roles, reordered authorize attribute
-- Up versioned ad-nativex
+- Up versioned ad-simplyadrian
 Dependent Cookbook Changes
-- Fixed bug in ad-nativex::dynamic_ou
+- Fixed bug in ad-simplyadrian::dynamic_ou
 
 **********************************************************
 *************** Release v4.3.0, 04/29/2015 ***************
@@ -196,8 +196,8 @@ Release ISE-271, ISE-368, ISE-369, awsCassUpdates
 
 Role Cookbook Changes
 - ISE-271 Snowflake added
-- ISE-368 Fixed ad-nativex attributes in base, onpremise-base, and nat RCBs
-- Up versioned ad-nativex
+- ISE-368 Fixed ad-simplyadrian attributes in base, onpremise-base, and nat RCBs
+- Up versioned ad-simplyadrian
 Dependent Cookbook Changes
 - ISE-271 Snowflake initial release
 - ISE-369 latest version of Java cookbook
@@ -209,4 +209,4 @@ Dependent Cookbook Changes
 
 - Updated aws commit reference in create session RCB
 - Fixed dse bug, updated reference
-- Fixed ad-nativex bug, updated version and reference
+- Fixed ad-simplyadrian bug, updated version and reference

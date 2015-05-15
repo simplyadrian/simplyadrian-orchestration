@@ -8,7 +8,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-privoxy-nativex]"
+    "recipe[role-privoxy-simplyadrian]"
   ],
   "env_run_lists": {
   }

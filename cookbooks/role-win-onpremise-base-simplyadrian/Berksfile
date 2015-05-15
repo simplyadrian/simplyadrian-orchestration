@@ -1,0 +1,8 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook 'autopatch-simplyadrian', '1.1.0', git: 'git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git', ref: '70ee3c04751e8b2500389e1cd40ec484b89d4b6f' 
+cookbook 'chef-client', '3.8.0'
+cookbook 'chef_handler', '1.1.6'
+cookbook 'windows', '1.37.0', git: 'git@github.com:simplyadrian/windows.git', ref: '42013d8ecd323e20d16ab580c41e4a35b5ed627d'

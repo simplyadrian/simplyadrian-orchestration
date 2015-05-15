@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
 
   # This can be set to the host name you wish the guest machine to have. Vagrant
   # will automatically execute the configuration necessary to make this happen.
-  config.vm.hostname = 'nativex-centos-6-5'
+  config.vm.hostname = 'simplyadrian-centos-6-5'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -107,10 +107,10 @@ Vagrant.configure(2) do |config|
     #chef.roles_path = 'roles'
     #chef.data_bags_path = 'data_bags'
 
-    ##chef.chef_server_url = 'https://api.opscode.com/organizations/jhauf-nativex'
+    ##chef.chef_server_url = 'https://api.opscode.com/organizations/jhauf-simplyadrian'
     #chef.node_name = 'jhauf'
-    ##chef.validation_key_path = '.chef/jhauf-nativex-validator.pem'
-    ##chef.validation_client_name = 'jhauf-nativex-validator'
+    ##chef.validation_key_path = '.chef/jhauf-simplyadrian-validator.pem'
+    ##chef.validation_client_name = 'jhauf-simplyadrian-validator'
     ##chef.encrypted_data_bag_secret_key_path = '.chef/encrypted_data_bag_secret'
     #chef.add_role 'spacewalk-server'
     #chef.delete_node = true

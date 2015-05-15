@@ -25,10 +25,10 @@ cat - >/etc/chef/client.rb <<EOF
 log_level          :info
 log_location       "/var/log/chef/client.log"
 ssl_verify_mode    :verify_none
-validation_client_name "nativex-validator"
+validation_client_name "simplyadrian-validator"
 validation_key         "/etc/chef/validation.pem"
 client_key               "/etc/chef/client.pem"
-chef_server_url    "https://api.opscode.com/organizations/nativex"
+chef_server_url    "https://api.opscode.com/organizations/simplyadrian"
 file_cache_path    "/var/cache/chef"
 file_backup_path  "/var/backups/chef"
 pid_file           "/var/run/chef/client.pid"

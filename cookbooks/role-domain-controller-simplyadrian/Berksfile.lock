@@ -1,0 +1,73 @@
+DEPENDENCIES
+  ad-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-ad-simplyadrian.git
+    revision: d8f3b67fe6050eca1b15ae579a49c73266638eba
+    ref: e1e8e0d
+  autopatch-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
+    revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
+    ref: 0f78b57
+  aws
+    git: git@github.com:simplyadrian/aws.git
+    revision: 476fb71977511b7370d213940be7e76a410cc8ba
+    ref: 476fb71
+  build-essential (= 2.1.3)
+  chef-client (= 3.8.0)
+  chef-sugar (= 2.5.0)
+  chef_handler (= 1.1.6)
+  cron (= 1.6.1)
+  logrotate (= 1.8.0)
+  ohai (= 2.0.1)
+  ohai-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git
+    revision: d57a81bbd0d84aafbe4a083ea01069b36e631775
+  role-domain-controller-simplyadrian
+    path: .
+    metadata: true
+  timezone-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-timezone-simplyadrian.git
+    revision: 3941eaeb8162f13015403427502024d70719474d
+    ref: 6a52405
+  windows
+    git: git@github.com:simplyadrian/windows.git
+    revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d
+    ref: 42013d8
+
+GRAPH
+  ad-simplyadrian (3.0.2)
+    chef-sugar (>= 0.0.0)
+    ohai-simplyadrian (>= 0.0.0)
+    windows (>= 0.0.0)
+  auto-patch (0.1.9)
+    cron (>= 0.0.0)
+  autopatch-simplyadrian (1.1.0)
+    auto-patch (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    windows (>= 0.0.0)
+  aws (2.6.0)
+  build-essential (2.1.3)
+  chef-client (3.8.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef-sugar (2.5.0)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  logrotate (1.8.0)
+  ohai (2.0.1)
+  ohai-simplyadrian (0.1.1)
+    ohai (>= 0.0.0)
+  role-domain-controller-simplyadrian (0.3.0)
+    ad-simplyadrian (>= 0.0.0)
+    autopatch-simplyadrian (>= 0.0.0)
+    aws (>= 0.0.0)
+    chef-client (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+    timezone-simplyadrian (>= 0.0.0)
+    windows (>= 0.0.0)
+  timezone-ii (0.2.0)
+  timezone-simplyadrian (1.0.0)
+    chef-sugar (>= 0.0.0)
+    timezone-ii (>= 0.0.0)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)

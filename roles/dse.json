@@ -9,7 +9,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-dse-nativex]"
+    "recipe[role-dse-simplyadrian]"
   ],
   "env_run_lists": {
 

@@ -10,7 +10,7 @@
         "interval": "600",
         "log_file": "chefclt.log"
     },
-    "spacewalk-nativex": {
+    "spacewalk-simplyadrian": {
       "activation_key": "1-dev-centos6"
     }
   },

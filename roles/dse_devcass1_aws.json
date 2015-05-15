@@ -8,7 +8,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-dse-devcass1-aws-nativex]"
+    "recipe[role-dse-devcass1-aws-simplyadrian]"
   ],
   "env_run_lists": {
   }

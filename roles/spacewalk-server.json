@@ -8,7 +8,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[role-spacewalk-server-nativex]"
+    "recipe[role-spacewalk-server-simplyadrian]"
   ],
   "env_run_lists": {
   }

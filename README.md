@@ -15,7 +15,7 @@ This repository contains several directories, and each directory contains a READ
 Data Bags
 ==========
 
-You can find the data_bags @ https://manage.chef.io/organizations/nativex/data_bags or request them from adrian.herrera.
+You can find the data_bags @ https://manage.chef.io/organizations/simplyadrian/data_bags or request them from adrian.herrera.
 
 ### NOTE
 Data Bag contents should never exist in this repository. Use the 'knife data bag' commands to manage our databags.
@@ -27,8 +27,8 @@ Cookbooks
 Cookbooks are managed by Berkshelf. 
 
 - Community cookbooks exist only in the Berkshelf. The code does not exist anywhere.
-  - Exceptions are the 'aws' and 'r' cookbooks. There are 'forks' of them in the NativeX git repo.
-- The code for NativeX cookbooks are individual repositories like 'cookbook-<name>-nativex' in the NativeX git repo.
+  - Exceptions are the 'aws' and 'r' cookbooks. There are 'forks' of them in the simplyadrian git repo.
+- The code for simplyadrian cookbooks are individual repositories like 'cookbook-<name>-simplyadrian' in the simplyadrian git repo.
 
 Berks Tasks
 ==========

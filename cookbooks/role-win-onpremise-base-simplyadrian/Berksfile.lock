@@ -1,0 +1,34 @@
+DEPENDENCIES
+  autopatch-simplyadrian
+    git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
+    revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
+    ref: 0f78b57
+  chef-client (= 3.8.0)
+  chef_handler (= 1.1.6)
+  role-win-onpremise-base-simplyadrian
+    path: .
+    metadata: true
+  windows
+    git: git@github.com:simplyadrian/windows.git
+    revision: 42013d8ecd323e20d16ab580c41e4a35b5ed627d
+    ref: 42013d8
+
+GRAPH
+  auto-patch (0.1.9)
+    cron (>= 0.0.0)
+  autopatch-simplyadrian (1.1.0)
+    auto-patch (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    windows (>= 0.0.0)
+  chef-client (3.8.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  logrotate (1.9.1)
+  role-win-onpremise-base-simplyadrian (1.0.0)
+    autopatch-simplyadrian (>= 0.0.0)
+    chef-client (>= 0.0.0)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)

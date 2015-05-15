@@ -2,13 +2,13 @@
   "name": "linux-domain-member-dev",
   "description": "",
   "cookbook_versions": {
-    "autofs-nativex": "= 0.1.0",
+    "autofs-simplyadrian": "= 0.1.0",
     "chef-sugar": "= 2.5.0",
     "line": "= 0.6.0",
     "ohai": "= 2.0.1",
-    "ohai-nativex": "= 0.1.1",
+    "ohai-simplyadrian": "= 0.1.1",
     "resource": "= 0.2.1",
-    "role-linux-domain-member-nativex": "= 0.1.0"
+    "role-linux-domain-member-simplyadrian": "= 0.1.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",

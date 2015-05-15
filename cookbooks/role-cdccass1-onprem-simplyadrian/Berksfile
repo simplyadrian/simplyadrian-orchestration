@@ -1,0 +1,15 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook 'ad-simplyadrian', '3.0.2', git: 'git@github.com:simplyadrian/cookbook-ad-simplyadrian.git', ref: 'd8f3b67fe6050eca1b15ae579a49c73266638eba'
+cookbook 'autofs-simplyadrian', '1.0.0', git: 'git@github.com:simplyadrian/cookbook-autofs-simplyadrian.git', ref: '6c7f45c531a83d104ca6844adccb8341f4884401'
+cookbook 'autopatch-simplyadrian', '1.1.0', git: 'git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git', ref: '70ee3c04751e8b2500389e1cd40ec484b89d4b6f'
+cookbook 'ohai-simplyadrian', '0.1.1', git: 'git@github.com:simplyadrian/cookbook-ohai-simplyadrian.git'
+cookbook 'role-onpremise-base-simplyadrian', '1.0.0', path: '../role-onpremise-base-simplyadrian'
+cookbook 'auto-patch', '0.1.9'
+cookbook 'chef-client', '4.2.4'
+cookbook 'chef_handler', '1.1.6'
+cookbook 'chef-sugar', '2.5.0'
+cookbook 'cron', '1.6.1'
+cookbook 'logrotate', '1.9.1'
