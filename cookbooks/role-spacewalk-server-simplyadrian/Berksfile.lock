@@ -3,7 +3,7 @@ DEPENDENCIES
   autopatch-simplyadrian
     git: git@github.com:simplyadrian/cookbook-autopatch-simplyadrian.git
     revision: 70ee3c04751e8b2500389e1cd40ec484b89d4b6f
-    ref: 0f78b57
+    ref: 70ee3c0
   chef-client (= 3.8.0)
   chef_handler (= 1.1.6)
   cron (= 1.6.1)
@@ -13,7 +13,7 @@ DEPENDENCIES
     metadata: true
   spacewalk-simplyadrian
     git: git@github.com:simplyadrian/cookbook-spacewalk-simplyadrian.git
-    revision: ec5698bbfaada9aff47ff5f7d1ae9c3018ab2daf
+    revision: 4449f9d2ba6238b389f5ee21fa185595c8bcac64
   windows (= 1.34.6)
 
 GRAPH

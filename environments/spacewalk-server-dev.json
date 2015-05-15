@@ -1,6 +1,6 @@
 {
   "name": "spacewalk-server-dev",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-spacewalk-server-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'dev' environment for the role-spacewalk-server-nativex cookbook.",
   "cookbook_versions": {
     "auto-patch": "= 0.1.9",
     "autopatch-simplyadrian": "= 1.1.0",
@@ -20,7 +20,7 @@
       "interval": "600",
       "log_file": "chefclt.log"
     },
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-dev-centos6"
     }
   },

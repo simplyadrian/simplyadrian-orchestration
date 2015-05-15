@@ -1,6 +1,6 @@
 {
   "name": "privoxy-prod",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-privoxy-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-privoxy-nativex cookbook.",
   "cookbook_versions": {
     "ad-simplyadrian": "= 3.0.2",
     "auto-patch": "= 0.1.9",
@@ -34,7 +34,7 @@
     "role-base-simplyadrian": "= 1.3.0",
     "role-privoxy-simplyadrian": "= 1.3.0",
     "snmp": "= 3.0.1",
-    "spacewalk-simplyadrian": "= 0.3.0",
+    "spacewalk-simplyadrian": "= 0.5.1",
     "sshd": "= 1.1.1",
     "sudo": "= 2.7.1",
     "timezone-ii": "= 0.2.0",
@@ -50,7 +50,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-prod-centos6"
     }
   },

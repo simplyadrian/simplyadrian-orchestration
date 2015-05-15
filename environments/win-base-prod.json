@@ -1,9 +1,9 @@
 {
   "name": "win-base-prod",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-win-base-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-win-base-nativex cookbook.",
   "cookbook_versions": {
     "ad-simplyadrian": "= 3.0.2",
-    "auto-patch": "= 0.1.9",
+    "auto-patch": "= 0.1.10",
     "autopatch-simplyadrian": "= 1.1.0",
     "aws": "= 2.6.0",
     "build-essential": "= 2.1.3",
@@ -22,7 +22,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-prod-centos6"
     }
   },

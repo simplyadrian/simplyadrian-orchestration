@@ -1,6 +1,6 @@
 {
   "name": "spacewalk-server-prod",
-  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-spacewalk-server-simplyadrian cookbook.",
+  "description": "A Chef environment that represents the set of cookbook versions in the 'prod' environment for the role-spacewalk-server-nativex cookbook.",
   "cookbook_versions": {
     "auto-patch": "= 0.1.9",
     "autopatch-simplyadrian": "= 1.1.0",
@@ -16,7 +16,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "spacewalk-simplyadrian": {
+    "spacewalk-nativex": {
       "activation_key": "1-prod-centos6"
     }
   },
